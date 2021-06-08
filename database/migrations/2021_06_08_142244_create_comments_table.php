@@ -20,7 +20,6 @@ class CreateCommentsTable extends Migration
             $table->text("comment")->nullable();
             $table->integer("rate");
             $table->dateTime('created_at');
-            $table->timestamps();
         });
     }
 
