@@ -1,10 +1,12 @@
 <?php
 
+use App\Specialization;
 use App\User;
 use Faker\Generator as Faker;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 
 class UsersTableSeeder extends Seeder
 {
@@ -15,6 +17,8 @@ class UsersTableSeeder extends Seeder
      */
     public function run(Faker $faker)
     {
+        $specialization = Specialization::all();
+
         for ($i=0; $i < 10; $i++) { 
             $newUser = new User;
             $newUser->name = $faker->firstName();
@@ -22,7 +26,16 @@ class UsersTableSeeder extends Seeder
             $newUser->email = $faker->email();
             $newUser->expire_date = Carbon::now();
             $newUser->password = Hash::make($faker->word());
+
+            // $newUser->specializations()->sync(rand(1, count($specialization)));
             $newUser->save();
         }
+        // foreach (range(1, 20) as $index) {
+        //     DB::table('specialization_user')->insert([
+        //         'user_id' => rand(1, 10),
+        //         'specialization_id' => $faker->unique()->randomNumber(1, count($specialization))
+        //     ]);
+        // }
+
     }
 }
