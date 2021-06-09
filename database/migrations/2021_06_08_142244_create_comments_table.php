@@ -19,7 +19,8 @@ class CreateCommentsTable extends Migration
             $table->string("username", 30)->default('Anonimo');
             $table->text("comment")->nullable();
             $table->integer("rate");
-            $table->dateTime('created_at');
+            $table->dateTime('added_on');
+            $table->timestamps();
         });
     }
 
