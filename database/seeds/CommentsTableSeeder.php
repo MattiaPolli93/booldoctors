@@ -26,7 +26,7 @@ class CommentsTableSeeder extends Seeder
                 }
                 
                 if (rand(0, 1)) {
-                    $newComment->comment = $faker->text(50);
+                    $newComment->comment = $faker->text(200);
                 }
                 $newComment->rate = rand(1, 5);
                 $newComment->added_on = $faker->dateTimeBetween("-2 years", "now"); 

@@ -19,7 +19,8 @@ class CreateMessagesTable extends Migration
             $table->string('email', 50);
             $table->text('message');
             $table->boolean('resolved')->default(0);
-            $table->dateTime('created_at');
+            $table->dateTime('added_on');
+            $table->timestamps();
         });
     }
 

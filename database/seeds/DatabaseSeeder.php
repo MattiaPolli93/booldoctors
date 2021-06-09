@@ -15,7 +15,8 @@ class DatabaseSeeder extends Seeder
             UsersTableSeeder::class, 
             SpecializationsTableSeeder::class,
             ServicesTableSeeder::class,
-            CommentsTableSeeder::class
+            CommentsTableSeeder::class,
+            MessagesTableSeeder::class
         ]);
         
     }
