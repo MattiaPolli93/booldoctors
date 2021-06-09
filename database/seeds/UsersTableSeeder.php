@@ -27,8 +27,14 @@ class UsersTableSeeder extends Seeder
             $newUser->expire_date = Carbon::now();
             $newUser->password = Hash::make($faker->word());
 
-            // $newUser->specializations()->sync(rand(1, count($specialization)));
             $newUser->save();
+
+            $numbers = range(1, count($specialization));
+            shuffle($numbers);
+            $spec = rand(1, 6);
+            for ($j = 0; $j < $spec; $j++) {
+                $newUser->specializations()->attach($numbers[$j]);
+            }
         }
         // foreach (range(1, 20) as $index) {
         //     DB::table('specialization_user')->insert([
