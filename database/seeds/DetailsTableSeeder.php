@@ -22,7 +22,7 @@ class DetailsTableSeeder extends Seeder
             $newDetail->image = 'https://via.placeholder.com/150';
 
             if (rand(0, 1)) {
-                $newDetail->curriculum = $faker->text(500);
+                $newDetail->bio = $faker->text(500);
             }
             
             $newDetail->address = $faker->streetAddress();
