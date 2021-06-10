@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateDetailsTable extends Migration
+class CreatePlansTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateDetailsTable extends Migration
      */
     public function up()
     {
-        Schema::create('details', function (Blueprint $table) {
+        Schema::create('plans', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->string('image')->nullable();
-            $table->text("bio")->nullable();
-            $table->string("address", 100);
-            $table->string("phone", 25)->nullable();
+            $table->string('plan', 20);
+            $table->float('price', 4, 2);
+            $table->time('period');
             $table->timestamps();
         });
     }
@@ -31,6 +29,6 @@ class CreateDetailsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('details');
+        Schema::dropIfExists('plans');
     }
 }
