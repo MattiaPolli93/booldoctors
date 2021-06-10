@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Detail;
 use App\Service;
 use App\Specialization;
 use App\User;
@@ -24,15 +25,16 @@ class DoctorController extends Controller
         $doctors = User::all();
         $specializations = Specialization::all();
         $services = Service::all();
+        $details = Detail::all();
 
-        dd($doctors, $specializations, $services);        
+        /* dd($doctors, $specializations, $services);   */      
 
-        return view('homepage', compact('doctors', 'specializations', 'services'));
+        return view('homepage', compact('doctors', 'specializations', 'services', 'details'));
     }
 
     /**
      * Show the form for creating a new resource.
-     *
+     *                                                      
      * @return \Illuminate\Http\Response
      */
     public function create()
@@ -59,7 +61,9 @@ class DoctorController extends Controller
      */
     public function show($id)
     {
-        //
+        $doctor = User::where('id', $id)->first();                         
+
+        return view('show', compact('doctor'));
     }
 
     /**

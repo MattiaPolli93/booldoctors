@@ -10,6 +10,6 @@ class Service extends Model
 
     public function user()
     {
-        return $this->belongsTo("App\Service");
+        return $this->belongsTo("App\User");
     }
 }

@@ -24,7 +24,7 @@ class UsersTableSeeder extends Seeder
             $newUser->name = $faker->firstName();
             $newUser->surname = $faker->lastName();
             $newUser->email = $faker->email();
-            $newUser->expire_date = Carbon::now();
+            /* $newUser->expire_date = Carbon::now(); */
             $newUser->password = Hash::make($faker->word());
 
             $newUser->save();
