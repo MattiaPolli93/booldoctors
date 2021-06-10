@@ -23,13 +23,9 @@ class DoctorController extends Controller
     public function index()
     {
         $doctors = User::all();
-        $specializations = Specialization::all();
-        $services = Service::all();
-        $details = Detail::all();
+        $specializations = Specialization::all();             
 
-        /* dd($doctors, $specializations, $services);   */      
-
-        return view('homepage', compact('doctors', 'specializations', 'services', 'details'));
+        return view('homepage', compact('doctors', 'specializations'));
     }
 
     /**
@@ -61,7 +57,7 @@ class DoctorController extends Controller
      */
     public function show($id)
     {
-        $doctor = User::where('id', $id)->first();                         
+        $doctor = User::where('id', $id)->first(); 
 
         return view('show', compact('doctor'));
     }
