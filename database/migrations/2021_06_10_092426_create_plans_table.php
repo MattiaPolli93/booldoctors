@@ -17,7 +17,7 @@ class CreatePlansTable extends Migration
             $table->id();
             $table->string('plan', 20);
             $table->float('price', 4, 2);
-            $table->time('period');
+            $table->integer('period');
             $table->timestamps();
         });
     }

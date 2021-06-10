@@ -17,7 +17,7 @@ class CreatePlanUserTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->foreignId('plan_id')->constrained()->onDelete('cascade');
-            $table->dateTime('expire_date');
+            $table->dateTime('expire_date')->nullable();
             $table->timestamps();
         });
     }
