@@ -7,6 +7,7 @@ use App\User;
 use App\Specialization;
 use Carbon\Carbon;
 use App\Plan;
+use App\Comment;
 use Illuminate\Http\Request;
 
 class GuestController extends Controller
@@ -72,6 +73,34 @@ class GuestController extends Controller
         $newMessage->save();
 
         return back()->with('message', 'Il tuo messaggio è stato inviato con successo');
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function storeComment(Request $request, User $user, $id)
+    {
+        $request->validate([
+            'username' => 'nullable|string|max:30',
+            'comment' => 'nullable|string',
+            'rate' => 'required|string|in:1,2,3,4,5',
+        ]);
+
+        $user = User::find($id);
+        $newComment = new Comment();
+        $newComment->user_id = $user->id;
+        if ($request->username != NULL) {
+            $newComment->username = $request->username;
+        }
+        $newComment->comment = $request->comment;
+        $newComment->rate = $request->rate;
+        $newComment->added_on = Carbon::now('Europe/Rome');
+        $newComment->save();
+
+        return back()->with('message', 'La tua recensione è stata inserita con successo');
     }
 
     /**
