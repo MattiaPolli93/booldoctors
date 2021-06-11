@@ -24,3 +24,4 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/', 'GuestController@index')->name('homepage');
 Route::get('doctor/{id}', 'GuestController@show')->name('show');
+Route::post('doctor/{id}/store-message', 'GuestController@storeMessage')->name('doctor.store-message');

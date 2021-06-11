@@ -1,6 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
+
+use App\Message;
 use App\User;
 use App\Specialization;
 use Carbon\Carbon;
@@ -55,9 +57,21 @@ class GuestController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function storeMessage(Request $request)
+    public function storeMessage(Request $request, User $user, $id)
     {
-        //
+        $request->validate([
+            'email' => 'required|email|max:50',
+            'message' => 'required|string',
+        ]);
+        $user = User::find($id);
+        $newMessage = new Message();
+        $newMessage->user_id = $user->id;
+        $newMessage->email = $request->email;
+        $newMessage->message = $request->message;
+        $newMessage->added_on = Carbon::now('Europe/Rome');
+        $newMessage->save();
+
+        return back()->with('message', 'Il tuo messaggio è stato inviato con successo');
     }
 
     /**

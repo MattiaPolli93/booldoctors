@@ -29,5 +29,21 @@
                 <p>{{$specialization['specialization']}}</p>
             @endforeach
         </div> 
+
+        <form action="{{route('doctor.store-message', ['id' => $doctor->id])}}" method="post">
+			@csrf
+			@method('POST')
+			<div class="form-group">
+				<label for="email">Email</label>
+				<input type="email" class="form-control" id="email" name="email" placeholder="Inserisci la tua mail">
+			</div>
+			<div class="form-group">
+				<label for="message">Messaggio</label>
+				<textarea class="form-control"  name="message" id="message" cols="30" rows="4" placeholder="Inserisci il tuo messaggio"></textarea>
+			</div>
+			<div class="mt-3">
+				<button type="submit" class="btn btn-primary">Inserisci</button>
+			</div>
+		</form>
     </body>
 </html>
