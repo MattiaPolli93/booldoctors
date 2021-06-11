@@ -21,7 +21,13 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+/* Route::get('/home', 'HomeController@index')->name('home'); */
+Route::prefix('user')->name('user.')->namespace('User')->middleware('auth')->group(function () {
+    Route::resource('profile', 'UserController');
+    /* Route::resource('posts', 'PostController');
+    Route::resource('tags', 'TagController'); */
+    /* Route::delete('comments/{comment}', 'CommentController@destroy')->name('comments.destroy'); */
+});
 
 Route::get('/', 'GuestController@index')->name('homepage');
 Route::get('doctor/{id}', 'GuestController@show')->name('show');
