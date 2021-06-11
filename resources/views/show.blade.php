@@ -32,7 +32,12 @@
         <div>
             <h2>Recensioni</h2>
             @foreach ($doctor->comments as $comment)
-                <p>{{$comment['comment']}}</p>
+                <ul>
+                    <li>
+                        <h4>{{$comment['username'] ? $comment['username'] : 'Anonimo'}}</h4>                        
+                        <p>{{$comment['comment']}}</p>                        
+                    </li>
+                </ul>                
             @endforeach
         </div> 
 
@@ -85,7 +90,6 @@
                 <label class="form-check-label" for="rate_5">5</label>
                 <input class="form-check-input" type="radio" name="rate" id="rate_5" value="5">
             </div>
-
 			<div class="mt-3">
 				<button type="submit" class="btn btn-primary">Inserisci</button>
 			</div>
