@@ -28,6 +28,12 @@
             @foreach ($doctor->specializations as $specialization)
                 <p>{{$specialization['specialization']}}</p>
             @endforeach
+        </div>
+        <div>
+            <h2>Recensioni</h2>
+            @foreach ($doctor->comments as $comment)
+                <p>{{$comment['comment']}}</p>
+            @endforeach
         </div> 
 
         <h2>Manda un messaggio al medico</h2>
