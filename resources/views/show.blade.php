@@ -34,7 +34,7 @@
             @foreach ($doctor->comments as $comment)
                 <ul>
                     <li>
-                        <h4>{{$comment['username'] ? $comment['username'] : 'Anonimo'}}</h4>                        
+                        <h4>{{$comment['username']}}</h4>                        
                         <p>{{$comment['comment']}}</p>                        
                     </li>
                 </ul>                
