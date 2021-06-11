@@ -64,6 +64,6 @@ class User extends Authenticatable
 
     public function plans()
     {
-        return $this->belongsToMany("App\Plan");
+        return $this->belongsToMany("App\Plan")->withPivot('expire_date');
     }
 }
