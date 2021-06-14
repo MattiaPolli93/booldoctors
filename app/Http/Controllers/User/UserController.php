@@ -4,6 +4,7 @@ namespace App\Http\Controllers\User;
 
 use App\Detail;
 use App\Http\Controllers\Controller;
+use App\Specialization;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -12,6 +13,15 @@ use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
+
+    protected $validation = ([
+        'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        'bio' => 'nullable|string',
+        'address' => 'required|string|max:100',
+        'phone' => 'nullable|string|max:25'
+    ]);
+
+    
     /**
      * Display a listing of the resource.
      *
@@ -21,8 +31,11 @@ class UserController extends Controller
     {
         $doctor_id = Auth::id();
 
-        $user = User::where('id', $doctor_id)->get();
-        return view('user.index', compact('user'));
+        $user = User::where('id', $doctor_id)->first();
+        
+        $details = Detail::where('id', $doctor_id)->first();
+
+        return view('user.index', compact('user', 'details'));
     }
 
     /**
@@ -32,7 +45,11 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        $specializations = Specialization::all();        
+
+        return view('user.create', compact('specializations'));
+
+    
     }
 
     /**
@@ -43,7 +60,29 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // validazione dei dati inseriti
+        $validation = $this->validation;
+        $request->validate($validation);
+
+        /* // imposto lo user_id
+        $data['user_id'] = Auth::id();
+
+        // prendo tutti i dati da salvare
+        $data = $request->all();     
+                
+        //inserimento dei dati
+        $details = Detail::create($data);   */   
+        
+        Detail::create([
+            'address' => request('address'),
+            'phone' => request('phone'),
+            'bio' => request('bio'),
+            //prende lo user_id
+            'user_id' => auth()->id()
+        ]);
+
+        // reindirizzamento alla pagina index
+        return redirect()->route('user.profile.index')->with('message', 'le tue informazioni sono state aggiunte!');
     }
 
     /**
@@ -63,9 +102,15 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user, Detail $details, $id)
     {
-        //
+
+        $doctor = User::where('id', $id)->first();
+
+        $details = Detail::all();       
+        
+
+        return view('user.edit', compact('doctor', 'details'));
     }
 
     /**
@@ -75,9 +120,29 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $id, Detail $details) 
     {
-        //
+
+        $user_id = Auth::id();
+
+        // validazione dei dati inseriti
+        $validation = $this->validation;
+        $request->validate($validation);
+
+        $doctor = User::where('id', $id)->first();
+
+        $data = $request->all();;
+        
+        
+
+        $details->update($data);
+
+        dd($details);
+
+       
+
+        return redirect()->route('user.profile.index', compact('details'))->with('message', 'Il profilo è stato modificato');
+
     }
 
     /**

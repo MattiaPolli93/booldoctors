@@ -9,7 +9,7 @@
     <body>
         <div class="doctor">
             <h1>{{$doctor->name}} {{$doctor->surname}}</h1>
-            <img src="{{$doctor->details->image}}" alt="{{$doctor->name}} {{$doctor->surname}}">    
+            <img src="{{$doctor->details->image ? $doctor->details->image : 'https://via.placeholder.com/150'}}" alt="{{$doctor->name}} {{$doctor->surname}}">    
             <h3>Indirizzo</h3>
             <p>{{$doctor->details->address}}</p>
             <h3>Telefono</h3>
