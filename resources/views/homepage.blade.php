@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
@@ -6,8 +6,10 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>Booldoctors</title>
     </head>
-    <body>
-        <header>
+    <body> --}}
+@extends('layouts.app')
+@section('content')
+    
             <nav>
                 <div class="specializations">
                     @foreach ($specializations as $specialization)
@@ -16,8 +18,8 @@
                      <p><i class="fas fa-clock"></i>Ciao</p>      
                 </div>
             </nav>
-        </header>
-        <main>
+
+
             <div>
                 @foreach ($sponsored_doctors as $doctor)
                     <ul style="list-style: none">
@@ -25,6 +27,7 @@
                     </ul>            
                 @endforeach        
             </div> 
-        </main>    
-    </body>
-</html>
+@endsection
+    
+    {{-- </body>
+</html> --}}
