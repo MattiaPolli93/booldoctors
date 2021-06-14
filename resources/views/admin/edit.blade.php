@@ -1,18 +1,4 @@
 @extends('layouts.app')
-
-@section('title')
-    Modifica
-@endsection
-
-@section('content')
-    <div class="container">
-        <form action="{{route('admin.profile.update', $doctor->id)}}" method="POST" enctype="multipart/form-data">
-            @csrf
-		    @method('PUT')
-            <div class="form-group">
-              <label for="image">Immagine</label>
-              <input type="file">
-@extends('layouts.app')
 @section('title')
     Modifica profilo
 @endsection
