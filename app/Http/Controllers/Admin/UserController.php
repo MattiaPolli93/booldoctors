@@ -93,7 +93,9 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $doctor = User::where('id', $id)->first();
+
+        return view('show', compact('doctor'));
     }
 
     /**
@@ -105,9 +107,14 @@ class UserController extends Controller
     public function edit(User $user, Detail $details, $id)
     {
 
+        $user_id = Auth::id();
+        $details = Detail::where('user_id', $id)->first();
+
+        if ($details->user_id != $user_id) {
+            abort('403');
+        }
         $doctor = User::where('id', $id)->first();
 
-        $details = Detail::all();
 
 
         return view('admin.edit', compact('doctor', 'details'));
