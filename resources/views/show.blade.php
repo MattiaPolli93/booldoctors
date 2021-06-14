@@ -15,7 +15,7 @@
             <h3>Telefono</h3>
             <p>{{$doctor->details->phone}}</p> 
             <h3>Bio</h3>
-            <p>{{$doctor->details->bio}}</p>       
+            <p>{{$doctor->details->bio}}</p>
         </div>
         <div class="services">
             <h2>Servizi</h2>

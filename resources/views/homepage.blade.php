@@ -13,6 +13,7 @@
                     @foreach ($specializations as $specialization)
                         <a href="#">{{$specialization['specialization']}}</a>
                     @endforeach
+                     <p><i class="fas fa-clock"></i>Ciao</p>      
                 </div>
             </nav>
         </header>
