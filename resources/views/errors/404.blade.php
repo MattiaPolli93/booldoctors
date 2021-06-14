@@ -13,7 +13,7 @@ Error - 404
         <div class="col-sm-12 d-flex justify-content-center align-items-center">
             <div class="error-text text-center">
                 <h2>Mmm... page was not found!</h2>
-                <p> <a href="{{ url('/') }}">Back to Homepage?</a> </p>
+                <p><a href="{{url('/')}}">Back to Homepage?</a></p>
             </div>
         </div>
     </div>

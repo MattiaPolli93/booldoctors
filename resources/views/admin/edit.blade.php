@@ -1,13 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Modifica Profilo</title>
-    <link rel="stylesheet" href="{{asset('css/app.css')}}">
-</head>
-<body>
+@extends('layouts.app')
+
+@section('title')
+    Modifica
+@endsection
+
+@section('content')
     <div class="container">
         <form action="{{route('admin.profile.update', $doctor->id)}}" method="POST" enctype="multipart/form-data">
             @csrf
@@ -29,8 +26,6 @@
               <textarea name="bio" id="bio" cols="30" rows="10">{{$doctor->details->bio}}</textarea>
             </div>
             <button type="submit" class="btn btn-primary">Inserisci</button>
-          </form>
-      </div>
-
-</body>
-</html>
+        </form>
+    </div>
+@endsection
