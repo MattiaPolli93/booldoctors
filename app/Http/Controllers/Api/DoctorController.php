@@ -20,7 +20,7 @@ class DoctorController extends Controller
                     ->groupBy('comments.user_id')
                     ->get(); */
         $doctors = User::all();
-    
+        
         /* return response()->json($doctors); */
         return UserResource::collection($doctors);
         

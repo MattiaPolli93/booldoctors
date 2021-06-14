@@ -16,10 +16,11 @@ class DetailResource extends JsonResource
     {
         /* return parent::toArray($request); */
         return [
+            'id' => $this->id,
             'image' => $this->image,
             'bio' => $this->bio,
             'address' => $this->address,
-            'phone' => $this->phone,
+            'phone' => $this->phone
         ];
     }
 }

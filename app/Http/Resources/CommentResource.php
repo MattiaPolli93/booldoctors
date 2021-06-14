@@ -4,7 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Resources\Json\JsonResource;
 
-class SpecializationResource extends JsonResource
+class CommentResource extends JsonResource
 {
     /**
      * Transform the resource into an array.
@@ -17,7 +17,7 @@ class SpecializationResource extends JsonResource
         /* return parent::toArray($request); */
         return [
             'id' => $this->id,
-            'field' => $this->specialization
-        ];    
+            'rate' => $this->rate
+        ];
     }
 }

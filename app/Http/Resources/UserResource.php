@@ -22,9 +22,9 @@ class UserResource extends JsonResource
             'name' => $this->name,
             'sruname' => $this->surname,
             'email' => $this->email,
-            'details' => $this->details,
-            'specializations' => SpecializationResource::collection($this->specializations)
-
+            'details' => new DetailResource($this->details),
+            'specializations' => SpecializationResource::collection($this->specializations),
+            'rate' => CommentResource::collection($this->comments)
         ];
     }
 }
