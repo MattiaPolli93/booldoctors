@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Detail;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use App\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
@@ -54,6 +56,7 @@ class RegisterController extends Controller
             'surname' => ['required', 'string', 'max:50'],
             'email' => ['required', 'string', 'email', 'max:50', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'max:50', 'confirmed'],
+            'address' => ['required', 'string', 'max:100']
         ]);
     }
 
@@ -65,11 +68,31 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
+        // $user = User::latest()->first();
+        // Detail::create([
+        //     'user_id' => $user->id + 1,
+        //     'address' => $data['address']
+        // ]);
+
+        $user = User::create([
             'surname' => $data['surname'],
+            'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
+        //UserData is the Model of user_data table
+        Detail::create([
+            'user_id' => $user->id,
+            'address' => $data['address']
+        ]);
+        return $user;
+
+        // return User::create([
+        //     'name' => $data['name'],
+        //     'surname' => $data['surname'],
+        //     'email' => $data['email'],
+        //     'password' => Hash::make($data['password']),
+        // ]);
+
     }
 }
