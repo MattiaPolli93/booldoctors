@@ -133,13 +133,8 @@ class UserController extends Controller
 
         $data = $request->all();;
 
-
-
-        $details->update($data);
-
-        dd($details);
-
-
+        // salvataggio dei dati modificati
+        $doctor->details->update($data);     
 
         return redirect()->route('admin.profile.index', compact('details'))->with('message', 'Il profilo è stato modificato');
 
