@@ -5,9 +5,10 @@ namespace App\Http\Controllers;
 use App\Message;
 use App\User;
 use App\Specialization;
+use App\Comment;
 use Carbon\Carbon;
 use App\Plan;
-use App\Comment;
+
 use Illuminate\Http\Request;
 
 class GuestController extends Controller
@@ -38,7 +39,6 @@ class GuestController extends Controller
                 $sponsored_doctors[] = $doctor;
             }
         }
-        dd($sponsored_doctors);
         return view('homepage', compact('sponsored_doctors', 'specializations'));
     }
 
@@ -74,6 +74,12 @@ class GuestController extends Controller
 
         return back()->with('message', 'Il tuo messaggio è stato inviato con successo');
     }
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */  
 
     /**
      * Store a newly created resource in storage.

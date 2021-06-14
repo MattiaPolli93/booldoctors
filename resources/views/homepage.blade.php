@@ -18,7 +18,7 @@
         </header>
         <main>
             <div>
-                @foreach ($doctors as $doctor)
+                @foreach ($sponsored_doctors as $doctor)
                     <ul style="list-style: none">
                         <li style="font-size: 26px">{{$doctor->name}} {{$doctor->surname}}</li>
                     </ul>            
