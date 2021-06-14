@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Detail;
 use App\Http\Controllers\Controller;
+use App\Service;
 use App\Specialization;
 use App\User;
 use Illuminate\Http\Request;
@@ -18,7 +19,9 @@ class UserController extends Controller
         'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         'bio' => 'nullable|string',
         'address' => 'required|string|max:100',
-        'phone' => 'nullable|string|max:25'
+        'phone' => 'nullable|string|max:25',
+        'service_name' => 'nullable|string',
+        'service_price' => 'nullable|numeric'
     ]);
 
 
@@ -38,52 +41,57 @@ class UserController extends Controller
         return view('admin.index', compact('user', 'details'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        $specializations = Specialization::all();
+    // /**
+    //  * Show the form for creating a new resource.
+    //  *
+    //  * @return \Illuminate\Http\Response
+    //  */
+    // public function create()
+    // {
+    //     $specializations = Specialization::all();
 
-        return view('admin.create', compact('specializations'));
+    //     return view('admin.create', compact('specializations'));
 
 
-    }
+    // }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        // validazione dei dati inseriti
-        $validation = $this->validation;
-        $request->validate($validation);
+    // /**
+    //  * Store a newly created resource in storage.
+    //  *
+    //  * @param  \Illuminate\Http\Request  $request
+    //  * @return \Illuminate\Http\Response
+    //  */
+    // public function store(Request $request, $id)
+    // {
+    //     // validazione dei dati inseriti
+    //     $validation = $this->validation;
+    //     $request->validate($validation);
 
-        /* // imposto lo user_id
-        $data['user_id'] = Auth::id();
+    //     /* // imposto lo user_id
+    //     $data['user_id'] = Auth::id();
 
-        // prendo tutti i dati da salvare
-        $data = $request->all();
+    //     // prendo tutti i dati da salvare
+    //     $data = $request->all();
 
-        //inserimento dei dati
-        $details = Detail::create($data);   */
+    //     //inserimento dei dati
+    //     $details = Detail::create($data);   */
+    //     $doctor = User::where('id', $id)->first();
+    //     Detail::create([
+    //         'address' => request('address'),
+    //         'phone' => request('phone'),
+    //         'bio' => request('bio'),
+    //         //prende lo user_id
+    //         'user_id' => auth()->id()
+    //     ]);
 
-        Detail::create([
-            'address' => request('address'),
-            'phone' => request('phone'),
-            'bio' => request('bio'),
-            //prende lo user_id
-            'user_id' => auth()->id()
-        ]);
+    //     if (!isset($data['specializations'])) {
+    //         $data['specializations'] = [];
+    //     }
+    //     $doctor->specializations()->sync($data['specializations']);
 
-        // reindirizzamento alla pagina index
-        return redirect()->route('admin.profile.index')->with('message', 'le tue informazioni sono state aggiunte!');
-    }
+    //     // reindirizzamento alla pagina index
+    //     return redirect()->route('admin.profile.index')->with('message', 'le tue informazioni sono state aggiunte!');
+    // }
 
     /**
      * Display the specified resource.
@@ -104,11 +112,12 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user, Detail $details, $id)
+    public function edit(User $user, Service $services, Specialization $specializations, $id)
     {
 
         $user_id = Auth::id();
         $details = Detail::where('user_id', $id)->first();
+        $specializations = Specialization::all();
 
         if ($details->user_id != $user_id) {
             abort('403');
@@ -117,7 +126,7 @@ class UserController extends Controller
 
 
 
-        return view('admin.edit', compact('doctor', 'details'));
+        return view('admin.edit', compact('doctor', 'details', 'specializations'));
     }
 
     /**
@@ -127,7 +136,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id, Detail $details)
+    public function update(Request $request, $id)
     {
 
         $user_id = Auth::id();
@@ -136,14 +145,30 @@ class UserController extends Controller
         $validation = $this->validation;
         $request->validate($validation);
 
+        $data = $request->only('bio', 'address', 'phone');
+
         $doctor = User::where('id', $id)->first();
-
-        $data = $request->all();;
-
+        
         // salvataggio dei dati modificati
-        $doctor->details->update($data);     
+        $doctor->details->update($data);
+        
+        if ($request->service_name || $request->service_price) {
+            // salvataggio nella tabella service
+            $newService = new Service();
+            $newService->user_id = $user_id;
+            $newService->service = $request->service_name;
+            $newService->price = $request->service_price;
+            $newService->save();
+        }
 
-        return redirect()->route('admin.profile.index', compact('details'))->with('message', 'Il profilo è stato modificato');
+        // controllo specializzazioni
+        $spec = $request->only('field');
+        if ( !isset($spec['field']) ) {
+            $spec['field'] = [];
+        }
+        $doctor->specializations()->sync($spec['field']);
+
+        return redirect()->route('admin.profile.index', $doctor)->with('message', 'Il profilo è stato modificato');
 
     }
 
