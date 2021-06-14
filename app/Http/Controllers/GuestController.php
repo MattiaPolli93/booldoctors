@@ -33,10 +33,13 @@ class GuestController extends Controller
             foreach ($doctor->plans as $plan) {
                 $ordered_plan[] = $plan->pivot->expire_date;
             }
-            // controllo l'ultima data di scadenza del piano
-            if ($ordered_plan[count($ordered_plan) - 1] > $now) {
-                // se il piano non è scaduto, inserisco il dottore tra i sponsorizzati
-                $sponsored_doctors[] = $doctor;
+            
+            if ($ordered_plan != null) {
+                // controllo l'ultima data di scadenza del piano
+                if ($ordered_plan[count($ordered_plan) - 1] > $now) {
+                    // se il piano non è scaduto, inserisco il dottore tra i sponsorizzati
+                    $sponsored_doctors[] = $doctor;
+                }
             }
         }
         return view('homepage', compact('sponsored_doctors', 'specializations'));
