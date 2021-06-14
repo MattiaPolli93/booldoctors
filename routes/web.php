@@ -22,7 +22,7 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 
 /* Route::get('/home', 'HomeController@index')->name('home'); */
-Route::prefix('user')->name('user.')->namespace('User')->middleware('auth')->group(function () {
+Route::prefix('admin')->name('admin.')->namespace('Admin')->middleware('auth')->group(function () {
     Route::resource('profile', 'UserController');
     /* Route::resource('create', 'UserController'); */
     /* Route::resource('posts', 'PostController');

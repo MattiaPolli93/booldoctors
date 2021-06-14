@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
-<body>        
+<body>
     <h1>{{$user->name}}</h1>
     <h4>{{$user->details->address}}</h4>
-    <p>{{$user->details->bio}}</p>   
+    <p>{{$user->details->bio}}</p>
 </body>
 </html>

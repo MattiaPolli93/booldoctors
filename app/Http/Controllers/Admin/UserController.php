@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\User;
+namespace App\Http\Controllers\Admin;
 
 use App\Detail;
 use App\Http\Controllers\Controller;
@@ -21,7 +21,7 @@ class UserController extends Controller
         'phone' => 'nullable|string|max:25'
     ]);
 
-    
+
     /**
      * Display a listing of the resource.
      *
@@ -32,10 +32,10 @@ class UserController extends Controller
         $doctor_id = Auth::id();
 
         $user = User::where('id', $doctor_id)->first();
-        
+
         $details = Detail::where('id', $doctor_id)->first();
 
-        return view('user.index', compact('user', 'details'));
+        return view('admin.index', compact('user', 'details'));
     }
 
     /**
@@ -45,11 +45,11 @@ class UserController extends Controller
      */
     public function create()
     {
-        $specializations = Specialization::all();        
+        $specializations = Specialization::all();
 
-        return view('user.create', compact('specializations'));
+        return view('admin.create', compact('specializations'));
 
-    
+
     }
 
     /**
@@ -68,11 +68,11 @@ class UserController extends Controller
         $data['user_id'] = Auth::id();
 
         // prendo tutti i dati da salvare
-        $data = $request->all();     
-                
+        $data = $request->all();
+
         //inserimento dei dati
-        $details = Detail::create($data);   */   
-        
+        $details = Detail::create($data);   */
+
         Detail::create([
             'address' => request('address'),
             'phone' => request('phone'),
@@ -82,7 +82,7 @@ class UserController extends Controller
         ]);
 
         // reindirizzamento alla pagina index
-        return redirect()->route('user.profile.index')->with('message', 'le tue informazioni sono state aggiunte!');
+        return redirect()->route('admin.profile.index')->with('message', 'le tue informazioni sono state aggiunte!');
     }
 
     /**
@@ -107,10 +107,10 @@ class UserController extends Controller
 
         $doctor = User::where('id', $id)->first();
 
-        $details = Detail::all();       
-        
+        $details = Detail::all();
 
-        return view('user.edit', compact('doctor', 'details'));
+
+        return view('admin.edit', compact('doctor', 'details'));
     }
 
     /**
@@ -120,7 +120,7 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id, Detail $details) 
+    public function update(Request $request, $id, Detail $details)
     {
 
         $user_id = Auth::id();
@@ -132,16 +132,16 @@ class UserController extends Controller
         $doctor = User::where('id', $id)->first();
 
         $data = $request->all();;
-        
-        
+
+
 
         $details->update($data);
 
         dd($details);
 
-       
 
-        return redirect()->route('user.profile.index', compact('details'))->with('message', 'Il profilo è stato modificato');
+
+        return redirect()->route('admin.profile.index', compact('details'))->with('message', 'Il profilo è stato modificato');
 
     }
 
