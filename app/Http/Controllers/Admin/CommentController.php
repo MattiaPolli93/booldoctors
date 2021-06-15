@@ -16,8 +16,7 @@ class CommentController extends Controller
 
         $user = User::where('id', $doctor_id)->first();
 
-        $comments = Comment::where('user_id', $doctor_id)->get();          
-        
+        $comments = Comment::where('user_id', $doctor_id)->get();        
 
         return view('admin.comments', compact('user', 'comments'));
 
