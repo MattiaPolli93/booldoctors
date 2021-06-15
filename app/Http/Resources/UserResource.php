@@ -20,8 +20,7 @@ class UserResource extends JsonResource
         return [
             'id' => $this->id,
             'name' => $this->name,
-            'sruname' => $this->surname,
-            'email' => $this->email,
+            'surname' => $this->surname,
             'details' => new DetailResource($this->details),
             'specializations' => SpecializationResource::collection($this->specializations),
             'rate' => CommentResource::collection($this->comments)
