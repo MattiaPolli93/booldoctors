@@ -7,7 +7,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-xs-12">
+        <div class="col">
 
             {{-- personal info --}}
             <section id="info">
@@ -37,9 +37,9 @@
                 <p>{{$user->details->bio}}</p>
 
                 
-                <a href="#"><button type="button" class="btn btn-info">Mostra recensioni</button></a>
-                <a href="#"><button type="button" class="btn btn-info">Mostra messaggi</button></a>
-                <a href="#"><button type="button" class="btn btn-info">Visualizza statistiche</button></a>
+                
+                <a href="{{route('admin.messages')}}"><button type="button" class="btn btn-info">Mostra messaggi</button></a>
+                
             </section>
             {{-- fine personal info --}}
 
@@ -48,8 +48,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12">
-                            ciao
-
+                            <a href="{{route('admin.comments')}}"><button type="button" class="btn btn-info">Mostra recensioni</button></a>
                         </div>
                     </div>
                 </div>
@@ -62,7 +61,7 @@
                     <div class="row">
                         <div class="col-xs-12">
                             come
-
+                            <a href="#"><button type="button" class="btn btn-info">Visualizza statistiche</button></a>
                         </div>
                     </div>
                 </div>
