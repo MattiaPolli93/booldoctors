@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\GuestController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -24,6 +25,7 @@ Auth::routes();
 /* Route::get('/home', 'HomeController@index')->name('home'); */
 Route::prefix('admin')->name('admin.')->namespace('Admin')->middleware('auth')->group(function () {
     Route::resource('profile', 'UserController');
+    Route::delete('services/{id}', 'ServiceController@destroy')->name('service.destroy');
     /* Route::resource('create', 'UserController'); */
     /* Route::resource('posts', 'PostController');
     Route::resource('tags', 'TagController'); */

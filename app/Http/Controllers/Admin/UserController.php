@@ -9,14 +9,13 @@ use App\Specialization;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-
-
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
 
     protected $validation = ([
-        'image' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        'image' => 'nullable|mimes:jpeg,png,jpg,gif,svg|max:2048',
         'bio' => 'nullable|string',
         'address' => 'required|string|max:100',
         'phone' => 'nullable|string|max:25',
@@ -118,6 +117,7 @@ class UserController extends Controller
         $user_id = Auth::id();
         $details = Detail::where('user_id', $id)->first();
         $specializations = Specialization::all();
+        $services = Service::where('user_id', $id)->get();
 
         if ($details->user_id != $user_id) {
             abort('403');
@@ -126,7 +126,7 @@ class UserController extends Controller
 
 
 
-        return view('admin.edit', compact('doctor', 'details', 'specializations'));
+        return view('admin.edit', compact('doctor', 'details', 'specializations', 'services'));
     }
 
     /**
@@ -145,9 +145,14 @@ class UserController extends Controller
         $validation = $this->validation;
         $request->validate($validation);
 
-        $data = $request->only('bio', 'address', 'phone');
+        $data = $request->only('bio', 'address', 'phone', 'image');
 
         $doctor = User::where('id', $id)->first();
+
+        // salvo l'immagine
+        if (isset($data['image'])) {
+            $data['image'] = Storage::disk('public')->put('images', $data['image']);
+        }
         
         // salvataggio dei dati modificati
         $doctor->details->update($data);
@@ -167,6 +172,8 @@ class UserController extends Controller
             $spec['field'] = [];
         }
         $doctor->specializations()->sync($spec['field']);
+
+        
 
         return redirect()->route('admin.profile.index', $doctor)->with('message', 'Il profilo è stato modificato');
 
