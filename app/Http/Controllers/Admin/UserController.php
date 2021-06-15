@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Detail;
 use App\Http\Controllers\Controller;
+use App\Message;
 use App\Service;
 use App\Specialization;
 use App\User;
@@ -35,7 +36,7 @@ class UserController extends Controller
 
         $user = User::where('id', $doctor_id)->first();
 
-        $details = Detail::where('id', $doctor_id)->first();
+        $details = Detail::where('id', $doctor_id)->first();        
 
         return view('admin.index', compact('user', 'details'));
     }
@@ -177,7 +178,7 @@ class UserController extends Controller
 
         return redirect()->route('admin.profile.index', $doctor)->with('message', 'Il profilo è stato modificato');
 
-    }
+    }  
 
     /**
      * Remove the specified resource from storage.

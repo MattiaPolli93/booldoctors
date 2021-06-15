@@ -26,6 +26,8 @@ Auth::routes();
 Route::prefix('admin')->name('admin.')->namespace('Admin')->middleware('auth')->group(function () {
     Route::resource('profile', 'UserController');
     Route::delete('services/{id}', 'ServiceController@destroy')->name('service.destroy');
+    Route::get('messages', 'MessageController@showMessages')->name('messages');
+    Route::get('comments', 'CommentController@showComments')->name('comments');
     /* Route::resource('create', 'UserController'); */
     /* Route::resource('posts', 'PostController');
     Route::resource('tags', 'TagController'); */

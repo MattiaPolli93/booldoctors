@@ -6,11 +6,10 @@
 
 @section('content')
     <div class="container">
-        <h1>I tuoi messaggi</h1>
-        @foreach ($messages as $message)
-        <p>{{$message->message}}</p>    
+        <h1>I tuoi commenti</h1>
+        @foreach ($comments as $comment)
+        <p>{{$comment->comment}}</p>    
         @endforeach
         <p> <a href="{{ route('admin.profile.index') }}">Back to Homepage?</a> </p>
     </div>
 @endsection
-
