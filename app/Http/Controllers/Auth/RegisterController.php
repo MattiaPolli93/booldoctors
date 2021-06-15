@@ -73,14 +73,14 @@ class RegisterController extends Controller
         //     'user_id' => $user->id + 1,
         //     'address' => $data['address']
         // ]);
-
+        // crea il nuovo utente da registrare
         $user = User::create([
             'surname' => $data['surname'],
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);
-        //UserData is the Model of user_data table
+        //inserisce le informazioni nella tabella Details
         Detail::create([
             'user_id' => $user->id,
             'address' => $data['address']
