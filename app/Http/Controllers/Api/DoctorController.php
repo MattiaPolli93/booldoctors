@@ -39,6 +39,8 @@ class DoctorController extends Controller
         $sponsoredDoc = User::join('plan_user', 'users.id', '=', 'plan_user.user_id')
                             ->select('users.*', 'plan_user.*')
                             ->where('plan_user.expire_date', '>', Carbon::now())
-                            ->get();        
+                            ->get();    
+                            
+        return response()->json($sponsoredDoc);
     }
 }

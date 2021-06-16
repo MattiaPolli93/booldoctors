@@ -14,7 +14,7 @@
         </select>
     </div>
     <ul>
-        <li v-for="doctor in filterDoc">
+        <li v-for="doctor in filterDoc" class="mt-3">
             @{{doctor.name}} @{{doctor.surname}}
             <p>@{{doctor.details.address}}</p>
         </li>
