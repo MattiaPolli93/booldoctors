@@ -25,7 +25,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
+    {{-- <div id="app"> --}}
         @include('partials.header')
 
         <main class="py-4">
@@ -33,7 +33,7 @@
         </main>
 
         @include('partials.footer')
-    </div>
+    {{-- </div> --}}
     <script src="{{ asset('js/app.js') }}" defer></script>
 </body>
 </html>
