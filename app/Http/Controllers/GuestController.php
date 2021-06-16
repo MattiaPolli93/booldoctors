@@ -125,4 +125,8 @@ class GuestController extends Controller
         return view('show', compact('doctor'));
     }
 
+    public function searchDoctors() {
+        return view('search');
+    }
+
 }

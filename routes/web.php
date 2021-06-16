@@ -35,6 +35,7 @@ Route::prefix('admin')->name('admin.')->namespace('Admin')->middleware('auth')->
 });
 
 Route::get('/', 'GuestController@index')->name('homepage');
+Route::get('search', 'GuestController@searchDoctors')->name('search');
 Route::get('doctor/{id}', 'GuestController@show')->name('show');
 Route::post('doctor/{id}/store-message', 'GuestController@storeMessage')->name('doctor.store-message');
 Route::post('doctor/{id}/store-comment', 'GuestController@storeComment')->name('doctor.store-comment');
