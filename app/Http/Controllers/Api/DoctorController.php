@@ -11,22 +11,26 @@ use Illuminate\Http\Request;
 class DoctorController extends Controller
 {
     public function searchDoctor(Request $request)
-    {
-        /* $doctors = User::all(); */
-        /* $doctors = User::where('specialization', 'like', '%' . $request->specialization['specialization'] . '%')->get() */;
-        /* $doctors = DB::table('users')
-                    ->join('comments','users.id','=','comments.user_id')
-                    ->select('comments.user_id', DB::raw('count(*) as total'))
-                    ->groupBy('comments.user_id')
-                    ->get(); */
-        /* $q = $_GET['id']; */
-         
-        $prova = request('id');
-        $doctors = User::all();
+    {   
+        /* 
+        array di parametri che passo lmao
+        dd($request->query('id')); 
+        */
+        if ($request->query('id')) {
+            $doctors = User::join('specialization_user', 'users.id', '=', 'specialization_user.user_id')
+            ->join('comments', 'users.id', '=', 'comments.user_id')
+            ->select('users.*', 'specialization_user.*')
+            ->where('specialization_id', $request->query('id'))
+            ->get();
+        } else {
+            $doctors = User::all();
+        }
+        
         /* dd($doctors); */
-        /* dd(request('id')); */ 
-        /* return response()->json($doctors); */
-        return UserResource::collection($doctors);
+        return $doctors;
+
+        /* $doctors_due = User::all();            
+        return UserResource::collection($doctors_due); */
         
     }
 }
