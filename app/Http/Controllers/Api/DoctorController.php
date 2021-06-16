@@ -16,7 +16,7 @@ class DoctorController extends Controller
         array di parametri che passo lmao
         dd($request->query('id')); 
         */
-        if ($request->query('id')) {
+        /* if ($request->query('id')) {
             $doctors = User::join('specialization_user', 'users.id', '=', 'specialization_user.user_id')
             ->join('comments', 'users.id', '=', 'comments.user_id')
             ->select('users.*', 'specialization_user.*')
@@ -24,13 +24,13 @@ class DoctorController extends Controller
             ->get();
         } else {
             $doctors = User::all();
-        }
+        } */
         
-        /* dd($doctors); */
-        return $doctors;
+        /* dd($doctors);
+        return $doctors; */
 
-        /* $doctors_due = User::all();            
-        return UserResource::collection($doctors_due); */
+        $doctors_due = User::all();            
+        return UserResource::collection($doctors_due);
         
     }
 }
