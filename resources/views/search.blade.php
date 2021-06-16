@@ -5,10 +5,18 @@
 @endsection
 
 @section('content')
-<div class="container" id="search">    
+<div class="container" id="search">
+    <div>
+        <select name="spec" id="spec" v-model="spec" v-on:change="filterSpec">
+            @foreach ($specializations as $specialization)
+                <option :value="{{$specialization->id}}">{{$specialization->specialization}}</option>
+            @endforeach
+        </select>
+    </div>
     <ul>
-        <li v-for="doctor in doctors">
+        <li v-for="doctor in filterDoc">
             @{{doctor.name}} @{{doctor.surname}}
+            <p>@{{doctor.details.address}}</p>
         </li>
     </ul>   
 </div>

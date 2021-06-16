@@ -121,12 +121,15 @@ class GuestController extends Controller
     public function show($id)
     {
         $doctor = User::where('id', $id)->first();
+        
 
         return view('show', compact('doctor'));
     }
 
-    public function searchDoctors() {
-        return view('search');
+    public function searchDoctors(Specialization $specializations) 
+    {
+        $specializations = Specialization::all();
+        return view('search', compact('specializations'));
     }
 
 }
