@@ -19,3 +19,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('v1/doctors', 'Api\DoctorController@searchDoctor');
+Route::get('v1/sponsoredDoc', 'Api\DoctorController@sponsoredDoctor');
+
