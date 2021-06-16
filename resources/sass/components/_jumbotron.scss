@@ -1,0 +1,16 @@
+.my_jumbotron {
+    background-image: url('../../img/jambotron.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+    position: relative;
+    color: $white;
+    .clame{
+        padding-top: 120px;
+        h3 {
+            color: rgba($color: $white, $alpha: .9);
+            padding: 70px 0 45px;
+        }
+    }
+}

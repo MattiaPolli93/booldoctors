@@ -10028,14 +10028,83 @@ img {
   flex-basis: 50%;
 }
 
+.reset_btn {
+  border: none;
+  box-shadow: none;
+}
+
+.my_jumbotron h1 {
+  font-size: 60px;
+  max-width: 75%;
+}
+
 .image_box img {
   width: 100%;
+}
+
+.my_container {
+  width: 60%;
+  margin: auto;
+}
+
+.my_action {
+  background-color: transparent;
+  padding: 15px 20px;
+  border: 0.2em solid white;
+  font-size: 24px;
+  font-weight: 700;
+  border-radius: 20px;
+  background-color: transparent;
+  color: white;
+  transition: background-color 0.1s linear;
+}
+.my_action:hover {
+  background-color: white;
+  color: #00B295;
 }
 
 footer {
   background-color: #1af3c495;
 }
 
+.infoShow {
+  padding: 80px 0;
+}
+.infoShow .my_container {
+  display: flex;
+  justify-content: space-between;
+}
+.infoShow .card {
+  width: calc((100% / 3) - 10px);
+  padding: 40px 25px;
+  max-width: 270px;
+}
+
 main #info {
   background-color: #ccdbd8;
+}
+.my_jumbotron {
+  background-image: url("../../img/jambotron.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 600px;
+  position: relative;
+  color: white;
+}
+.my_jumbotron .clame {
+  padding-top: 120px;
+}
+.my_jumbotron .clame h3 {
+  color: rgba(255, 255, 255, 0.9);
+  padding: 70px 0 45px;
+}
+
+.card {
+  background-color: white;
+  box-shadow: 3px 3px 10px -3px rgba(0, 0, 0, 0.79);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
 }
