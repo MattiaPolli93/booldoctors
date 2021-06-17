@@ -52,9 +52,23 @@ const Search = {
     },
     computed: {
         docLimit() {
+            for (let i = this.doctors.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                const temp = this.doctors[i];
+                this.doctors[i] = this.doctors[j];
+                this.doctors[j] = temp;
+            }
             return this.doctors.slice(0, 5)
         }
     }
 }
 
 Vue.createApp(Search).mount('#search')
+
+
+for (let i = this.doctors.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    const temp = this.doctors[i];
+    this.doctors[i] = this.doctors[j];
+    this.doctors[j] = temp;
+}
