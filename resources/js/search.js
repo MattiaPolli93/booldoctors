@@ -25,7 +25,7 @@ const Search = {
                }
            }
            console.log(allDoctors);
-           console.log(this.sponsoredDocs);
+           console.log(this.filterDoc);
            /* for(var i = 0; i < this.sponsoredDocs.length; i++){
               for(var j = 0; j < this.sponsoredDocs[i].length; j++){
                 if(this.sponsoredDocs[i] == this.spec){

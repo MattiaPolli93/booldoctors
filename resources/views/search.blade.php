@@ -15,8 +15,11 @@
     </div>
     <ul>
         <li v-for="doctor in filterDoc" class="mt-3">
-            @{{doctor.name}} @{{doctor.surname}}
+            <h3>@{{doctor.name}} @{{doctor.surname}}</h3>
             <p>@{{doctor.details.address}}</p>
+            <h5>Specializzazioni</h5>          
+            <p v-for="doc in doctor.specializations">@{{doc.field}}</p>
+
         </li>
     </ul>   
 </div>
