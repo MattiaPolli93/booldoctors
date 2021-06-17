@@ -10186,6 +10186,7 @@ main #sponsor .text h2 {
 
 .cardDoctor {
   display: flex;
+  width: 100%;
   margin: 30px 0;
 }
 .cardDoctor .docInfo {
@@ -10203,6 +10204,9 @@ main #sponsor .text h2 {
 }
 .cardDoctor .docAvatar {
   width: 15%;
+}
+.cardDoctor .docAvatar img {
+  width: 120px;
 }
 
 .my_tag {

@@ -1,6 +1,6 @@
 .card {
     background-color: $white;
-    -webkit-box-shadow: 3px 3px 10px -3px rgba(0,0,0,0.79); 
+    -webkit-box-shadow: 3px 3px 10px -3px rgba(0,0,0,0.79);
     box-shadow: 3px 3px 10px -3px rgba(0,0,0,0.79);
     display: flex;
     align-items: center;
@@ -10,6 +10,7 @@
 
 .cardDoctor {
     display: flex;
+    width: 100%;
     margin: 30px 0;
     .docInfo {
         width: 85%;
@@ -27,5 +28,8 @@
 
     .docAvatar {
         width: 15%;
+        img {
+          width: 120px;
+        }
     }
 }

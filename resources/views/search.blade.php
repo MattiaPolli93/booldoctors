@@ -17,7 +17,7 @@
     <div v-for="doctor in filterDoc" class="cardDoctor">
         <div class="docAvatar">
             <div class="image_box">
-                <img v-if="doctor.details.image != 'https://via.placeholder.com/150'"{{-- da modificare in caso di seed --}} :src="'storage/'+ doctor.details.image" :alt="'Immagine di ' + doctor.name + ' ' + doctor.surname">
+                <img v-if="doctor.details.image != 'https://via.placeholder.com/150'"{{-- da modificare in caso di seed --}} :src="'storage/' + doctor.details.image" :alt="'Immagine di ' + doctor.name + ' ' + doctor.surname">
                 <img v-else src="https://i.ibb.co/wQBsxBd/standard-Doctor.png" alt="Immagine del dottore">
             </div>
         </div>
@@ -28,12 +28,12 @@
             <a :href="'http://127.0.0.1:8000/doctor/' + doctor.id">Contatta questo professionista</a>
         </div>
     </div>
-{{-- 
+{{--
     <ul>
         <li v-for="doctor in filterDoc" class="mt-3">
             <h3>@{{doctor.name}} @{{doctor.surname}}</h3>
             <p>@{{doctor.details.address}}</p>
-            <h5>Specializzazioni</h5>          
+            <h5>Specializzazioni</h5>
             <p v-for="doc in doctor.specializations">@{{doc.field}}</p>
 
         </li>
