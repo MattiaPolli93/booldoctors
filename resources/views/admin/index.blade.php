@@ -63,18 +63,16 @@
 
             {{-- sponsorships --}}
             <section id="sponsor">
-                <div class="container">
-                    <div class="row">
-                        <div class="col text-center">
-                            <h3>
-                                Vuoi aggiungere una sponsorizzazione al tuo profilo?
-                            </h3>
-                            <p>
-                                Scegli fra le seguenti offerte e acquista visibilità, il tuo profilo sarà messo in risalto nella homepage di BoolDoctors!                       
-                            </p>
-                            <a href="#"><button class="btn btn-info"><em>Ottieni sponsorizzaione</em></button></a>
-                        </div>
+                <div class="col text-center h-100 d-flex flex-column justify-content-between">
+                    <div class="text">
+                        <h2>
+                            Vuoi aggiungere una sponsorizzazione al tuo profilo?
+                        </h2>
+                        <p>
+                            Scegli fra le seguenti offerte e acquista visibilità, il tuo profilo sarà messo in risalto nella homepage di BoolDoctors!           
+                        </p>
                     </div>
+                    <a href="#"><button class="btn btn-info"><em>Ottieni sponsorizzazione</em></button></a>
                 </div>
             </section>
             {{-- fine sponsorships --}}

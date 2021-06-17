@@ -10101,9 +10101,26 @@ footer {
   margin: 30px 0;
 }
 
+main section {
+  padding: 50px 0;
+  height: 60vh;
+}
 main #info {
   background-color: #ccdbd8;
 }
+main #sponsor {
+  background-image: url("https://wallpaperaccess.com/full/3464162.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main #sponsor .text {
+  color: #17a2b8;
+}
+main #sponsor .text h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
 .my_jumbotron {
   background-image: url("../../img/jambotron.jpg");
   background-size: cover;

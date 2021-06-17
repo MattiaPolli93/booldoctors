@@ -1,4 +1,9 @@
 main {
+    section {
+        padding: 50px 0;
+        height: 60vh;
+    }
+
   #info {
     background-color: #ccdbd8;
     
@@ -13,6 +18,17 @@ main {
   }
 
   #sponsor {
-    //code
+    background-image: url("https://wallpaperaccess.com/full/3464162.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .text {
+        color: #17a2b8;
+        
+        h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+    }
   }
 }
