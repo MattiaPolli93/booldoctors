@@ -20,12 +20,36 @@ main {
   }
 
   #reviews {
-    //code
-  }
+    background-color: $background-color;
 
-  #statistics {
+    .reviews,
+    .reviews-image {
+        flex-basis: 50%;
+    }
     
-  }
+    .reviews-image {
+    
+        img {
+            width: 100%;
+        }
+    }
+}
+
+    #statistics {
+        background-color: $bannerColor;
+
+        .statistics,
+        .statistics-image {
+            flex-basis: 50%;
+        }
+
+        .statistics-image {
+
+            img {
+                width: 100%;
+            }
+        }
+    }
 
   #sponsor {
     background-image: url("https://wallpaperaccess.com/full/3464162.jpg");
@@ -33,7 +57,7 @@ main {
     background-repeat: no-repeat;
 
     .text {
-        color: #17a2b8;
+        color: $bannerColor;
         
         h2 {
             font-size: 40px;

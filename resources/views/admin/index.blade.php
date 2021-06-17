@@ -18,8 +18,9 @@
                 </figure>
             </div>
             <a href="{{route('admin.profile.edit', [ 'profile' => $user->id ])}}"><button type="button" class="btn btn-info"><i class="fas fa-pencil-alt"></i>Modifica dettagli</button></a>
+
             {{-- personal details --}}
-            <div class="col">
+            <div class="">
                 <h1>Ciao {{$user->name}} {{$user->surname}}</h1>
                 <h4>{{$user->details->address}}</h4>
             </div>
@@ -31,19 +32,29 @@
 
     {{-- reviews --}}
     <section id="reviews">
-        <div class="my_container">
-            <a href="{{route('admin.comments')}}"><button type="button" class="btn btn-info">Mostra recensioni</button></a>
+        <div class="my_container d-flex flex-row-reverse align-items-center">
+            <div class="reviews d-flex justify-content-center align-items-center">
+                <a href="{{route('admin.comments')}}"><button type="button" class="btn btn-info">Mostra recensioni</button></a>
+            </div>
+            <div class="reviews-image">
+                <img src="https://www.interno16holidayhome.com/wp-content/uploads/2019/01/reviews.png" alt="Recensioni">
+            </div>
         </div>
     </section>
     {{-- fine reviews --}}
 
     {{-- statistics --}}
     <section id="statistics">
-        <div class="my_container">
-            <a href="#"><button type="button" class="btn btn-info">Visualizza le tue statistiche</button></a>
+        <div class="my_container d-flex align-items-center">
+            <div class="statistics d-flex justify-content-center align-items-center">
+                <a href="#"><button type="button" class="btn btn-info">Visualizza le tue statistiche</button></a>
+            </div>
+            <div class="statistics-image">
+                <img src="https://images.vexels.com/media/users/3/143065/isolated/preview/c6cbc8cf5ca3856bca8d5f28c0471fca-bar-graph-cart-by-vexels.png" alt="Grafico">
+            </div>
         </div>                       
-        </section>
-        {{-- fine statistics --}}
+    </section>
+    {{-- fine statistics --}}
 
     {{-- sponsorships --}}
     <section id="sponsor">

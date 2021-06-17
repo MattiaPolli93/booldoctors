@@ -10154,13 +10154,33 @@ main #sponsor {
 main #info {
   background-color: #ccdbd8;
 }
+main #reviews {
+  background-color: #1af3c495;
+}
+main #reviews .reviews,
+main #reviews .reviews-image {
+  flex-basis: 50%;
+}
+main #reviews .reviews-image img {
+  width: 100%;
+}
+main #statistics {
+  background-color: #00B295;
+}
+main #statistics .statistics,
+main #statistics .statistics-image {
+  flex-basis: 50%;
+}
+main #statistics .statistics-image img {
+  width: 100%;
+}
 main #sponsor {
   background-image: url("https://wallpaperaccess.com/full/3464162.jpg");
   background-size: cover;
   background-repeat: no-repeat;
 }
 main #sponsor .text {
-  color: #17a2b8;
+  color: #00B295;
 }
 main #sponsor .text h2 {
   font-size: 40px;
