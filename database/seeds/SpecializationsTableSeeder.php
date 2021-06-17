@@ -13,26 +13,26 @@ class SpecializationsTableSeeder extends Seeder
     public function run()
     {
         $specializations = [
-            "Allergy and immunology",
-            "Anesthesiology",
-            "Dermatology",
-            "Diagnostic radiology",
-            "Emergency medicine",
-            "Family medicine",
-            "Internal medicine",
-            "Medical genetics",
-            "Neurology",
-            "Nuclear medicine",
-            "Obstetrics and gynecology",
-            "Ophthalmology",
-            "Pathology",
-            "Pediatrics",
-            "Physical medicine and rehabilitation",
-            "Preventive medicine",
-            "Psychiatry",
-            "Radiation oncology",
-            "Surgery",
-            "Urology"
+            "Allergologia e immunologia",
+            "Anestesia",
+            "Chirurgia",
+            "Dermatologia",
+            "Genetica medica",
+            "Medicina d'emergenza",
+            "Medicina fisica e riabilitativa",
+            "Medicina generale",
+            "Medicina nucleare",
+            "Medicina interna",
+            "Medicina preventiva",
+            "Neurologia",
+            "Oftalmologia",
+            "Oncologia",
+            "Ostetricia e ginecologia",
+            "Patologia",
+            "Pediatria",
+            "Psichiatria",
+            "Radiologia",
+            "Urologia"
         ];
 
         foreach ($specializations as $specialization) {
