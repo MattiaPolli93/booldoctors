@@ -31,15 +31,9 @@
                             <h4>{{$user->details->address}}</h4>
                         </div>
                     </div>
-                </div>
-                
-               
+                </div>           
                 <p>{{$user->details->bio}}</p>
-
-                
-                
                 <a href="{{route('admin.messages')}}"><button type="button" class="btn btn-info">Mostra messaggi</button></a>
-                
             </section>
             {{-- fine personal info --}}
 
@@ -47,7 +41,7 @@
             <section id="reviews">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xs-12">
+                        <div class="col">
                             <a href="{{route('admin.comments')}}"><button type="button" class="btn btn-info">Mostra recensioni</button></a>
                         </div>
                     </div>
@@ -59,9 +53,8 @@
             <section id="statistics">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xs-12">
-                            come
-                            <a href="#"><button type="button" class="btn btn-info">Visualizza statistiche</button></a>
+                        <div class="col">                            
+                            <a href="#"><button type="button" class="btn btn-info">Visualizza le tue statistiche</button></a>
                         </div>
                     </div>
                 </div>
@@ -72,15 +65,19 @@
             <section id="sponsor">
                 <div class="container">
                     <div class="row">
-                        <div class="col-xs-12">
-
-                            stai
+                        <div class="col text-center">
+                            <h3>
+                                Vuoi aggiungere una sponsorizzazione al tuo profilo?
+                            </h3>
+                            <p>
+                                Scegli fra le seguenti offerte e acquista visibilità, il tuo profilo sarà messo in risalto nella homepage di BoolDoctors!                       
+                            </p>
+                            <a href="#"><button class="btn btn-info"><em>Ottieni sponsorizzaione</em></button></a>
                         </div>
                     </div>
                 </div>
             </section>
             {{-- fine sponsorships --}}
-
         </div>
     </div>
 </div>
