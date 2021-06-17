@@ -49,6 +49,11 @@ const Search = {
                 }
 
             )
+    },
+    computed: {
+        docLimit() {
+            return this.doctors.slice(0, 5)
+        }
     }
 }
 
