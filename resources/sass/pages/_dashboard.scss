@@ -1,33 +1,88 @@
 main {
     section {
         padding: 50px 0;
-    }
 
-  #info {
-    background-color: #ccdbd8;
-
-  }
-
-  #reviews {
-    //code
-  }
-
-  #statistics {
-    //code
-  }
-
-  #sponsor {
-    background-image: url("https://wallpaperaccess.com/full/3464162.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    .text {
-        color: #17a2b8;
-
-        h2 {
-            font-size: 40px;
-            margin-bottom: 20px;
+        .my_container {
+            height: 100%
         }
     }
-  }
+
+    #info,
+    #reviews,
+    #statistics,
+    #sponsor {
+        height: 60vh;
+    }
+
+    #info {
+        background-color: #ccdbd8;
+        
+        .image_box,
+        .details {
+            flex-basis: 50%;
+        }
+
+        .image_box {
+
+            .info-buttons {
+                width: 100%;
+            }
+        }
+
+        .details {
+
+            .name {
+                font-size: 90px;
+                color: $bannerColor;
+                font-style: italic;
+            }
+        }
+    }
+
+    #reviews {
+        background-color: $background-color;
+
+        .reviews,
+        .reviews-image {
+            flex-basis: 50%;
+        }
+
+        .reviews-image {
+        
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    #statistics {
+        background-color: $bannerColor;
+
+        .statistics,
+        .statistics-image {
+            flex-basis: 50%;
+        }
+
+        .statistics-image {
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    #sponsor {
+        background-image: url("https://wallpaperaccess.com/full/3464162.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        .text {
+            color: $bannerColor;
+            
+            h2 {
+                font-size: 40px;
+                margin-bottom: 20px;
+            }
+        }
+    }
 }

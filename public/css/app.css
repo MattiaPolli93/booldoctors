@@ -10043,7 +10043,7 @@ img {
 }
 
 .my_container {
-  width: 60%;
+  width: 70%;
   margin: auto;
 }
 
@@ -10142,8 +10142,49 @@ footer {
 main section {
   padding: 50px 0;
 }
+main section .my_container {
+  height: 100%;
+}
+main #info,
+main #reviews,
+main #statistics,
+main #sponsor {
+  height: 60vh;
+}
 main #info {
   background-color: #ccdbd8;
+}
+main #info .image_box,
+main #info .details {
+  flex-basis: 50%;
+}
+main #info .image_box .info-buttons {
+  width: 100%;
+}
+main #info .details .name {
+  font-size: 90px;
+  color: #00B295;
+  font-style: italic;
+}
+main #reviews {
+  background-color: #1af3c495;
+}
+main #reviews .reviews,
+main #reviews .reviews-image {
+  flex-basis: 50%;
+}
+main #reviews .reviews-image img {
+  width: 100%;
+}
+main #statistics {
+  background-color: #00B295;
+}
+main #statistics .statistics,
+main #statistics .statistics-image {
+  flex-basis: 50%;
+}
+main #statistics .statistics-image img {
+  width: 100%;
 }
 main #sponsor {
   background-image: url("https://wallpaperaccess.com/full/3464162.jpg");
@@ -10151,7 +10192,7 @@ main #sponsor {
   background-repeat: no-repeat;
 }
 main #sponsor .text {
-  color: #17a2b8;
+  color: #00B295;
 }
 main #sponsor .text h2 {
   font-size: 40px;
@@ -10204,9 +10245,6 @@ main #sponsor .text h2 {
 }
 .cardDoctor .docAvatar {
   width: 15%;
-}
-.cardDoctor .docAvatar img {
-  width: 120px;
 }
 
 .my_tag {
