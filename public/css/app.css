@@ -10111,11 +10111,6 @@ footer {
   color: #00B295;
 }
 
-main section {
-  padding: 50px 0;
-  height: 60vh;
-}
-
 .SearchLinks {
   text-align: center;
   background-image: url("../../img/background.png");
@@ -10144,6 +10139,9 @@ main section {
   align-self: flex-start;
 }
 
+main section {
+  padding: 50px 0;
+}
 main #info {
   background-color: #ccdbd8;
 }
@@ -10203,11 +10201,17 @@ main #sponsor .text h2 {
   display: inline-block;
   margin: 10px 0;
 }
+.cardDoctor .docAvatar {
+  width: 15%;
+}
 
 .my_tag {
-  background-color: #1662c6;
+  /* background-color: $bannerSecondary; */
+  background: #084aa3;
+  background: linear-gradient(90deg, #084aa3 0%, #1662c6 14%, #508cdb 100%);
   margin: 10px 3px 10px 0;
   display: inline-block;
   padding: 4px 10px;
   border-radius: 20px;
+  color: white;
 }
