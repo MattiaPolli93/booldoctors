@@ -7,25 +7,28 @@
 @section('content')
     {{-- personal info --}}
     <section id="info">
-        <div class="my_container">
+        <div class="my_container d-flex">
             {{-- profile image --}}
-            <div class="image_box">
+            <div class="image_box d-flex flex-column align-items-center">
                 <figure>
                     <img src="{{ asset('storage/' . $user->details->image) }}" alt="Immagine di {{$user->name}}">
                     <figcaption>
                         <p><small>La tua immagine di profilo</small></p>
                     </figcaption>
                 </figure>
+                <div class="info-buttons d-flex justify-content-around">
+                    <a href="{{route('admin.profile.edit', [ 'profile' => $user->id ])}}"><button type="button" class="btn btn-info"><i class="fas fa-pencil-alt"></i> Modifica dettagli</button></a>
+                    <a href="#"><button type="button" class="btn btn-danger"><i class="fas fa-cross"></i> Elimina profilo</button></a>
+                </div>
             </div>
-            <a href="{{route('admin.profile.edit', [ 'profile' => $user->id ])}}"><button type="button" class="btn btn-info"><i class="fas fa-pencil-alt"></i>Modifica dettagli</button></a>
-
+                
             {{-- personal details --}}
-            <div class="">
-                <h1>Ciao {{$user->name}} {{$user->surname}}</h1>
+            <div class="details d-flex flex-column">
+                <h1>Buongiorno, <br> <span class="name">{{$user->name}} {{$user->surname}}</span></h1>
                 <h4>{{$user->details->address}}</h4>
+                <p>{{$user->details->bio}}</p>
+                <a href="{{route('admin.messages')}}"><button type="button" class="btn btn-info">Mostra messaggi</button></a>
             </div>
-            <p>{{$user->details->bio}}</p>
-            <a href="{{route('admin.messages')}}"><button type="button" class="btn btn-info">Mostra messaggi</button></a>
         </div>
     </section>
     {{-- fine personal info --}}

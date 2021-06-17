@@ -10154,6 +10154,18 @@ main #sponsor {
 main #info {
   background-color: #ccdbd8;
 }
+main #info .image_box,
+main #info .details {
+  flex-basis: 50%;
+}
+main #info .image_box .info-buttons {
+  width: 100%;
+}
+main #info .details .name {
+  font-size: 90px;
+  color: #00B295;
+  font-style: italic;
+}
 main #reviews {
   background-color: #1af3c495;
 }

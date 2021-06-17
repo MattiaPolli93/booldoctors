@@ -14,26 +14,46 @@ main {
         height: 60vh;
     }
 
-  #info {
-    background-color: #ccdbd8;
-    
-  }
+    #info {
+        background-color: #ccdbd8;
+        
+        .image_box,
+        .details {
+            flex-basis: 50%;
+        }
 
-  #reviews {
-    background-color: $background-color;
+        .image_box {
 
-    .reviews,
-    .reviews-image {
-        flex-basis: 50%;
-    }
-    
-    .reviews-image {
-    
-        img {
-            width: 100%;
+            .info-buttons {
+                width: 100%;
+            }
+        }
+
+        .details {
+
+            .name {
+                font-size: 90px;
+                color: $bannerColor;
+                font-style: italic;
+            }
         }
     }
-}
+
+    #reviews {
+        background-color: $background-color;
+
+        .reviews,
+        .reviews-image {
+            flex-basis: 50%;
+        }
+
+        .reviews-image {
+        
+            img {
+                width: 100%;
+            }
+        }
+    }
 
     #statistics {
         background-color: $bannerColor;
@@ -51,18 +71,18 @@ main {
         }
     }
 
-  #sponsor {
-    background-image: url("https://wallpaperaccess.com/full/3464162.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
+    #sponsor {
+        background-image: url("https://wallpaperaccess.com/full/3464162.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
 
-    .text {
-        color: $bannerColor;
-        
-        h2 {
-            font-size: 40px;
-            margin-bottom: 20px;
+        .text {
+            color: $bannerColor;
+            
+            h2 {
+                font-size: 40px;
+                margin-bottom: 20px;
+            }
         }
     }
-  }
 }
