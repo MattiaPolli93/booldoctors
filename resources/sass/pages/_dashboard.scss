@@ -1,6 +1,16 @@
 main {
     section {
         padding: 50px 0;
+
+        .my_container {
+            height: 100%
+        }
+    }
+
+    #info,
+    #reviews,
+    #statistics,
+    #sponsor {
         height: 60vh;
     }
 
@@ -14,7 +24,7 @@ main {
   }
 
   #statistics {
-    //code
+    
   }
 
   #sponsor {

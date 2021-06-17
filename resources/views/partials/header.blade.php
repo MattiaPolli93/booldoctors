@@ -1,6 +1,6 @@
 <header>
     <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-        <div class="container">
+        <div class="my_container">
             <a class="navbar-brand" href="{{ route('homepage') }}">
                 BoolDoctors
             </a>
