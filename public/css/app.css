@@ -10067,6 +10067,11 @@ footer {
   background-color: #1af3c495;
 }
 
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+
 .infoShow {
   padding: 80px 0;
 }
