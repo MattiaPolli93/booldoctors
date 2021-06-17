@@ -10199,6 +10199,52 @@ main #sponsor .text h2 {
   margin-bottom: 20px;
 }
 
+.doctor {
+  display: flex;
+  padding: 30px 0;
+}
+.doctor h1 {
+  color: #5EF77F;
+  font-size: 60px;
+  font-weight: bolder;
+}
+.doctor .col_left {
+  width: 40%;
+}
+.doctor .col_right {
+  width: 60%;
+  padding-left: 20px;
+}
+.doctor .col_right .specializations {
+  margin-top: 25px;
+}
+.doctor .col_right h3 {
+  color: #097521;
+  font-size: 30px;
+  font-weight: bold;
+}
+.doctor .col_right p {
+  margin: 5px 0;
+  font-size: 22px;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+}
+.services .service_box {
+  display: flex;
+  justify-content: space-between;
+  width: 23%;
+  background-color: #1af3c495;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 0 10px 10px 0;
+}
+.services .service_box .right {
+  margin-left: 20px;
+}
+
 .my_jumbotron {
   background-image: url("../../img/jambotron.jpg");
   background-size: cover;
@@ -10245,6 +10291,9 @@ main #sponsor .text h2 {
 }
 .cardDoctor .docAvatar {
   width: 15%;
+}
+.cardDoctor .docAvatar img {
+  width: 120px;
 }
 
 .my_tag {
