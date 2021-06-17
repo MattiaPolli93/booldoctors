@@ -16,7 +16,8 @@ const Search = {
     methods: {
         filterSpec(){
             let allDoctors = [];
-           for(var i = 0; i < this.doctors.length; i++){
+            this.filterDoc = [];
+            for(var i = 0; i < this.doctors.length; i++){
                for(var j = 0; j < this.doctors[i].specializations.length; j++){                   
                    if(this.doctors[i].specializations[j].id == this.spec){
                         this.filterDoc.push(this.doctors[i])
