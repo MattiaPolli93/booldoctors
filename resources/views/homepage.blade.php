@@ -72,7 +72,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nulla labore facere. Voluptatum, incidunt quia amet commodi maiores quos exercitationem distinctio ipsam accusamus nulla deleniti delectus vel iure, voluptatem natus.</p>
                     <a href="#">Contatta questo porfessionista</a>
                 </div>
-                
+
             </div>
 
             <div class="cardDoctor">
@@ -87,10 +87,10 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti nulla labore facere. Voluptatum, incidunt quia amet commodi maiores quos exercitationem distinctio ipsam accusamus nulla deleniti delectus vel iure, voluptatem natus.</p>
                     <a href="#">Contatta questo porfessionista</a>
                 </div>
-                
+
             </div>
         </div>
-    </section>   
+    </section>
     <specs>
         <div class="specializations">
             @foreach ($specializations as $specialization)
@@ -102,7 +102,7 @@
         @foreach ($sponsored_doctors as $doctor)
             <ul style="list-style: none">
                 <li style="font-size: 26px">{{$doctor->name}} {{$doctor->surname}}</li>
-            </ul>            
-        @endforeach        
-    </div> 
+            </ul>
+        @endforeach
+    </div>
 @endsection
