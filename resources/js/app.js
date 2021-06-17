@@ -10,7 +10,7 @@ require('./bootstrap');
 // let app = createApp({})
 // app.component('user-info', require('./components/UserInfo.vue').default);
 // app.mount("#app")
-window.Vue = require('vue');
+/* window.Vue = require('vue'); */
 
 
 /**

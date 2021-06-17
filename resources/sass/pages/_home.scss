@@ -1,5 +1,5 @@
 .infoShow {
-    padding: 80px 0;
+    /* padding: 80px 0; */
     .my_container {
         display: flex;
         justify-content: space-between;
@@ -27,6 +27,36 @@
         .doctorLogo {
             font-size: 100px;
             color: $bannerColor;
+        }
+    }
+}
+
+.SearchLinks {
+    text-align: center;
+    background-image: url('../../img/background.png');
+    background-size: cover;
+    background-position: center;
+    .specializations {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        padding: 40px;
+    }
+    .specialization_container {
+        min-width: 30%;
+        max-width: 33%;
+        padding: 20px 0;
+        margin-bottom: 10px;
+        border-bottom: 2px solid $bannerSecondary;
+
+        a {
+            color: $bannerSecondary;
+            font-weight: 500;
+            font-size: 15px;
+
+            &:last-of-type {
+                align-self: flex-start;
+            }
         }
     }
 }

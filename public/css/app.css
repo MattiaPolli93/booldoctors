@@ -10047,6 +10047,14 @@ img {
   margin: auto;
 }
 
+.sectionP {
+  padding: 40px 0 40px;
+}
+
+.colorName {
+  color: #00B295;
+}
+
 .my_action {
   background-color: transparent;
   padding: 15px 20px;
@@ -10073,7 +10081,7 @@ footer {
 }
 
 .infoShow {
-  padding: 80px 0;
+  /* padding: 80px 0; */
 }
 .infoShow .my_container {
   display: flex;
@@ -10107,6 +10115,35 @@ main section {
   padding: 50px 0;
   height: 60vh;
 }
+
+.SearchLinks {
+  text-align: center;
+  background-image: url("../../img/background.png");
+  background-size: cover;
+  background-position: center;
+}
+.SearchLinks .specializations {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 40px;
+}
+.SearchLinks .specialization_container {
+  min-width: 30%;
+  max-width: 33%;
+  padding: 20px 0;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #1662c6;
+}
+.SearchLinks .specialization_container a {
+  color: #1662c6;
+  font-weight: 500;
+  font-size: 15px;
+}
+.SearchLinks .specialization_container a:last-of-type {
+  align-self: flex-start;
+}
+
 main #info {
   background-color: #ccdbd8;
 }
@@ -10162,8 +10199,9 @@ main #sponsor .text h2 {
 .cardDoctor .docInfo h3 {
   color: #00B295;
 }
-.cardDoctor .docAvatar {
-  width: 15%;
+.cardDoctor .docInfo a {
+  display: inline-block;
+  margin: 10px 0;
 }
 
 .my_tag {
