@@ -10079,6 +10079,27 @@ footer {
   padding: 40px 25px;
   max-width: 270px;
 }
+.infoShow .card div {
+  font-size: 40px;
+  color: #1662c6;
+}
+.infoShow .card h3 {
+  margin: 15px 0 35px;
+  min-height: 90px;
+}
+
+.sponsorDoc .my_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sponsorDoc .my_container .doctorLogo {
+  font-size: 100px;
+  color: #00B295;
+}
+.sponsorDoc .my_container .cardDoctor {
+  margin: 30px 0;
+}
 
 main #info {
   background-color: #ccdbd8;
@@ -10107,4 +10128,24 @@ main #info {
   align-items: center;
   text-align: center;
   flex-direction: column;
+}
+
+.cardDoctor {
+  display: flex;
+}
+.cardDoctor .docInfo {
+  margin: 0 20px;
+  padding: 0 10px 20px 10px;
+  background-color: rgba(157, 187, 172, 0.1);
+}
+.cardDoctor .docInfo h3 {
+  color: #00B295;
+}
+
+.my_tag {
+  background-color: #1662c6;
+  margin: 10px 0;
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
 }
