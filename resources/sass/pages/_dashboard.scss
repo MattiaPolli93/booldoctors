@@ -86,3 +86,44 @@ main {
         }
     }
 }
+=======
+        .reviews-image {
+        
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    #statistics {
+        background-color: $bannerColor;
+
+        .statistics,
+        .statistics-image {
+            flex-basis: 50%;
+        }
+
+        .statistics-image {
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    #sponsor {
+        background-image: url("https://wallpaperaccess.com/full/3464162.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        .text {
+            color: $bannerColor;
+            
+            h2 {
+                font-size: 40px;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+>>>>>>> dashboard
