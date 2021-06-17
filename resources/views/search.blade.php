@@ -28,17 +28,7 @@
             <a :href="'http://127.0.0.1:8000/doctor/' + doctor.id">Contatta questo professionista</a>
         </div>
     </div>
-{{--
-    <ul>
-        <li v-for="doctor in filterDoc" class="mt-3">
-            <h3>@{{doctor.name}} @{{doctor.surname}}</h3>
-            <p>@{{doctor.details.address}}</p>
-            <h5>Specializzazioni</h5>
-            <p v-for="doc in doctor.specializations">@{{doc.field}}</p>
-
-        </li>
-    </ul>    --}}
 </div>
-    <script src="https://unpkg.com/vue@next"></script>
-    <script src="{{ asset('js/search.js') }}" defer></script>
+<script src="https://unpkg.com/vue@next"></script>
+<script src="{{ asset('js/search.js') }}" defer></script>
 @endsection

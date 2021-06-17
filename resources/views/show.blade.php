@@ -4,36 +4,54 @@
     Profilo
 @endsection
 
-@section('content')    
+@section('content')
+<div class="container">
+
+    {{-- dettagli principali --}}
     <div class="doctor">
-        <h1>{{$doctor->name}} {{$doctor->surname}}</h1>
-        <img src="{{$doctor->details->image ? $doctor->details->image : 'https://via.placeholder.com/150'}}" alt="{{$doctor->name}} {{$doctor->surname}}">    
-        <h3>Indirizzo</h3>
-        <p>{{$doctor->details->address}}</p>
-        <h3>Telefono</h3>
-        <p>{{$doctor->details->phone}}</p> 
-        <h3>Bio</h3>
-        <p>{{$doctor->details->bio}}</p>
+        <div class="col_left">
+            <div class="image_box">
+                <img src="{{$doctor->details->image ? $doctor->details->image : 'https://i.ibb.co/wQBsxBd/standard-Doctor.png'}}" alt="{{$doctor->name}} {{$doctor->surname}}">
+            </div>
+        </div>
+        <div class="col_right">
+            <h1>{{$doctor->name}} {{$doctor->surname}}</h1>
+            <div class="specializations">
+                @foreach ($doctor->specializations as $specialization)
+                    <span class="my_tag">{{$specialization['specialization']}}</span>
+                @endforeach
+            </div>
+            <h3>Contatti</h3>
+            <p>Indirizzo: {{$doctor->details->address}}</p>
+            <p>Telefono: {{$doctor->details->phone}}</p>
+        </div>
     </div>
+    {{-- fine dettagli principali --}}
+    <h3>Bio</h3>
+    <p>{{$doctor->details->bio}}</p>
+
+    <h3>Servizi</h3>
     <div class="services">
-        <h2>Servizi</h2>
         @foreach ($doctor->services as $service)
-            <p>{{$service['service']}} {{$service['price']}} €</p>
+        <div class="service_box">
+            <span>{{$service['service']}} </span>
+            <span class="right">{{$service['price']}} €</span>
+        </div>
         @endforeach
     </div> 
-    <div class="specializations">
-        <h2>Specializazioni</h2>
-        @foreach ($doctor->specializations as $specialization)
-            <p>{{$specialization['specialization']}}</p>
-        @endforeach
-    </div>
     <div>
         <h2>Recensioni</h2>
         @foreach ($doctor->comments as $comment)
             <ul>
                 <li>
                     <h4>{{$comment['username']}}</h4>                        
-                    <p>{{$comment['comment']}}</p>                        
+                    <p>Voto: {{$comment['rate']}}</p>
+                    @if ($comment['comment'])
+                    <p>{{$comment['comment']}}</p>
+                    @else
+                    <p><em>Nessun commento</em></p>
+                    @endif
+                    <small>{{$comment['added_on']}}</small>
                 </li>
             </ul>                
         @endforeach
@@ -61,7 +79,7 @@
         @csrf
         @method('POST')
         <div class="form-group">
-            <label for="username">Username</label>
+            <label for="username">Nome</label>
             <input type="username" class="form-control" id="username" name="username" placeholder="Inserisci il tuo username">
         </div>
         <div class="form-group">
@@ -92,5 +110,6 @@
             <button type="submit" class="btn btn-primary">Inserisci</button>
         </div>
     </form>
+</div>
 @endsection
 
