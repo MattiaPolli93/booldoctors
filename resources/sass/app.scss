@@ -23,10 +23,11 @@
 @import 'components/buttons';
 @import 'components/dropdown';
 
-@import 'layout/footer';
-@import 'layout/forms';
 @import 'layout/header';
+@import 'layout/main';
+@import 'layout/forms';
 @import 'layout/sidebar';
+@import 'layout/footer';
 
 @import 'pages/home';
 @import 'pages/dashboard';
