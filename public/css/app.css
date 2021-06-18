@@ -10052,32 +10052,53 @@ img {
 }
 
 .colorName {
-  color: #00B295;
+  color: #00b295;
 }
 
 .my_action {
   background-color: transparent;
   padding: 15px 20px;
-  border: 0.2em solid white;
+  border: 0.2em solid #ffffff;
   font-size: 24px;
   font-weight: 700;
   border-radius: 20px;
   background-color: transparent;
-  color: white;
+  color: #ffffff;
   transition: background-color 0.1s linear;
 }
 .my_action:hover {
-  background-color: white;
-  color: #00B295;
+  background-color: #ffffff;
+  color: #00b295;
+}
+
+header {
+  background-color: #1af3c495;
+  position: fixed;
+  height: 100px;
+  inset: 0;
+  z-index: 3;
+}
+header .my_container {
+  height: 100px;
+  justify-content: center;
+  align-items: center;
+}
+header .my_container .navbar-nav {
+  display: flex;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  header .my_container {
+    justify-content: space-between;
+  }
+}
+
+main {
+  margin-top: 100px;
 }
 
 footer {
   background-color: #1af3c495;
-}
-
-.navbar-nav {
-  display: flex;
-  align-items: center;
 }
 
 .infoShow {
@@ -10108,7 +10129,7 @@ footer {
 }
 .sponsorDoc .my_container .doctorLogo {
   font-size: 100px;
-  color: #00B295;
+  color: #00b295;
 }
 
 .SearchLinks {
@@ -10160,7 +10181,7 @@ main #info .details {
   padding: 0 30px;
 }
 main #info .image_box figure img {
-  width: 80%;
+  max-width: 80%;
 }
 main #info .image_box .info-buttons {
   margin-top: 30px;
@@ -10174,11 +10195,11 @@ main #info .details .bio {
   width: 100%;
 }
 main #info .details .bio h4 {
-  color: #00B295;
+  color: #00b295;
   margin-bottom: 15px;
 }
 main #info .details .name {
-  color: #00B295;
+  color: #00b295;
   font-size: 60px;
   font-style: italic;
 }
@@ -10196,7 +10217,7 @@ main #reviews .reviews-image img {
   width: 100%;
 }
 main #statistics {
-  background-color: #00B295;
+  background-color: #00b295;
 }
 main #statistics .statistics,
 main #statistics .statistics-image {
@@ -10211,7 +10232,7 @@ main #sponsor {
   background-repeat: no-repeat;
 }
 main #sponsor .text {
-  color: #00B295;
+  color: #00b295;
 }
 main #sponsor .text h2 {
   font-size: 40px;
@@ -10223,7 +10244,7 @@ main #sponsor .text h2 {
   padding: 30px 0;
 }
 .doctor h1 {
-  color: #5EF77F;
+  color: #5ef77f;
   font-size: 60px;
   font-weight: bolder;
 }
@@ -10271,7 +10292,7 @@ main #sponsor .text h2 {
   background-position: center;
   height: 600px;
   position: relative;
-  color: white;
+  color: #ffffff;
 }
 .my_jumbotron .clame {
   padding-top: 120px;
@@ -10282,7 +10303,7 @@ main #sponsor .text h2 {
 }
 
 .card {
-  background-color: white;
+  background-color: #ffffff;
   box-shadow: 3px 3px 10px -3px rgba(0, 0, 0, 0.79);
   display: flex;
   align-items: center;
@@ -10302,7 +10323,7 @@ main #sponsor .text h2 {
   background-color: rgba(157, 187, 172, 0.1);
 }
 .cardDoctor .docInfo h3 {
-  color: #00B295;
+  color: #00b295;
 }
 .cardDoctor .docInfo a {
   display: inline-block;
@@ -10323,5 +10344,5 @@ main #sponsor .text h2 {
   display: inline-block;
   padding: 4px 10px;
   border-radius: 20px;
-  color: white;
+  color: #ffffff;
 }
