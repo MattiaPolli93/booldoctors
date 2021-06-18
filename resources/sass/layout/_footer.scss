@@ -1,3 +1,33 @@
 footer {
     background-color: $background_color;
+    padding: 25px 0;
+
+    .list-box {
+        width: calc(100% / 4);
+        padding: 0 15px;
+
+        li {
+            a {
+                color: $bannerColor;
+            }
+        }
+
+        li:first-child {
+            font-size: 25px;
+            font-style: italic;
+            font-weight: bold;
+        }
+    }
+
+    .lower-footer {
+        padding: 25px 0 5px;
+
+        p {
+            color: $bannerColor;
+
+            span {
+                color: #ff0000;
+            }
+        }
+    }
 }

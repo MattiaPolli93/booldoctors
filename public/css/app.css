@@ -10099,6 +10099,28 @@ main {
 
 footer {
   background-color: #1af3c495;
+  padding: 25px 0;
+}
+footer .list-box {
+  width: calc(100% / 4);
+  padding: 0 15px;
+}
+footer .list-box li a {
+  color: #00b295;
+}
+footer .list-box li:first-child {
+  font-size: 25px;
+  font-style: italic;
+  font-weight: bold;
+}
+footer .lower-footer {
+  padding: 25px 0 5px;
+}
+footer .lower-footer p {
+  color: #00b295;
+}
+footer .lower-footer p span {
+  color: #ff0000;
 }
 
 .infoShow {
