@@ -35,11 +35,14 @@ const Search = {
              }
              console.log(this.filterSponsoredDocs);   */
         },
-        affafa() {
-            for (var i = 0; i < this.doctors.length; i++) {
+        filterText() {
+            this.filterDoc = []; 
+            for (var i = 0; i < this.doctors.length; i++){
                 for (var j = 0; j < this.doctors[i].specializations.length; j++) {
-                    if (this.doctors[i].specializations[j].field.toLowerCase().includes(this.spec.toLowerCase())) {
-                        this.filterDoc.push(this.doctors[i])
+                    if (this.doctors[i].specializations[j].field.toLowerCase().includes(this.spec.toLowerCase())){
+
+                        if (!this.filterDoc.includes(this.doctors[i])) this.filterDoc.push(this.doctors[i]);
+
                     }
                 }
             }
