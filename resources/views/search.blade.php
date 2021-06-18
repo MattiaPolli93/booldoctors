@@ -13,7 +13,7 @@
                 <option :value="{{$specialization->id}}">{{$specialization->specialization}}</option>
             @endforeach
         </select> --}}
-        <input type="text" v-model="spec" v-on:keyup="affafa">
+        <input type="text" v-model="spec" v-on:keyup="filterText">
     </div>
     <div v-for="doctor in filterDoc" class="cardDoctor">
         <div class="docAvatar">
