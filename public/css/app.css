@@ -10261,6 +10261,10 @@ main #sponsor .text h2 {
   margin-bottom: 20px;
 }
 
+main .messages {
+  height: 50vh;
+}
+
 .doctor {
   display: flex;
   padding: 30px 0;
