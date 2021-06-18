@@ -11,7 +11,7 @@ main {
     #reviews,
     #statistics,
     #sponsor {
-        height: 60vh;
+        height: 80vh;
     }
 
     #info {
@@ -20,21 +20,47 @@ main {
         .image_box,
         .details {
             flex-basis: 50%;
+            padding: 0 30px;
         }
-
+        
         .image_box {
-
+            
+            figure {
+                
+                img {
+                    width: 80%;
+                }
+            }
+            
             .info-buttons {
+                margin-top: 30px;
                 width: 100%;
             }
         }
 
         .details {
+            h1 {
+                margin-bottom: 25px;
+            }
+
+            .bio {
+                overflow-y: auto;
+                width: 100%;
+
+                h4 {
+                    color: $bannerColor;
+                    margin-bottom: 15px;
+                }
+            }
 
             .name {
-                font-size: 90px;
                 color: $bannerColor;
+                font-size: 60px;
                 font-style: italic;
+            }
+
+            button {
+                margin-top: 25px;
             }
         }
     }

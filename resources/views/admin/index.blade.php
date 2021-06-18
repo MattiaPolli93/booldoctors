@@ -10,12 +10,12 @@
         <div class="my_container d-flex">
             {{-- profile image --}}
             <div class="image_box d-flex flex-column align-items-center">
-                <figure>
+                <figue class="text-center">
                     <img src="{{ asset('storage/' . $user->details->image) }}" alt="Immagine di {{$user->name}}">
                     <figcaption>
                         <p><small>La tua immagine di profilo</small></p>
                     </figcaption>
-                </figure>
+                </figue>
                 <div class="info-buttons d-flex justify-content-around">
                     <a href="{{route('admin.profile.edit', [ 'profile' => $user->id ])}}"><button type="button" class="btn btn-info"><i class="fas fa-pencil-alt"></i> Modifica dettagli</button></a>
                     <a href="#"><button type="button" class="btn btn-danger"><i class="fas fa-cross"></i> Elimina profilo</button></a>
@@ -25,8 +25,10 @@
             {{-- personal details --}}
             <div class="details d-flex flex-column">
                 <h1>Buongiorno, <br> <span class="name">{{$user->name}} {{$user->surname}}</span></h1>
-                <h4>{{$user->details->address}}</h4>
-                <p>{{$user->details->bio}}</p>
+                <div class="bio">
+                    <h4><strong>Indirizzo <br> </strong> {{$user->details->address}}</h4>
+                    <p><strong>Bio <br> </strong> {{$user->details->bio}}</p>
+                </div>
                 <a href="{{route('admin.messages')}}"><button type="button" class="btn btn-info">Mostra messaggi</button></a>
             </div>
         </div>

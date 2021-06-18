@@ -10149,7 +10149,7 @@ main #info,
 main #reviews,
 main #statistics,
 main #sponsor {
-  height: 60vh;
+  height: 80vh;
 }
 main #info {
   background-color: #ccdbd8;
@@ -10157,14 +10157,33 @@ main #info {
 main #info .image_box,
 main #info .details {
   flex-basis: 50%;
+  padding: 0 30px;
+}
+main #info .image_box figure img {
+  width: 80%;
 }
 main #info .image_box .info-buttons {
+  margin-top: 30px;
   width: 100%;
 }
-main #info .details .name {
-  font-size: 90px;
+main #info .details h1 {
+  margin-bottom: 25px;
+}
+main #info .details .bio {
+  overflow-y: auto;
+  width: 100%;
+}
+main #info .details .bio h4 {
   color: #00B295;
+  margin-bottom: 15px;
+}
+main #info .details .name {
+  color: #00B295;
+  font-size: 60px;
   font-style: italic;
+}
+main #info .details button {
+  margin-top: 25px;
 }
 main #reviews {
   background-color: #1af3c495;
