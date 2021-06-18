@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Dashboard
+    BoolDoctors - Dashboard
 @endsection
 
 @section('content')
@@ -21,7 +21,7 @@
                     <a href="#"><button type="button" class="btn btn-danger"><i class="fas fa-cross"></i> Elimina profilo</button></a>
                 </div>
             </div>
-                
+
             {{-- personal details --}}
             <div class="details d-flex flex-column">
                 <h1>Buongiorno, <br> <span class="name">{{$user->name}} {{$user->surname}}</span></h1>
@@ -57,7 +57,7 @@
             <div class="statistics-image">
                 <img src="https://images.vexels.com/media/users/3/143065/isolated/preview/c6cbc8cf5ca3856bca8d5f28c0471fca-bar-graph-cart-by-vexels.png" alt="Grafico">
             </div>
-        </div>                       
+        </div>
     </section>
     {{-- fine statistics --}}
 
@@ -70,7 +70,7 @@
                         Vuoi aggiungere una sponsorizzazione al tuo profilo?
                     </h2>
                     <p>
-                        Scegli fra le seguenti offerte e acquista visibilità, il tuo profilo sarà messo in risalto nella homepage di BoolDoctors!           
+                        Scegli fra le seguenti offerte e acquista visibilità, il tuo profilo sarà messo in risalto nella homepage di BoolDoctors!
                     </p>
                 </div>
                 <a href="#"><button class="btn btn-info"><em>Ottieni sponsorizzazione</em></button></a>

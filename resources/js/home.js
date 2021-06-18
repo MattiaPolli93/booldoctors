@@ -3,9 +3,12 @@ window.Vue = require('vue');
 const Home = {
     data() {
         return {
-            io: 'ciao'
+            prova: [],
         }
-    }
+    },
+
+
 }
+
 
 Vue.createApp(Home).mount('#home')
