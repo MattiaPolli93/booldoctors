@@ -79,7 +79,7 @@
         <div class="specializations my_container">
             @foreach ($specializations as $specialization)
             <div class="specialization_container">
-                <a href="#">{{$specialization['specialization']}}</a>
+                <a href="{{route('search', ['specialization' => $specialization->specialization])}}">{{$specialization['specialization']}}</a>
             </div>
             @endforeach
         </div>
