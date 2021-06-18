@@ -126,10 +126,12 @@ class GuestController extends Controller
         return view('show', compact('doctor'));
     }
 
-    public function searchDoctors(Specialization $specializations) 
+    public function searchDoctors(Specialization $specializations, Request $request) 
     {
         $specializations = Specialization::all();
-        return view('search', compact('specializations'));
+        $currentSpec = Specialization::where('id', $request->query('id'))->first();
+        /* dd($currentSpec->specialization); */
+        return view('search', compact('specializations', 'currentSpec'));
     }
 
 }

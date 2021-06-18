@@ -60,7 +60,24 @@ const Search = {
                         })
                 }
 
-            )
+            );
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const SpecializationUrl = urlParams.get('specialization')
+        console.log(SpecializationUrl);
+        this.spec = SpecializationUrl;
+        setTimeout(()=>{
+            for (var i = 0; i < this.doctors.length; i++) {
+                for (var j = 0; j < this.doctors[i].specializations.length; j++) {
+                    if (this.doctors[i].specializations[j].field.toLowerCase().includes(this.spec.toLowerCase())) {
+
+                        if (!this.filterDoc.includes(this.doctors[i])) this.filterDoc.push(this.doctors[i]);
+
+                    }
+                }
+            }
+        }, 1000);
+        
     },
     computed: {
         docLimit() {
