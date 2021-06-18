@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Profilo
+    BoolDoctors - Profilo
 @endsection
 
 @section('content')
@@ -171,4 +171,3 @@
     
 </div>
 @endsection
-

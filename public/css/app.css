@@ -10261,24 +10261,15 @@ main #sponsor .text h2 {
   margin-bottom: 20px;
 }
 
-<<<<<<< Updated upstream
 main .messages {
   height: 50vh;
 }
 
-.doctor {
-  display: flex;
-  padding: 30px 0;
-}
-.doctor h1 {
-  color: #5ef77f;
-=======
 .profile .details {
   display: flex;
   padding: 30px 0;
 }
 .profile .details h1 {
->>>>>>> Stashed changes
   font-size: 60px;
   font-weight: bolder;
   font-style: italic;
@@ -10294,7 +10285,7 @@ main .messages {
   margin-top: 25px;
 }
 .profile h3 {
-  color: #00B295;
+  color: #00b295;
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 10px;
@@ -10316,13 +10307,13 @@ main .messages {
   border-bottom: 3px solid transparent;
 }
 .profile .menu ul li a {
-  color: #00B295;
+  color: #00b295;
 }
 .profile .menu ul li a:hover {
   text-decoration: none;
 }
 .profile .menu ul li:hover {
-  border-bottom: 3px solid #00B295;
+  border-bottom: 3px solid #00b295;
 }
 .profile #services .service_cont {
   display: flex;
@@ -10366,7 +10357,7 @@ main .messages {
   justify-content: space-between;
 }
 .profile .review_cont .review_box .top .username {
-  color: #00B295;
+  color: #00b295;
   font-size: 18px;
 }
 .profile .review_cont .review_box .date {

@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'failed' => 'Questo indirizzo e-mail non è presente nel nostro database.',
+    'failed' => 'Indirizzo e-mail o password errati.',
     'throttle' => 'Troppi tentativi di accesso. Per favore riprova tra :seconds secondi.',
 
 ];

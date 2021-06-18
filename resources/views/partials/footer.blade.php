@@ -41,7 +41,7 @@
                 <li><a href="#"><i class="fab fa-github"></i> Stefano Bodritti</a></li>
                 <li><a href="#"><i class="fab fa-github"></i> Gabriele Corti</a></li>
                 <li><a href="#"><i class="fab fa-github"></i> Giuseppe Lana</a></li>
-                <li><a href="#"><i class="fab fa-github"></i> Nicolò Matassoli</a></li>
+                <li><a href="https://github.com/matassoli"><i class="fab fa-github"></i> Nicolò Matassoli</a></li>
                 <li><a href="#"><i class="fab fa-github"></i> Mattia Polli</a></li>
             </ul>
         </div>

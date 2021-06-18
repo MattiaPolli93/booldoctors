@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Home
+    BoolDoctors - Home
 @endsection
 
 @section('content')

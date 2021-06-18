@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Messaggi
+    BoolDoctors - Commenti
 @endsection
 
 @section('content')
@@ -10,8 +10,8 @@
         @foreach ($comments as $comment)
         <h6>Valutazione: {{$comment->rate}}</h6>
         @if ($comment->comment != NULL)
-        <p>{{$comment->comment}}</p>    
-        @else 
+        <p>{{$comment->comment}}</p>
+        @else
         <p><em>Nessun commento</em></p>
         @endif
         <p>Inviato da: {{$comment->username}}</p>

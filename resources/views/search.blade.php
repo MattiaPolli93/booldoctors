@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Ricerca avanzata
+    BoolDoctors - Ricerca avanzata
 @endsection
 
 @section('content')

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Registrati
+    BoolDoctors - Registrati
 @endsection
 
 @section('content')
