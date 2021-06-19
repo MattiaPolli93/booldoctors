@@ -10412,8 +10412,12 @@ main .messages {
 .profile .review_cont .review_box .date {
   margin: 10px 0;
 }
-.profile i.fas {
-  color: gold;
+.profile i.fa-star {
+  display: initial;
+  filter: drop-shadow(1px 1px 1px black);
+  background: linear-gradient(to top right, gold 0%, yellow 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .my_jumbotron {

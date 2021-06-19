@@ -52,7 +52,7 @@
     <section id="statistics">
         <div class="my_container d-flex align-items-center">
             <div class="statistics d-flex justify-content-center align-items-center">
-                <a href="#"><button type="button" class="btn btn-info">Visualizza le tue statistiche</button></a>
+                <a href="{{route('admin.statistics')}}"><button type="button" class="btn btn-info">Visualizza le tue statistiche</button></a>
             </div>
             <div class="statistics-image">
                 <img src="https://images.vexels.com/media/users/3/143065/isolated/preview/c6cbc8cf5ca3856bca8d5f28c0471fca-bar-graph-cart-by-vexels.png" alt="Grafico">
