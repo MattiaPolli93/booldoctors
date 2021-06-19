@@ -21,11 +21,10 @@ header {
     .my_container {
         height: 80px;
         align-items: center;
-        justify-content: flex-end;
 
         .navbar-nav {
             display: flex;
-            align-items: center;
+            align-items: flex-end;
         }
         @media screen and (max-width: 768px) {
             justify-content: space-between;

@@ -10109,11 +10109,10 @@ header button .navbar-toggler-icon {
 header .my_container {
   height: 80px;
   align-items: center;
-  justify-content: flex-end;
 }
 header .my_container .navbar-nav {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
 }
 @media screen and (max-width: 768px) {
   header .my_container {
