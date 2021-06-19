@@ -76,7 +76,7 @@ const Search = {
                     }
                 }
             }
-        }, 1000);
+        }, 1500);
         
     },
     computed: {

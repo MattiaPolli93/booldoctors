@@ -10038,6 +10038,10 @@ img {
   max-width: 75%;
 }
 
+.glass .text h3 {
+  font-size: 24px;
+}
+
 .image_box img {
   width: 100%;
 }
@@ -10055,6 +10059,10 @@ img {
   color: #00b295;
 }
 
+.marginB {
+  margin-bottom: 100px;
+}
+
 .my_action {
   background-color: transparent;
   padding: 15px 20px;
@@ -10065,6 +10073,11 @@ img {
   background-color: transparent;
   color: #ffffff;
   transition: background-color 0.1s linear;
+}
+.my_action.small {
+  font-size: 20px;
+  padding: 5px 50px;
+  border-radius: 15px;
 }
 .my_action:hover {
   background-color: #ffffff;
@@ -10180,6 +10193,25 @@ footer .lower-footer p span {
 }
 .SearchLinks .specialization_container a:last-of-type {
   align-self: flex-start;
+}
+
+.glassMorph {
+  padding-top: 85px;
+}
+.glassMorph .glass_blue .glass {
+  background: linear-gradient(180deg, rgba(191, 241, 255, 0.4), rgba(122, 194, 255, 0.4));
+}
+.glassMorph .glass_blue .glass .text {
+  order: 2;
+}
+.glassMorph .glass_blue .glass .glass_img {
+  background: linear-gradient(180deg, rgba(174, 216, 252, 0.8), rgba(136, 197, 255, 0.8));
+  order: 1;
+  margin-left: 0;
+  margin-right: 40px;
+}
+.glassMorph .glass_blue .glass .glass_img svg {
+  fill: white;
 }
 
 main section {
@@ -10427,4 +10459,37 @@ main .messages {
   padding: 4px 10px;
   border-radius: 20px;
   color: #ffffff;
+}
+
+.glass {
+  /* display: flex; */
+  background: linear-gradient(180deg, rgba(173, 255, 205, 0.4), rgba(120, 233, 141, 0.4));
+  height: 255px;
+  border-radius: 16px;
+  padding: 0 40px;
+  display: flex;
+}
+.glass .text {
+  width: 50%;
+  margin: 30px 0;
+}
+.glass .text p {
+  margin: 20px 0 30px;
+}
+.glass .glass_img {
+  background: linear-gradient(180deg, rgba(184, 242, 208, 0.8), rgba(118, 233, 163, 0.8));
+  height: 332px;
+  width: 487px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  left: 0;
+  top: -38px;
+  border-radius: 16px;
+  width: 46%;
+  margin-left: 40px;
+}
+.glass .glass_img svg {
+  width: 40%;
 }

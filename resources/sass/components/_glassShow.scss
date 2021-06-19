@@ -1,0 +1,32 @@
+.glass {
+    /* display: flex; */
+    background:linear-gradient(180deg,rgba(173,255,205,.4),rgba(120,233,141,.4));
+    height: 255px;
+    border-radius: 16px;
+    padding: 0 40px;
+    display: flex;
+    .text {
+        width: 50%;
+        margin: 30px 0;
+        p {
+            margin: 20px 0 30px;
+        }
+    }
+    .glass_img {
+        background: linear-gradient(180deg,rgba(184,242,208,.8),rgba(118,233,163,.8));
+        height: 332px;
+        width: 487px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        left: 0;
+        top: -38px;
+        border-radius: 16px;
+        width: 46%;
+        margin-left: 40px;
+        svg {
+            width: 40%;
+        }
+    }
+}

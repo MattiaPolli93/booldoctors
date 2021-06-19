@@ -60,3 +60,24 @@
         }
     }
 }
+
+.glassMorph {
+    padding-top: 85px;
+    .glass_blue {
+        .glass {
+            background: linear-gradient(180deg,rgba(191,241,255,.4),rgba(122,194,255,.4));;
+            .text {
+                order: 2;
+            }
+            .glass_img {
+                background: linear-gradient(180deg,rgba(174,216,252,.8),rgba(136,197,255,.8));;
+                order: 1;
+                margin-left: 0;
+                margin-right: 40px;
+                svg {
+                    fill: white;
+                }
+            }
+        }
+    }
+}
