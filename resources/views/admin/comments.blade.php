@@ -6,6 +6,7 @@
 
 @section('content')
     <div class="container">
+      <div class="messages">
         <h1>I tuoi commenti</h1>
         @foreach ($comments as $comment)
         <h6>Valutazione: {{$comment->rate}}</h6>
@@ -19,4 +20,5 @@
         @endforeach
         <p> <a href="{{ route('admin.profile.index') }}">Back to Homepage?</a> </p>
     </div>
+  </div>
 @endsection
