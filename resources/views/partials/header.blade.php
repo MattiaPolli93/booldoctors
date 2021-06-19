@@ -1,9 +1,8 @@
 <header>
     <nav class="navbar-expand-md navbar-light">
         <div class="my_container d-flex">
-            <a class="navbar-brand" href="{{ route('homepage') }}">
-                BoolDoctors
-            </a>
+
+          <a class="navbar-brand" href="{{ route('homepage') }}">BoolDoctors</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -28,7 +27,7 @@
                         @endif
                     @else
                         <li class="nav-item">
-                            <a href="{{route('admin.profile.index')}}">Profilo</a>
+
                         </li>
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -36,6 +35,8 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="{{route('admin.profile.index')}}">Profilo</a>
+
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                                     document.getElementById('logout-form').submit();">
@@ -52,4 +53,18 @@
             </div>
         </div>
     </nav>
+
+    <script>
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+        document.getElementsByTagName("header")[0].style.height = "40px";
+        document.getElementsByClassName("my_container")[0].style.height = "40px";
+      } else {
+        document.getElementsByTagName("header")[0].style.height = "80px";
+      document.getElementsByClassName("my_container")[0].style.height = "80px";
+      }
+    }
+    </script>
 </header>

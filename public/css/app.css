@@ -10091,14 +10091,25 @@ img {
 header {
   background-color: #1af3c495;
   position: fixed;
-  height: 100px;
+  height: 80px;
   inset: 0;
   z-index: 3;
 }
-header .my_container {
-  height: 100px;
+header button {
+  height: 30px;
+  display: flex;
   justify-content: center;
   align-items: center;
+}
+header button .navbar-toggler-icon {
+  height: 30px;
+  height: 1em;
+  width: 1em;
+}
+header .my_container {
+  height: 80px;
+  align-items: center;
+  justify-content: flex-end;
 }
 header .my_container .navbar-nav {
   display: flex;
@@ -10111,7 +10122,7 @@ header .my_container .navbar-nav {
 }
 
 main {
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 .card-auth {

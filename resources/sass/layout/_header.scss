@@ -1,20 +1,32 @@
 header {
     background-color: $background_color;
     position: fixed;
-    height: 100px;
+    height: 80px;
     inset: 0;
     z-index: 3;
 
-    .my_container {
-        height: 100px;
+    button {
+        height: 30px;
+        display: flex;
         justify-content: center;
         align-items: center;
+
+        .navbar-toggler-icon {
+            height: 30px;
+            height: 1em;
+            width: 1em;
+        }
+    }
+
+    .my_container {
+        height: 80px;
+        align-items: center;
+        justify-content: flex-end;
 
         .navbar-nav {
             display: flex;
             align-items: center;
         }
-
         @media screen and (max-width: 768px) {
             justify-content: space-between;
         }
