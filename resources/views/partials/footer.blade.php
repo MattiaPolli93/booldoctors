@@ -2,7 +2,7 @@
     <div class="my_container d-flex justify-content-between">
         <div class="list-box">
             <ul>
-                <li><a href="#">Servizi</a></li>
+                <li>Servizi</li>
                 <li><a href="#">Privacy e cookies</a></li>
                 <li><a href="#">Chi siamo</a></li>
                 <li><a href="#">Contatti</a></li>
@@ -13,7 +13,7 @@
         </div>
         <div class="list-box">
             <ul>
-                <li><a href="#">Per i pazienti</a></li>
+                <li>Per i pazienti</li>
                 <li><a href="#">Dottori</a></li>
                 <li><a href="#">Strutture</a></li>
                 <li><a href="#">Chiedi al dottore</a></li>
@@ -25,7 +25,7 @@
         </div>
         <div class="list-box">
             <ul>
-                <li><a href="#">Per i professionisti</a></li>
+                <li>Per i professionisti</li>
                 <li><a href="#">Per i dottori</a></li>
                 <li><a href="#">Prezzi</a></li>
                 <li><a href="#">Risorse gratuite</a></li>
@@ -37,12 +37,12 @@
         </div>
         <div class="list-box">
             <ul>
-                <li><a href="#">Booldoctors</a></li>
-                <li><a href="#"><i class="fab fa-github"></i> Stefano Bodritti</a></li>
-                <li><a href="#"><i class="fab fa-github"></i> Gabriele Corti</a></li>
-                <li><a href="#"><i class="fab fa-github"></i> Giuseppe Lana</a></li>
-                <li><a href="https://github.com/matassoli"><i class="fab fa-github"></i> Nicolò Matassoli</a></li>
-                <li><a href="#"><i class="fab fa-github"></i> Mattia Polli</a></li>
+                <li>Booldoctors</li>
+                <li><a href="https://github.com/Stefano-Bodritti" target="_blank"><i class="fab fa-github"></i> Stefano Bodritti</a></li>
+                <li><a href="https://github.com/GabrieleCorti" target="_blank"><i class="fab fa-github"></i> Gabriele Corti</a></li>
+                <li><a href="https://github.com/MattiaPolli93" target="_blank"><i class="fab fa-github"></i> Giuseppe Lana</a></li>
+                <li><a href="https://github.com/matassoli" target="_blank"><i class="fab fa-github"></i> Nicolò Matassoli</a></li>
+                <li><a href="https://github.com/giuseppe-lana27" target="_blank"><i class="fab fa-github"></i> Mattia Polli</a></li>
             </ul>
         </div>
     </div>

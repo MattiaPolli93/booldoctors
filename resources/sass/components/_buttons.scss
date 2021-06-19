@@ -18,7 +18,10 @@
     &:hover {
         background-color: $white;
         color: $bannerColor;
-    } 
+    }
 
 }
 
+.my_action-blue:hover {
+  color: $bannerSecondary;
+}

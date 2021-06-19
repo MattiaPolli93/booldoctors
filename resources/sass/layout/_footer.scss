@@ -6,10 +6,9 @@ footer {
         width: calc(100% / 4);
         padding: 0 15px;
 
+        a,
         li {
-            a {
-                color: $bannerColor;
-            }
+            color: $bannerColor;
         }
 
         li:first-child {
@@ -21,13 +20,10 @@ footer {
 
     .lower-footer {
         padding: 25px 0 5px;
+        color: $bannerColor;
 
-        p {
-            color: $bannerColor;
-
-            span {
-                color: #ff0000;
-            }
+        span {
+            color: #ff0000;
         }
     }
 }

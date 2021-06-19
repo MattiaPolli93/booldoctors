@@ -92,13 +92,11 @@
             <div class="marginB">
                 <div class="glass blue">
                     <div class="text">
-                        <h3> Sei un dottore o uno specialista sanitario?
-                            Entra nella nuova era digitale 
-                        </h3>
+                        <h3>Sei un dottore o uno specialista sanitario? Entra nella nuova era digitale</h3>
                         <p>
-                            Un unico strumento per gestire tutte le prestazioni, le visite e le attività mediche. Da web e da mobile, 24 ore su 24. 
+                            Un unico strumento per gestire tutte le prestazioni, le visite e le attività mediche. Da web e da mobile, 24 ore su 24.
                         </p>
-                        <a href="#"><button class="my_action small">iscriviti</button></a>
+                        <a href="{{route('login')}}"><button class="my_action small">Iscriviti</button></a>
                     </div>
                     <div class="glass_img">
                         <svg viewBox="0 0 219 206" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><defs><filter x="-1.4%" y="-1.5%" width="102.7%" height="102.9%" filterUnits="objectBoundingBox" id="b"><feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner1"/><feOffset dy="3" in="shadowBlurInner1" result="shadowOffsetInner1"/><feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"/><feColorMatrix values="0 0 0 0 0.759001359 0 0 0 0 0.759001359 0 0 0 0 0.759001359 0 0 0 0.5 0" in="shadowInnerInner1"/></filter><path d="M515.386 1741.635h-31.707v-16.725c0-12.081-9.834-21.91-21.921-21.91h-46.516c-12.087 0-21.921 9.829-21.921 21.91v16.725h-31.707c-17.983 0-32.614 14.623-32.614 32.597v102.172c0 17.974 14.63 32.596 32.614 32.596h153.772c17.983 0 32.614-14.622 32.614-32.596v-102.172c0-17.974-14.63-32.597-32.614-32.597zm-109.233-16.725c0-5.01 4.077-9.085 9.09-9.085h46.515c5.012 0 9.09 4.075 9.09 9.085v16.725h-64.695v-16.725zm-64.321 151.493v-102.171c0-8.658 5.6-16.029 13.366-18.698v139.568c-7.767-2.67-13.366-10.04-13.366-18.699zm26.198 19.772V1754.46h140.94v141.715H368.03zm153.772-140.642c7.767 2.67 13.366 10.04 13.366 18.699v102.171c0 8.658-5.6 16.029-13.366 18.698v-139.568zm-70.417 24.737a6.414 6.414 0 016.417 6.412v19.344h19.354a6.414 6.414 0 016.417 6.413v25.757a6.414 6.414 0 01-6.417 6.412h-19.354v19.344a6.414 6.414 0 01-6.417 6.413h-25.77a6.414 6.414 0 01-6.417-6.413v-19.344h-19.354a6.414 6.414 0 01-6.417-6.412v-25.757a6.414 6.414 0 016.417-6.413h19.354v-19.344a6.414 6.414 0 016.417-6.412zm-6.416 12.825h-12.938v19.344a6.414 6.414 0 01-6.416 6.412H406.26v12.932h19.355a6.414 6.414 0 016.416 6.413v19.344h12.938v-19.344a6.414 6.414 0 016.416-6.413h19.355v-12.932h-19.355a6.414 6.414 0 01-6.416-6.412v-19.344z" id="a"/></defs><g transform="translate(-329 -1703)" fill="none" fill-rule="evenodd"><use fill="#FFF" xlink:href="#a"/><use fill="#000" filter="url(#b)" xlink:href="#a"/></g></svg>
@@ -109,11 +107,11 @@
              <div class="marginB glass_blue">
                 <div class="glass">
                     <div class="text">
-                        <h3> Sei in cerca di un professionesta che possa darti delle risposte?</h3>
+                        <h3> Sei in cerca di un professionista che possa darti delle risposte?</h3>
                         <p>
-                            Una piattaforma ad acesso libero che raccoglie professionisti da tutta italia. Da web e da mobile, 24 ore su 24. 
+                            Una piattaforma ad accesso libero che raccoglie professionisti da tutta italia. Da web e da mobile, 24 ore su 24.
                         </p>
-                        <a href="#"><button class="my_action small">trova il tuo professionista</button></a>
+                        <a href="{{route('search')}}"><button class="my_action small my_action-blue">Trova il tuo professionista</button></a>
                     </div>
                     <div class="glass_img">
                         <?xml version='1.0' encoding='iso-8859-1'?>
@@ -132,7 +130,7 @@
             </div>
         </div>
 
-        
+
     </section>
     {{-- <section class="specialization">
         <h1>Le Specializazioni dei nostri dottori</h1>

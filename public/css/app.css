@@ -10084,6 +10084,10 @@ img {
   color: #00b295;
 }
 
+.my_action-blue:hover {
+  color: #1662c6;
+}
+
 header {
   background-color: #1af3c495;
   position: fixed;
@@ -10118,7 +10122,8 @@ footer .list-box {
   width: calc(100% / 4);
   padding: 0 15px;
 }
-footer .list-box li a {
+footer .list-box a,
+footer .list-box li {
   color: #00b295;
 }
 footer .list-box li:first-child {
@@ -10128,11 +10133,9 @@ footer .list-box li:first-child {
 }
 footer .lower-footer {
   padding: 25px 0 5px;
-}
-footer .lower-footer p {
   color: #00b295;
 }
-footer .lower-footer p span {
+footer .lower-footer span {
   color: #ff0000;
 }
 
