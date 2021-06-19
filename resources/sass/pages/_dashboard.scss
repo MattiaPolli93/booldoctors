@@ -3,35 +3,33 @@ main {
         padding: 50px 0;
 
         .my_container {
-            height: 100%
+            height: 100%;
         }
     }
 
     #info,
     #reviews,
-    #statistics,
-    #sponsor {
+    #sponsor,
+    #statistics {
         height: 80vh;
     }
 
     #info {
         background-color: #ccdbd8;
-        
-        .image_box,
-        .details {
+
+        .details,
+        .image_box {
             flex-basis: 50%;
             padding: 0 30px;
         }
-        
+
         .image_box {
-            
             figure {
-                
                 img {
                     max-width: 80%;
                 }
             }
-            
+
             .info-buttons {
                 margin-top: 30px;
                 width: 100%;
@@ -39,6 +37,8 @@ main {
         }
 
         .details {
+            padding-top: 12px;
+
             h1 {
                 margin-bottom: 25px;
             }
@@ -74,7 +74,6 @@ main {
         }
 
         .reviews-image {
-        
             img {
                 width: 100%;
             }
@@ -90,7 +89,6 @@ main {
         }
 
         .statistics-image {
-
             img {
                 width: 100%;
             }
@@ -104,7 +102,7 @@ main {
 
         .text {
             color: $bannerColor;
-            
+
             h2 {
                 font-size: 40px;
                 margin-bottom: 20px;

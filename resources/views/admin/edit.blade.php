@@ -9,8 +9,9 @@
       <form action="{{route('admin.profile.update', $doctor->id)}}" method="POST" enctype="multipart/form-data">
           @csrf
           @method('PUT')
+          <img v-if="doctor.details.image != 'https://via.placeholder.com/150'"{{-- da modificare in caso di seed --}} :src="'storage/' + doctor.details.image" :alt="'Immagine di ' + doctor.name + ' ' + doctor.surname" style="height: 200px">
+          <img v-else src="https://i.ibb.co/wQBsxBd/standard-Doctor.png" alt="Immagine del dottore" style="height: 200px">
 
-          <img src="{{ asset('storage/' . $doctor->details->image) }}" alt="Immagine" style="height: 150px">
           <div class="form-group">
             <label for="image">Immagine</label>
             <input type="file" class="form-control" id='image' name='image'>

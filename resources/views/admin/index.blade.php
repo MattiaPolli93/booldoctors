@@ -10,12 +10,13 @@
         <div class="my_container d-flex">
             {{-- profile image --}}
             <div class="image_box d-flex flex-column align-items-center">
-                <figue class="text-center">
-                    <img src="{{ asset('storage/' . $user->details->image) }}" alt="Immagine di {{$user->name}}">
+                <figure class="text-center">
+                  <img v-if="doctor.details.image != 'https://via.placeholder.com/150'"{{-- da modificare in caso di seed --}} :src="'storage/' + doctor.details.image" :alt="'Immagine di ' + doctor.name + ' ' + doctor.surname">
+                  <img v-else src="https://i.ibb.co/wQBsxBd/standard-Doctor.png" alt="Immagine del dottore">
                     <figcaption>
                         <p><small>La tua immagine di profilo</small></p>
                     </figcaption>
-                </figue>
+                </figure>
                 <div class="info-buttons d-flex justify-content-around">
                     <a href="{{route('admin.profile.edit', [ 'profile' => $user->id ])}}"><button type="button" class="btn btn-info"><i class="fas fa-pencil-alt"></i> Modifica dettagli</button></a>
                     <a href="#"><button type="button" class="btn btn-danger"><i class="fas fa-cross"></i> Elimina profilo</button></a>
