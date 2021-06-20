@@ -16,6 +16,14 @@
         <input type="text" placeholder="Cerca una specializzazione" v-model="spec" @keyup="filterText">
         <i class="fas fa-search"></i>
     </div>
+
+
+      <div class="loading" v-if="loading">
+          <div class="loader">
+            <!-- here put a spinner or whatever you want to indicate that a request is in progress -->
+          </div>
+      </div>
+
     <div v-for="doctor in filterDoc" class="cardDoctor">
         <div class="docAvatar">
             <div class="image_box">

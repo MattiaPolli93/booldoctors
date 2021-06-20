@@ -10,6 +10,7 @@ const Search = {
             filterDoc: [],
             sponsoredDocs: [],
             filterSponsoredDocs: [],
+            loading: true,
 
         }
     },
@@ -36,7 +37,7 @@ const Search = {
              console.log(this.filterSponsoredDocs);   */
         },
         filterText() {
-            this.filterDoc = []; 
+            this.filterDoc = [];
             for (var i = 0; i < this.doctors.length; i++){
                 for (var j = 0; j < this.doctors[i].specializations.length; j++) {
                     if (this.doctors[i].specializations[j].field.toLowerCase().includes(this.spec.toLowerCase())){
@@ -52,11 +53,10 @@ const Search = {
         axios.get("http://localhost:8000/api/v1/doctors")
             .then((risposta) => {
                     this.doctors = risposta.data.data;
-                    /* console.log(this.doctors[0].specializations); */
                     axios.get("http://localhost:8000/api/v1/sponsoredDoc")
                         .then((response) => {
                             this.sponsoredDocs = response.data;
-                            /* console.log(this.sponsoredDocs); */
+
                         })
                 }
 
@@ -76,8 +76,9 @@ const Search = {
                     }
                 }
             }
+            this.loading = false;
         }, 1500);
-        
+
     },
     computed: {
         docLimit() {

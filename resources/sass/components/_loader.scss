@@ -1,0 +1,38 @@
+.loading {
+    padding: 130px 250px;
+
+    .loader {
+        width: 60px;
+        height: 60px;
+        border: 15px solid #00b295;
+        border-radius: 50%;
+        position: relative;
+        transform: rotate(45deg);
+    }
+
+    .loader::before {
+        content: "";
+        position: absolute;
+        inset: -15px;
+        border-radius: 50%;
+        border: 15px solid lightgrey;
+        animation: loader 1.5s infinite linear;
+    }
+    @keyframes loader {
+        0% {
+            clip-path: polygon(50% 50%,0 0,0 0,0 0 ,0 0 ,0 0);
+        }
+        25% {
+            clip-path: polygon(50% 50%,0 0,100% 0,100% 0 ,100% 0 ,100% 0);
+        }
+        50% {
+            clip-path: polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%);
+        }
+        75% {
+            clip-path: polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%);
+        }
+        100% {
+            clip-path: polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0);
+        }
+    }
+}
