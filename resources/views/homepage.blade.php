@@ -75,7 +75,7 @@
         <hr>
     </div>
     <section class="SearchLinks sectionP">
-        <h2>Le Specializazioni dei nostri <span class="colorName">Dottori</span></h2>
+        <h2>Le Specializzazioni dei nostri <span class="colorName">Dottori</span></h2>
         <div class="specializations my_container">
             @foreach ($specializations as $specialization)
             <div class="specialization_container">
@@ -133,7 +133,7 @@
 
     </section>
     {{-- <section class="specialization">
-        <h1>Le Specializazioni dei nostri dottori</h1>
+        <h1>Le Specializzazioni dei nostri dottori</h1>
         @foreach ($sponsored_doctors as $doctor)
                 <li style="font-size: 26px">{{$doctor->name}} {{$doctor->surname}}</li>
         @endforeach

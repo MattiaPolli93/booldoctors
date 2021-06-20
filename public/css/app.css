@@ -10095,9 +10095,6 @@ header {
   inset: 0;
   z-index: 3;
 }
-header h1 {
-  font-size: 24px;
-}
 header button {
   height: 30px;
   display: flex;
@@ -10112,6 +10109,10 @@ header button .navbar-toggler-icon {
 header .my_container {
   height: 80px;
   align-items: center;
+}
+header .my_container img {
+  width: 340px;
+  height: auto;
 }
 header .my_container .navbar-nav {
   display: flex;
