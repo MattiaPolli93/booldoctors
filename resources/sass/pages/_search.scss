@@ -8,7 +8,7 @@
         border-radius: 20px;
         margin: 20px 0;
         padding: 8px 20px 8px 40px;
-        width: 40%;
+        width: 50%;
         outline: none;
     }
 
@@ -20,4 +20,12 @@
         vertical-align: middle;
         color: gray;
     }
+}
+@media screen and (max-width: 768px) {
+
+  .search_input {
+    input {
+      width: 80%;
+    }
+  }
 }
