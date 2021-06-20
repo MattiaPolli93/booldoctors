@@ -2,7 +2,7 @@
     <nav class="navbar-expand-md navbar-light">
         <div class="my_container d-flex">
 
-          <a class="navbar-brand" href="{{ route('homepage') }}"> <img src="{{url('/img/logo.jpg')}}" alt="BoolDoctors Logo">
+          <a class="navbar-brand" href="{{ route('homepage') }}"> <img src="{{url('/img/logotransp.png')}}" alt="BoolDoctors Logo">
           </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                 <span class="navbar-toggler-icon"></span>
