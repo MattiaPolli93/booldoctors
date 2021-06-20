@@ -5,10 +5,14 @@
 @endsection
 
 @section('content')
-Le tue statistiche
 <div class="my_container">
+  <h1 class="stat_title">Le tue statistiche</h1>
   <canvas id="myChart" width="100" height="100"></canvas>
+  <p class="link_dashboard"><a href="{{ route('admin.profile.index') }}">Torna alla Dashboard</a></p>
+  
 </div>
+
+
 <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
 <script>dayjs().format()</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.3.2/chart.min.js" integrity="sha512-VCHVc5miKoln972iJPvkQrUYYq7XpxXzvqNfiul1H4aZDwGBGC0lq373KNleaB2LpnC2a/iNfE5zoRYmB4TRDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>

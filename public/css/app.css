@@ -10456,6 +10456,47 @@ main .messages {
     width: 80%;
   }
 }
+h1.stat_title {
+  font-weight: bolder;
+  color: #5ef77f;
+  margin: 10px 0 30px;
+}
+
+p.link_dashboard {
+  margin: 10px 0 30px;
+}
+
+h1#title {
+  font-size: 40px;
+  font-weight: bolder;
+  color: #5ef77f;
+  margin: 20px 0;
+}
+
+.comments {
+  display: flex;
+  flex-wrap: wrap;
+}
+.comments .comment {
+  width: calc(50% - 20px);
+  border: 2px solid #1af3c495;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+}
+.comments .comment h5 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.comments .comment p {
+  margin: 5px 0;
+}
+
+p.link_dashboard {
+  margin: 10px 0 30px;
+}
+
 .my_jumbotron {
   background-image: url("../../img/jambotron.jpg");
   background-size: cover;
