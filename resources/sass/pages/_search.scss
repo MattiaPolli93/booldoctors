@@ -1,0 +1,23 @@
+.search_input {
+  position: relative;
+    input {
+        color: $bannerColor;
+        background-color: rgba($color: #9dbbac, $alpha: 0.1);
+        font-weight: 600;
+        border: none;
+        border-radius: 20px;
+        margin: 20px 0;
+        padding: 8px 20px 8px 40px;
+        width: 40%;
+        outline: none;
+    }
+
+    .fa-search {
+        position: absolute;
+        font-size: 14px;
+        left: 15px;
+        top: 34px;
+        vertical-align: middle;
+        color: gray;
+    }
+}

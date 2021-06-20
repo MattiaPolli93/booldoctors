@@ -6,14 +6,15 @@
 
 @section('content')
 <div class="container" id="search">
-    <div>
+    <div class="search_input">
         {{-- <select name="spec" id="spec" v-model="spec" v-on:change="filterSpec">
             <option value="" disabled selected>Filtra per specializzazione</option>
             @foreach ($specializations as $specialization)
-                <option :value="{{$specialization->id}}">{{$specialization->specialization}}</option>
+                <option :value="{{$specialization->name}}">{{$specialization->specialization}}</option>
             @endforeach
         </select> --}}
-        <input type="text" v-model="spec" v-on:keyup="filterText">
+        <input type="text" placeholder="Cerca una specializzazione" v-model="spec" @keyup="filterText">
+        <i class="fas fa-search"></i>
     </div>
     <div v-for="doctor in filterDoc" class="cardDoctor">
         <div class="docAvatar">
