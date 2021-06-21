@@ -34,7 +34,7 @@
           <div class="form-group mt-4">
             <h3 class="mb-3">Aggiungi nuova prestazione</h3>
               <label for="service_name">Nome prestazione</label>
-              <input type="text" class="form-control" name="service_name" id="service_name" placeholder="Inserisci il nome della prestazione" value="">
+              <input type="text" class="form-control mb-3" name="service_name" id="service_name" placeholder="Inserisci il nome della prestazione" value="">
               <label for="service_price">Prezzo prestazione</label>
               <input type="number" class="form-control" name="service_price" id="service_price" min="0" max="9999.99" step="0.01" placeholder="Inserisci il prezzo della prestazione" value="">
           </div>
