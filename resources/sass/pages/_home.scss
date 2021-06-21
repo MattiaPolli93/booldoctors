@@ -2,6 +2,7 @@
     /* padding: 80px 0; */
     .my_container {
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
     }
     .card {
@@ -78,6 +79,31 @@
                     fill: white;
                 }
             }
+        }
+    }
+}
+@media screen and (max-width: 800px) {
+    .infoShow {
+
+        .card {
+            margin-top: 80px;
+            width: 50%;
+            &:last-child {
+                margin: 80px auto 0;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .infoShow {
+        .my_container {
+            justify-content: center;
+        }
+        
+        .card {
+            margin-top: 80px;
+            width: 100%;
         }
     }
 }

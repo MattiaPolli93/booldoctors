@@ -13,4 +13,7 @@
             padding: 70px 0 45px;
         }
     }
+    @media screen and (max-width: 768px) {
+       .clame {h3 {padding: 20px 0 45px;}}
+    }
 }
