@@ -1,13 +1,30 @@
 main {
+    .edit-form {
+        h2,
+        h3 {
+            color: $bannerColor;
+            font-weight: 600;
+        }
     
-    h2,
-    h3 {
-        color: $bannerColor;
-        font-weight: 600;
-    }
+        .info-box {
+            align-items: center;
+            padding-top: 20px;
+    
+            .image-box {
+                img {
+                    width: 50%;
+                    border-radius: 50%;
+                }
+            }
 
-    /* .box {
-        justify-content: space-between;
-        align-items: center;
-    } */
+            .text-box {
+                h4 {
+                    color: $bannerColor;
+                    font-size: 45px;
+                    font-weight: 600;
+                    font-style: italic;
+                }
+            }
+        }
+    }
 }

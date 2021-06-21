@@ -10171,6 +10171,7 @@ footer .lower-footer span {
 }
 .infoShow .my_container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
 }
 .infoShow .card {
@@ -10244,6 +10245,24 @@ footer .lower-footer span {
   fill: white;
 }
 
+@media screen and (max-width: 800px) {
+  .infoShow .card {
+    margin-top: 80px;
+    width: 50%;
+  }
+  .infoShow .card:last-child {
+    margin: 80px auto 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .infoShow .my_container {
+    justify-content: center;
+  }
+  .infoShow .card {
+    margin-top: 80px;
+    width: 100%;
+  }
+}
 main section {
   padding: 50px 0;
 }
@@ -10326,23 +10345,27 @@ main #sponsor .text h2 {
   margin-bottom: 20px;
 }
 
-main {
-<<<<<<< Updated upstream
-  /* .box {
-      justify-content: space-between;
-      align-items: center;
-  } */
-}
-main h2,
-main h3 {
+main .edit-form h2,
+main .edit-form h3 {
   color: #00b295;
   font-weight: 600;
 }
+main .edit-form .info-box {
+  align-items: center;
+  padding-top: 20px;
+}
+main .edit-form .info-box .image-box img {
+  width: 50%;
+  border-radius: 50%;
+}
+main .edit-form .info-box .text-box h4 {
+  color: #00b295;
+  font-size: 45px;
+  font-weight: 600;
+  font-style: italic;
+}
 
-main .messages {
-  height: 50vh;
-  margin: 100px 0;
-=======
+main {
   min-height: 40vh;
 }
 
@@ -10379,7 +10402,6 @@ h1#title {
 
 p.link_dashboard {
   margin: 10px 0 30px;
->>>>>>> Stashed changes
 }
 
 .profile .details {
@@ -10579,6 +10601,11 @@ p.link_dashboard {
 .my_jumbotron .clame h3 {
   color: rgba(255, 255, 255, 0.9);
   padding: 70px 0 45px;
+}
+@media screen and (max-width: 768px) {
+  .my_jumbotron .clame h3 {
+    padding: 20px 0 45px;
+  }
 }
 
 .card {
