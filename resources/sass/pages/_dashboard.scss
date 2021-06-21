@@ -27,6 +27,7 @@ main {
             figure {
                 img {
                     max-width: 80%;
+                    border-radius: 50%;
                 }
             }
 
@@ -81,7 +82,7 @@ main {
     }
 
     #statistics {
-        background-color: $bannerColor;
+        background-color: $main_color;
 
         .statistics,
         .statistics-image {
@@ -96,16 +97,23 @@ main {
     }
 
     #sponsor {
-        background-image: url("https://wallpaperaccess.com/full/3464162.jpg");
+        background-image: url("https://wallpaperaccess.com/full/3988500.jpg");
         background-size: cover;
         background-repeat: no-repeat;
+        background-position-y: 15%;
 
         .text {
             color: $bannerColor;
+            font-weight: 600;
 
             h2 {
                 font-size: 40px;
-                margin-bottom: 20px;
+                margin-bottom: 15px;
+            }
+
+            p {
+                font-size: 25px;
+                letter-spacing: 1px;
             }
         }
     }

@@ -21,8 +21,8 @@
                     </figcaption>
                 </figure>
                 <div class="info-buttons d-flex justify-content-around">
-                    <a href="{{route('admin.profile.edit', [ 'profile' => $user->id ])}}"><button type="button" class="btn btn-info"><i class="fas fa-pencil-alt"></i> Modifica dettagli</button></a>
-                    <a href="#"><button type="button" class="btn btn-danger"><i class="fas fa-cross"></i> Elimina profilo</button></a>
+                    <a href="{{route('admin.profile.edit', [ 'profile' => $user->id ])}}"><button type="button" class="btn btn-insert"><i class="fas fa-pencil-alt"></i> Modifica dettagli</button></a>
+                    <a href="#"><button type="button" class="btn btn-danger"><i class="fas fa-times"></i> Elimina profilo</button></a>
                 </div>
             </div>
 
@@ -33,7 +33,7 @@
                     <h4><strong>Indirizzo <br> </strong> {{$user->details->address}}</h4>
                     <p><strong>Bio <br> </strong> {{$user->details->bio}}</p>
                 </div>
-                <a href="{{route('admin.messages')}}"><button type="button" class="btn btn-info">Mostra messaggi</button></a>
+                <a href="{{route('admin.messages')}}"><button type="button" class="btn btn-insert">Mostra messaggi</button></a>
             </div>
         </div>
     </section>
@@ -43,7 +43,7 @@
     <section id="reviews">
         <div class="my_container d-flex flex-row-reverse align-items-center">
             <div class="reviews d-flex justify-content-center align-items-center">
-                <a href="{{route('admin.comments')}}"><button type="button" class="btn btn-info">Mostra recensioni</button></a>
+                <a href="{{route('admin.comments')}}"><button type="button" class="btn btn-insert">Mostra recensioni</button></a>
             </div>
             <div class="reviews-image">
                 <img src="https://www.interno16holidayhome.com/wp-content/uploads/2019/01/reviews.png" alt="Recensioni">
@@ -56,7 +56,7 @@
     <section id="statistics">
         <div class="my_container d-flex align-items-center">
             <div class="statistics d-flex justify-content-center align-items-center">
-                <a href="{{route('admin.statistics')}}"><button type="button" class="btn btn-info">Visualizza le tue statistiche</button></a>
+                <a href="{{route('admin.statistics')}}"><button type="button" class="btn btn-insert">Visualizza le tue statistiche</button></a>
             </div>
             <div class="statistics-image">
                 <img src="https://images.vexels.com/media/users/3/143065/isolated/preview/c6cbc8cf5ca3856bca8d5f28c0471fca-bar-graph-cart-by-vexels.png" alt="Grafico">
@@ -77,7 +77,7 @@
                         Scegli fra le seguenti offerte e acquista visibilità, il tuo profilo sarà messo in risalto nella homepage di BoolDoctors!
                     </p>
                 </div>
-                <a href="{{route('admin.sponsor')}}"><button class="btn btn-info"><em>Ottieni sponsorizzazione</em></button></a>
+                <a href="#"><button class="btn btn-insert">Ottieni sponsorizzazione</button></a>
             </div>
         </div>
     </section>

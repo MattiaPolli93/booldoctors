@@ -27,6 +27,7 @@ footer {
             }
             
             &:not(:first-child) {
+
                 ul.github {
                     
                     li {
@@ -34,7 +35,6 @@ footer {
                         
                         a {
                             font-weight: 700;
-                            
                             .fa-github {
                                 color: $secondary_color;
                                 font-size: 25px;
@@ -69,9 +69,9 @@ footer {
     }
 
     .lower-footer {
-        padding: 25px 0;
-        color: $secondary_color;
         background-color: $bannerColor;
+        color: $main_color;
+        padding: 25px 0;
         
         span {
             color: #ff0000;

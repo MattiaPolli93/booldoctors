@@ -10202,9 +10202,9 @@ footer .my_container .list-box:not(:first-child) ul.github li a .fa-github {
   }
 }
 footer .lower-footer {
-  padding: 25px 0;
-  color: #097521;
   background-color: #00b295;
+  color: #5ef77f;
+  padding: 25px 0;
 }
 footer .lower-footer span {
   color: #ff0000;
@@ -10273,6 +10273,9 @@ footer .lower-footer span {
 .glassMorph {
   padding-top: 85px;
 }
+.glassMorph .glass {
+  margin: auto;
+}
 .glassMorph .glass_blue .glass {
   background: linear-gradient(180deg, rgba(191, 241, 255, 0.4), rgba(122, 194, 255, 0.4));
 }
@@ -10289,6 +10292,32 @@ footer .lower-footer span {
   fill: white;
 }
 
+@media screen and (max-width: 1365px) {
+  .glassMorph .glass .text p {
+    margin: 10px 0;
+  }
+  .glassMorph .glass .my_action.small {
+    padding: 0 50px;
+  }
+}
+/* @media screen and (max-width: 1110px){
+    .glass {
+        flex-direction: column;
+        .text {
+            width: 100%;
+            order: 2;
+            margin-top: 0px;
+            padding-bottom: 30px;
+        }
+        .glass_img {
+            width: 100%;
+            margin: 0;
+            svg {
+                width: 70px;
+            }
+        }
+    }
+} */
 @media screen and (max-width: 800px) {
   .infoShow .card {
     margin-top: 80px;
@@ -10329,6 +10358,7 @@ main #info .image_box {
 }
 main #info .image_box figure img {
   max-width: 80%;
+  border-radius: 50%;
 }
 main #info .image_box .info-buttons {
   margin-top: 30px;
@@ -10367,7 +10397,7 @@ main #reviews .reviews-image img {
   width: 100%;
 }
 main #statistics {
-  background-color: #00b295;
+  background-color: #5ef77f;
 }
 main #statistics .statistics,
 main #statistics .statistics-image {
@@ -10377,16 +10407,22 @@ main #statistics .statistics-image img {
   width: 100%;
 }
 main #sponsor {
-  background-image: url("https://wallpaperaccess.com/full/3464162.jpg");
+  background-image: url("https://wallpaperaccess.com/full/3988500.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position-y: 15%;
 }
 main #sponsor .text {
   color: #00b295;
+  font-weight: 600;
 }
 main #sponsor .text h2 {
   font-size: 40px;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+}
+main #sponsor .text p {
+  font-size: 25px;
+  letter-spacing: 1px;
 }
 
 main .edit-form h2,
@@ -10694,7 +10730,8 @@ p.link_dashboard {
   width: 15%;
 }
 .cardDoctor .docAvatar img {
-  width: 120px;
+  max-width: 120px;
+  width: 100%;
 }
 
 .my_tag {
@@ -10712,6 +10749,8 @@ p.link_dashboard {
   /* display: flex; */
   background: linear-gradient(180deg, rgba(173, 255, 205, 0.4), rgba(120, 233, 141, 0.4));
   height: 255px;
+  width: 100%;
+  max-width: 1130px;
   border-radius: 16px;
   padding: 0 40px;
   display: flex;
@@ -10738,9 +10777,33 @@ p.link_dashboard {
   margin-left: 40px;
 }
 .glass .glass_img svg {
-  width: 40%;
+  width: 200px;
 }
 
+@media screen and (max-width: 1110px) {
+  .glass {
+    flex-direction: column;
+    height: auto;
+  }
+  .glass .text {
+    width: 100%;
+    order: 2;
+    margin-top: 0px;
+    padding-bottom: 30px;
+  }
+  .glass .text button {
+    width: 100%;
+  }
+  .glass .glass_img {
+    width: 100%;
+    max-height: 95px;
+    margin: 0;
+  }
+  .glass .glass_img svg {
+    width: 70px;
+    margin: 15px 0;
+  }
+}
 .loading {
   padding: 130px 250px;
 }

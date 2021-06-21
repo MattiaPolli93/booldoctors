@@ -70,7 +70,7 @@
         <h3 class="mt-4">Cancella prestazione</h3>
           <ul>
           @foreach ($services as $service)
-            <li class='mt-5'>
+            <li class='mt-3'>
               <p>{{$service['service']}}</p>
               <p>{{$service['price']}}</p>
               <form action="{{route('admin.service.destroy', $service)}}" method="POST" enctype="multipart/form-data">
