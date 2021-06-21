@@ -11,8 +11,11 @@
             {{-- profile image --}}
             <div class="image_box d-flex flex-column align-items-center">
                 <figure class="text-center">
-                  <img v-if="doctor.details.image != 'https://via.placeholder.com/150'"{{-- da modificare in caso di seed --}} :src="'storage/' + doctor.details.image" :alt="'Immagine di ' + doctor.name + ' ' + doctor.surname">
-                  <img v-else src="https://i.ibb.co/wQBsxBd/standard-Doctor.png" alt="Immagine del dottore">
+                    @if ($details->image != 'https://via.placeholder.com/150')
+                    <img {{-- da modificare in caso di seed --}} src="{{ asset('storage/' . $details->image) }}" alt="Immagine di {{$user->name}} {{$user->surname}}">
+                    @else
+                    <img src="https://i.ibb.co/wQBsxBd/standard-Doctor.png" alt="Immagine del dottore">
+                    @endif
                     <figcaption>
                         <p><small>La tua immagine di profilo</small></p>
                     </figcaption>
