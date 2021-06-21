@@ -38,6 +38,7 @@ const Search = {
         },
         filterText() {
             this.filterDoc = [];
+            this.loading = false;
             for (var i = 0; i < this.doctors.length; i++){
                 for (var j = 0; j < this.doctors[i].specializations.length; j++) {
                     if (this.doctors[i].specializations[j].field.toLowerCase().includes(this.spec.toLowerCase())){

@@ -10465,6 +10465,10 @@ main .messages {
     width: 80%;
   }
 }
+.doctor_container {
+  min-height: 200px;
+}
+
 h1.stat_title {
   font-weight: bolder;
   color: #5ef77f;
