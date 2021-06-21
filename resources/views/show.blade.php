@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-<div class="container profile">
+<div class="my_container profile">
 
     {{-- dettagli principali --}}
     <div class="details">
