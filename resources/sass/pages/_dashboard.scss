@@ -3,7 +3,6 @@ main {
     #reviews,
     #sponsor,
     #statistics {
-        height: 90vh;
         padding: 50px 0;
         
         .my_container {
@@ -14,6 +13,8 @@ main {
     #reviews,
     #sponsor,
     #statistics {
+        height: 90vh;
+
         @media screen and (max-width: 768px) {
             height: 70vh;
         }
@@ -26,8 +27,7 @@ main {
     #info {
         background-color: #ccdbd8;
 
-        .my_container.info {
-            
+        .my_container.info {            
             .details,
             .image_box {
                 flex-basis: 50%;
@@ -110,8 +110,7 @@ main {
                 .bio {
                     flex-direction: column;
                     overflow-y: auto;
-                    width: 100%;
-
+                    
                     @media screen and (max-width: 768px) {
                         flex-direction: column;
                     }
@@ -130,6 +129,10 @@ main {
             @media screen and (max-width: 992px) {
                 flex-direction: column;
             }
+        }
+
+        .btn-box {
+            padding-top: 35px;
         }
     }
 

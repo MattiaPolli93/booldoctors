@@ -10340,7 +10340,6 @@ main #info,
 main #reviews,
 main #sponsor,
 main #statistics {
-  height: 90vh;
   padding: 50px 0;
 }
 main #info .my_container,
@@ -10348,6 +10347,11 @@ main #reviews .my_container,
 main #sponsor .my_container,
 main #statistics .my_container {
   height: 100%;
+}
+main #reviews,
+main #sponsor,
+main #statistics {
+  height: 90vh;
 }
 @media screen and (max-width: 768px) {
   main #reviews,
@@ -10443,7 +10447,6 @@ main #info .my_container.info .details .details-title h4 {
 main #info .my_container.info .details .bio {
   flex-direction: column;
   overflow-y: auto;
-  width: 100%;
 }
 @media screen and (max-width: 768px) {
   main #info .my_container.info .details .bio {
@@ -10465,6 +10468,9 @@ main #info .my_container.info .details .bio {
   main #info .my_container.info {
     flex-direction: column;
   }
+}
+main #info .btn-box {
+  padding-top: 35px;
 }
 main #reviews {
   background-color: #1af3c495;
