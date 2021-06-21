@@ -6,7 +6,7 @@
 
 @section('content')
     <div class="container">
-      <h1 id="title">I tuoi commenti</h1>
+      <h1 id="title">Le tue recensioni</h1>
       <div class="comments">
         @foreach ($comments as $comment)
         <div class="comment">

@@ -18,7 +18,7 @@
                   @endif
                 </div>
                 <div class="text-box">
-                    <h4>Doctor <br> {{$doctor->name}} {{$doctor->surname}}</h4>
+                    <h4>Dottore<br>{{$doctor->name}} {{$doctor->surname}}</h4>
                 </div>
           </div>
 
@@ -40,7 +40,7 @@
                 <textarea name="bio" id="bio" cols="60" rows="10">{{$doctor->details->bio}}</textarea>
             </div>
           </div>
-          
+
           {{-- Specializzazioni --}}
           <div class="mt-4">
               <h3 class="mb-3">Specializzazioni</h3>

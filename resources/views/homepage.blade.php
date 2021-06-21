@@ -54,7 +54,7 @@
                   <img v-else src="https://i.ibb.co/wQBsxBd/standard-Doctor.png" alt="Immagine del dottore">
                 </div>
                 <div class="docInfo">
-                    <h3>@{{doctor.name}}</h3>
+                    <h3>@{{doctor.name}} @{{doctor.surname}}</h3>
                     <span v-for="doc in doctor.specializations" class="my_tag">@{{doc.field}}</span>
                     <p>@{{doctor.details.address}}</p>
                     <a :href="'http://127.0.0.1:8000/doctor/' + doctor.id">Contatta questo professionista</a>
