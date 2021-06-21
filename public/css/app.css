@@ -10473,22 +10473,30 @@ main #statistics .statistics-image img {
   width: 100%;
 }
 main #sponsor {
-  background-image: url("https://wallpaperaccess.com/full/3988500.jpg");
+  background-color: #dfdfdf;
+  /* background-image: url("https://wallpaperaccess.com/full/3988500.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-y: 15%;
-}
-main #sponsor .text {
-  color: #00b295;
-  font-weight: 600;
+  background-position-y: 15%; */
 }
 main #sponsor .text h2 {
-  font-size: 40px;
-  margin-bottom: 15px;
+  color: #00b295;
+  font-size: 45px;
+  font-weight: 600;
+  margin-bottom: 35px;
 }
 main #sponsor .text p {
+  color: #000;
   font-size: 25px;
   letter-spacing: 1px;
+}
+@media screen and (max-width: 576px) {
+  main #sponsor .text h2 {
+    font-size: 35px;
+  }
+  main #sponsor .text p {
+    font-size: 20px;
+  }
 }
 
 main .edit-form h2,

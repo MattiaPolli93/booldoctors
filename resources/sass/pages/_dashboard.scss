@@ -152,24 +152,35 @@ main {
     }
 
     #sponsor {
-        background-image: url("https://wallpaperaccess.com/full/3988500.jpg");
+        background-color: #dfdfdf;
+        /* background-image: url("https://wallpaperaccess.com/full/3988500.jpg");
         background-size: cover;
         background-repeat: no-repeat;
-        background-position-y: 15%;
+        background-position-y: 15%; */
 
-        .text {
-            color: $bannerColor;
-            font-weight: 600;
-
+        .text {            
             h2 {
-                font-size: 40px;
-                margin-bottom: 15px;
+                color: $bannerColor;
+                font-size: 45px;
+                font-weight: 600;
+                margin-bottom: 35px;
             }
 
             p {
+                color: #000;
                 font-size: 25px;
                 letter-spacing: 1px;
             }
+
+             @media screen and (max-width: 576px) {
+                h2 {
+                    font-size: 35px;
+                }
+
+                p {
+                    font-size: 20px;
+                }
+             }
         }
     }
 }
