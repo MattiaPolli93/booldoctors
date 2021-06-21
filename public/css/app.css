@@ -10326,6 +10326,18 @@ main #sponsor .text h2 {
   margin-bottom: 20px;
 }
 
+main {
+  /* .box {
+      justify-content: space-between;
+      align-items: center;
+  } */
+}
+main h2,
+main h3 {
+  color: #00b295;
+  font-weight: 600;
+}
+
 main .messages {
   height: 50vh;
   margin: 100px 0;

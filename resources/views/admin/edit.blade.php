@@ -3,9 +3,7 @@
     Modifica profilo
 @endsection
 @section('content')
-  <div class="container">
-    <h2>Vuoi ottenere una sponsorizzazione?</h2>
-    <a href="#"><button type="button" class="btn btn-insert mt-3 mb-3">Clicca qui!</button></a>
+  <div class="my_container">
       <form action="{{route('admin.profile.update', $doctor->id)}}" method="POST" enctype="multipart/form-data">
           @csrf
           @method('PUT')
@@ -28,7 +26,9 @@
           </div>
           <div class="form-group mt-3">
             <label for="bio">Bio</label>
-            <textarea name="bio" id="bio" cols="30" rows="10">{{$doctor->details->bio}}</textarea>
+            <div class="bio-text-container">
+                <textarea name="bio" id="bio" cols="60" rows="10">{{$doctor->details->bio}}</textarea>
+            </div>
           </div>
 
           <div class="form-group mt-4">
@@ -44,7 +44,7 @@
               @foreach ($specializations as $spec)
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="{{$spec->id}}" id="{{$spec->specialization}}" name="field[]" {{ $doctor->specializations->contains($spec) ? 'checked' : '' }}>
-                  <label class="form-check-label" for="{{$spec->specialization}}">
+                  <label class="form-check-label mb-2" for="{{$spec->specialization}}">
                     {{$spec->specialization}}
                   </label>
                 </div>
@@ -54,7 +54,7 @@
           <button type="submit" class="btn btn-insert mt-3 mb-3">Inserisci</button>
         </form>
 
-        <h3 class="mt-3">Cancella prestazione</h3>
+        <h3 class="mt-4">Cancella prestazione</h3>
           <ul>
           @foreach ($services as $service)
             <li class='mt-5'>
