@@ -99,11 +99,11 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+     public function show($id)
     {
         $doctor = User::where('id', $id)->first();
 
-        return view('show', compact('doctor'));
+        return view('admin.show', compact('doctor'));
     }
 
     /**

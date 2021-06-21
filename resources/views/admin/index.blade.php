@@ -77,7 +77,7 @@
                         Scegli fra le seguenti offerte e acquista visibilità, il tuo profilo sarà messo in risalto nella homepage di BoolDoctors!
                     </p>
                 </div>
-                <a href="#"><button class="btn btn-info"><em>Ottieni sponsorizzazione</em></button></a>
+                <a href="{{route('admin.sponsor')}}"><button class="btn btn-info"><em>Ottieni sponsorizzazione</em></button></a>
             </div>
         </div>
     </section>
