@@ -10351,40 +10351,90 @@ main #statistics {
 main #info {
   background-color: #ccdbd8;
 }
-main #info .details,
-main #info .image_box {
+main #info .my_container.info .details,
+main #info .my_container.info .image_box {
   flex-basis: 50%;
   padding: 0 30px;
 }
-main #info .image_box figure img {
+main #info .my_container.info .image_box figure img {
   max-width: 80%;
   border-radius: 50%;
 }
-main #info .image_box .info-buttons {
+@media screen and (max-width: 992px) {
+  main #info .my_container.info .image_box figure img {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 768px) {
+  main #info .my_container.info .image_box figure img {
+    width: 75%;
+  }
+}
+main #info .my_container.info .image_box .info-buttons {
   margin-top: 30px;
   width: 100%;
 }
-main #info .details {
+@media screen and (max-width: 992px) {
+  main #info .my_container.info .image_box .info-buttons {
+    margin-top: 0;
+  }
+}
+main #info .my_container.info .details {
+  flex-direction: column;
   padding-top: 12px;
 }
-main #info .details h1 {
+main #info .my_container.info .details .details-title,
+main #info .my_container.info .details .bio {
+  flex-basis: 50%;
+}
+main #info .my_container.info .details .details-title h1 {
   margin-bottom: 25px;
 }
-main #info .details .bio {
-  overflow-y: auto;
-  width: 100%;
+@media screen and (max-width: 992px) {
+  main #info .my_container.info .details .details-title h1 {
+    font-size: 20px;
+    text-align: center;
+  }
 }
-main #info .details .bio h4 {
-  color: #00b295;
-  margin-bottom: 15px;
-}
-main #info .details .name {
+main #info .my_container.info .details .details-title .name {
   color: #00b295;
   font-size: 60px;
   font-style: italic;
 }
-main #info .details button {
+@media screen and (max-width: 992px) {
+  main #info .my_container.info .details .details-title .name {
+    font-size: 25px;
+  }
+}
+main #info .my_container.info .details .bio {
+  flex-direction: column;
+  overflow-y: auto;
+  width: 100%;
+  /* button.btn-insert {
+      margin-right: 15px;
+  } */
+}
+main #info .my_container.info .details .bio h4 {
+  color: #00b295;
+  margin-bottom: 15px;
+}
+main #info .my_container.info .details .bio button {
   margin-top: 25px;
+}
+@media screen and (max-width: 992px) {
+  main #info .my_container.info .details .bio {
+    align-items: center;
+  }
+}
+@media screen and (max-width: 992px) {
+  main #info .my_container.info .details {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 992px) {
+  main #info .my_container.info {
+    flex-direction: column;
+  }
 }
 main #reviews {
   background-color: #1af3c495;
@@ -10458,7 +10508,7 @@ main .edit-form .info-box .text-box h4 {
   }
 }
 main .edit-form .bio-text-box textarea {
-  max-width: 95%;
+  max-width: 100%;
 }
 
 main {

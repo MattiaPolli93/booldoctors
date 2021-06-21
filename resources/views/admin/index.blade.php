@@ -7,7 +7,7 @@
 @section('content')
     {{-- personal info --}}
     <section id="info">
-        <div class="my_container d-flex">
+        <div class="my_container info d-flex">
             {{-- profile image --}}
             <div class="image_box d-flex flex-column align-items-center">
                 <figure class="text-center">
@@ -27,13 +27,15 @@
             </div>
 
             {{-- personal details --}}
-            <div class="details d-flex flex-column">
-                <h1>Buongiorno, <br> <span class="name">{{$user->name}} {{$user->surname}}</span></h1>
-                <div class="bio">
+            <div class="details d-flex">
+                <div class="details-title">
+                    <h1>Buongiorno, <br> <span class="name">{{$user->name}} {{$user->surname}}</span></h1>
+                </div>
+                <div class="bio d-flex">
                     <h4><strong>Indirizzo <br> </strong> {{$user->details->address}}</h4>
                     <p><strong>Bio <br> </strong> {{$user->details->bio}}</p>
+                    <a href="{{route('admin.messages')}}"><button type="button" class="btn btn-insert">Mostra messaggi</button></a>
                 </div>
-                <a href="{{route('admin.messages')}}"><button type="button" class="btn btn-insert">Mostra messaggi</button></a>
             </div>
         </div>
     </section>
