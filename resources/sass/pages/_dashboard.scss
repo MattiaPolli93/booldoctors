@@ -11,7 +11,7 @@ main {
     #reviews,
     #sponsor,
     #statistics {
-        height: 80vh;
+        height: 90vh;
     }
 
     #info {
@@ -21,7 +21,6 @@ main {
             .details,
             .image_box {
                 flex-basis: 50%;
-                padding: 0 30px;
             }
 
             .image_box {
@@ -35,7 +34,7 @@ main {
                         }
 
                         @media screen and (max-width: 768px) {
-                            width: 75%;
+                            width: 70%;
                         }
                     }
                 }
@@ -52,31 +51,45 @@ main {
             
             .details {
                 flex-direction: column;
-                padding-top: 12px;
+                padding-top: 30px;
                 
                 .details-title,
                 .bio {
                     flex-basis: 50%;
+                    height: 200px;
                 }
 
                 .details-title {
+                    flex-direction: column;
+                    justify-content: space-around;
+                    height: 50px;
+
                     h1 {
-                        margin-bottom: 25px;
+                        margin-bottom: 5px;
 
                         @media screen and (max-width: 992px) {
                             font-size: 20px;
                             text-align: center;
                         }
                     }
-                    
+
                     .name {
                         color: $bannerColor;
                         font-size: 60px;
                         font-style: italic;
-
+                        
                         @media screen and (max-width: 992px) {
                             font-size: 25px;
                         }
+                    }
+
+                    h4 {
+                        color: $bannerColor;
+                        margin-bottom: 15px;
+                    }
+
+                    @media screen and (max-width: 992px) {
+                        flex-direction: row;
                     }
                 }
                 
@@ -84,31 +97,28 @@ main {
                     flex-direction: column;
                     overflow-y: auto;
                     width: 100%;
-                    
-                    h4 {
-                        color: $bannerColor;
-                        margin-bottom: 15px;
-                    }
 
-                    button {
-                        margin-top: 25px;
-                        
-                    }
-                    
-                    /* button.btn-insert {
-                        margin-right: 15px;
-                    } */
-
-                    @media screen and (max-width: 992px) {
-                        align-items: center;
+                    @media screen and (max-width: 768px) {
+                        flex-direction: column;
                     }
                 }
                 
                 @media screen and (max-width: 992px) {
-                    flex-direction: row;
+                    flex-direction: column;
+                    padding-top: 5px;
+                }
+            
+            .btn-box {
+
+                button {
+                    margin-top: 25px;
+
+                    &.btn-insert {
+                        margin-right: 15px;
+                    }
                 }
             }
-
+            
             @media screen and (max-width: 992px) {
                 flex-direction: column;
             }

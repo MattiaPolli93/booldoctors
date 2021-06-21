@@ -10346,15 +10346,19 @@ main #info,
 main #reviews,
 main #sponsor,
 main #statistics {
-  height: 80vh;
+  height: 90vh;
 }
 main #info {
   background-color: #ccdbd8;
 }
+main #info .my_container.info {
+  /* button.btn-insert {
+          margin-right: 15px;
+      } */
+}
 main #info .my_container.info .details,
 main #info .my_container.info .image_box {
   flex-basis: 50%;
-  padding: 0 30px;
 }
 main #info .my_container.info .image_box figure img {
   max-width: 80%;
@@ -10367,7 +10371,7 @@ main #info .my_container.info .image_box figure img {
 }
 @media screen and (max-width: 768px) {
   main #info .my_container.info .image_box figure img {
-    width: 75%;
+    width: 70%;
   }
 }
 main #info .my_container.info .image_box .info-buttons {
@@ -10381,14 +10385,20 @@ main #info .my_container.info .image_box .info-buttons {
 }
 main #info .my_container.info .details {
   flex-direction: column;
-  padding-top: 12px;
+  padding-top: 30px;
 }
 main #info .my_container.info .details .details-title,
 main #info .my_container.info .details .bio {
   flex-basis: 50%;
+  height: 200px;
+}
+main #info .my_container.info .details .details-title {
+  flex-direction: column;
+  justify-content: space-around;
+  height: 50px;
 }
 main #info .my_container.info .details .details-title h1 {
-  margin-bottom: 25px;
+  margin-bottom: 5px;
 }
 @media screen and (max-width: 992px) {
   main #info .my_container.info .details .details-title h1 {
@@ -10406,30 +10416,33 @@ main #info .my_container.info .details .details-title .name {
     font-size: 25px;
   }
 }
+main #info .my_container.info .details .details-title h4 {
+  color: #00b295;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 992px) {
+  main #info .my_container.info .details .details-title {
+    flex-direction: row;
+  }
+}
 main #info .my_container.info .details .bio {
   flex-direction: column;
   overflow-y: auto;
   width: 100%;
-  /* button.btn-insert {
-      margin-right: 15px;
-  } */
 }
-main #info .my_container.info .details .bio h4 {
-  color: #00b295;
-  margin-bottom: 15px;
-}
-main #info .my_container.info .details .bio button {
-  margin-top: 25px;
-}
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 768px) {
   main #info .my_container.info .details .bio {
-    align-items: center;
+    flex-direction: column;
   }
 }
 @media screen and (max-width: 992px) {
   main #info .my_container.info .details {
-    flex-direction: row;
+    flex-direction: column;
+    padding-top: 5px;
   }
+}
+main #info .my_container.info .btn-box button {
+  margin-top: 25px;
 }
 @media screen and (max-width: 992px) {
   main #info .my_container.info {

@@ -28,15 +28,17 @@
 
             {{-- personal details --}}
             <div class="details d-flex">
-                <div class="details-title">
+                <div class="details-title d-flex">
                     <h1>Buongiorno, <br> <span class="name">{{$user->name}} {{$user->surname}}</span></h1>
+                    <h4><strong>Indirizzo <br> </strong> {{$user->details->address}}</h4>
                 </div>
                 <div class="bio d-flex">
-                    <h4><strong>Indirizzo <br> </strong> {{$user->details->address}}</h4>
                     <p><strong>Bio <br> </strong> {{$user->details->bio}}</p>
-                    <a href="{{route('admin.messages')}}"><button type="button" class="btn btn-insert">Mostra messaggi</button></a>
                 </div>
             </div>
+        </div>
+        <div class="btn-box text-center">                
+            <a href="{{route('admin.messages')}}"><button type="button" class="btn btn-insert ">Mostra messaggi</button></a>
         </div>
     </section>
     {{-- fine personal info --}}
