@@ -1,27 +1,66 @@
 footer {
     background-color: $background_color;
-    padding: 25px 0;
+    padding: 25px 0 0;
 
-    .list-box {
-        width: calc(100% / 4);
-        padding: 0 15px;
+    .my_container {
+        justify-content: space-between;
+        flex-wrap: wrap;
 
-        a,
-        li {
-            color: $bannerColor;
-        }
+        .list-box {
+            flex-basis: calc(100% / 4);
+            padding: 0 15px;
+            
+            a,
+            li {
+                color: $bannerColor;
+            }
 
-        li:first-child {
-            font-size: 25px;
-            font-style: italic;
-            font-weight: bold;
+            li:first-child {
+                font-size: 25px;
+                font-style: italic;
+                font-weight: bold;
+                padding-bottom: 10px;
+
+                @media screen and (max-width: 576px) {
+                    font-size: 30px;
+                }
+            }
+
+            &:not(:first-child) {
+                ul.github {
+
+                    li {
+                        padding-bottom: 10px;
+                        
+                        a {
+                            color: $secondary_color;
+                            font-weight: 700;
+                            
+                            .fa-github {
+                                font-size: 25px;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            @media screen and (max-width: 992px) {
+                flex-basis: 50%;
+                margin-bottom: 20px;
+            }
+            
+            @media screen and (max-width: 576px) {
+                flex-basis: 100%;
+                font-size: 20px;
+            }
         }
     }
 
     .lower-footer {
-        padding: 25px 0 5px;
-        color: $bannerColor;
-
+        padding: 25px 0;
+        color: $secondary_color;
+        background-color: $bannerColor;
+        
         span {
             color: #ff0000;
         }

@@ -10143,24 +10143,57 @@ main {
 
 footer {
   background-color: #1af3c495;
-  padding: 25px 0;
+  padding: 25px 0 0;
 }
-footer .list-box {
-  width: calc(100% / 4);
+footer .my_container {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+footer .my_container .list-box {
+  flex-basis: calc(100% / 4);
   padding: 0 15px;
 }
-footer .list-box a,
-footer .list-box li {
+footer .my_container .list-box a,
+footer .my_container .list-box li {
   color: #00b295;
 }
-footer .list-box li:first-child {
+footer .my_container .list-box li:first-child {
   font-size: 25px;
   font-style: italic;
   font-weight: bold;
+  padding-bottom: 10px;
+}
+@media screen and (max-width: 576px) {
+  footer .my_container .list-box li:first-child {
+    font-size: 30px;
+  }
+}
+footer .my_container .list-box:not(:first-child) ul.github li {
+  padding-bottom: 10px;
+}
+footer .my_container .list-box:not(:first-child) ul.github li a {
+  color: #097521;
+  font-weight: 700;
+}
+footer .my_container .list-box:not(:first-child) ul.github li a .fa-github {
+  font-size: 25px;
+}
+@media screen and (max-width: 992px) {
+  footer .my_container .list-box {
+    flex-basis: 50%;
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 576px) {
+  footer .my_container .list-box {
+    flex-basis: 100%;
+    font-size: 20px;
+  }
 }
 footer .lower-footer {
-  padding: 25px 0 5px;
-  color: #00b295;
+  padding: 25px 0;
+  color: #097521;
+  background-color: #00b295;
 }
 footer .lower-footer span {
   color: #ff0000;
@@ -10355,12 +10388,12 @@ main .edit-form .info-box {
   padding-top: 20px;
 }
 main .edit-form .info-box .image-box img {
-  width: 50%;
+  width: 75%;
   border-radius: 50%;
 }
 @media screen and (max-width: 768px) {
   main .edit-form .info-box .image-box img {
-    width: 75%;
+    width: 60%;
   }
 }
 main .edit-form .info-box .text-box {

@@ -18,7 +18,7 @@
                   @endif
                 </div>
                 <div class="text-box">
-                    <h4>Dottore<br>{{$doctor->name}} {{$doctor->surname}}</h4>
+                    <h4>{{$doctor->name}} {{$doctor->surname}}</h4>
                 </div>
           </div>
 

@@ -1,5 +1,5 @@
 <footer>
-    <div class="my_container d-flex justify-content-between">
+    <div class="my_container d-flex">
         <div class="list-box">
             <ul>
                 <li>Servizi</li>
@@ -36,7 +36,7 @@
             </ul>
         </div>
         <div class="list-box">
-            <ul>
+            <ul class="github">
                 <li>Booldoctors</li>
                 <li><a href="https://github.com/Stefano-Bodritti" target="_blank"><i class="fab fa-github"></i> Stefano Bodritti</a></li>
                 <li><a href="https://github.com/GabrieleCorti" target="_blank"><i class="fab fa-github"></i> Gabriele Corti</a></li>
