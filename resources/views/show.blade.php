@@ -100,7 +100,7 @@
                 <label class="form-check-label" for="rate_1">
                     <i class="fas fa-star"></i>
                 </label>
-                <input class="form-check-input" type="radio" name="rate" id="rate_1" value="1">
+                <input class="form-check-input ml-2 mt-1" type="radio" name="rate" id="rate_1" value="1">
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label" for="rate_2">
@@ -108,7 +108,7 @@
                         <i class="fas fa-star"></i>
                     @endfor
                 </label>
-                <input class="form-check-input" type="radio" name="rate" id="rate_2" value="2">
+                <input class="form-check-input ml-2 mt-1" type="radio" name="rate" id="rate_2" value="2">
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label" for="rate_3">
@@ -116,7 +116,7 @@
                         <i class="fas fa-star"></i>
                     @endfor
                 </label>
-                <input class="form-check-input" type="radio" name="rate" id="rate_3" value="3">
+                <input class="form-check-input ml-2 mt-1" type="radio" name="rate" id="rate_3" value="3">
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label" for="rate_4">
@@ -124,7 +124,7 @@
                         <i class="fas fa-star"></i>
                     @endfor
                 </label>
-                <input class="form-check-input" type="radio" name="rate" id="rate_4" value="4">
+                <input class="form-check-input ml-2 mt-1" type="radio" name="rate" id="rate_4" value="4">
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label" for="rate_5">
@@ -132,10 +132,10 @@
                         <i class="fas fa-star"></i>
                     @endfor
                 </label>
-                <input class="form-check-input" type="radio" name="rate" id="rate_5" value="5">
+                <input class="form-check-input ml-2 mt-1" type="radio" name="rate" id="rate_5" value="5">
             </div>
             <div class="mt-3">
-                <button type="submit" class="btn btn-primary">Inserisci</button>
+                <button type="submit" class="btn btn-insert">Inserisci</button>
             </div>
         </form>
     </section> 
@@ -164,7 +164,7 @@
                 <textarea class="form-control"  name="message" id="message" cols="30" rows="4" placeholder="Inserisci il tuo messaggio"></textarea>
             </div>
             <div class="mt-3">
-                <button type="submit" class="btn btn-primary">Inserisci</button>
+                <button type="submit" class="btn btn-insert">Inserisci</button>
             </div>
         </form>
     </section>

@@ -5,40 +5,40 @@
 @section('content')
   <div class="container">
     <h2>Vuoi ottenere una sponsorizzazione?</h2>
-    <a href="#"><button type="button" class="btn btn-info">Clicca qui!</button></a>
+    <a href="#"><button type="button" class="btn btn-insert mt-3 mb-3">Clicca qui!</button></a>
       <form action="{{route('admin.profile.update', $doctor->id)}}" method="POST" enctype="multipart/form-data">
           @csrf
           @method('PUT')
           <img v-if="doctor.details.image != 'https://via.placeholder.com/150'"{{-- da modificare in caso di seed --}} :src="'storage/' + doctor.details.image" :alt="'Immagine di ' + doctor.name + ' ' + doctor.surname" style="height: 200px">
           <img v-else src="https://i.ibb.co/wQBsxBd/standard-Doctor.png" alt="Immagine del dottore" style="height: 200px">
 
-          <div class="form-group">
+          <div class="form-group mt-3">
             <label for="image">Immagine</label>
             <input type="file" class="form-control" id='image' name='image'>
           </div>
-          <div class="form-group mt-5">
+          <div class="form-group mt-3">
               <label for="address">Indirizzo</label>
               <input type="text" class="form-control" name="address" id="address" placeholder="Inserisci il tuo indirizzo" value="{{$doctor->details->address}}">
           </div>
-          <div class="form-group mt-5">
+          <div class="form-group mt-3">
               <label for="phone">Numero di telefono</label>
               <input type="text" class="form-control" name="phone" id="phone" placeholder="Inserisci il tuo numero di telefono" value="{{$doctor->details->phone}}">
           </div>
-          <div class="form-group mt-5">
+          <div class="form-group mt-3">
             <label for="bio">Bio</label>
             <textarea name="bio" id="bio" cols="30" rows="10">{{$doctor->details->bio}}</textarea>
           </div>
 
-          <div class="form-group mt-5">
-            <h3>Aggiungi nuova prestazione</h3>
+          <div class="form-group mt-4">
+            <h3 class="mb-3">Aggiungi nuova prestazione</h3>
               <label for="service_name">Nome prestazione</label>
               <input type="text" class="form-control" name="service_name" id="service_name" placeholder="Inserisci il nome della prestazione" value="">
               <label for="service_price">Prezzo prestazione</label>
               <input type="number" class="form-control" name="service_price" id="service_price" min="0" max="9999.99" step="0.01" placeholder="Inserisci il prezzo della prestazione" value="">
           </div>
 
-          <div class="mt-3">
-              <h3>Specializzazioni</h3>
+          <div class="mt-4">
+              <h3 class="mb-3">Specializzazioni</h3>
               @foreach ($specializations as $spec)
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" value="{{$spec->id}}" id="{{$spec->specialization}}" name="field[]" {{ $doctor->specializations->contains($spec) ? 'checked' : '' }}>
@@ -49,10 +49,10 @@
               @endforeach
             </div>
 
-          <button type="submit" class="btn btn-primary">Inserisci</button>
+          <button type="submit" class="btn btn-insert mt-3 mb-3">Inserisci</button>
         </form>
 
-        <h3>Cancella prestazione</h3>
+        <h3 class="mt-3">Cancella prestazione</h3>
           <ul>
           @foreach ($services as $service)
             <li class='mt-5'>
@@ -72,9 +72,5 @@
           </div> --}}
           @endforeach
           </ul>
-
-
-
-        <p> <a href="{{ route('admin.profile.index') }}">Back to Homepage?</a> </p>
     </div>
 @endsection

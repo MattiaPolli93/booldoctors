@@ -10088,6 +10088,15 @@ img {
   color: #1662c6;
 }
 
+.btn-insert {
+  background-color: #00b295;
+  color: #ffffff;
+  font-weight: 600;
+}
+.btn-insert:hover {
+  color: #f1f1f1;
+}
+
 header {
   background-color: #1af3c495;
   position: fixed;
@@ -10111,7 +10120,7 @@ header .my_container {
   align-items: center;
 }
 header .my_container img {
-  width: 340px;
+  width: 185px;
   height: auto;
 }
 header .my_container .navbar-nav {

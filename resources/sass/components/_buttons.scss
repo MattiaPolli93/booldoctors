@@ -25,3 +25,14 @@
 .my_action-blue:hover {
   color: $bannerSecondary;
 }
+
+// Bottone - Inserisci
+.btn-insert {
+    background-color: $bannerColor;
+    color: $white;
+    font-weight: 600;
+
+    &:hover {
+        color: #f1f1f1;
+    }
+}
