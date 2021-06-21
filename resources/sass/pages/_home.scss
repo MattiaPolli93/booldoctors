@@ -64,9 +64,12 @@
 
 .glassMorph {
     padding-top: 85px;
+    .glass {
+        margin: auto;
+    }
     .glass_blue {
         .glass {
-            background: linear-gradient(180deg,rgba(191,241,255,.4),rgba(122,194,255,.4));;
+            background: linear-gradient(180deg,rgba(191,241,255,.4),rgba(122,194,255,.4));
             .text {
                 order: 2;
             }
@@ -82,6 +85,42 @@
         }
     }
 }
+
+@media screen and (max-width: 1365px){
+    .glassMorph {
+        .glass {
+            .text {
+                p {
+                    margin: 10px 0;
+                }
+            }
+
+            .my_action.small {
+                padding: 0 50px;
+            }
+        }
+    }
+}
+
+/* @media screen and (max-width: 1110px){
+    .glass {
+        flex-direction: column;
+        .text {
+            width: 100%;
+            order: 2;
+            margin-top: 0px;
+            padding-bottom: 30px;
+        }
+        .glass_img {
+            width: 100%;
+            margin: 0;
+            svg {
+                width: 70px;
+            }
+        }
+    }
+} */
+
 @media screen and (max-width: 800px) {
     .infoShow {
 
