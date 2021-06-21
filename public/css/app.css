@@ -10336,25 +10336,21 @@ footer .lower-footer span {
     width: 100%;
   }
 }
-main section {
-  padding: 50px 0;
-}
-main section .my_container {
-  height: 100%;
-}
 main #info,
 main #reviews,
 main #sponsor,
 main #statistics {
   height: 90vh;
+  padding: 50px 0;
+}
+main #info .my_container,
+main #reviews .my_container,
+main #sponsor .my_container,
+main #statistics .my_container {
+  height: 100%;
 }
 main #info {
   background-color: #ccdbd8;
-}
-main #info .my_container.info {
-  /* button.btn-insert {
-          margin-right: 15px;
-      } */
 }
 main #info .my_container.info .details,
 main #info .my_container.info .image_box {
@@ -10366,12 +10362,17 @@ main #info .my_container.info .image_box figure img {
 }
 @media screen and (max-width: 992px) {
   main #info .my_container.info .image_box figure img {
-    width: 50%;
+    width: 60%;
   }
 }
 @media screen and (max-width: 768px) {
   main #info .my_container.info .image_box figure img {
-    width: 70%;
+    width: 50%;
+  }
+}
+@media screen and (max-width: 576) {
+  main #info .my_container.info .image_box figure img {
+    width: 75%;
   }
 }
 main #info .my_container.info .image_box .info-buttons {
@@ -10441,8 +10442,10 @@ main #info .my_container.info .details .bio {
     padding-top: 5px;
   }
 }
-main #info .my_container.info .btn-box button {
-  margin-top: 25px;
+@media screen and (max-width: 992px) {
+  main #info .my_container.info .details {
+    flex-direction: column;
+  }
 }
 @media screen and (max-width: 992px) {
   main #info .my_container.info {

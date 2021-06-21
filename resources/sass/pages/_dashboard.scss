@@ -1,23 +1,21 @@
-main {
-    section {
-        padding: 50px 0;
-
-        .my_container {
-            height: 100%;
-        }
-    }
-
+main {    
     #info,
     #reviews,
     #sponsor,
     #statistics {
         height: 90vh;
+        padding: 50px 0;
+        
+        .my_container {
+            height: 100%;
+        }
     }
 
     #info {
         background-color: #ccdbd8;
 
         .my_container.info {
+            
             .details,
             .image_box {
                 flex-basis: 50%;
@@ -30,11 +28,15 @@ main {
                         border-radius: 50%;
 
                         @media screen and (max-width: 992px) {
-                            width: 50%;
+                            width: 60%;
                         }
 
                         @media screen and (max-width: 768px) {
-                            width: 70%;
+                            width: 50%;
+                        }
+
+                        @media screen and (max-width: 576) {
+                            width: 75%;
                         }
                     }
                 }
@@ -108,17 +110,11 @@ main {
                     padding-top: 5px;
                 }
             
-            .btn-box {
-
-                button {
-                    margin-top: 25px;
-
-                    &.btn-insert {
-                        margin-right: 15px;
-                    }
+                @media screen and (max-width: 992px) {
+                    flex-direction: column;
                 }
             }
-            
+
             @media screen and (max-width: 992px) {
                 flex-direction: column;
             }
