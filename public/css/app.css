@@ -10358,11 +10358,27 @@ main .edit-form .info-box .image-box img {
   width: 50%;
   border-radius: 50%;
 }
+@media screen and (max-width: 768px) {
+  main .edit-form .info-box .image-box img {
+    width: 75%;
+  }
+}
+main .edit-form .info-box .text-box {
+  width: 100%;
+}
 main .edit-form .info-box .text-box h4 {
   color: #00b295;
-  font-size: 45px;
+  font-size: 50px;
   font-weight: 600;
   font-style: italic;
+}
+@media screen and (max-width: 768px) {
+  main .edit-form .info-box .text-box h4 {
+    font-size: 35px;
+  }
+}
+main .edit-form .bio-text-box textarea {
+  max-width: 95%;
 }
 
 main {

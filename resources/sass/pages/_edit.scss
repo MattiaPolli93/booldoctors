@@ -14,16 +14,32 @@ main {
                 img {
                     width: 50%;
                     border-radius: 50%;
+
+                    @media screen and (max-width: 768px) {
+                        width: 75%;
+                    }
                 }
             }
 
             .text-box {
+                width: 100%;
+
                 h4 {
                     color: $bannerColor;
-                    font-size: 45px;
+                    font-size: 50px;
                     font-weight: 600;
                     font-style: italic;
+
+                    @media screen and (max-width: 768px) {
+                        font-size: 35px;
+                    }
                 }
+            }
+        }
+
+        .bio-text-box {
+            textarea {
+                max-width: 95%;
             }
         }
     }
