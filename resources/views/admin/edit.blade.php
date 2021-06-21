@@ -7,6 +7,8 @@
       <form action="{{route('admin.profile.update', $doctor->id)}}" method="POST" enctype="multipart/form-data">
           @csrf
           @method('PUT')
+
+          {{-- Info personali --}}
           <div class="info-box d-flex">
               <div class="image-box">
                   @if ($doctor->details->image != 'https://via.placeholder.com/150')
@@ -18,8 +20,8 @@
                 <div class="text-box">
                     <h4>Doctor <br> {{$doctor->name}} {{$doctor->surname}}</h4>
                 </div>
-
           </div>
+
           <div class="form-group mt-3">
             <label for="image">Immagine</label>
             <input type="file" class="form-control" id='image' name='image'>
@@ -39,6 +41,7 @@
             </div>
           </div>
           
+          {{-- Specializzazioni --}}
           <div class="mt-4">
               <h3 class="mb-3">Specializzazioni</h3>
               @foreach ($specializations as $spec)
@@ -51,6 +54,7 @@
               @endforeach
             </div>
 
+            {{-- Inserisci prestazioni --}}
           <div class="form-group mt-4">
             <h3 class="mb-3">Aggiungi nuova prestazione</h3>
               <label for="service_name">Nome prestazione</label>
@@ -62,6 +66,7 @@
           <button type="submit" class="btn btn-insert mt-3 mb-3">Inserisci</button>
         </form>
 
+        {{-- Cancella prestazioni --}}
         <h3 class="mt-4">Cancella prestazione</h3>
           <ul>
           @foreach ($services as $service)

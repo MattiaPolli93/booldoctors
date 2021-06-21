@@ -40,9 +40,9 @@
                 <li>Booldoctors</li>
                 <li><a href="https://github.com/Stefano-Bodritti" target="_blank"><i class="fab fa-github"></i> Stefano Bodritti</a></li>
                 <li><a href="https://github.com/GabrieleCorti" target="_blank"><i class="fab fa-github"></i> Gabriele Corti</a></li>
-                <li><a href="https://github.com/MattiaPolli93" target="_blank"><i class="fab fa-github"></i> Giuseppe Lana</a></li>
+                <li><a href="https://github.com/giuseppe-lana27" target="_blank"><i class="fab fa-github"></i> Giuseppe Lana</a></li>
                 <li><a href="https://github.com/matassoli" target="_blank"><i class="fab fa-github"></i> Nicolò Matassoli</a></li>
-                <li><a href="https://github.com/giuseppe-lana27" target="_blank"><i class="fab fa-github"></i> Mattia Polli</a></li>
+                <li><a href="https://github.com/MattiaPolli93" target="_blank"><i class="fab fa-github"></i> Mattia Polli</a></li>
             </ul>
         </div>
     </div>
