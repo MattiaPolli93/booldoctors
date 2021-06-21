@@ -29,7 +29,8 @@
     .docAvatar {
         width: 15%;
         img {
-          width: 120px;
+            max-width: 120px;
+            width: 100%;
         }
     }
 }
