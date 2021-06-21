@@ -12,7 +12,7 @@
             <div class="message">
                 <div class="message_top">
                     <h5>Inviato da: {{$message->email}}</h5>
-                    <button type="button" class="btn btn-primary">Risolvi richiesta</button>
+                    <button type="button" class="btn btn-insert">Risolvi richiesta</button>
                 </div>
                 <p>{{$message->message}}</p>
                 <p><small>Data e orario dell'invio: {{$message->added_on}}</small></p>
