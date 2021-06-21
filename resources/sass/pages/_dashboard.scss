@@ -10,6 +10,18 @@ main {
             height: 100%;
         }
     }
+    
+    #reviews,
+    #sponsor,
+    #statistics {
+        @media screen and (max-width: 768px) {
+            height: 70vh;
+        }
+    
+        @media screen and (max-width: 576px) {
+            height: 60vh;
+        }
+    }
 
     #info {
         background-color: #ccdbd8;
@@ -124,14 +136,36 @@ main {
     #reviews {
         background-color: $background-color;
 
-        .reviews,
-        .reviews-image {
-            flex-basis: 50%;
-        }
+        .my_container {
+            flex-direction: row-reverse;
 
-        .reviews-image {
-            img {
-                width: 100%;
+            .reviews,
+            .reviews-image {
+                flex-basis: 50%;
+            }
+            
+            .reviews {
+                align-items: center;
+
+                @media screen and (max-width: 992px) {
+                    align-items: flex-start;
+                    flex-basis: 25%;
+                }
+            }
+
+            .reviews-image {
+                img {
+                    width: 100%;
+                }
+
+                @media screen and (max-width: 992px) {
+                    align-items: flex-start;
+                    flex-basis: 75%;
+                }
+            }
+
+            @media screen and (max-width: 992px) {
+                flex-direction: column;
             }
         }
     }
@@ -139,14 +173,33 @@ main {
     #statistics {
         background-color: $main_color;
 
-        .statistics,
-        .statistics-image {
-            flex-basis: 50%;
-        }
+        .my_container {
+            .statistics,
+            .statistics-image {
+                flex-basis: 50%;
+            }
 
-        .statistics-image {
-            img {
-                width: 100%;
+            .statistics {
+                align-items: center;
+
+                @media screen and (max-width: 992px) {
+                    align-items: flex-start;
+                    flex-basis: 25%;
+                }
+            }
+
+            .statistics-image {
+                img {
+                    width: 100%;
+                }
+
+                @media screen and (max-width: 992px) {
+                    flex-basis: 75%;
+                }
+            }
+
+            @media screen and (max-width: 992px) {
+                flex-direction: column;
             }
         }
     }
@@ -172,7 +225,7 @@ main {
                 letter-spacing: 1px;
             }
 
-             @media screen and (max-width: 576px) {
+            @media screen and (max-width: 576px) {
                 h2 {
                     font-size: 35px;
                 }
@@ -180,7 +233,7 @@ main {
                 p {
                     font-size: 20px;
                 }
-             }
+            }
         }
     }
 }

@@ -10349,6 +10349,20 @@ main #sponsor .my_container,
 main #statistics .my_container {
   height: 100%;
 }
+@media screen and (max-width: 768px) {
+  main #reviews,
+main #sponsor,
+main #statistics {
+    height: 70vh;
+  }
+}
+@media screen and (max-width: 576px) {
+  main #reviews,
+main #sponsor,
+main #statistics {
+    height: 60vh;
+  }
+}
 main #info {
   background-color: #ccdbd8;
 }
@@ -10455,22 +10469,64 @@ main #info .my_container.info .details .bio {
 main #reviews {
   background-color: #1af3c495;
 }
-main #reviews .reviews,
-main #reviews .reviews-image {
+main #reviews .my_container {
+  flex-direction: row-reverse;
+}
+main #reviews .my_container .reviews,
+main #reviews .my_container .reviews-image {
   flex-basis: 50%;
 }
-main #reviews .reviews-image img {
+main #reviews .my_container .reviews {
+  align-items: center;
+}
+@media screen and (max-width: 992px) {
+  main #reviews .my_container .reviews {
+    align-items: flex-start;
+    flex-basis: 25%;
+  }
+}
+main #reviews .my_container .reviews-image img {
   width: 100%;
+}
+@media screen and (max-width: 992px) {
+  main #reviews .my_container .reviews-image {
+    align-items: flex-start;
+    flex-basis: 75%;
+  }
+}
+@media screen and (max-width: 992px) {
+  main #reviews .my_container {
+    flex-direction: column;
+  }
 }
 main #statistics {
   background-color: #5ef77f;
 }
-main #statistics .statistics,
-main #statistics .statistics-image {
+main #statistics .my_container .statistics,
+main #statistics .my_container .statistics-image {
   flex-basis: 50%;
 }
-main #statistics .statistics-image img {
+main #statistics .my_container .statistics {
+  align-items: center;
+}
+@media screen and (max-width: 992px) {
+  main #statistics .my_container .statistics {
+    align-items: flex-start;
+    flex-basis: 25%;
+  }
+}
+main #statistics .my_container .statistics-image img {
   width: 100%;
+}
+@media screen and (max-width: 992px) {
+  main #statistics .my_container .statistics-image {
+    flex-basis: 75%;
+  }
+}
+@media screen and (max-width: 992px) {
+  main #statistics .my_container {
+    flex-direction: column;
+  }
 }
 main #sponsor {
   background-color: #dfdfdf;

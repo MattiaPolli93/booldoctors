@@ -45,8 +45,8 @@
 
     {{-- reviews --}}
     <section id="reviews">
-        <div class="my_container d-flex flex-row-reverse align-items-center">
-            <div class="reviews d-flex justify-content-center align-items-center">
+        <div class="my_container d-flex align-items-center">
+            <div class="reviews d-flex justify-content-center">
                 <a href="{{route('admin.comments')}}"><button type="button" class="btn btn-insert">Mostra recensioni</button></a>
             </div>
             <div class="reviews-image">
@@ -59,7 +59,7 @@
     {{-- statistics --}}
     <section id="statistics">
         <div class="my_container d-flex align-items-center">
-            <div class="statistics d-flex justify-content-center align-items-center">
+            <div class="statistics d-flex justify-content-center">
                 <a href="{{route('admin.statistics')}}"><button type="button" class="btn btn-insert">Visualizza le tue statistiche</button></a>
             </div>
             <div class="statistics-image">
