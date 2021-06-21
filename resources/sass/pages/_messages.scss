@@ -1,6 +1,43 @@
 main {
-    .messages {
-        height: 50vh;
-        margin: 100px 0;
+        min-height: 40vh;
+        // margin: 100px 0;
+}
+
+h1#title {
+  font-size: 40px;
+  font-weight: bolder;
+  color: $main_color;
+  margin: 20px 0;
+}
+
+.messages {
+  display: flex;
+  flex-wrap: wrap;
+
+  .message {
+    width: calc(50% - 20px);
+    border: 2px solid $background_color;
+    border-radius: 10px;
+    padding: 15px;
+    margin-right: 10px;
+    margin-bottom: 20px;
+
+    h5 {
+      font-size: 20px;
+      font-weight: 600;
     }
+    p {
+      margin: 10px 0;
+    }
+
+    .message_top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+  }
+}
+
+p.link_dashboard {
+  margin: 10px 0 30px;
 }

@@ -12,11 +12,11 @@
         <div class="comment">
           <h5>Valutazione: {{$comment->rate}}/5</h5>
           @if ($comment->comment != NULL)
-          <p>{{$comment->comment}}</p>
+          <p class="comment_text">{{$comment->comment}}</p>
           @else
-          <p><em>Nessun commento inserito</em></p>
+          <p class="comment_text"><em>Nessun commento inserito</em></p>
           @endif
-          <p>Inviato da: {{$comment->username}}</p>
+          <p><small>Inviato da: {{$comment->username}}</small></p>
           <p><small>Data e orario del commento: {{$comment->added_on}}</small></p>
         </div>
         @endforeach
