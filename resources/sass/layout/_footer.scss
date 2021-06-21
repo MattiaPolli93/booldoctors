@@ -7,8 +7,8 @@ footer {
         flex-wrap: wrap;
 
         .list-box {
-            flex-basis: calc(100% / 4);
-            padding: 0 15px;
+            flex-basis: 25%;
+            padding-right: 15px;
             
             a,
             li {
@@ -25,23 +25,34 @@ footer {
                     font-size: 30px;
                 }
             }
-
+            
             &:not(:first-child) {
                 ul.github {
-
+                    
                     li {
-                        padding-bottom: 10px;
+                        padding-bottom: 5px;
                         
                         a {
-                            color: $secondary_color;
                             font-weight: 700;
                             
                             .fa-github {
+                                color: $secondary_color;
                                 font-size: 25px;
                             }
                         }
                     }
                 }
+            }
+
+            &:nth-child(2n+2) {
+                @media screen and (max-width: 992px) {
+                    padding-left: 15px;
+                }
+
+                @media screen and (max-width: 576px) {
+                    padding-left: 0;
+                }
+
             }
             
             @media screen and (max-width: 992px) {
@@ -52,6 +63,7 @@ footer {
             @media screen and (max-width: 576px) {
                 flex-basis: 100%;
                 font-size: 20px;
+                padding-left: 0;
             }
         }
     }

@@ -10150,8 +10150,8 @@ footer .my_container {
   flex-wrap: wrap;
 }
 footer .my_container .list-box {
-  flex-basis: calc(100% / 4);
-  padding: 0 15px;
+  flex-basis: 25%;
+  padding-right: 15px;
 }
 footer .my_container .list-box a,
 footer .my_container .list-box li {
@@ -10169,14 +10169,24 @@ footer .my_container .list-box li:first-child {
   }
 }
 footer .my_container .list-box:not(:first-child) ul.github li {
-  padding-bottom: 10px;
+  padding-bottom: 5px;
 }
 footer .my_container .list-box:not(:first-child) ul.github li a {
-  color: #097521;
   font-weight: 700;
 }
 footer .my_container .list-box:not(:first-child) ul.github li a .fa-github {
+  color: #097521;
   font-size: 25px;
+}
+@media screen and (max-width: 992px) {
+  footer .my_container .list-box:nth-child(2n+2) {
+    padding-left: 15px;
+  }
+}
+@media screen and (max-width: 576px) {
+  footer .my_container .list-box:nth-child(2n+2) {
+    padding-left: 0;
+  }
 }
 @media screen and (max-width: 992px) {
   footer .my_container .list-box {
@@ -10188,6 +10198,7 @@ footer .my_container .list-box:not(:first-child) ul.github li a .fa-github {
   footer .my_container .list-box {
     flex-basis: 100%;
     font-size: 20px;
+    padding-left: 0;
   }
 }
 footer .lower-footer {
