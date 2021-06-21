@@ -23,20 +23,21 @@
             <!-- here put a spinner or whatever you want to indicate that a request is in progress -->
           </div>
       </div>
-
-    <div v-for="doctor in filterDoc" class="cardDoctor">
-        <div class="docAvatar">
-            <div class="image_box">
-                <img v-if="doctor.details.image != 'https://via.placeholder.com/150'"{{-- da modificare in caso di seed --}} :src="'storage/' + doctor.details.image" :alt="'Immagine di ' + doctor.name + ' ' + doctor.surname">
-                <img v-else src="https://i.ibb.co/wQBsxBd/standard-Doctor.png" alt="Immagine del dottore">
+    <div class="doctor_container">
+        <div v-for="doctor in filterDoc" class="cardDoctor">
+            <div class="docAvatar">
+                <div class="image_box">
+                    <img v-if="doctor.details.image != 'https://via.placeholder.com/150'"{{-- da modificare in caso di seed --}} :src="'storage/' + doctor.details.image" :alt="'Immagine di ' + doctor.name + ' ' + doctor.surname">
+                    <img v-else src="https://i.ibb.co/wQBsxBd/standard-Doctor.png" alt="Immagine del dottore">
+                </div>
             </div>
-        </div>
-        <div class="docInfo">
-            <h3>@{{doctor.name}} @{{doctor.surname}}</h3>
-            <span v-for="doc in doctor.specializations" class="my_tag">@{{doc.field}}</span>
-            <p>Indirizzo: @{{doctor.details.address}}</p>
-            <a :href="'http://127.0.0.1:8000/doctor/' + doctor.id">Contatta questo professionista</a>
-        </div>
+            <div class="docInfo">
+                <h3>@{{doctor.name}} @{{doctor.surname}}</h3>
+                <span v-for="doc in doctor.specializations" class="my_tag">@{{doc.field}}</span>
+                <p>Indirizzo: @{{doctor.details.address}}</p>
+                <a :href="'http://127.0.0.1:8000/doctor/' + doctor.id">Contatta questo professionista</a>
+            </div>
+        </div>  
     </div>
 </div>
 <script src="https://unpkg.com/vue@next"></script>
