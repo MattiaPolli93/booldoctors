@@ -4,66 +4,80 @@
     Sponsorizzazione
 @endsection
 
+
 @section('content')
-    {{-- <div class="my_container"> --}}
-        {{-- <form id="payment-form" action="/route/on/your/server" method="post">
-            <!-- Putting the empty container you plan to pass to
-              `braintree.dropin.create` inside a form will make layout and flow
-              easier to manage -->
-            <div id="dropin-container">
-                <h1>Seleziona il piano per la tua sponsorizzazione</h1>
-                <div class="form-group mt-3">
-                    @foreach ($plans as $plan)                    
-                      <h2>Il piano {{$plan->plan}} ha una durata di {{$plan->period}} ore</h2>                     
-                        <input class="form-check-input" type="checkbox" value="{{$plan->id}}" id="{{$plan->price}}" name="plans[]">
-                        <label class="form-check-label" for="{{$plan->plan}}">
-                            {{$plan->price}} €
-                        </label> 
-                    @endforeach                    
-                </div>            
-            </div>
-            <input type="submit" />
-            <input type="hidden" id="nonce" name="payment_method_nonce"/>
-        </form> --}}
-   {{--      <div class="my_container">
-        <div id="dropin-container">
-            <h1>Ha nesciri i soddi</h1>            
+
+@if (session('message'))
+    <div class="alert alert-success">
+        {{ session('message') }}
+    </div>
+@endif
+
+@if(count($errors) > 0)
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
+
+<div class="my_container">
+    <h1>{{$plan->plan}}</h1>
+    <form id="pay_form" method="POST" action=""  enctype="multipart/form-data"> 
+      @csrf
+      @method('POST')
+      <h3 class="mt-5 mb-4">Il prezzo da pagare è: {{$plan->price}}</h3>
+      <label for="amount">
+        <span class="input-label">Amount</span>
+        <div class="input-wrapper amount-wrapper">
+            <input id="amount" name="amount" type="tel" min="1" placeholder="Amount" value="2001">
         </div>
-        <button id="submit-button">Purchase</button>
-        </div>
-   <script src="https://js.braintreegateway.com/web/dropin/1.30.1/js/dropin.min.js"></script>
+    </label>
+      
+  
+      <form id="pay_form" method="POST" action=""  enctype="multipart/form-data"> 
+          @csrf
+          @method('POST')
 
-   <script>
-       
-     var submitButton = document.querySelector('#submit-button');
-     // Step two: create a dropin instance using that container (or a string
-    //   that functions as a query selector such as `#dropin-container`)
-    braintree.dropin.create({
-      container: document.getElementById('dropin-container'),
-      // ...plus remaining configuration
-    }, (error, dropinInstance) => {
-      // Use `dropinInstance` here
-      // Methods documented at https://braintree.github.io/braintree-web-drop-in/docs/current/Dropin.html
-    });
+          <div id="dropin-container"></div>
+          <input  type="submit" value="completa l ordine">
+          <input type="hidden" id="nonce" name="payment_method_nonce"/>
+        
+  
+          {{-- <button class="btn-success" type="submit" ></button> --}}
+          
+      </form>
+</div> 
+      <script src="https://js.braintreegateway.com/js/braintree-2.32.1.min.js"></script>
 
-     braintree.dropin.create({
-       authorization: 'CLIENT_AUTHORIZATION',
-       selector: '#dropin-container'
-     }, function (err, dropinInstance) {
-       if (err) {
-         // Handle any errors that might've occurred when creating Drop-in
-         console.error(err);
-         return;
-       }
-       submitButton.addEventListener('click', function () {
-         dropinInstance.requestPaymentMethod(function (err, payload) {
-           if (err) {
-             // Handle errors in requesting payment method
-           }
+ <script src="https://js.braintreegateway.com/web/dropin/1.10.0/js/dropin.js"></script>
 
-           // Send payload.nonce to your server
-         });
-       });
-     });
-   </script>    --}}     
+ 
+ 
+ 
+ <script>
+    
+var form = document.querySelector('#pay_form');
+var token = "{{ $token }}"
+braintree.dropin.create({
+authorization: token,
+selector: '#dropin-container'
+}, function (err, instance) {
+form.addEventListener('submit',function (event) {
+        event.preventDefault();
+        instance.requestPaymentMethod(function (err, payload) {
+            if (err) {
+                console.log('Request Payment Method Error', err);
+                return;
+            }
+            // Add the nonce to the form and submit
+            document.querySelector('#nonce').value = payload.nonce;
+            form.submit();
+        });
+    })
+});
+ 
+</script> 
 @endsection

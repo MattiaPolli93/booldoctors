@@ -99,12 +99,12 @@ class UserController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-     public function show($id)
+    /*  public function show($id)
     {
-        $doctor = User::where('id', $id)->first();
+        $doctor = Auth::id();
 
         return view('admin.show', compact('doctor'));
-    }
+    } */
 
     /**
      * Show the form for editing the specified resource.
