@@ -55,18 +55,30 @@ class PlanController extends Controller
                 'submitForSettlement' => true
             ]
         ]);
-        $extendPlan = $user->plans()->get()->last();
-
-        $currentExpireDate = $extendPlan->pivot->expire_date;
-       
-        $now = Carbon::now('Europe/Rome');
-
+        
         if($result->success){   
-            if($currentExpireDate < $now){
-                $currentExpireDate = $now->addHour($plan->period);                                
-            } else {
-                $currentExpireDate = Carbon::parse($currentExpireDate)->addHour($plan->period);
-            } 
+            // accedo all'ultima entry di questo user nella tabella pivot
+            $extendPlan = $user->plans()->get()->last();
+            $now = Carbon::now('Europe/Rome');
+
+                // se non ha mai fatto una sponsorizzazione
+                if ($extendPlan == null) {
+                    $currentExpireDate = $now->addHour($plan->period);
+                } else {
+
+                    // prendo l'ultima expire date dalla pivot
+                    $currentExpireDate = $extendPlan->pivot->expire_date;
+                    
+                    // se la sponsorizzazione non è ancora scaduta, aggiunto le ore alla attuale expire date
+                    if($currentExpireDate < $now){
+                        $currentExpireDate = $now->addHour($plan->period);                                
+                    } else {
+                        // altrimenti la aggiungo all'ora odierna
+                        $currentExpireDate = Carbon::parse($currentExpireDate)->addHour($plan->period);
+                    } 
+                }
+
+                // inserisco i dati nella pivot
             $user->plans()->attach($user, [
                 'user_id' => $user->id,
                 'plan_id' => $plan->id,
