@@ -10351,7 +10351,7 @@ main #statistics .my_container {
 main #reviews,
 main #sponsor,
 main #statistics {
-  height: 90vh;
+  height: 80vh;
 }
 @media screen and (max-width: 768px) {
   main #reviews,
@@ -10375,7 +10375,7 @@ main #info .my_container.info .image_box {
   flex-basis: 50%;
 }
 main #info .my_container.info .image_box figure img {
-  max-width: 80%;
+  max-width: 70%;
   border-radius: 50%;
 }
 @media screen and (max-width: 992px) {
@@ -10409,7 +10409,6 @@ main #info .my_container.info .details {
 main #info .my_container.info .details .details-title,
 main #info .my_container.info .details .bio {
   flex-basis: 50%;
-  height: 200px;
 }
 main #info .my_container.info .details .details-title {
   flex-direction: column;

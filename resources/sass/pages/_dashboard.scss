@@ -13,7 +13,7 @@ main {
     #reviews,
     #sponsor,
     #statistics {
-        height: 90vh;
+        height: 80vh;
 
         @media screen and (max-width: 768px) {
             height: 70vh;
@@ -36,7 +36,7 @@ main {
             .image_box {
                 figure {
                     img {
-                        max-width: 80%;
+                        max-width: 70%;
                         border-radius: 50%;
 
                         @media screen and (max-width: 992px) {
@@ -70,7 +70,6 @@ main {
                 .details-title,
                 .bio {
                     flex-basis: 50%;
-                    height: 200px;
                 }
 
                 .details-title {
@@ -210,6 +209,7 @@ main {
     #sponsor {
         background-color: #dfdfdf;
         /* background-image: url("https://wallpaperaccess.com/full/3988500.jpg");
+        background-image: url("https: //wallpaperaccess.com/full/3464162.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position-y: 15%; */
