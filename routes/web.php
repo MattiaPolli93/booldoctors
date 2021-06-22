@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\GuestController;
+use Illuminate\Http\Client\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -30,6 +31,7 @@ Route::prefix('admin')->name('admin.')->namespace('Admin')->middleware('auth')->
     Route::get('comments', 'CommentController@showComments')->name('comments');
     Route::get('statistics', 'StatisticController@showStats')->name('statistics');
     Route::get('sponsor', 'PlanController@setPlan')->name('sponsor');
+    Route::post('sponsor', 'PlanController@payPlan')->name('sponsor.checkout');
     /* Route::resource('create', 'UserController'); */
     /* Route::resource('posts', 'PostController');
     Route::resource('tags', 'TagController'); */
