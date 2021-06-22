@@ -91,7 +91,7 @@
                     {{-- Sponsor disponibili --}}
                     <div class="sponsors d-flex">
                         {{-- 2.99 --}}
-                        <div class="card_wrapcard price first">
+                        <div class="card card_wrapcard price first">
                             <ul>
                                 <li class="price">
                                     <div class="pricenumber">
@@ -99,10 +99,6 @@
                                             <i class="fas fa-euro-sign"></i>
                                         </div>
                                         <span>2.99</span>
-                                    </div>
-                                    <div class="decimal">
-                                        <span class="cent">99</span>
-                                        <span class="month">monthly</span>
                                     </div>
                                 </li>
                                 <li><span>44 Projects</span></li>
@@ -113,7 +109,7 @@
                         </div>
 
                         {{-- 5.99 --}}
-                        <div class="card_wrapcard price second">
+                        <div class="card card_wrapcard price second">
                             <ul>
                                 <li class="price">
                                     <div class="pricenumber">
@@ -121,10 +117,6 @@
                                             <i class="fas fa-euro-sign"></i>
                                         </div>
                                         <span>5.99</span>
-                                    </div>
-                                    <div class="decimal">
-                                        <span class="cent">99</span>
-                                        <span class="month">monthly</span>
                                     </div>
                                 </li>
                                 <li><span>44 Projects</span></li>
@@ -135,7 +127,7 @@
                         </div>
 
                         {{-- 9.99 --}}
-                        <div class="card_wrapcard price third">
+                        <div class="card card_wrapcard price third">
                             <ul>
                                 <li class="price">
                                     <div class="pricenumber">
@@ -143,10 +135,6 @@
                                             <i class="fas fa-euro-sign"></i>
                                         </div>
                                         <span>9.99</span>
-                                    </div>
-                                    <div class="decimal">
-                                        <span class="cent">99</span>
-                                        <span class="month">monthly</span>
                                     </div>
                                 </li>
                                 <li><span>44 Projects</span></li>
