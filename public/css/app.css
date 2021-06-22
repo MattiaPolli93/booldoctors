@@ -10777,11 +10777,16 @@ h1.stat_title {
   text-align: center;
 }
 
-.canvas_container {
+.chart_1 {
   width: 85%;
   margin: auto;
   height: 50%;
   margin-bottom: 60px;
+}
+.chart_1 h4 {
+  text-align: center;
+  color: #097521;
+  margin-bottom: 20px;
 }
 
 h1#title {

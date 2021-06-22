@@ -8,11 +8,11 @@
 <div class="my_container">
   <h1 class="stat_title">Le tue statistiche</h1>
   <div class="chart_1">
-    <h2>Numero di messaggi e recensioni ricevute ogni mese</h2>
+    <h4>Numero di messaggi e recensioni ricevute ogni mese</h4>
     <canvas id="myChart"></canvas>
   </div>
   <div class="chart_1">
-    <h2>Voti ricevuti ogni mese</h2>
+    <h4>Voti ricevuti ogni mese</h4>
     <canvas id="myOtherChart"></canvas>
   </div>
   <p class="link_dashboard"><a href="{{ route('admin.profile.index') }}">Torna alla Dashboard</a></p>
