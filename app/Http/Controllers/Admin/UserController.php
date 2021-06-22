@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Detail;
 use App\Http\Controllers\Controller;
 use App\Message;
+use App\Plan;
 use App\Service;
 use App\Specialization;
 use App\User;
@@ -36,9 +37,11 @@ class UserController extends Controller
 
         $user = User::where('id', $doctor_id)->first();
 
-        $details = Detail::where('id', $doctor_id)->first();        
+        $details = Detail::where('id', $doctor_id)->first(); 
+        
+        $plan = Plan::all();
 
-        return view('admin.index', compact('user', 'details'));
+        return view('admin.index', compact('user', 'details', 'plan'));
     }
 
     // /**

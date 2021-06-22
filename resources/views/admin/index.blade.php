@@ -81,7 +81,82 @@
                         Scegli fra le seguenti offerte e acquista visibilità, il tuo profilo sarà messo in risalto nella homepage di BoolDoctors!
                     </p>
                 </div>
-                <a href="#"><button class="btn btn-insert">Ottieni sponsorizzazione</button></a>
+                {{-- VERSIONE CARD --}}
+                <div class="my_container">
+                    {{-- Scegli sponsor --}}
+                    <div class="choose-sponsor pt-3 text-center">
+                        <h1>Ottieni una Sponsorizzazione!</h1>
+                    </div>
+                    
+                    {{-- Sponsor disponibili --}}
+                    <div class="sponsors d-flex">
+                        {{-- 2.99 --}}
+                        <div class="card_wrapcard price first">
+                            <ul>
+                                <li class="price">
+                                    <div class="pricenumber">
+                                        <div class="euro">
+                                            <i class="fas fa-euro-sign"></i>
+                                        </div>
+                                        <span>2.99</span>
+                                    </div>
+                                    <div class="decimal">
+                                        <span class="cent">99</span>
+                                        <span class="month">monthly</span>
+                                    </div>
+                                </li>
+                                <li><span>44 Projects</span></li>
+                                <li><span>44 Storage</span></li>
+                                <li><span>44</span></li>
+                            </ul>
+                            <a href="{{route('admin.sponsor', ['id' => 1])}}"><button class="btn btn-insert">Ottieni sponsorizzazione</button></a>
+                        </div>
+
+                        {{-- 5.99 --}}
+                        <div class="card_wrapcard price second">
+                            <ul>
+                                <li class="price">
+                                    <div class="pricenumber">
+                                        <div class="euro">
+                                            <i class="fas fa-euro-sign"></i>
+                                        </div>
+                                        <span>5.99</span>
+                                    </div>
+                                    <div class="decimal">
+                                        <span class="cent">99</span>
+                                        <span class="month">monthly</span>
+                                    </div>
+                                </li>
+                                <li><span>44 Projects</span></li>
+                                <li><span>44 Storage</span></li>
+                                <li><span>44</span></li>
+                            </ul>
+                            <a href="{{route('admin.sponsor', ['id' => 2])}}"><button class="btn btn-insert">Ottieni sponsorizzazione</button></a>
+                        </div>
+
+                        {{-- 9.99 --}}
+                        <div class="card_wrapcard price third">
+                            <ul>
+                                <li class="price">
+                                    <div class="pricenumber">
+                                        <div class="euro">
+                                            <i class="fas fa-euro-sign"></i>
+                                        </div>
+                                        <span>9.99</span>
+                                    </div>
+                                    <div class="decimal">
+                                        <span class="cent">99</span>
+                                        <span class="month">monthly</span>
+                                    </div>
+                                </li>
+                                <li><span>44 Projects</span></li>
+                                <li><span>44 Storage</span></li>
+                                <li><span>44</span></li>
+                            </ul>
+                            <a href="{{route('admin.sponsor', ['id' => 3])}}"><button class="btn btn-insert">Ottieni sponsorizzazione</button></a>
+                        </div>
+                    </div>
+                </div>                
             </div>
         </div>
     </section>
