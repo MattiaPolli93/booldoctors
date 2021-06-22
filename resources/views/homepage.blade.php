@@ -9,7 +9,7 @@
 
     <section class="my_jumbotron">
         <div class="my_container clame">
-            <h1>Prenota la tua commit online!</h1>
+            <h1>Prenota la tua visita online!</h1>
             <h3>Cerca tra 200 000 dottori.</h3>
             <a href="{{route('search')}}"><button class=".reset_btn my_action">Trova il tuo professionista</button></a>
         </div>
