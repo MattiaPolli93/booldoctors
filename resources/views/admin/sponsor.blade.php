@@ -7,6 +7,91 @@
 
 @section('content')
 
+
+
+
+{{-- VERSIONE CARD --}}
+<div class="my_container">
+    {{-- Scegli sponsor --}}
+    <div class="choose-sponsor pt-3 text-center">
+        <h1>Ottieni una Sponsorizzazione!</h1>
+    </div>
+    
+    {{-- Sponsor disponibili --}}
+    <div class="sponsors d-flex">
+        {{-- 2.99 --}}
+        <div class="card_wrapcard price first">
+            <ul>
+                <li class="price">
+                    <div class="pricenumber">
+                        <div class="euro">
+                            <i class="fas fa-euro-sign"></i>
+                        </div>
+                        <span>2.99</span>
+                    </div>
+                    <div class="decimal">
+                        <span class="cent">99</span>
+                        <span class="month">monthly</span>
+                    </div>
+                </li>
+                <li><span>44 Projects</span></li>
+                <li><span>44 Storage</span></li>
+                <li><span>44</span></li>
+            </ul>
+            <button class="btn_primary btn_gray">start today</button>
+        </div>
+
+        {{-- 5.99 --}}
+        <div class="card_wrapcard price second">
+            <ul>
+                <li class="price">
+                    <div class="pricenumber">
+                        <div class="euro">
+                            <i class="fas fa-euro-sign"></i>
+                        </div>
+                        <span>5.99</span>
+                    </div>
+                    <div class="decimal">
+                        <span class="cent">99</span>
+                        <span class="month">monthly</span>
+                    </div>
+                </li>
+                <li><span>44 Projects</span></li>
+                <li><span>44 Storage</span></li>
+                <li><span>44</span></li>
+            </ul>
+            <button class="btn_primary btn_gray">start today</button>
+        </div>
+
+        {{-- 9.99 --}}
+        <div class="card_wrapcard price third">
+            <ul>
+                <li class="price">
+                    <div class="pricenumber">
+                        <div class="euro">
+                            <i class="fas fa-euro-sign"></i>
+                        </div>
+                        <span>9.99</span>
+                    </div>
+                    <div class="decimal">
+                        <span class="cent">99</span>
+                        <span class="month">monthly</span>
+                    </div>
+                </li>
+                <li><span>44 Projects</span></li>
+                <li><span>44 Storage</span></li>
+                <li><span>44</span></li>
+            </ul>
+            <button class="btn_primary btn_gray">start today</button>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
 @if (session('message'))
     <div class="alert alert-success">
         {{ session('message') }}

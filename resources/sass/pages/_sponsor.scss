@@ -1,0 +1,63 @@
+.sponsors {
+    padding: 40px 0;
+    justify-content: space-between;
+
+    .card_wrapcard {
+        flex-basis: calc(100% / 3);
+        border: 5px dotted blue;
+        margin: 0 5px;
+
+        li {
+            margin: 35px 0;
+            color: #000;
+
+            &.price {
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+
+                .pricenumber {
+                    .euro {
+                        display: inline-block;
+
+                        .fas.fa-euro-sign {
+                            font-size: 18px;
+                            vertical-align: super;
+                            position: relative;
+                            left: 9px;
+                        }
+                    }
+
+                    span {
+                        color: #000;
+                    }
+
+                    font-size: 40px;
+                    font-weight: 900;
+                }
+
+                .decimal {
+                    display: flex;
+                    flex-direction: column;
+                    align-self: center;
+
+                    .cent {
+                        font-size: 14px;
+                        position: relative;
+                        right: 8px;
+                        bottom: 4px;
+                        font-weight: 900;
+                        color: #000;
+                    }
+
+                    .month {
+                        font-size: 11px;
+                        font-style: italic;
+                        font-weight: 900;
+                        color: #818e9d;
+                    }
+                }
+            }
+        }
+    }
+}
