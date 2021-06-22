@@ -9,7 +9,7 @@ footer {
         .list-box {
             flex-basis: 25%;
             padding-right: 15px;
-            
+
             a,
             li {
                 color: $bannerColor;
@@ -25,14 +25,14 @@ footer {
                     font-size: 30px;
                 }
             }
-            
+
             &:not(:first-child) {
 
                 ul.github {
-                    
+
                     li {
                         padding-bottom: 5px;
-                        
+
                         a {
                             font-weight: 700;
                             .fa-github {
@@ -54,12 +54,12 @@ footer {
                 }
 
             }
-            
+
             @media screen and (max-width: 992px) {
                 flex-basis: 50%;
                 margin-bottom: 20px;
             }
-            
+
             @media screen and (max-width: 576px) {
                 flex-basis: 100%;
                 font-size: 20px;
@@ -71,8 +71,8 @@ footer {
     .lower-footer {
         background-color: $bannerColor;
         color: $main_color;
-        padding: 25px 0;
-        
+        padding: 20px 0;
+
         span {
             color: #ff0000;
         }

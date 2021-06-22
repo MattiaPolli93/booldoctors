@@ -7,14 +7,14 @@
 @section('content')
 <div class="my_container">
   <h1 class="stat_title">Le tue statistiche</h1>
-  <div style="width: 85%; margin: auto; height: 500px;">
+  <div class="canvas_container">
     <canvas id="myChart"></canvas>
   </div>
-  <div style="width: 85%; margin: auto;">
+  <div class="canvas_container">
     <canvas id="myOtherChart"></canvas>
   </div>
   <p class="link_dashboard"><a href="{{ route('admin.profile.index') }}">Torna alla Dashboard</a></p>
-  
+
 </div>
 
 
@@ -120,7 +120,7 @@ for (i; i<=diff; i++) {
         case 5:
           countRece5++;
           break;
-          
+
         default:
           break;
       }

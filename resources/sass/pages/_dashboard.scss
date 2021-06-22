@@ -1,33 +1,31 @@
-main {    
+main {
     #info,
     #reviews,
     #sponsor,
     #statistics {
         padding: 50px 0;
-        
+
         .my_container {
             height: 100%;
         }
     }
-    
+
     #reviews,
     #sponsor,
     #statistics {
         height: 80vh;
-
         @media screen and (max-width: 768px) {
-            height: 70vh;
+            height: 50vh;
         }
-    
         @media screen and (max-width: 576px) {
-            height: 60vh;
+            height: 40vh;
         }
     }
 
     #info {
         background-color: #ccdbd8;
 
-        .my_container.info {            
+        .my_container.info {
             .details,
             .image_box {
                 flex-basis: 50%;
@@ -38,15 +36,12 @@ main {
                     img {
                         max-width: 70%;
                         border-radius: 50%;
-
                         @media screen and (max-width: 992px) {
                             width: 60%;
                         }
-
                         @media screen and (max-width: 768px) {
                             width: 50%;
                         }
-
                         @media screen and (max-width: 576) {
                             width: 75%;
                         }
@@ -56,19 +51,18 @@ main {
                 .info-buttons {
                     margin-top: 30px;
                     width: 100%;
-
                     @media screen and (max-width: 992px) {
                         margin-top: 0;
                     }
                 }
             }
-            
+
             .details {
                 flex-direction: column;
                 padding-top: 30px;
-                
-                .details-title,
-                .bio {
+
+                .bio,
+                .details-title {
                     flex-basis: 50%;
                 }
 
@@ -79,7 +73,6 @@ main {
 
                     h1 {
                         margin-bottom: 5px;
-
                         @media screen and (max-width: 992px) {
                             font-size: 20px;
                             text-align: center;
@@ -90,7 +83,6 @@ main {
                         color: $bannerColor;
                         font-size: 60px;
                         font-style: italic;
-                        
                         @media screen and (max-width: 992px) {
                             font-size: 25px;
                         }
@@ -100,31 +92,26 @@ main {
                         color: $bannerColor;
                         margin-bottom: 15px;
                     }
-
                     @media screen and (max-width: 992px) {
                         flex-direction: row;
                     }
                 }
-                
+
                 .bio {
                     flex-direction: column;
                     overflow-y: auto;
-                    
                     @media screen and (max-width: 768px) {
                         flex-direction: column;
                     }
                 }
-                
                 @media screen and (max-width: 992px) {
                     flex-direction: column;
                     padding-top: 5px;
                 }
-            
                 @media screen and (max-width: 992px) {
                     flex-direction: column;
                 }
             }
-
             @media screen and (max-width: 992px) {
                 flex-direction: column;
             }
@@ -145,10 +132,9 @@ main {
             .reviews-image {
                 flex-basis: 50%;
             }
-            
+
             .reviews {
                 align-items: center;
-
                 @media screen and (max-width: 992px) {
                     align-items: flex-start;
                     flex-basis: 25%;
@@ -159,13 +145,11 @@ main {
                 img {
                     width: 100%;
                 }
-
                 @media screen and (max-width: 992px) {
                     align-items: flex-start;
                     flex-basis: 75%;
                 }
             }
-
             @media screen and (max-width: 992px) {
                 flex-direction: column;
             }
@@ -183,7 +167,6 @@ main {
 
             .statistics {
                 align-items: center;
-
                 @media screen and (max-width: 992px) {
                     align-items: flex-start;
                     flex-basis: 25%;
@@ -194,12 +177,10 @@ main {
                 img {
                     width: 100%;
                 }
-
                 @media screen and (max-width: 992px) {
                     flex-basis: 75%;
                 }
             }
-
             @media screen and (max-width: 992px) {
                 flex-direction: column;
             }
@@ -213,8 +194,7 @@ main {
         background-size: cover;
         background-repeat: no-repeat;
         background-position-y: 15%; */
-
-        .text {            
+        .text {
             h2 {
                 color: $bannerColor;
                 font-size: 45px;
@@ -227,7 +207,6 @@ main {
                 font-size: 25px;
                 letter-spacing: 1px;
             }
-
             @media screen and (max-width: 576px) {
                 h2 {
                     font-size: 35px;

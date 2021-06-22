@@ -10204,7 +10204,7 @@ footer .my_container .list-box:not(:first-child) ul.github li a .fa-github {
 footer .lower-footer {
   background-color: #00b295;
   color: #5ef77f;
-  padding: 25px 0;
+  padding: 20px 0;
 }
 footer .lower-footer span {
   color: #ff0000;
@@ -10357,14 +10357,14 @@ main #statistics {
   main #reviews,
 main #sponsor,
 main #statistics {
-    height: 70vh;
+    height: 50vh;
   }
 }
 @media screen and (max-width: 576px) {
   main #reviews,
 main #sponsor,
 main #statistics {
-    height: 60vh;
+    height: 40vh;
   }
 }
 main #info {
@@ -10406,8 +10406,8 @@ main #info .my_container.info .details {
   flex-direction: column;
   padding-top: 30px;
 }
-main #info .my_container.info .details .details-title,
-main #info .my_container.info .details .bio {
+main #info .my_container.info .details .bio,
+main #info .my_container.info .details .details-title {
   flex-basis: 50%;
 }
 main #info .my_container.info .details .details-title {
@@ -10536,6 +10536,7 @@ main #statistics .my_container .statistics-image img {
 main #sponsor {
   background-color: #dfdfdf;
   /* background-image: url("https://wallpaperaccess.com/full/3988500.jpg");
+  background-image: url("https: //wallpaperaccess.com/full/3464162.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: 15%; */
@@ -10776,6 +10777,13 @@ h1.stat_title {
   text-align: center;
 }
 
+.canvas_container {
+  width: 85%;
+  margin: auto;
+  height: 50%;
+  margin-bottom: 60px;
+}
+
 h1#title {
   font-size: 40px;
   font-weight: bolder;
@@ -10809,7 +10817,7 @@ h1#title {
 
 p.link_dashboard {
   margin: 10px 0 30px;
-  font-size: 23px;
+  font-size: 20px;
 }
 
 .my_jumbotron {
