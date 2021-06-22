@@ -22,12 +22,12 @@
     </div>
 @endif
 
-<div class="my_container pt-4 pb-4">
-    <h1>Hai scelto il piano: {{$plan->plan}}</h1>
-    <form id="pay_form" method="POST" action=""  enctype="multipart/form-data"> 
+<div class="my_container pb-4">
+    <h1 id="title">Hai scelto il piano <span class="text-uppercase">{{$plan->plan}}</span></h1>
+    <form class="pb-4" id="pay_form" method="POST" action=""  enctype="multipart/form-data"> 
       @csrf
       @method('POST')
-      <h3 class="mt-5 mb-4">Il prezzo da pagare è: {{$plan->price}} €</h3>
+      <h3 class="mt-5 mb-4">Il prezzo da pagare è {{$plan->price}} €</h3>
       <label for="amount" class="d-lg-none">
         <span class="input-label">Amount</span>
             <div class="input-wrapper amount-wrapper">
@@ -41,10 +41,12 @@
             <input type="hidden" id="nonce" name="payment_method_nonce"/>
         </div> 
     </form>
+    <p class="link_dashboard"><a href="{{ route('admin.profile.index') }}">Torna alla Dashboard</a></p>
 </div> 
-      <script src="https://js.braintreegateway.com/js/braintree-2.32.1.min.js"></script>
 
- <script src="https://js.braintreegateway.com/web/dropin/1.10.0/js/dropin.js"></script>
+<script src="https://js.braintreegateway.com/js/braintree-2.32.1.min.js"></script>
+
+<script src="https://js.braintreegateway.com/web/dropin/1.10.0/js/dropin.js"></script>
 
  
  
