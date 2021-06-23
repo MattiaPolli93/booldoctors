@@ -11,14 +11,16 @@
             {{-- profile image --}}
             <div class="image_box d-flex flex-column align-items-center">
                 <figure class="text-center">
-                    @if ($details->image != null)
-                    <img {{-- da modificare in caso di seed --}} src="{{ asset('storage/' . $details->image) }}" alt="Immagine di {{$user->name}} {{$user->surname}}">
-                    @else
-                    <img src="https://i.ibb.co/wQBsxBd/standard-Doctor.png" alt="Immagine del dottore">
-                    @endif
-                    <figcaption>
-                        <p><small>La tua immagine di profilo</small></p>
-                    </figcaption>
+                    <div class="image text-center">
+                        @if ($details->image != null)
+                        <img {{-- da modificare in caso di seed --}} src="{{ asset('storage/' . $details->image) }}" alt="Immagine di {{$user->name}} {{$user->surname}}">
+                        @else
+                        <img src="https://i.ibb.co/wQBsxBd/standard-Doctor.png" alt="Immagine del dottore">
+                        @endif
+                    </div>
+                        <figcaption>
+                            <p><small>La tua immagine di profilo</small></p>
+                        </figcaption>
                 </figure>
                 <div class="info-buttons d-flex justify-content-around">
                     <a href="{{route('admin.profile.edit', [ 'profile' => $user->id ])}}"><button type="button" class="btn btn-insert"><i class="fas fa-pencil-alt"></i> Modifica dettagli</button></a>

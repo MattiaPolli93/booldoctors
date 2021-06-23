@@ -10367,24 +10367,14 @@ main #info .my_container.info .image_box {
 main #info .my_container.info .image_box {
   padding: 0 35px;
 }
-main #info .my_container.info .image_box figure img {
-  max-width: 100%;
+main #info .my_container.info .image_box figure .image {
+  width: 80%;
+  margin: auto;
   border-radius: 50%;
+  overflow: hidden;
 }
-@media screen and (max-width: 992px) {
-  main #info .my_container.info .image_box figure img {
-    width: 60%;
-  }
-}
-@media screen and (max-width: 768px) {
-  main #info .my_container.info .image_box figure img {
-    width: 50%;
-  }
-}
-@media screen and (max-width: 576) {
-  main #info .my_container.info .image_box figure img {
-    width: 75%;
-  }
+main #info .my_container.info .image_box figure .image img {
+  width: 100%;
 }
 main #info .my_container.info .image_box .info-buttons {
   margin-top: 30px;

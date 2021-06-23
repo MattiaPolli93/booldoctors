@@ -29,19 +29,16 @@ main {
 
             .image_box {
                 padding: 0 35px;
-
+                
                 figure {
-                    img {
-                        max-width: 100%;
+                    .image {
+                        width: 80%;
+                        margin: auto;
                         border-radius: 50%;
-                        @media screen and (max-width: 992px) {
-                            width: 60%;
-                        }
-                        @media screen and (max-width: 768px) {
-                            width: 50%;
-                        }
-                        @media screen and (max-width: 576) {
-                            width: 75%;
+                        overflow: hidden;
+
+                        img {
+                            width: 100%;
                         }
                     }
                 }
