@@ -10348,25 +10348,6 @@ main #sponsor .my_container,
 main #statistics .my_container {
   height: 100%;
 }
-main #reviews,
-main #sponsor,
-main #statistics {
-  min-height: 80vh;
-}
-@media screen and (max-width: 768px) {
-  main #reviews,
-main #sponsor,
-main #statistics {
-    min-height: 50vh;
-  }
-}
-@media screen and (max-width: 576px) {
-  main #reviews,
-main #sponsor,
-main #statistics {
-    min-height: 40vh;
-  }
-}
 main #info {
   background-color: #ccdbd8;
 }
@@ -10476,6 +10457,12 @@ main #reviews {
 }
 main #reviews .my_container {
   flex-direction: row-reverse;
+  justify-content: space-between;
+}
+main #reviews .my_container .btn-container {
+  width: 30%;
+  display: flex;
+  justify-content: space-between;
 }
 main #reviews .my_container .reviews,
 main #reviews .my_container .reviews-image {
@@ -10502,6 +10489,11 @@ main #reviews .my_container .reviews-image img {
 @media screen and (max-width: 992px) {
   main #reviews .my_container {
     flex-direction: column;
+  }
+  main #reviews .my_container .btn-container {
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 20px;
   }
 }
 main #statistics {
@@ -10561,14 +10553,24 @@ main #sponsor .text p {
   }
 }
 main #sponsor .sponsors {
+  flex-wrap: wrap;
   padding: 40px 0;
   justify-content: space-between;
 }
+@media screen and (max-width: 992px) {
+  main #sponsor .sponsors {
+    justify-content: center;
+  }
+}
 main #sponsor .sponsors .card_wrapcard {
-  flex-basis: calc(100% / 3);
-  /* border: 5px dotted blue; */
-  margin: 0 30px;
-  padding: 40px 0 20px 0;
+  flex-basis: 28%;
+  padding: 40px 0 20px;
+}
+@media screen and (max-width: 992px) {
+  main #sponsor .sponsors .card_wrapcard {
+    flex-basis: 60%;
+    margin-bottom: 50px;
+  }
 }
 main #sponsor .sponsors .card_wrapcard a {
   width: 90%;

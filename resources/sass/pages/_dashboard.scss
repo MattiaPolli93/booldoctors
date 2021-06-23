@@ -10,18 +10,6 @@ main {
         }
     }
 
-    #reviews,
-    #sponsor,
-    #statistics {
-        min-height: 80vh;
-        @media screen and (max-width: 768px) {
-            min-height: 50vh;
-        }
-        @media screen and (max-width: 576px) {
-            min-height: 40vh;
-        }
-    }
-
     #info {
         background-color: #ccdbd8;
 
@@ -127,6 +115,13 @@ main {
 
         .my_container {
             flex-direction: row-reverse;
+            justify-content: space-between;
+
+            .btn-container {
+                width: 30%;
+                display: flex;
+                justify-content: space-between;
+            }
 
             .reviews,
             .reviews-image {
@@ -152,6 +147,12 @@ main {
             }
             @media screen and (max-width: 992px) {
                 flex-direction: column;
+
+                .btn-container {
+                    width: 100%;
+                    justify-content: space-around;
+                    margin-bottom: 20px;
+                }
             }
         }
     }
@@ -217,19 +218,28 @@ main {
                 }
             }
         }
+
         .sponsors {
+            flex-wrap: wrap;
             padding: 40px 0;
             justify-content: space-between;
+            @media screen and (max-width: 992px) {
+                justify-content: center;
+            }
 
             .card_wrapcard {
-                flex-basis: calc(100% / 3);
-                /* border: 5px dotted blue; */
-                margin: 0 30px;
-                padding: 40px 0 20px 0;
+                flex-basis: 28%;
+                padding: 40px 0 20px;
+                @media screen and (max-width: 992px) {
+                    flex-basis: 60%;
+                    margin-bottom: 50px;
+                }
+
                 a {
                     width: 90%;
+
                     button {
-                      width: 100%;
+                        width: 100%;
                     }
                 }
 
@@ -258,7 +268,6 @@ main {
                             span {
                                 color: $bannerColor;
                             }
-
                             font-size: 40px;
                             font-weight: 900;
                         }

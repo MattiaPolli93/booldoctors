@@ -52,7 +52,7 @@
                     </div>
                 </div>
             </div>
-            
+
             {{-- personal details --}}
             <div class="details d-flex">
                 <div class="details-title d-flex">
@@ -64,18 +64,21 @@
                 </div>
             </div>
         </div>
-        <div class="btn-box text-center">
-            <a href="{{route('admin.messages')}}"><button type="button" class="btn btn-insert ">Mostra messaggi</button></a>
-        </div>
+
     </section>
     {{-- fine personal info --}}
 
     {{-- reviews --}}
     <section id="reviews">
         <div class="my_container d-flex align-items-center">
+          <div class="btn-container">
+          <div class="btn-box text-center">
+              <a href="{{route('admin.messages')}}"><button type="button" class="btn btn-insert ">Messaggi</button></a>
+          </div>
             <div class="reviews d-flex justify-content-center">
-                <a href="{{route('admin.comments')}}"><button type="button" class="btn btn-insert">Mostra recensioni</button></a>
+                <a href="{{route('admin.comments')}}"><button type="button" class="btn btn-insert">Recensioni</button></a>
             </div>
+          </div>
             <div class="reviews-image">
                 <img src="https://www.interno16holidayhome.com/wp-content/uploads/2019/01/reviews.png" alt="Recensioni">
             </div>
@@ -89,7 +92,7 @@
             <div class="statistics d-flex justify-content-center">
                 <a href="{{route('admin.statistics')}}"><button type="button" class="btn btn-insert">Visualizza le tue statistiche</button></a>
             </div>
-            <div class="statistics-image">
+            <div class="statistics-image text-center">
                 <img src="https://images.vexels.com/media/users/3/143065/isolated/preview/c6cbc8cf5ca3856bca8d5f28c0471fca-bar-graph-cart-by-vexels.png" alt="Grafico">
             </div>
         </div>
@@ -105,11 +108,11 @@
                         Vuoi aggiungere una sponsorizzazione al tuo profilo?
                     </h2>
                     <p>
-                        Scegli fra le seguenti offerte e acquista visibilità, il tuo profilo sarà messo in risalto nella homepage di BoolDoctors!
+                        Scegli fra le seguenti offerte e acquista visibilità, il tuo profilo sarà messo in risalto nel motore di ricerca di BoolDoctors!
                     </p>
                 </div>
                 {{-- VERSIONE CARD --}}
-                <div class="my_container">
+              
                     {{-- Scegli sponsor --}}
                     <div class="choose-sponsor pt-3 text-center">
                         <h1>Ottieni una Sponsorizzazione!</h1>
@@ -171,7 +174,7 @@
                             <a href="{{route('admin.sponsor', ['id' => 3])}}"><button class="btn btn-insert">Ottieni</button></a>
                         </div>
                     </div>
-                </div>
+
             </div>
         </div>
     </section>
