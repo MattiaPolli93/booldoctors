@@ -37,7 +37,7 @@
                 </div>
             </div>
         </div>
-        <div class="btn-box text-center">                
+        <div class="btn-box text-center">
             <a href="{{route('admin.messages')}}"><button type="button" class="btn btn-insert ">Mostra messaggi</button></a>
         </div>
     </section>
@@ -87,7 +87,7 @@
                     <div class="choose-sponsor pt-3 text-center">
                         <h1>Ottieni una Sponsorizzazione!</h1>
                     </div>
-                    
+
                     {{-- Sponsor disponibili --}}
                     <div class="sponsors d-flex">
                         {{-- 2.99 --}}
@@ -105,7 +105,7 @@
                                 <li><span>44 Storage</span></li>
                                 <li><span>44</span></li>
                             </ul>
-                            <a href="{{route('admin.sponsor', ['id' => 1])}}"><button class="btn btn-insert">Ottieni sponsorizzazione</button></a>
+                            <a href="{{route('admin.sponsor', ['id' => 1])}}"><button class="btn btn-insert">Ottieni</button></a>
                         </div>
 
                         {{-- 5.99 --}}
@@ -123,7 +123,7 @@
                                 <li><span>44 Storage</span></li>
                                 <li><span>44</span></li>
                             </ul>
-                            <a href="{{route('admin.sponsor', ['id' => 2])}}"><button class="btn btn-insert">Ottieni sponsorizzazione</button></a>
+                            <a href="{{route('admin.sponsor', ['id' => 2])}}"><button class="btn btn-insert">Ottieni</button></a>
                         </div>
 
                         {{-- 9.99 --}}
@@ -141,10 +141,10 @@
                                 <li><span>44 Storage</span></li>
                                 <li><span>44</span></li>
                             </ul>
-                            <a href="{{route('admin.sponsor', ['id' => 3])}}"><button class="btn btn-insert">Ottieni sponsorizzazione</button></a>
+                            <a href="{{route('admin.sponsor', ['id' => 3])}}"><button class="btn btn-insert">Ottieni</button></a>
                         </div>
                     </div>
-                </div>                
+                </div>
             </div>
         </div>
     </section>

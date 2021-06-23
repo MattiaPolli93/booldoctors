@@ -40,7 +40,17 @@
         </ul>
     </div>
     <hr>
-    
+
+    {{-- contatti --}}
+    <section id="contacts">
+        <h3>Contatti</h3>
+        <p>Indirizzo: {{$doctor->details->address}}</p>
+        <p>Telefono: {{$doctor->details->phone}}</p>
+    </section>
+
+    <hr>
+
+
     {{-- bio --}}
     <section id="bio">
         <h3>Bio</h3>
@@ -88,6 +98,9 @@
         @endforeach
         </div>
 
+        <hr>
+        
+<section>
         <h3>Inserisci una recensione</h3>
         <form action="{{route('doctor.store-comment', ['id' => $doctor->id])}}" method="post">
             @csrf
@@ -142,17 +155,11 @@
                 <button type="submit" class="btn btn-insert">Inserisci</button>
             </div>
         </form>
-    </section> 
-
-    <hr>
-    {{-- contatti --}}
-    <section id="contacts">
-        <h3>Contatti</h3>
-        <p>Indirizzo: {{$doctor->details->address}}</p>
-        <p>Telefono: {{$doctor->details->phone}}</p>
+      </section>
     </section>
 
     <hr>
+
     {{-- contattami --}}
     <section id="contact_me">
         <h3>Manda un messaggio al medico</h3>
@@ -172,6 +179,6 @@
             </div>
         </form>
     </section>
-    
+
 </div>
 @endsection

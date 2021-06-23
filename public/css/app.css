@@ -10351,20 +10351,20 @@ main #statistics .my_container {
 main #reviews,
 main #sponsor,
 main #statistics {
-  height: 80vh;
+  min-height: 80vh;
 }
 @media screen and (max-width: 768px) {
   main #reviews,
 main #sponsor,
 main #statistics {
-    height: 50vh;
+    min-height: 50vh;
   }
 }
 @media screen and (max-width: 576px) {
   main #reviews,
 main #sponsor,
 main #statistics {
-    height: 40vh;
+    min-height: 40vh;
   }
 }
 main #info {
@@ -10560,6 +10560,67 @@ main #sponsor .text p {
     font-size: 20px;
   }
 }
+main #sponsor .sponsors {
+  padding: 40px 0;
+  justify-content: space-between;
+}
+main #sponsor .sponsors .card_wrapcard {
+  flex-basis: calc(100% / 3);
+  /* border: 5px dotted blue; */
+  margin: 0 30px;
+  padding: 40px 0 20px 0;
+}
+main #sponsor .sponsors .card_wrapcard a {
+  width: 90%;
+}
+main #sponsor .sponsors .card_wrapcard a button {
+  width: 100%;
+}
+main #sponsor .sponsors .card_wrapcard li {
+  margin-bottom: 35px;
+  color: #000;
+}
+main #sponsor .sponsors .card_wrapcard li.price {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+main #sponsor .sponsors .card_wrapcard li.price .pricenumber {
+  font-size: 40px;
+  font-weight: 900;
+}
+main #sponsor .sponsors .card_wrapcard li.price .pricenumber .euro {
+  display: inline-block;
+}
+main #sponsor .sponsors .card_wrapcard li.price .pricenumber .euro .fas.fa-euro-sign {
+  font-size: 18px;
+  vertical-align: super;
+  position: relative;
+  left: 9px;
+  color: black;
+}
+main #sponsor .sponsors .card_wrapcard li.price .pricenumber span {
+  color: #00b295;
+}
+main #sponsor .sponsors .card_wrapcard li.price .decimal {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+main #sponsor .sponsors .card_wrapcard li.price .decimal .cent {
+  font-size: 14px;
+  position: relative;
+  right: 8px;
+  bottom: 4px;
+  font-weight: 900;
+  color: #000;
+}
+main #sponsor .sponsors .card_wrapcard li.price .decimal .month {
+  font-size: 11px;
+  font-style: italic;
+  font-weight: 900;
+  color: #818e9d;
+}
 
 main .edit-form h2,
 main .edit-form h3 {
@@ -10702,7 +10763,7 @@ h1#title {
 .profile #services .service_cont i {
   font-size: 7px;
   vertical-align: middle;
-  color: #1662c6;
+  color: #00b295;
   margin: 0 15px;
 }
 .profile .review_cont {
@@ -10768,60 +10829,6 @@ h1#title {
 }
 .doctor_container {
   min-height: 200px;
-}
-
-.sponsors {
-  padding: 40px 0;
-  justify-content: space-between;
-}
-.sponsors .card_wrapcard {
-  flex-basis: calc(100% / 3);
-  border: 5px dotted blue;
-  margin: 0 5px;
-}
-.sponsors .card_wrapcard li {
-  margin: 35px 0;
-  color: #000;
-}
-.sponsors .card_wrapcard li.price {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-.sponsors .card_wrapcard li.price .pricenumber {
-  font-size: 40px;
-  font-weight: 900;
-}
-.sponsors .card_wrapcard li.price .pricenumber .euro {
-  display: inline-block;
-}
-.sponsors .card_wrapcard li.price .pricenumber .euro .fas.fa-euro-sign {
-  font-size: 18px;
-  vertical-align: super;
-  position: relative;
-  left: 9px;
-}
-.sponsors .card_wrapcard li.price .pricenumber span {
-  color: #000;
-}
-.sponsors .card_wrapcard li.price .decimal {
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-}
-.sponsors .card_wrapcard li.price .decimal .cent {
-  font-size: 14px;
-  position: relative;
-  right: 8px;
-  bottom: 4px;
-  font-weight: 900;
-  color: #000;
-}
-.sponsors .card_wrapcard li.price .decimal .month {
-  font-size: 11px;
-  font-style: italic;
-  font-weight: 900;
-  color: #818e9d;
 }
 
 h1.stat_title {
@@ -10939,8 +10946,8 @@ p.link_dashboard {
 .my_tag {
   /* background-color: $bannerSecondary; */
   background: #084aa3;
-  background: linear-gradient(90deg, #084aa3 0%, #1662c6 14%, #508cdb 100%);
-  margin: 10px 3px 10px 0;
+  background: linear-gradient(90deg, #00b295 0%, #00b295 14%, #1662c6 100%);
+  margin: 10px 10px 10px 0;
   display: inline-block;
   padding: 4px 10px;
   border-radius: 20px;
