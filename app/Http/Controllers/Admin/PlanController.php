@@ -84,9 +84,9 @@ class PlanController extends Controller
                 'plan_id' => $plan->id,
                 'expire_date' => $currentExpireDate
             ]);         
-            return back()->with('message', 'Transazione riuscita');
+            return redirect()->route('admin.profile.index')->with('message', 'Transazione riuscita');
         } else{
-            return back()->with('message', 'Transazione fallita');
+            return redirect()->route('admin.profile.index')->with('message', 'Transazione fallita');
         } 
     }
 }
