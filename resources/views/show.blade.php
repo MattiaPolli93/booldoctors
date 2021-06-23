@@ -32,10 +32,10 @@
     {{-- menu dottore --}}
     <div class="menu">
         <ul>
+            <li><a href="#contacts">Contatti</a></li>
             <li><a href="#bio">Bio</a></li>
             <li><a href="#services">Servizi</a></li>
             <li><a href="#review">Recensioni</a></li>
-            <li><a href="#contacts">Contatti</a></li>
             <li><a href="#contact_me">Manda un messaggio al medico</a></li>
         </ul>
     </div>
@@ -181,4 +181,14 @@
     </section>
 
 </div>
+
+@if (session('message'))
+<div class="alert alert-success" style="position: fixed; bottom: 30px; right: 30px">
+    {{ session('message') }}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+@endif
+
 @endsection
