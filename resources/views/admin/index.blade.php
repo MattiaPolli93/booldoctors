@@ -41,11 +41,15 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-insert" data-dismiss="modal">Torna indietro</button>
+<<<<<<< Updated upstream
                                 <form action="{{route('admin.profile.destroy', [ 'profile' => $user->id ])}}" method="POST">
 							    @csrf
 							    @method('DELETE')
                                     <button type="submit" class="btn btn-danger">Sono sicuro, elimina il profilo</button>
                                 </form>
+=======
+                                <button type="button" class="btn btn-danger">Sono sicuro, elimina il profilo</button>
+>>>>>>> Stashed changes
                             </div>
                         </div>
                     </div>
