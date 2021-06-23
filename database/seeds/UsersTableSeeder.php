@@ -21,12 +21,42 @@ class UsersTableSeeder extends Seeder
         $specialization = Specialization::all();
         $plan = Plan::all();
 
+        $names = [
+            'Mario',            
+            'Giacomo', 
+            'Luigi',
+            'Mattia',
+            'Stefano',
+            'Nicolò',
+            'Gabriele',
+            'Giuseppe',
+            'Alfredo',
+            'Adriano'
+        ];
+
+        $surnames = [
+            'Rossi',            
+            'Corti', 
+            'Bodritti',
+            'Polli',
+            'Lana',
+            'Matassoli',
+            'Bianchi',
+            'Baglio',
+            'Storti',
+            'Poretti'
+        ];
+        
+
         for ($i=0; $i < 10; $i++) { 
             $newUser = new User;
-            $newUser->name = $faker->firstName();
-            $newUser->surname = $faker->lastName();
-            $newUser->email = $faker->email();
-            /* $newUser->expire_date = Carbon::now(); */
+            for($j = 0; $j < count($names); $j++){
+                $newUser->name = $names[array_rand($names)];
+            }       
+            for($z = 0; $z < count($surnames); $z++){
+                $newUser->surname = $surnames[array_rand($surnames)];
+            } 
+            $newUser->email = $faker->email();            
             $newUser->password = Hash::make($faker->word());
             $newUser->save();
             
