@@ -10348,8 +10348,17 @@ main #sponsor .my_container,
 main #statistics .my_container {
   height: 100%;
 }
+main #reviews, main #statistics {
+  height: 50vh;
+}
 main #info {
   background-color: #ccdbd8;
+  height: 100vh;
+}
+@media screen and (max-width: 992px) {
+  main #info {
+    height: 100%;
+  }
 }
 main #info .my_container.info .details,
 main #info .my_container.info .image_box {
@@ -10385,7 +10394,6 @@ main #info .my_container.info .image_box .info-buttons {
 }
 main #info .my_container.info .details {
   flex-direction: column;
-  padding-top: 30px;
 }
 main #info .my_container.info .details .bio,
 main #info .my_container.info .details .details-title {
@@ -10394,7 +10402,6 @@ main #info .my_container.info .details .details-title {
 main #info .my_container.info .details .details-title {
   flex-direction: column;
   justify-content: space-around;
-  height: 50px;
 }
 main #info .my_container.info .details .details-title h1 {
   margin-bottom: 5px;
@@ -10416,7 +10423,6 @@ main #info .my_container.info .details .details-title .name {
   }
 }
 main #info .my_container.info .details .details-title h4 {
-  color: #00b295;
   margin-bottom: 15px;
 }
 @media screen and (max-width: 992px) {
@@ -10427,6 +10433,7 @@ main #info .my_container.info .details .details-title h4 {
 main #info .my_container.info .details .bio {
   flex-direction: column;
   overflow-y: auto;
+  height: 200px;
 }
 @media screen and (max-width: 768px) {
   main #info .my_container.info .details .bio {

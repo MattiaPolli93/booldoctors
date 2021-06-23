@@ -63,7 +63,7 @@
               <input type="number" class="form-control" name="service_price" id="service_price" min="0" max="9999.99" step="0.01" placeholder="Inserisci il prezzo della prestazione" value="">
           </div>
 
-          <button type="submit" class="btn btn-insert mt-3 mb-3">Inserisci</button>
+          <button type="submit" class="btn btn-insert mt-3 mb-3">Salva modifiche</button>
         </form>
 
         {{-- Cancella prestazioni --}}
@@ -72,7 +72,7 @@
           @foreach ($services as $service)
             <li class='mt-3'>
               <p>{{$service['service']}}</p>
-              <p>{{$service['price']}}</p>
+              <p>{{$service['price']}} €</p>
               <form action="{{route('admin.service.destroy', $service)}}" method="POST" enctype="multipart/form-data">
                 @csrf
                 @method('DELETE')

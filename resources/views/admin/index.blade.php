@@ -112,7 +112,7 @@
                     </p>
                 </div>
                 {{-- VERSIONE CARD --}}
-              
+
                     {{-- Scegli sponsor --}}
                     <div class="choose-sponsor pt-3 text-center">
                         <h1>Ottieni una Sponsorizzazione!</h1>
