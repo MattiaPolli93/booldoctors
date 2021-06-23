@@ -116,6 +116,10 @@
                 font-size: 24px;
                 font-weight: bold;
 
+                @media screen and (max-width: 992px) {
+                width: 100%;
+            }
+
                 .euro {
                     font-size: 18px;
                     font-weight: 300;
@@ -145,6 +149,14 @@
             width: calc((100% / 3) - 15px);
             height: 300px;
             overflow-y: auto;
+
+            @media screen and (max-width: 992px) {
+                width: calc((100% / 2) - 15px);
+            }
+
+            @media screen and (max-width: 669px) {
+                width: 100%;
+            }
 
             .top {
                 display: flex;
@@ -193,6 +205,7 @@
         filter: drop-shadow(1px 1px 1px black);
         background: linear-gradient(to top right, gold 0%, yellow 100%);
         -webkit-background-clip: text;
+        background-clip: text;
         -webkit-text-fill-color: transparent;
     }
     // .services {
