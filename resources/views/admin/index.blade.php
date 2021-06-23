@@ -40,7 +40,7 @@
                                 Sei proprio sicuro di voler eliminare il profilo? Questa operazione è irreversibile.
                             </div>
                             <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Torna indietro</button>
+                                <button type="button" class="btn btn-insert" data-dismiss="modal">Torna indietro</button>
                                 <form action="{{route('admin.profile.destroy', [ 'profile' => $user->id ])}}" method="POST">
 							    @csrf
 							    @method('DELETE')
