@@ -63,17 +63,21 @@ class UsersTableSeeder extends Seeder
             $newUser->save();
             
             // seed della tabella pivot plan_user
-            $newUser->plans()->attach($newUser, [
-                'user_id' => $newUser->id,
-                'plan_id' => rand(1, 3),
-                'expire_date' => $faker->dateTimeBetween('now', '+1 days')
-            ]);
-            // $newUser->plans()->expire_date = $faker->dateTimeBetween('now', '+1 days');
+
+            if (rand(0, 1)) {
+
+                $newUser->plans()->attach($newUser, [
+                    'user_id' => $newUser->id,
+                    'plan_id' => rand(1, 3),
+                    'expire_date' => $faker->dateTimeBetween('now', '+1 week')
+                ]);
+                // $newUser->plans()->expire_date = $faker->dateTimeBetween('now', '+1 days');
+            }
             
             // seed della tabella pivot spec_user: prendo tra 1 e 6 spec casuali diverse e le associo a newUser
             $numbers = range(1, count($specialization));
             shuffle($numbers);
-            $spec = rand(1, 6);
+            $spec = rand(1, 4);
             for ($j = 0; $j < $spec; $j++) {
                 $newUser->specializations()->attach($numbers[$j]);
             }

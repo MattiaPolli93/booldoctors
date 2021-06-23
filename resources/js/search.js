@@ -10,8 +10,7 @@ const Search = {
             filterDoc: [],
             sponsoredDocs: [],
             filterSponsoredDocs: [],
-            loading: true,
-
+            /* loading: true, */
         }
     },
     methods: {
@@ -38,7 +37,7 @@ const Search = {
         },
         filterText() {
             this.filterDoc = [];
-            this.loading = false;
+            /* this.loading = false; */
             for (var i = 0; i < this.doctors.length; i++){
                 for (var j = 0; j < this.doctors[i].specializations.length; j++) {
                     if (this.doctors[i].specializations[j].field.toLowerCase().includes(this.spec.toLowerCase())){
@@ -77,7 +76,7 @@ const Search = {
                     }
                 }
             }
-            this.loading = false;
+            /* this.loading = false; */
         }, 1500);
 
     },
@@ -90,7 +89,21 @@ const Search = {
                 this.doctors[j] = temp;
             }
             return this.doctors.slice(0, 5)
+        },
+
+        noFindTxt() {
+            if (this.doctors.length > 0 & this.filterDoc.length > 0) return false;
+
+            return true;
+        },
+
+        loading() {
+            if (this.doctors.length > 0) return false;
+
+            return true;
         }
+
+
     }
 }
 

@@ -16,13 +16,37 @@ class ServicesTableSeeder extends Seeder
     {
         $doctors = User::all();
 
+        $services = [
+            'Visita di controllo',
+            'Visita dermatologica',
+            'Consulenza online',
+            'Tampone',
+            'Certificato anamnestico per patente di guida',
+            'Elettrocardiogramma',
+            'Ecografia',
+            'Visita a domicilio',
+            'Visita cardiologica + elettrocardiogramma (ECG)',
+            'Ozonoterapia',
+            'Trattamento della Sindrome da stanchezza cronica',
+        ];
+
         foreach ($doctors as $doctor) {
 
-            for ($i=0; $i < rand(3,10); $i++) { 
+            $r = rand(2, 8);
+            if ($r % 2 != 0) {
+                $r++;
+            }
+            for ($i = 0; $i < $r; $i++) { 
+
                 $newService = new Service();
                 $newService->user_id = $doctor->id;
-                $newService->service = $faker->word();
-                $newService->price = $faker->randomFloat(2, 100, 9999);
+
+                for ($j = 0; $j < count($services); $j++) {
+                    $newService->service = $services[array_rand($services)];
+                }
+
+                // $newService->service = $faker->word();
+                $newService->price = $faker->randomFloat(2, 50, 400);
                 $newService->save();
             }
         }

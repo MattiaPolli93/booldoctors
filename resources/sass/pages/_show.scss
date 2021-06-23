@@ -12,6 +12,15 @@
 
         .col_left {
             width: 20%;
+
+            .image_box {
+                border-radius: 50%;
+                overflow: hidden;
+                
+                img {
+                    width: 100%;
+                }
+            }
         }
 
         .col_right {

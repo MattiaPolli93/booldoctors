@@ -24,6 +24,7 @@
           </div>
       </div>
     <div class="doctor_container">
+        <h2 v-if="noFindTxt">Nessun dottore corrisponde a questa ricerca</h2>
         <div v-for="doctor in filterDoc" class="cardDoctor">
             <div class="docAvatar">
                 <div class="image_box">
