@@ -27,7 +27,7 @@ class UsersTableSeeder extends Seeder
             'Luigi',
             'Mattia',
             'Stefano',
-            'Nicolò',
+            'Nicolo',
             'Gabriele',
             'Giuseppe',
             'Alfredo',
@@ -45,7 +45,7 @@ class UsersTableSeeder extends Seeder
             'Baglio',
             'Storti',
             'Poretti'
-        ];
+        ];       
         
 
         for ($i=0; $i < 10; $i++) { 
@@ -55,8 +55,10 @@ class UsersTableSeeder extends Seeder
             }       
             for($z = 0; $z < count($surnames); $z++){
                 $newUser->surname = $surnames[array_rand($surnames)];
-            } 
-            $newUser->email = $faker->email();            
+            }
+            
+            $newUser->email = strtolower($newUser->name) . strtolower($newUser->surname) . strval(rand(1, 20)) . '@mail.it';
+                      
             $newUser->password = Hash::make($faker->word());
             $newUser->save();
             
