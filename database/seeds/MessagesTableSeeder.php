@@ -23,7 +23,7 @@ class MessagesTableSeeder extends Seeder
                 $newMessage->user_id = $doctor->id;            
                 $newMessage->email = $faker->safeEmail();
                 $newMessage->message = $faker->text(400);
-                $newMessage->added_on = $faker->dateTimeBetween("-2 years", "now");
+                $newMessage->added_on = $faker->dateTimeBetween("-5 months", "now");
                 if (rand(0, 1)) {
                     $newMessage->resolved = 1;
                 }

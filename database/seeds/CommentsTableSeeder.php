@@ -15,21 +15,47 @@ class CommentsTableSeeder extends Seeder
     public function run(Faker $faker)
     {
         $doctors = User::all();
+        $names = [
+            'Mario',
+            'Giacomo',
+            'Luigi',
+            'Mattia',
+            'Stefano',
+            'Nicolo',
+            'Gabriele',
+            'Giuseppe',
+            'Alfredo',
+            'Adriano',
+            'Enrico',
+            'Alberto',
+            'Aldo',
+            'Giovanni',
+            'Chiara',
+            'Francesca',
+            'Maria',
+            'Raffaella',
+            'Giulia',
+            'Cristina',
+        ];
         
         foreach ($doctors as $doctor) {
-            for ($i=0; $i < rand(0, 5); $i++) { 
+            for ($i = 0; $i < rand(5, 15); $i++) { 
                 $newComment = new Comment();
 
                 $newComment->user_id = $doctor->id; 
                 if (rand(0, 1)){
-                        $newComment->username = $faker->name();
+                    // $newComment->username = $faker->name();
+                    for ($i = 0; $i < count($names); $i++) {
+                        $newComment->username = $names[array_rand($names)];
+                    }
                 }
                 
                 if (rand(0, 1)) {
                     $newComment->comment = $faker->text(200);
                 }
+
                 $newComment->rate = rand(1, 5);
-                $newComment->added_on = $faker->dateTimeBetween("-2 years", "now"); 
+                $newComment->added_on = $faker->dateTimeBetween("-5 months", "now"); 
                 $newComment->save();
             }
         }
