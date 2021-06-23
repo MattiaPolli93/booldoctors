@@ -11,7 +11,7 @@
     <div class="details">
         <div class="col_left">
             <div class="image_box">
-                @if ($doctor->details->image != 'https://via.placeholder.com/150')
+                @if ($doctor->details->image != null)
                     <img {{-- da modificare in caso di seed --}} src="{{ asset('storage/' . $doctor->details->image) }}" alt="Immagine di {{$doctor->name}} {{$doctor->surname}}">
                     @else
                     <img src="https://i.ibb.co/wQBsxBd/standard-Doctor.png" alt="Immagine del dottore">
