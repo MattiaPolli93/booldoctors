@@ -177,9 +177,7 @@ class UserController extends Controller
         }
         $doctor->specializations()->sync($spec['field']);
 
-        
-
-        return redirect()->route('admin.profile.index', $doctor)->with('message', 'Il profilo è stato modificato');
+        return redirect()->route('admin.profile.index', $doctor)->with('message', 'Il tuo profilo è stato modificato');
 
     }  
 
@@ -191,6 +189,9 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::where('id', $id)->first();
+        $user->delete();
+
+        return redirect()->route('homepage')->with('message', 'Il tuo profilo è stato eliminato!');
     }
 }
