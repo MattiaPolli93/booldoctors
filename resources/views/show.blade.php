@@ -75,7 +75,7 @@
 
     <hr>
     {{-- recensioni --}}
-    <section id="review">
+<section id="review">
         <h3>Recensioni</h3>
         <div class="review_cont">
         @foreach ($doctor->comments as $comment)
@@ -100,7 +100,7 @@
 
         <hr>
         
-<section>
+    <section>
         <h3>Inserisci una recensione</h3>
         <form action="{{route('doctor.store-comment', ['id' => $doctor->id])}}" method="post">
             @csrf
@@ -113,13 +113,22 @@
                 <label for="comment">Recensione</label>
                 <textarea class="form-control"  name="comment" id="comment" cols="30" rows="4" placeholder="Inserisci la tua recensione"></textarea>
             </div>
-            <div class="form-check form-check-inline">
-                <label class="form-check-label" for="rate_1">
-                    <i class="fas fa-star"></i>
-                </label>
-                <input class="form-check-input ml-2 mt-1" type="radio" name="rate" id="rate_1" value="1">
+           <div class="form-check form-check-inline">
+                <div class="star-widget">
+                    <input type="radio" name="rate" id="rate_5"  value="5">
+                    <label for="rate_5" class="fas fa-star"></label>
+                    <input type="radio" name="rate" id="rate_4"  value="4">
+                    <label for="rate_4" class="fas fa-star"></label>
+                    <input type="radio" name="rate" id="rate_3"  value="3">
+                    <label for="rate_3" class="fas fa-star"></label>
+                    <input type="radio" name="rate" id="rate_2"  value="2">
+                    <label for="rate_2" class="fas fa-star"></label>
+                    <input type="radio" name="rate" id="rate_1"  value="1">
+                    <label for="rate_1" class="fas fa-star"></label>
+                </div> 
             </div>
-            <div class="form-check form-check-inline">
+            
+            {{-- <div class="form-check form-check-inline">
                 <label class="form-check-label" for="rate_2">
                     @for ($i = 0; $i < 2; $i++)
                         <i class="fas fa-star"></i>
@@ -150,13 +159,13 @@
                     @endfor
                 </label>
                 <input class="form-check-input ml-2 mt-1" type="radio" name="rate" id="rate_5" value="5">
-            </div>
+            </div>  --}}                    
             <div class="mt-3">
                 <button type="submit" class="btn btn-insert">Inserisci</button>
             </div>
         </form>
       </section>
-    </section>
+</section>
 
     <hr>
 

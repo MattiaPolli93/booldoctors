@@ -10858,6 +10858,33 @@ h1#title {
 .profile .review_cont .review_box .date {
   margin: 10px 0;
 }
+.profile .star-widget {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+}
+.profile .star-widget label {
+  font-size: 40px;
+  color: #444;
+  padding: 10px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.profile input[type=radio] {
+  display: none;
+}
+.profile input:not(:checked) ~ label:hover,
+.profile input:not(:checked) ~ label:hover ~ label {
+  color: #fd4;
+}
+.profile input:checked ~ label {
+  color: #fd4;
+}
+.profile input#rate-5:checked ~ label {
+  color: #fe7;
+  text-shadow: 0 0 20px #952;
+}
 .profile i.fa-star {
   display: initial;
   filter: drop-shadow(1px 1px 1px black);
@@ -10895,7 +10922,7 @@ h1#title {
   }
 }
 .doctor_container {
-  min-height: 200px;
+  min-height: 500px;
 }
 
 h1.stat_title {
