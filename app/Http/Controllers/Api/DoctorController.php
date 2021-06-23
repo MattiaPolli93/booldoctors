@@ -40,7 +40,7 @@ class DoctorController extends Controller
                             ->select('users.*', 'plan_user.*')
                             ->where('plan_user.expire_date', '>', Carbon::now())
                             ->get();    
-                            
+        
         return response()->json($sponsoredDoc);
     }
 }
