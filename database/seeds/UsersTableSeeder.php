@@ -77,7 +77,7 @@ class UsersTableSeeder extends Seeder
             // seed della tabella pivot spec_user: prendo tra 1 e 6 spec casuali diverse e le associo a newUser
             $numbers = range(1, count($specialization));
             shuffle($numbers);
-            $spec = rand(1, 6);
+            $spec = rand(1, 4);
             for ($j = 0; $j < $spec; $j++) {
                 $newUser->specializations()->attach($numbers[$j]);
             }

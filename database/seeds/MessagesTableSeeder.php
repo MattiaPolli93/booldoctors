@@ -37,7 +37,7 @@ class MessagesTableSeeder extends Seeder
                 $newMessage->user_id = $doctor->id;            
                 $newMessage->email = $faker->safeEmail();
                 // $newMessage->message = $faker->text(400);
-                for ($i = 0; $i < count($messages); $i++) {
+                for ($j = 0; $j < count($messages); $j++) {
                     $newMessage->message = $messages[array_rand($messages)];
                 }
 

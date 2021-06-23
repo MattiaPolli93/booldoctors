@@ -32,11 +32,16 @@ class ServicesTableSeeder extends Seeder
 
         foreach ($doctors as $doctor) {
 
-            for ($i=0; $i < rand(2, 8); $i++) { 
+            $r = rand(2, 8);
+            if ($r % 2 != 0) {
+                $r++;
+            }
+            for ($i = 0; $i < $r; $i++) { 
+
                 $newService = new Service();
                 $newService->user_id = $doctor->id;
 
-                for ($i = 0; $i < count($services); $i++) {
+                for ($j = 0; $j < count($services); $j++) {
                     $newService->service = $services[array_rand($services)];
                 }
 

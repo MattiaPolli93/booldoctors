@@ -57,19 +57,20 @@ class CommentsTableSeeder extends Seeder
         ];
 
         foreach ($doctors as $doctor) {
-            for ($i = 0; $i < rand(5, 15); $i++) { 
+            $r = rand(5, 15);
+            for ($i = 0; $i < $r; $i++) { 
                 $newComment = new Comment();
 
                 $newComment->user_id = $doctor->id; 
                 if (rand(0, 1)){
                     // $newComment->username = $faker->name();
-                    for ($i = 0; $i < count($names); $i++) {
+                    for ($j = 0; $j < count($names); $j++) {
                         $newComment->username = $names[array_rand($names)];
                     }
                 }
                 
                 if (rand(0, 1)) {
-                    for ($i = 0; $i < count($comments); $i++) {
+                    for ($k = 0; $k < count($comments); $k++) {
                         $newComment->comment = $comments[array_rand($comments)];
                     }
                     // $newComment->comment = $faker->text(200);
