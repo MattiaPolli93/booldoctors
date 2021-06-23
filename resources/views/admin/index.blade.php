@@ -79,7 +79,7 @@
                 <a href="{{route('admin.comments')}}"><button type="button" class="btn btn-insert">Recensioni</button></a>
             </div>
           </div>
-            <div class="reviews-image">
+            <div class="reviews-image text-center">
                 <img src="https://www.interno16holidayhome.com/wp-content/uploads/2019/01/reviews.png" alt="Recensioni">
             </div>
         </div>
