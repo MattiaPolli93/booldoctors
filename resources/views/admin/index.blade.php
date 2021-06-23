@@ -121,6 +121,7 @@
                     {{-- Sponsor disponibili --}}
                     <div class="sponsors d-flex">
                         {{-- 2.99 --}}
+
                         <div class="card card_wrapcard price first">
                             <ul>
                                 <li class="price">
@@ -136,6 +137,9 @@
                                 <li><span>44</span></li>
                             </ul>
                             <a href="{{route('admin.sponsor', ['id' => 1])}}"><button class="btn btn-insert">Ottieni</button></a>
+                            <div class="hovertext_container">
+                            <span class="hovertext">Regular</span>
+                          </div>
                         </div>
 
                         {{-- 5.99 --}}
@@ -154,6 +158,9 @@
                                 <li><span>44</span></li>
                             </ul>
                             <a href="{{route('admin.sponsor', ['id' => 2])}}"><button class="btn btn-insert">Ottieni</button></a>
+                            <div class="hovertext_container">
+                            <span class="hovertext">Medium</span>
+                          </div>
                         </div>
 
                         {{-- 9.99 --}}
@@ -172,6 +179,9 @@
                                 <li><span>44</span></li>
                             </ul>
                             <a href="{{route('admin.sponsor', ['id' => 3])}}"><button class="btn btn-insert">Ottieni</button></a>
+                            <div class="hovertext_container">
+                            <span class="hovertext">Premium</span>
+                          </div>
                         </div>
                     </div>
 

@@ -10,15 +10,16 @@ main {
         }
     }
 
-#reviews, #statistics {
-  min-height: 50vh;
-}
+    #reviews,
+    #statistics {
+        min-height: 50vh;
+    }
 
     #info {
         background-color: #ccdbd8;
         height: 100vh;
         @media screen and (max-width: 992px) {
-            height: 100%
+            height: 100%;
         }
 
         .my_container.info {
@@ -83,7 +84,6 @@ main {
                     }
 
                     h4 {
-
                         margin-bottom: 15px;
                     }
                     @media screen and (max-width: 992px) {
@@ -234,12 +234,56 @@ main {
                 justify-content: center;
             }
 
+            .card_wrapcard:hover {
+                transition: transform 0.2s ease-in-out;
+                transform: scale(1.05);
+                box-shadow: 3px 3px 10px -3px $background_color;
+            }
+
+            .card_wrapcard:hover .hovertext {
+                visibility: visible;
+                left: 5px;
+                top: -390px;
+                position: absolute;
+                background: none;
+                font-size: 70px;
+                z-index: -1;
+                opacity: 0.1;
+                animation: fade 0.5s;
+            }
+            @keyframes highlight {
+                0% {
+                    transform: translateY(0);
+                }
+
+                100% {
+                    transform: translateY(-50px);
+                }
+            }
+            @keyframes fade {
+                0% {
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 0.1;
+                }
+            }
+
             .card_wrapcard {
+                overflow: hidden;
                 flex-basis: 28%;
                 padding: 40px 0 20px;
                 @media screen and (max-width: 992px) {
                     flex-basis: 60%;
                     margin-bottom: 50px;
+                }
+
+                .hovertext_container {
+                    height: 100%;
+                    width: 100%;
+                    position: relative;
+                    visibility: hidden;
                 }
 
                 a {

@@ -10348,7 +10348,8 @@ main #sponsor .my_container,
 main #statistics .my_container {
   height: 100%;
 }
-main #reviews, main #statistics {
+main #reviews,
+main #statistics {
   min-height: 50vh;
 }
 main #info {
@@ -10569,7 +10570,57 @@ main #sponsor .sponsors {
     justify-content: center;
   }
 }
+main #sponsor .sponsors .card_wrapcard:hover {
+  transition: transform 0.2s ease-in-out;
+  transform: scale(1.05);
+  box-shadow: 3px 3px 10px -3px #1af3c495;
+}
+main #sponsor .sponsors .card_wrapcard:hover .hovertext {
+  visibility: visible;
+  left: 5px;
+  top: -390px;
+  position: absolute;
+  background: none;
+  font-size: 70px;
+  z-index: -1;
+  opacity: 0.1;
+  -webkit-animation: fade 0.5s;
+          animation: fade 0.5s;
+}
+@-webkit-keyframes highlight {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
+@keyframes highlight {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
+@-webkit-keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.1;
+  }
+}
 main #sponsor .sponsors .card_wrapcard {
+  overflow: hidden;
   flex-basis: 28%;
   padding: 40px 0 20px;
 }
@@ -10578,6 +10629,12 @@ main #sponsor .sponsors .card_wrapcard {
     flex-basis: 60%;
     margin-bottom: 50px;
   }
+}
+main #sponsor .sponsors .card_wrapcard .hovertext_container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  visibility: hidden;
 }
 main #sponsor .sponsors .card_wrapcard a {
   width: 90%;
