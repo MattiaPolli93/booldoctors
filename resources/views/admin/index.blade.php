@@ -11,7 +11,7 @@
             {{-- profile image --}}
             <div class="image_box d-flex flex-column align-items-center">
                 <figure class="text-center">
-                    @if ($details->image != 'https://via.placeholder.com/150')
+                    @if ($details->image != null)
                     <img {{-- da modificare in caso di seed --}} src="{{ asset('storage/' . $details->image) }}" alt="Immagine di {{$user->name}} {{$user->surname}}">
                     @else
                     <img src="https://i.ibb.co/wQBsxBd/standard-Doctor.png" alt="Immagine del dottore">
@@ -48,7 +48,7 @@
                     </div>
                 </div>
             </div>
-
+            
             {{-- personal details --}}
             <div class="details d-flex">
                 <div class="details-title d-flex">

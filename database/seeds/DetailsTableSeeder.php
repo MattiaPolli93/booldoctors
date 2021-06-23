@@ -19,7 +19,7 @@ class DetailsTableSeeder extends Seeder
         foreach ($doctors as $doctor) {
             $newDetail = new Detail;
             $newDetail->user_id = $doctor->id;
-            $newDetail->image = 'https://via.placeholder.com/150';
+            // $newDetail->image = 'https://via.placeholder.com/150';
 
             if (rand(0, 1)) {
                 $newDetail->bio = $faker->text(500);
