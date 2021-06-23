@@ -10757,13 +10757,24 @@ h1#title {
   display: flex;
   padding: 30px 0;
 }
+@media screen and (max-width: 768px) {
+  .profile .details {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .profile .details h1 {
   font-size: 60px;
   font-weight: bolder;
   font-style: italic;
 }
+@media screen and (max-width: 768px) {
+  .profile .details h1 {
+    font-size: 40px;
+  }
+}
 .profile .details .col_left {
-  width: 20%;
+  width: 30%;
 }
 .profile .details .col_left .image_box {
   border-radius: 50%;
@@ -10772,12 +10783,23 @@ h1#title {
 .profile .details .col_left .image_box img {
   width: 100%;
 }
+@media screen and (max-width: 768px) {
+  .profile .details .col_left .image_box img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .profile .details .col_left {
+    width: 60%;
+    padding-bottom: 25px;
+  }
+}
 .profile .details .col_right {
-  width: 80%;
+  width: 70%;
   padding-left: 20px;
 }
 .profile .details .col_right .specializations {
-  margin-top: 25px;
+  margin-top: 20px;
 }
 .profile h3 {
   color: #00b295;
@@ -10792,23 +10814,39 @@ h1#title {
 .profile section {
   padding: 20px 0;
 }
-.profile .menu ul {
-  display: flex;
+.profile nav.menu {
+  /* ul {
+      display: flex;
+
+      li {
+          font-weight: bold;
+          font-size: 20px;
+          margin-right: 15px;
+          border-bottom: 3px solid transparent;
+
+          a {
+              color: $bannerColor;
+
+              &:hover {
+                  text-decoration: none;
+              }
+          }
+
+          &:hover {
+              border-bottom: 3px solid $bannerColor;
+          }
+      }
+  } */
 }
-.profile .menu ul li {
+.profile nav.menu a {
+  color: #00b295;
   font-weight: bold;
   font-size: 20px;
-  margin-right: 15px;
+  padding-right: 15px;
   border-bottom: 3px solid transparent;
 }
-.profile .menu ul li a {
-  color: #00b295;
-}
-.profile .menu ul li a:hover {
+.profile nav.menu a:hover {
   text-decoration: none;
-}
-.profile .menu ul li:hover {
-  border-bottom: 3px solid #00b295;
 }
 .profile #services .service_cont {
   display: flex;

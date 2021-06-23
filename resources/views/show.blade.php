@@ -18,7 +18,7 @@
                     @endif
             </div>
         </div>
-        <div class="col_right">
+        <div class="col_right text-center">
             <h1>{{$doctor->name}} {{$doctor->surname}}</h1>
             <div class="specializations">
                 @foreach ($doctor->specializations as $specialization)
@@ -30,7 +30,24 @@
     {{-- fine dettagli principali --}}
 
     {{-- menu dottore --}}
-    <div class="menu">
+    <nav class="menu pr-0 pl-0 navbar navbar-expand-md navbar-light w-100">
+        <button class="navbar-toggler mb-3" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a href="#contacts">Contatti</a>
+                <a href="#bio">Bio</a>
+                <a href="#services">Servizi</a>
+                <a class="disabled" href="#review">Recensioni</a>
+                <a class="disabled" href="#add-review">Inserisci Recensione</a>
+                <a class="nav-item disabled" href="#contact_me">Manda messaggio</a>
+            </div>
+        </div>
+    </nav>
+
+    {{-- menu dottore --}}
+    {{-- <div class="menu">
         <ul>
             <li><a href="#contacts">Contatti</a></li>
             <li><a href="#bio">Bio</a></li>
@@ -38,7 +55,8 @@
             <li><a href="#review">Recensioni</a></li>
             <li><a href="#contact_me">Manda un messaggio al medico</a></li>
         </ul>
-    </div>
+    </div> --}}
+
     <hr>
 
     {{-- contatti --}}
@@ -100,7 +118,7 @@
 
         <hr>
         
-    <section>
+    <section id="add-review">
         <h3>Inserisci una recensione</h3>
         <form action="{{route('doctor.store-comment', ['id' => $doctor->id])}}" method="post">
             @csrf
