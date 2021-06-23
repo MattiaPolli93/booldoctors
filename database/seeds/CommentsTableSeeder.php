@@ -37,7 +37,25 @@ class CommentsTableSeeder extends Seeder
             'Giulia',
             'Cristina',
         ];
-        
+
+        $comments = [
+            'Bravissimo dottore, altamente consigliato!',
+            'Mani di velluto, consigliatissimo',
+            'Nella media',
+            'senza infamia e senza lode',
+            'Da denuncia!',
+            'Gentile e professionale, molto chiaro nelle spiegazioni. Ti mette a proprio agio lo studio è accogliente. Lo consiglio',
+            'Spiegazioni chiare e precise molto cortese e disponibile. Lo consiglio vivamente ad altre persone.',
+            'Cortesia puntualità disponibilità Per la cura dobbiamo vedere in futuro per adesso non posso esprimere parere lo dovrei fare dopo aver fatto la cura.',
+            'Sono il ragazzo affetto dalle varici al collo vescicale..Volevodire Che il dottore e’ Bravissimo!',
+            'Il dottore da un messaggio (probabilmente privo di complete informazioni) è riuscito a mettere immediatamente a fuoco il problema, cosa non avvenuta in una visita frettolosa al San Paolo di Milano, orientandomi rispetto ai passi da seguire per una corretta diagnosi e nel contempo restituendomi fiducia in una possibile guarigione. Lo ringrazio di cuore, in attesa di poterlo incontrare anche di persona per una visita ambulatoriale.',
+            'Professionalità, cortesia ,attenzione, puntualità. L\'empatia con chi prende cura delle problematiche vale più della cura in sé stessa.',
+            'Nello studio ho trovato molta cortesia e disponibilità. Il dottore e propenso all ascolto e subito valuta la situazione di salute. Mi sono sentita subito a mio agio e il dermatologo adatto a me',
+            'Molto soddisfatto della visita urologica, professionale, super puntuale e disponibile. Assolutamente consigliato',
+            'Consigliato a tt un dottore bravissimo,e capisce e risolve il problema. Nn lo cambierei con nessuno. Il numero uno.',
+            'Persona molto professionale e gentile e soprattutto studio pulitissimo.',
+        ];
+
         foreach ($doctors as $doctor) {
             for ($i = 0; $i < rand(5, 15); $i++) { 
                 $newComment = new Comment();
@@ -51,7 +69,10 @@ class CommentsTableSeeder extends Seeder
                 }
                 
                 if (rand(0, 1)) {
-                    $newComment->comment = $faker->text(200);
+                    for ($i = 0; $i < count($comments); $i++) {
+                        $newComment->comment = $comments[array_rand($comments)];
+                    }
+                    // $newComment->comment = $faker->text(200);
                 }
 
                 $newComment->rate = rand(1, 5);
