@@ -30,7 +30,7 @@ class CommentResource extends JsonResource
         return [
             /* 'id' => $this->id, */
             /* 'rate' => $this->rate */
-            'ratesTotal' => count($rates),
+            'RateCout' => count($rates),
             'averageRate' => intval($averageRate)
         ];
     }

@@ -42,6 +42,7 @@ class UserResource extends JsonResource
             'surname' => $this->surname,
             'details' => new DetailResource($this->details),
             'specializations' => SpecializationResource::collection($this->specializations),
+            'services' => ServiceResource::collection($this->services),
             /* 'rate' => CommentResource::collection($this->comments), */
             'RateInfo' => new CommentResource($this),
             'expire_date' => $Date
