@@ -47,13 +47,15 @@
             <div class="doctorLogo">
                 <i class="fas fa-user-md"></i>
             </div>
-            <h2>Professionisti in <span class="colorName">primo piano</span></h2>
+            <h2 class="mb-3">Professionisti in <span class="colorName">primo piano</span></h2>
             <div class="cardDoctor" v-for="doctor in docLimit">
-                <div class="docAvatar">                     
-                  <img v-if="doctor.details.image != null"{{-- da modificare in caso di seed --}} :src="'storage/' + doctor.details.image" :alt="'Immagine di ' + doctor.name + ' ' + doctor.surname">
-                  <img v-else src="https://i.ibb.co/wQBsxBd/standard-Doctor.png" alt="Immagine del dottore">
+                <div class="docAvatar d-flex">
+                    <div class="image_box">
+                        <a :href="'http://127.0.0.1:8000/doctor/' + doctor.id"><img v-if="doctor.details.image != null"{{-- da modificare in caso di seed --}} :src="'storage/' + doctor.details.image" :alt="'Immagine di ' + doctor.name + ' ' + doctor.surname">
+                        <img v-else src="https://i.ibb.co/wQBsxBd/standard-Doctor.png" alt="Immagine del dottore"></a>
+                    </div>              
                 </div>
-                <div class="docInfo">                    
+                    <div class="docInfo">                    
                     <h3>@{{doctor.name}} @{{doctor.surname}}</h3> 
                     <span v-for="doc in doctor.specializations" class="my_tag">@{{doc.field}}</span>
                     <div v-if="true" class="sponsor">

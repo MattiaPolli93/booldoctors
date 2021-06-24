@@ -26,6 +26,40 @@
         flex-direction: column;
         align-items: center;
         
+        .docAvatar {
+            width: auto;
+            align-items: center;
+            
+            .image_box {
+                border-radius: 50%;
+                overflow: hidden;
+                transition: 0.8s;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+                
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .docInfo {
+            border-radius: 15px;
+            padding: 10px 15px;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: $background_color;
+
+                h3 {
+                    color: $white;
+                }
+            }
+        }
+
         .doctorLogo {
             font-size: 100px;
             color: $bannerColor;
@@ -38,12 +72,14 @@
     background-image: url('../../img/background.png');
     background-size: cover;
     background-position: center;
+
     .specializations {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         padding: 40px;
     }
+
     .specialization_container {
         min-width: 30%;
         max-width: 33%;
