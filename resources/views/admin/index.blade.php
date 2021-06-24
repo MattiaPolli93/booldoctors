@@ -43,15 +43,11 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-insert" data-dismiss="modal">Torna indietro</button>
-<<<<<<< Updated upstream
                                 <form action="{{route('admin.profile.destroy', [ 'profile' => $user->id ])}}" method="POST">
 							    @csrf
 							    @method('DELETE')
                                     <button type="submit" class="btn btn-danger">Sono sicuro, elimina il profilo</button>
                                 </form>
-=======
-                                <button type="button" class="btn btn-danger">Sono sicuro, elimina il profilo</button>
->>>>>>> Stashed changes
                             </div>
                         </div>
                     </div>
@@ -138,9 +134,9 @@
                                         <span>2.99</span>
                                     </div>
                                 </li>
-                                <li><span>44 Projects</span></li>
-                                <li><span>44 Storage</span></li>
-                                <li><span>44</span></li>
+                                <li><span class="days">1 giorno di sponsorizzazione!</span></li>
+                                <li><span>2.99 euro al giorno</span></li>
+                                <li><span class="saving">Nessun risparmio</span></li>
                             </ul>
                             <a href="{{route('admin.sponsor', ['id' => 1])}}"><button class="btn btn-insert">Ottieni</button></a>
                             <div class="hovertext_container">
@@ -159,9 +155,9 @@
                                         <span>5.99</span>
                                     </div>
                                 </li>
-                                <li><span>44 Projects</span></li>
-                                <li><span>44 Storage</span></li>
-                                <li><span>44</span></li>
+                                <li><span class="days">3 giorni di sponsorizzazione!</span></li>
+                                <li><span>2.00 euro al giorno</span></li>
+                                <li><span class="saving">Risparmi 2.98 euro rispetto al piano Regular</span></li>
                             </ul>
                             <a href="{{route('admin.sponsor', ['id' => 2])}}"><button class="btn btn-insert">Ottieni</button></a>
                             <div class="hovertext_container">
@@ -180,9 +176,9 @@
                                         <span>9.99</span>
                                     </div>
                                 </li>
-                                <li><span>44 Projects</span></li>
-                                <li><span>44 Storage</span></li>
-                                <li><span>44</span></li>
+                                <li><span class="days">6 giorni di sponsorizzazione!</span></li>
+                                <li><span>1.66 euro al giorno</span></li>
+                                <li><span class="saving">Risparmi 7.95 euro rispetto al piano Regular</span></li>
                             </ul>
                             <a href="{{route('admin.sponsor', ['id' => 3])}}"><button class="btn btn-insert">Ottieni</button></a>
                             <div class="hovertext_container">

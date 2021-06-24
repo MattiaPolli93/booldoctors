@@ -6,6 +6,14 @@
     align-items: center;
     text-align: center;
     flex-direction: column;
+
+    .days {
+        font-weight: 600;
+    }
+    .saving {
+        font-size: 14px;
+        color: $red;
+    }
 }
 
 .cardDoctor {
