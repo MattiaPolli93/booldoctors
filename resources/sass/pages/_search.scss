@@ -1,73 +1,94 @@
-.search_input {
-  position: relative;
-    input {
-        color: $bannerColor;
-        background-color: rgba($color: #9dbbac, $alpha: 0.1);
-        font-weight: 600;
-        border: none;
-        border-radius: 20px;
-        margin: 20px 0;
-        padding: 8px 20px 8px 40px;
-        width: 50%;
-        outline: none;
+.my_container#search {
+    padding: 50px 0 30px;
+
+    .filter-options {
+
+        .filter_bar,
+        .search_input {
+            flex-basis: 50%;
+        }
+
+        .filter_bar {
+
+        }
+
+        .search_input {
+            position: relative;
+
+            input {
+                color: $bannerColor;
+                background-color: rgba($color: #9dbbac, $alpha: 0.1);
+                font-weight: 600;
+                border: none;
+                border-radius: 20px;
+                margin: 20px 0;
+                padding: 8px 20px 8px 40px;
+                width: 70%;
+                outline: none;
+                caret-color: $bannerColor;
+            }
+
+            .fa-search {
+                position: absolute;
+                font-size: 14px;
+                left: 15px;
+                top: 34px;
+                vertical-align: middle;
+                color: gray;
+            }
+
+            @media screen and (max-width: 768px) {
+
+                input {
+                    width: 80%;
+                }
+            }
+        }
     }
 
-    .fa-search {
-        position: absolute;
-        font-size: 14px;
-        left: 15px;
-        top: 34px;
-        vertical-align: middle;
-        color: gray;
-    }
-}
-@media screen and (max-width: 768px) {
 
-  .search_input {
-    input {
-      width: 80%;
-    }
-  }
-}
 
-.doctor_container {
-    min-height: 500px;
 
-    .cardDoctor {
-        
-        .docAvatar {
-            width: auto;
-            align-items: center;
+    .doctor_container {
+        min-height: 500px;
+
+        .cardDoctor {
             
-            .image_box {
-                border-radius: 50%;
-                overflow: hidden;
-                transition: 0.8s;
+            .docAvatar {
+                width: auto;
+                align-items: center;
+                
+                .image_box {
+                    border-radius: 50%;
+                    overflow: hidden;
+                    transition: 0.8s;
 
+                    &:hover {
+                        transform: scale(1.2);
+                    }
+                    
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            
+            .docInfo {
+                border-radius: 15px;
+                padding: 10px 15px;
+                width: 75%;
+                transition: 0.3s;
+                
                 &:hover {
-                    transform: scale(1.2);
+                    background-color: $background_color;
+                    
+                    h3 {
+                        color: $white;
+                    }
                 }
-                
-                img {
-                    width: 100%;
-                }
-            }
-        }
-        
-        .docInfo {
-            border-radius: 15px;
-            padding: 10px 15px;
-            width: 75%;
-            transition: 0.3s;
-            
-            &:hover {
-                background-color: $background_color;
-                
-                h3 {
-                    color: $white;
-                }
-            }
 
+            }
         }
     }
 }
+

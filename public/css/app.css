@@ -10995,10 +10995,17 @@ h1#title {
   -webkit-text-fill-color: transparent;
 }
 
-.search_input {
+.my_container#search {
+  padding: 50px 0 30px;
+}
+.my_container#search .filter-options .filter_bar,
+.my_container#search .filter-options .search_input {
+  flex-basis: 50%;
+}
+.my_container#search .filter-options .search_input {
   position: relative;
 }
-.search_input input {
+.my_container#search .filter-options .search_input input {
   color: #00b295;
   background-color: rgba(157, 187, 172, 0.1);
   font-weight: 600;
@@ -11006,10 +11013,11 @@ h1#title {
   border-radius: 20px;
   margin: 20px 0;
   padding: 8px 20px 8px 40px;
-  width: 50%;
+  width: 70%;
   outline: none;
+  caret-color: #00b295;
 }
-.search_input .fa-search {
+.my_container#search .filter-options .search_input .fa-search {
   position: absolute;
   font-size: 14px;
   left: 15px;
@@ -11017,40 +11025,39 @@ h1#title {
   vertical-align: middle;
   color: gray;
 }
-
 @media screen and (max-width: 768px) {
-  .search_input input {
+  .my_container#search .filter-options .search_input input {
     width: 80%;
   }
 }
-.doctor_container {
+.my_container#search .doctor_container {
   min-height: 500px;
 }
-.doctor_container .cardDoctor .docAvatar {
+.my_container#search .doctor_container .cardDoctor .docAvatar {
   width: auto;
   align-items: center;
 }
-.doctor_container .cardDoctor .docAvatar .image_box {
+.my_container#search .doctor_container .cardDoctor .docAvatar .image_box {
   border-radius: 50%;
   overflow: hidden;
   transition: 0.8s;
 }
-.doctor_container .cardDoctor .docAvatar .image_box:hover {
+.my_container#search .doctor_container .cardDoctor .docAvatar .image_box:hover {
   transform: scale(1.2);
 }
-.doctor_container .cardDoctor .docAvatar .image_box img {
+.my_container#search .doctor_container .cardDoctor .docAvatar .image_box img {
   width: 100%;
 }
-.doctor_container .cardDoctor .docInfo {
+.my_container#search .doctor_container .cardDoctor .docInfo {
   border-radius: 15px;
   padding: 10px 15px;
   width: 75%;
   transition: 0.3s;
 }
-.doctor_container .cardDoctor .docInfo:hover {
+.my_container#search .doctor_container .cardDoctor .docInfo:hover {
   background-color: #1af3c495;
 }
-.doctor_container .cardDoctor .docInfo:hover h3 {
+.my_container#search .doctor_container .cardDoctor .docInfo:hover h3 {
   color: #ffffff;
 }
 
