@@ -31,9 +31,15 @@ main {
                     font-style: italic;
 
                     @media screen and (max-width: 768px) {
-                        font-size: 35px;
+                        font-size: 40px;
+                        margin: 20px 0 10px;
                     }
                 }
+            }
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+                text-align: center;
             }
         }
 
@@ -45,7 +51,6 @@ main {
     }
 
     ul.delete-services {
-        justify-content: space-between;
         flex-wrap: wrap;
 
         li {

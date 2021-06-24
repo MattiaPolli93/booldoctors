@@ -70,7 +70,7 @@
         <h3 class="mt-4">Cancella prestazione</h3>
             <ul class="d-flex delete-services mt-1 mb-4">
                 @foreach ($services as $service)
-                    <li class='mt-3 d-flex'>
+                    <li class='mt-3 mr-5 d-flex'>
                         <p>{{$service['service']}}: <strong>{{$service['price']}}</strong> €</p>
                             <form action="{{route('admin.service.destroy', $service)}}" method="POST" enctype="multipart/form-data">
                                 @csrf

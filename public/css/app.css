@@ -10711,14 +10711,20 @@ main .edit-form .info-box .text-box h4 {
 }
 @media screen and (max-width: 768px) {
   main .edit-form .info-box .text-box h4 {
-    font-size: 35px;
+    font-size: 40px;
+    margin: 20px 0 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  main .edit-form .info-box {
+    flex-direction: column;
+    text-align: center;
   }
 }
 main .edit-form .bio-text-box textarea {
   max-width: 100%;
 }
 main ul.delete-services {
-  justify-content: space-between;
   flex-wrap: wrap;
 }
 main ul.delete-services li {
@@ -11093,6 +11099,13 @@ p.link_dashboard {
   align-items: center;
   text-align: center;
   flex-direction: column;
+}
+.card .days {
+  font-weight: 600;
+}
+.card .saving {
+  font-size: 14px;
+  color: #e3342f;
 }
 
 .cardDoctor {
