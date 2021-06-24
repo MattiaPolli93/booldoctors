@@ -11106,6 +11106,13 @@ p.link_dashboard {
   padding: 0 10px 20px 10px;
   background-color: rgba(157, 187, 172, 0.1);
 }
+.cardDoctor .docInfo .sponsor {
+  width: 40px;
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  transform: rotate(-25deg);
+}
 .cardDoctor .docInfo h3 {
   color: #00b295;
 }

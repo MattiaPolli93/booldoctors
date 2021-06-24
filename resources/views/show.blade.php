@@ -126,7 +126,7 @@
             <div class="form-group">
                 <label for="username">Nome</label>
                 <input type="username" class="form-control" id="username" name="username" placeholder="Inserisci il tuo username">
-            </div>
+            </div>            
             <div class="form-group">
                 <label for="comment">Recensione</label>
                 <textarea class="form-control"  name="comment" id="comment" cols="30" rows="4" placeholder="Inserisci la tua recensione"></textarea>
