@@ -11,6 +11,7 @@ const Search = {
             sponsoredDocs: [],
             filterSponsoredDocs: [],
             /* loading: true, */
+            slectRate: null,
         }
     },
     methods: {

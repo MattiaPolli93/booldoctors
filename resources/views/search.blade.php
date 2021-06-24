@@ -6,6 +6,23 @@
 
 @section('content')
 <div class="container" id="search">
+    <div class="fiter_bar">
+        <select name="rate" id="rate" v-model:"selectRate">
+            <option selected disabled>Filtra per voto</option>
+            <option value="0" >0</option>
+            <option value="1" >1</option>
+            <option value="2" >2</option>
+            <option value="3" >3</option>
+            <option value="4" >4</option>
+            <option value="5" >5</option>
+        </select>
+        
+        <form name="myform" oninput="range1value.value = range1.valueAsNumber">
+            <label for="range1">Filtra per numero di recensioni</label>
+            <input type="range" id="range" name="range1" min="0" max="50" step="10" value="50" list="tickmarks">
+            <output name="range1value" for="range1" >50</output>
+        </form>
+    </div>
     <div class="search_input">
         {{-- <select name="spec" id="spec" v-model="spec" v-on:change="filterSpec">
             <option value="" disabled selected>Filtra per specializzazione</option>
