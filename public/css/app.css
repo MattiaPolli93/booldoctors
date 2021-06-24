@@ -11018,13 +11018,12 @@ h1#title {
   border-radius: 15px;
   padding: 10px 15px;
   width: 75%;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 .doctor_container .cardDoctor .docInfo:hover {
   background-color: #1af3c495;
 }
 .doctor_container .cardDoctor .docInfo:hover h3 {
-  transition: 0.5s;
   color: #ffffff;
 }
 

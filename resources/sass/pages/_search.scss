@@ -58,13 +58,12 @@
             border-radius: 15px;
             padding: 10px 15px;
             width: 75%;
-            transition: 0.5s;
+            transition: 0.3s;
             
             &:hover {
                 background-color: $background_color;
                 
                 h3 {
-                    transition: 0.5s;
                     color: $white;
                 }
             }
