@@ -149,6 +149,8 @@
 </div>
 @endif
 
+<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+<script>dayjs().format()</script>
 <script src="https://unpkg.com/vue@next" ></script>
 <script src="{{ asset('js/search.js') }}" defer></script>
 @endsection

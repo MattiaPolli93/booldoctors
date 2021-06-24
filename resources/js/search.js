@@ -24,8 +24,8 @@ const Search = {
                     }
                 }
             }
-            console.log(allDoctors);
-            console.log(this.filterDoc);
+            // console.log(allDoctors);
+            // console.log(this.filterDoc);
             /* for(var i = 0; i < this.sponsoredDocs.length; i++){
                for(var j = 0; j < this.sponsoredDocs[i].length; j++){
                  if(this.sponsoredDocs[i] == this.spec){
@@ -52,13 +52,23 @@ const Search = {
     mounted() {
         axios.get("http://localhost:8000/api/v1/doctors")
             .then((risposta) => {
-                    this.doctors = risposta.data.data;
-                    axios.get("http://localhost:8000/api/v1/sponsoredDoc")
-                        .then((response) => {
-                            this.sponsoredDocs = response.data;
+                this.doctors = risposta.data.data;
+                // console.log(this.doctors);
+                let now = dayjs();
+                // console.log(now);
+                this.doctors.forEach(doctor => {
 
-                        })
-                }
+                    if (dayjs(doctor.expire_date) > now) {
+                        this.sponsoredDocs.push(doctor);
+                    }
+                });
+                console.log(this.sponsoredDocs);
+                // axios.get("http://localhost:8000/api/v1/sponsoredDoc")
+                //     .then((response) => {
+                //         this.sponsoredDocs = response.data;
+
+                //     })
+            }
 
             );
         const queryString = window.location.search;
@@ -82,13 +92,13 @@ const Search = {
     },
     computed: {
         docLimit() {
-            for (let i = this.doctors.length - 1; i > 0; i--) {
+            for (let i = this.sponsoredDocs.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
-                const temp = this.doctors[i];
-                this.doctors[i] = this.doctors[j];
-                this.doctors[j] = temp;
+                const temp = this.sponsoredDocs[i];
+                this.sponsoredDocs[i] = this.sponsoredDocs[j];
+                this.sponsoredDocs[j] = temp;
             }
-            return this.doctors.slice(0, 5)
+            return this.sponsoredDocs.slice(0, 5)
         },
 
         noFindTxt() {
