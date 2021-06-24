@@ -18,6 +18,7 @@ class UserResource extends JsonResource
     public function toArray($request)
     {
         /* return parent::toArray($request); */
+        /*passo le date delle sponsorizazioni*/
         if ($this->plans()->get()->last()) {
                 $Date = $this->plans()->get()->last()->pivot->expire_date;
         } else {

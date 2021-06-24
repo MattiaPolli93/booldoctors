@@ -15,6 +15,7 @@ class CommentResource extends JsonResource
     public function toArray($request)
     {
         /* return parent::toArray($request); */
+        /*calcolo il voto medio*/
         $rates = $this->comments()->get('rate');
         /* dd($rates[0]->rate); */
         if (count($rates) > 0) {
