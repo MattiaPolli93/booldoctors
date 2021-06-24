@@ -11002,6 +11002,30 @@ h1#title {
 .my_container#search .filter-options .search_input {
   flex-basis: 50%;
 }
+.my_container#search .filter-options .filter_bar .select-box select {
+  color: #ffffff;
+  background-color: #1af3c495;
+  border: none;
+  border-radius: 15px;
+  font-weight: 600;
+  padding: 15px 10px;
+}
+.my_container#search .filter-options .filter_bar input,
+.my_container#search .filter-options .filter_bar output {
+  vertical-align: middle;
+}
+.my_container#search .filter-options .filter_bar input[type=range] {
+  background-color: #1af3c495;
+  border-radius: 15px;
+  overflow: hidden;
+  -webkit-appearance: none;
+  width: 90%;
+}
+.my_container#search .filter-options .filter_bar output {
+  color: #00b295;
+  font-size: 700;
+  margin-left: 10px;
+}
 .my_container#search .filter-options .search_input {
   position: relative;
 }
@@ -11013,7 +11037,7 @@ h1#title {
   border-radius: 20px;
   margin: 20px 0;
   padding: 8px 20px 8px 40px;
-  width: 70%;
+  width: 80%;
   outline: none;
   caret-color: #00b295;
 }
@@ -11030,8 +11054,14 @@ h1#title {
     width: 80%;
   }
 }
+@media screen and (max-width: 768px) {
+  .my_container#search .filter-options {
+    flex-direction: column;
+  }
+}
 .my_container#search .doctor_container {
   min-height: 500px;
+  padding-top: 40px;
 }
 .my_container#search .doctor_container .cardDoctor .docAvatar {
   width: auto;

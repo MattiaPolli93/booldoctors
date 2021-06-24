@@ -8,8 +8,38 @@
             flex-basis: 50%;
         }
 
-        .filter_bar {
+        .filter_bar {            
+            .select-box {
+                select {
+                    color: $white;
+                    background-color: $background_color;
+                    border: none;
+                    border-radius: 15px;
+                    font-weight: 600;
+                    padding: 15px 10px;
+                }
+            }
 
+            input,
+            output {
+                vertical-align: middle;
+            }
+
+            input {
+                &[type="range"] {
+                    background-color: $background_color;
+                    border-radius: 15px;
+                    overflow: hidden;
+                    -webkit-appearance: none;
+                    width: 90%;
+                }
+            }
+
+            output {
+                color: $bannerColor;
+                font-size: 700;
+                margin-left: 10px;
+            }
         }
 
         .search_input {
@@ -23,7 +53,7 @@
                 border-radius: 20px;
                 margin: 20px 0;
                 padding: 8px 20px 8px 40px;
-                width: 70%;
+                width: 80%;
                 outline: none;
                 caret-color: $bannerColor;
             }
@@ -38,19 +68,20 @@
             }
 
             @media screen and (max-width: 768px) {
-
                 input {
                     width: 80%;
                 }
             }
         }
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;          
+        }
     }
-
-
-
 
     .doctor_container {
         min-height: 500px;
+        padding-top: 40px;
 
         .cardDoctor {
             
