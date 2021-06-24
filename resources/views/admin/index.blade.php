@@ -98,8 +98,61 @@
                 <img src="https://images.vexels.com/media/users/3/143065/isolated/preview/c6cbc8cf5ca3856bca8d5f28c0471fca-bar-graph-cart-by-vexels.png" alt="Grafico">
             </div>
         </div>
+
     </section>
     {{-- fine statistics --}}
+
+
+<!-- TEST ANIMAZIONE -->
+    <section class="scroll-container">
+      <div class="scroll-element js-scroll slide-left">
+        <h1>Prova</h1>
+      </div>
+    </section>
+
+<script type="text/javascript">
+// https://webdesign.tutsplus.com/tutorials/animate-on-scroll-with-javascript--cms-36671
+const scrollElements = document.querySelectorAll(".js-scroll");
+const elementInView = (el, dividend = 1) => {
+  const elementTop = el.getBoundingClientRect().top;
+  return (
+    elementTop <=
+    (window.innerHeight || document.documentElement.clientHeight) / dividend
+  );
+};
+
+const elementOutofView = (el) => {
+  const elementTop = el.getBoundingClientRect().top;
+
+  return (
+    elementTop > (window.innerHeight || document.documentElement.clientHeight)
+  );
+};
+
+const displayScrollElement = (element) => {
+  element.classList.add("scrolled");
+};
+
+//
+const hideScrollElement = (element) => {
+  element.classList.remove("scrolled");
+};
+
+const handleScrollAnimation = () => {
+  scrollElements.forEach((el) => {
+    if (elementInView(el, 1.25)) {
+      displayScrollElement(el);
+    } else if (elementOutofView(el)) {
+      hideScrollElement(el)
+    }
+  })
+}
+window.addEventListener("scroll", () => {
+  handleScrollAnimation();
+});
+</script>
+<!-- FINE TEST ANIMAZIONE -->
+
 
     {{-- sponsorships --}}
     <section id="sponsor">

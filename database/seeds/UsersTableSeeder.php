@@ -22,12 +22,12 @@ class UsersTableSeeder extends Seeder
         $plan = Plan::all();
 
         $names = [
-            'Mario',            
-            'Giacomo', 
+            'Mario',
+            'Giacomo',
             'Luigi',
             'Mattia',
             'Stefano',
-            'Nicolo',
+            'Nicolò',
             'Gabriele',
             'Giuseppe',
             'Alfredo',
@@ -35,8 +35,8 @@ class UsersTableSeeder extends Seeder
         ];
 
         $surnames = [
-            'Rossi',            
-            'Corti', 
+            'Rossi',
+            'Corti',
             'Bodritti',
             'Polli',
             'Lana',
@@ -45,23 +45,23 @@ class UsersTableSeeder extends Seeder
             'Baglio',
             'Storti',
             'Poretti'
-        ];       
-        
+        ];
 
-        for ($i=0; $i < 10; $i++) { 
+
+        for ($i=0; $i < 10; $i++) {
             $newUser = new User;
             for($j = 0; $j < count($names); $j++){
                 $newUser->name = $names[array_rand($names)];
-            }       
+            }
             for($z = 0; $z < count($surnames); $z++){
                 $newUser->surname = $surnames[array_rand($surnames)];
             }
-            
+
             $newUser->email = strtolower($newUser->name) . strtolower($newUser->surname) . strval(rand(1, 20)) . '@mail.it';
-                      
+
             $newUser->password = Hash::make($faker->word());
             $newUser->save();
-            
+
             // seed della tabella pivot plan_user
 
             if (rand(0, 1)) {
@@ -73,7 +73,7 @@ class UsersTableSeeder extends Seeder
                 ]);
                 // $newUser->plans()->expire_date = $faker->dateTimeBetween('now', '+1 days');
             }
-            
+
             // seed della tabella pivot spec_user: prendo tra 1 e 6 spec casuali diverse e le associo a newUser
             $numbers = range(1, count($specialization));
             shuffle($numbers);
