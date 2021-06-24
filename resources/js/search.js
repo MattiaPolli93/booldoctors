@@ -11,7 +11,8 @@ const Search = {
             sponsoredDocs: [],
             filterSponsoredDocs: [],
             /* loading: true, */
-            slectRate: null,
+            selectRate: '',
+            numberOfRates: 50,
         }
     },
     methods: {
@@ -48,6 +49,9 @@ const Search = {
                     }
                 }
             }
+        },
+        prova() {
+            console.log(this.numberOfRates, this.selectRate);
         }
     },
     mounted() {
