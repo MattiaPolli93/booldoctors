@@ -10717,6 +10717,21 @@ main .edit-form .info-box .text-box h4 {
 main .edit-form .bio-text-box textarea {
   max-width: 100%;
 }
+main ul.delete-services {
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+main ul.delete-services li {
+  flex-direction: column;
+}
+main ul.delete-services li p {
+  font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+  main ul.delete-services {
+    flex-direction: column;
+  }
+}
 
 main {
   min-height: 40vh;
@@ -10860,6 +10875,11 @@ h1#title {
   font-size: 24px;
   font-weight: bold;
 }
+@media screen and (max-width: 992px) {
+  .profile #services .service_cont .service {
+    width: 100%;
+  }
+}
 .profile #services .service_cont .service .euro {
   font-size: 18px;
   font-weight: 300;
@@ -10884,6 +10904,16 @@ h1#title {
   width: calc((100% / 3) - 15px);
   height: 300px;
   overflow-y: auto;
+}
+@media screen and (max-width: 992px) {
+  .profile .review_cont .review_box {
+    width: calc((100% / 2) - 15px);
+  }
+}
+@media screen and (max-width: 669px) {
+  .profile .review_cont .review_box {
+    width: 100%;
+  }
 }
 .profile .review_cont .review_box .top {
   display: flex;
@@ -10928,6 +10958,7 @@ h1#title {
   filter: drop-shadow(1px 1px 1px black);
   background: linear-gradient(to top right, gold 0%, yellow 100%);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 

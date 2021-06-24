@@ -43,4 +43,21 @@ main {
             }
         }
     }
+
+    ul.delete-services {
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        li {
+            flex-direction: column;
+
+            p {
+                font-size: 18px;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+        }
+    }
 }

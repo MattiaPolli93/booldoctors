@@ -3,7 +3,7 @@
     Modifica profilo
 @endsection
 @section('content')
-  <div class="my_container edit-form">
+    <div class="my_container edit-form">
       <form action="{{route('admin.profile.update', $doctor->id)}}" method="POST" enctype="multipart/form-data">
           @csrf
           @method('PUT')
@@ -68,24 +68,23 @@
 
         {{-- Cancella prestazioni --}}
         <h3 class="mt-4">Cancella prestazione</h3>
-          <ul>
-          @foreach ($services as $service)
-            <li class='mt-3'>
-              <p>{{$service['service']}}</p>
-              <p>{{$service['price']}} €</p>
-              <form action="{{route('admin.service.destroy', $service)}}" method="POST" enctype="multipart/form-data">
-                @csrf
-                @method('DELETE')
-                <button type="submit" class="btn btn-danger">Cancella</button>
-              </form>
-            </li>
-          {{-- <div class="form-group mt-5">
-              <label for="service_name">Nome prestazione</label>
-              <input type="text" class="form-control" name="service_name" id="service_name" placeholder="Inserisci il nome della prestazione" value="{{$service['service']}}">
-              <label for="service_price">Prezzo prestazione</label>
-              <input type="number" class="form-control" name="service_price" id="service_price" min="0" max="9999.99" step="0.01" placeholder="Inserisci il prezzo della prestazione" value="{{$service['price']}}">
-          </div> --}}
-          @endforeach
-          </ul>
+            <ul class="d-flex delete-services mt-1 mb-4">
+                @foreach ($services as $service)
+                    <li class='mt-3 d-flex'>
+                        <p>{{$service['service']}}: <strong>{{$service['price']}}</strong> €</p>
+                            <form action="{{route('admin.service.destroy', $service)}}" method="POST" enctype="multipart/form-data">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="btn btn-danger mt-3 mb-2">Cancella</button>
+                            </form>
+                    </li>
+                {{-- <div class="form-group mt-5">
+                    <label for="service_name">Nome prestazione</label>
+                    <input type="text" class="form-control" name="service_name" id="service_name" placeholder="Inserisci il nome della prestazione" value="{{$service['service']}}">
+                    <label for="service_price">Prezzo prestazione</label>
+                    <input type="number" class="form-control" name="service_price" id="service_price" min="0" max="9999.99" step="0.01" placeholder="Inserisci il prezzo della prestazione" value="{{$service['price']}}">
+                </div> --}}
+                 @endforeach
+            </ul>
     </div>
 @endsection
