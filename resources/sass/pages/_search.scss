@@ -37,10 +37,16 @@
         
         .docAvatar {
             width: auto;
+            align-items: center;
             
             .image_box {
                 border-radius: 50%;
                 overflow: hidden;
+                transition: 0.8s;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
                 
                 img {
                     width: 100%;
@@ -52,6 +58,17 @@
             border-radius: 15px;
             padding: 10px 15px;
             width: 75%;
+            transition: 0.5s;
+            
+            &:hover {
+                background-color: $background_color;
+                
+                h3 {
+                    transition: 0.5s;
+                    color: $white;
+                }
+            }
+
         }
     }
 }

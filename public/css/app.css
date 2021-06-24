@@ -11001,10 +11001,15 @@ h1#title {
 }
 .doctor_container .cardDoctor .docAvatar {
   width: auto;
+  align-items: center;
 }
 .doctor_container .cardDoctor .docAvatar .image_box {
   border-radius: 50%;
   overflow: hidden;
+  transition: 0.8s;
+}
+.doctor_container .cardDoctor .docAvatar .image_box:hover {
+  transform: scale(1.2);
 }
 .doctor_container .cardDoctor .docAvatar .image_box img {
   width: 100%;
@@ -11013,6 +11018,14 @@ h1#title {
   border-radius: 15px;
   padding: 10px 15px;
   width: 75%;
+  transition: 0.5s;
+}
+.doctor_container .cardDoctor .docInfo:hover {
+  background-color: #1af3c495;
+}
+.doctor_container .cardDoctor .docInfo:hover h3 {
+  transition: 0.5s;
+  color: #ffffff;
 }
 
 h1.stat_title {
