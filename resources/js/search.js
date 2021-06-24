@@ -12,7 +12,7 @@ const Search = {
             filterSponsoredDocs: [],
             /* loading: true, */
             selectRate: '',
-            numberOfRates: 50,
+            numberOfRates: 0,
         }
     },
     methods: {
@@ -50,9 +50,9 @@ const Search = {
                 }
             }
         },
-        prova() {
+        /* prova() {
             console.log(this.numberOfRates, this.selectRate);
-        }
+        }, */
     },
     mounted() {
         axios.get("http://localhost:8000/api/v1/doctors")
@@ -116,6 +116,17 @@ const Search = {
             if (this.doctors.length > 0) return false;
 
             return true;
+        },
+
+        maxRange() {
+            let maxRange = 0;
+            this.doctors.forEach(element => {
+                if (element.RateInfo.RateCout > maxRange ) {
+                    maxRange = element.RateInfo.RateCout
+                }
+            });
+
+            return maxRange;
         }
 
 
