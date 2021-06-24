@@ -19,10 +19,12 @@ class UserResource extends JsonResource
     {
         /* return parent::toArray($request); */
         if ($this->plans()->get()->last()) {
-                $Date = ['expire_date' => $this->plans()->get()->last()->pivot->expire_date];
+                $Date = $this->plans()->get()->last()->pivot->expire_date;
         } else {
             $Date = Carbon::now('Europe/Rome')->subDay()->format('Y-m-d H:m:s');
         }
+
+        /* dd(CommentResource::collection($this->comments)); */
         return [
             'id' => $this->id,
             'name' => $this->name,
