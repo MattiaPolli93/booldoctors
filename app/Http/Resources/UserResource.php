@@ -23,8 +23,8 @@ class UserResource extends JsonResource
         } else {
             $Date = Carbon::now('Europe/Rome')->subDay()->format('Y-m-d H:m:s');
         }
-        $rates = $this->comments()->get('rate');
-        /* dd($rates[0]->rate); */
+       /*  $rates = $this->comments()->get('rate');
+        dd($rates[0]->rate);
         if (count($rates)>0) {
             $rateSum = 0;
             for ($i=0; $i < count($rates); $i++) {
@@ -35,7 +35,7 @@ class UserResource extends JsonResource
         } else {
             $averageRate = 0;
         }
-        /* dd(intval($averageRate)); */
+        dd(intval($averageRate)); */
         return [
             'id' => $this->id,
             'name' => $this->name,
@@ -43,10 +43,7 @@ class UserResource extends JsonResource
             'details' => new DetailResource($this->details),
             'specializations' => SpecializationResource::collection($this->specializations),
             /* 'rate' => CommentResource::collection($this->comments), */
-            'RateInfo' => [
-                'ratesTotal' => count($rates),
-                'averageRate' => intval($averageRate),
-            ],
+            'RateInfo' => new CommentResource($this),
             'expire_date' => $Date
         ];
     }
