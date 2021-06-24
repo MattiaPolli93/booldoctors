@@ -31,5 +31,27 @@
 }
 
 .doctor_container {
-  min-height: 500px;
+    min-height: 500px;
+
+    .cardDoctor {
+        
+        .docAvatar {
+            width: auto;
+            
+            .image_box {
+                border-radius: 50%;
+                overflow: hidden;
+                
+                img {
+                    width: 100%;
+                }
+            }
+        }
+        
+        .docInfo {
+            border-radius: 15px;
+            padding: 10px 15px;
+            width: 75%;
+        }
+    }
 }

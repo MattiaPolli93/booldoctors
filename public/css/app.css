@@ -10993,6 +10993,21 @@ h1#title {
 .doctor_container {
   min-height: 500px;
 }
+.doctor_container .cardDoctor .docAvatar {
+  width: auto;
+}
+.doctor_container .cardDoctor .docAvatar .image_box {
+  border-radius: 50%;
+  overflow: hidden;
+}
+.doctor_container .cardDoctor .docAvatar .image_box img {
+  width: 100%;
+}
+.doctor_container .cardDoctor .docInfo {
+  border-radius: 15px;
+  padding: 10px 15px;
+  width: 75%;
+}
 
 h1.stat_title {
   font-weight: bolder;
