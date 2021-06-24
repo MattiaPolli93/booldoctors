@@ -23,15 +23,30 @@ class UserResource extends JsonResource
         } else {
             $Date = Carbon::now('Europe/Rome')->subDay()->format('Y-m-d H:m:s');
         }
-
-        /* dd(CommentResource::collection($this->comments)); */
+        $rates = $this->comments()->get('rate');
+        /* dd($rates[0]->rate); */
+        if (count($rates)>0) {
+            $rateSum = 0;
+            for ($i=0; $i < count($rates); $i++) {
+                $rateSum = $rateSum + $rates[$i]->rate;
+            }
+            $averageRate = $rateSum / count($rates);
+            
+        } else {
+            $averageRate = 0;
+        }
+        /* dd(intval($averageRate)); */
         return [
             'id' => $this->id,
             'name' => $this->name,
             'surname' => $this->surname,
             'details' => new DetailResource($this->details),
             'specializations' => SpecializationResource::collection($this->specializations),
-            'rate' => CommentResource::collection($this->comments),
+            /* 'rate' => CommentResource::collection($this->comments), */
+            'RateInfo' => [
+                'ratesTotal' => count($rates),
+                'averageRate' => intval($averageRate),
+            ],
             'expire_date' => $Date
         ];
     }
