@@ -43,7 +43,7 @@ const hideScrollElement = (element) => {
 
 const handleScrollAnimation = () => {
   scrollElements.forEach((el) => {
-    if (elementInView(el, 1.25)) {
+    if (elementInView(el, 1.3)) {
       displayScrollElement(el);
     } else if (elementOutofView(el)) {
       hideScrollElement(el)
@@ -52,4 +52,45 @@ const handleScrollAnimation = () => {
 }
 window.addEventListener("scroll", () => {
   handleScrollAnimation();
+});
+
+// FUNZIONE HOME
+
+const scrollElements2 = document.querySelectorAll(".js-scroll2");
+const elementInView2 = (el, dividend = 1) => {
+  const elementTop = el.getBoundingClientRect().top;
+  return (
+    elementTop <=
+    (window.innerHeight || document.documentElement.clientHeight) / dividend
+  );
+};
+
+const elementOutofView2 = (el) => {
+  const elementTop = el.getBoundingClientRect().top;
+
+  return (
+    elementTop > (window.innerHeight || document.documentElement.clientHeight)
+  );
+};
+
+const displayScrollElement2 = (element) => {
+  element.classList.add("scrolled2");
+};
+
+//
+const hideScrollElement2 = (element) => {
+  element.classList.remove("scrolled2");
+};
+
+const handleScrollAnimation2 = () => {
+  scrollElements2.forEach((el) => {
+    if (elementInView2(el, 2)) {
+      displayScrollElement2(el);
+    } else if (elementOutofView2(el)) {
+      hideScrollElement2(el)
+    }
+  })
+}
+window.addEventListener("scroll", () => {
+  handleScrollAnimation2();
 });

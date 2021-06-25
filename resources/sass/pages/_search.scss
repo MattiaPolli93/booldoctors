@@ -14,7 +14,7 @@
             border-radius: 15px;
             box-shadow: 5px 5px 5px $background_color;
             padding: 15px 20px;
-            
+
             .filter-text {
                 color: $background_color;
                 font-weight: 700;
@@ -68,7 +68,7 @@
                 width: 90%;
                 outline: none;
                 caret-color: $bannerColor;
-                
+
                 @media screen and (max-width: 768px) {
                     width: 100%;
                 }
@@ -85,7 +85,7 @@
         }
 
         @media screen and (max-width: 768px) {
-            flex-direction: column-reverse;          
+            flex-direction: column-reverse;
         }
     }
 
@@ -94,11 +94,11 @@
         padding-top: 40px;
 
         .cardDoctor {
-            
+
             .docAvatar {
                 width: auto;
                 align-items: center;
-                
+
                 .image_box {
                     border-radius: 50%;
                     overflow: hidden;
@@ -107,22 +107,22 @@
                     &:hover {
                         transform: scale(1.2);
                     }
-                    
+
                     img {
                         width: 100%;
                     }
                 }
             }
-            
+
             .docInfo {
                 border-radius: 15px;
                 padding: 10px 15px;
                 width: 75%;
                 transition: 0.3s;
-                
+
                 &:hover {
                     background-color: $background_color;
-                    
+
                     h3 {
                         color: $white;
                     }
@@ -142,4 +142,3 @@
         }
     }
 }
-

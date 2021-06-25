@@ -10088,11 +10088,33 @@ h3 {
     opacity: 1;
   }
 }
-.provaaa {
-  width: 100%;
-  height: 100%;
+.js-scroll2 {
+  opacity: 0.9;
 }
 
+.js-scroll2.scrolled2 {
+  opacity: 0.2;
+  -webkit-animation: fading 0.4s ease-in-out;
+          animation: fading 0.4s ease-in-out;
+}
+
+@-webkit-keyframes fading {
+  0% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes fading {
+  0% {
+    opacity: 0.9;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
 * {
   margin: 0;
   padding: 0;
@@ -10303,9 +10325,6 @@ footer .lower-footer span {
   color: #ff0000;
 }
 
-.infoShow {
-  /* padding: 80px 0; */
-}
 .infoShow .my_container {
   display: flex;
   flex-wrap: wrap;
@@ -10325,10 +10344,18 @@ footer .lower-footer span {
   min-height: 90px;
 }
 
+.sponsorDoc {
+  padding-top: 100px;
+}
 .sponsorDoc .my_container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+}
+.sponsorDoc .my_container .anim_size {
+  width: 100%;
+  height: 100%;
 }
 .sponsorDoc .my_container .docAvatar {
   width: auto;
@@ -10352,7 +10379,7 @@ footer .lower-footer span {
   transition: 0.3s;
 }
 .sponsorDoc .my_container .docInfo:hover {
-  background-color: #1af3c495;
+  background-color: #1af3c4;
 }
 .sponsorDoc .my_container .docInfo:hover h3 {
   color: #ffffff;
@@ -10465,6 +10492,16 @@ footer .lower-footer span {
     width: 100%;
   }
 }
+h6 {
+  font-size: 120px;
+  left: -200px;
+  display: inline-block;
+  top: -100px;
+  position: absolute;
+  width: 1000px;
+  z-index: -2;
+}
+
 main #info,
 main #reviews,
 main #sponsor,

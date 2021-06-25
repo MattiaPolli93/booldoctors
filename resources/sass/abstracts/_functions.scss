@@ -60,7 +60,26 @@
     }
 }
 
-.provaaa {
-  width: 100%;
-  height: 100%;
+
+.js-scroll2 {
+    opacity: 0.9;
+}
+
+.js-scroll2.scrolled2 {
+    opacity: 0.2;
+    animation: fading 0.4s ease-in-out;
+}
+
+h6 {
+}
+@keyframes fading {
+    0% {
+
+        opacity: 0.9;
+    }
+
+    100% {
+
+        opacity: 0.2;
+    }
 }
