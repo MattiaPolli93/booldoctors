@@ -10615,6 +10615,10 @@ main #info .btn-box {
 main #reviews {
   background-color: #1af3c495;
 }
+main #reviews h2 {
+  font-size: 1200%;
+  line-height: 1;
+}
 main #reviews .my_container {
   flex-direction: row-reverse;
   justify-content: space-between;

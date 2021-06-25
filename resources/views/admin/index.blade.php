@@ -72,25 +72,31 @@
 
     {{-- reviews --}}
     <section id="reviews">
-      <p class="scroll-element js-scroll slide-left reviews-text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        <strong><a href="{{route('admin.messages')}}">Vai alla pagina<i class="fas fa-arrow-right"></i></a></strong></p>
-          <section class="scroll-container right-scroll">
-            <div class="scroll-element js-scroll slide-right">
-              <h2>Messaggi</h2>
-            </div>
-          </section>
+      <p class="scroll-element js-scroll slide-left reviews-text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        <strong><a href="{{route('admin.messages')}}">Vai alla pagina<i class="fas fa-arrow-right"></i></a></strong>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+        <strong><a href="{{route('admin.comments')}}">Vai alla pagina<i class="fas fa-arrow-right"></i></a></strong>
+      </p>
+
+      <section class="scroll-container right-scroll">
+        <div class="scroll-element js-scroll slide-right">
+          <h2>Messaggi &<br>Recensioni</h2>
+        </div>
+      </section>
     </section>
     {{-- fine reviews --}}
 
     {{-- statistics --}}
     <section id="statistics">
-        <p class="scroll-element js-scroll slide-right reviews-text-right">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <strong><a href="{{route('admin.messages')}}">Vai alla pagina<i class="fas fa-arrow-right"></i></a></strong></p>
-            <section class="scroll-container">
-              <div class="scroll-element js-scroll slide-left">
-                <h2>Statistiche</h2>
-              </div>
-            </section>
+        <p class="scroll-element js-scroll slide-right reviews-text-right">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          <strong><a href="{{route('admin.statistics')}}">Vai alla pagina<i class="fas fa-arrow-right"></i></a></strong>
+        </p>
 
+        <section class="scroll-container">
+          <div class="scroll-element js-scroll slide-left">
+            <h2>Statistiche</h2>
+          </div>
+        </section>
     </section>
     {{-- fine statistics --}}
 
