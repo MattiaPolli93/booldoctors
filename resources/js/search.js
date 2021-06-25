@@ -10,9 +10,9 @@ const Search = {
             filterDoc: [],
             sponsoredDocs: [],
             filterSponsoredDocs: [],
-            /* loading: true, */
+            loading: true,
             selectRate: '',
-            numberOfRates: 0,            
+            numberOfRates: 0,
         }
     },
     methods: {
@@ -24,7 +24,7 @@ const Search = {
             for (var i = 0; i < this.doctors.length; i++) {
                 for (var j = 0; j < this.doctors[i].specializations.length; j++) {
                     if (this.doctors[i].specializations[j].id == this.spec) {
-                        
+
                     }
                 }
             }
@@ -43,16 +43,16 @@ const Search = {
             this.filterDoc = [];
             this.filterSponsoredDocs = [];
             let now = dayjs();
-            /* this.loading = false; */
-            for (var i = 0; i < this.doctors.length; i++){
+            this.loading = false;
+            for (var i = 0; i < this.doctors.length; i++) {
                 for (var j = 0; j < this.doctors[i].specializations.length; j++) {
-                    if (this.doctors[i].specializations[j].field.toLowerCase().includes(this.spec.toLowerCase())){                       
-                        if (!this.filterDoc.includes(this.doctors[i]) && !this.filterSponsoredDocs.includes(this.doctors[i]) ){
+                    if (this.doctors[i].specializations[j].field.toLowerCase().includes(this.spec.toLowerCase())) {
+                        if (!this.filterDoc.includes(this.doctors[i]) && !this.filterSponsoredDocs.includes(this.doctors[i])) {
                             console.log(this.filterDoc);
                             if (dayjs(this.doctors[i].expire_date) > now) {
                                 this.filterSponsoredDocs.push(this.doctors[i]);
                                 console.log(this.filterSponsoredDocs);
-                            }else {
+                            } else {
                                 this.filterDoc.push(this.doctors[i]);
                                 console.log(this.filterDoc);
                             }
@@ -68,31 +68,32 @@ const Search = {
     mounted() {
         axios.get("http://localhost:8000/api/v1/doctors")
             .then((risposta) => {
-                this.doctors = risposta.data.data;
-                // console.log(this.doctors);
-                let now = dayjs();
-                console.log(now);
-                this.doctors.forEach(doctor => {
+                    this.doctors = risposta.data.data;
+                    // console.log(this.doctors);
+                    let now = dayjs();
+                    console.log(now);
+                    this.doctors.forEach(doctor => {
 
-                    if (dayjs(doctor.expire_date) > now) {
-                        this.sponsoredDocs.push(doctor);
-                    }
-                });
-                /* console.log(this.sponsoredDocs); */
-                // axios.get("http://localhost:8000/api/v1/sponsoredDoc")
-                //     .then((response) => {
-                //         this.sponsoredDocs = response.data;
+                        if (dayjs(doctor.expire_date) > now) {
+                            this.sponsoredDocs.push(doctor);
+                        }
+                    });
+                    /* console.log(this.sponsoredDocs); */
+                    // axios.get("http://localhost:8000/api/v1/sponsoredDoc")
+                    //     .then((response) => {
+                    //         this.sponsoredDocs = response.data;
 
-                //     })
-            }
+                    //     })
+                }
 
             );
+
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         const SpecializationUrl = urlParams.get('specialization')
         /* console.log(SpecializationUrl); */
         this.spec = SpecializationUrl;
-        setTimeout(()=>{
+        setTimeout(() => {
             for (var i = 0; i < this.doctors.length; i++) {
                 for (var j = 0; j < this.doctors[i].specializations.length; j++) {
                     if (this.doctors[i].specializations[j].field.toLowerCase().includes(this.spec.toLowerCase())) {
@@ -102,8 +103,12 @@ const Search = {
                     }
                 }
             }
-            /* this.loading = false; */
+            this.loading = false;
         }, 1500);
+
+        if (this.spec == null) {
+            this.loading = false;
+        }
 
     },
     computed: {
@@ -118,21 +123,19 @@ const Search = {
         },
 
         noFindTxt() {
-            if (this.doctors.length > 0 & this.filterDoc.length > 0) return false;
-
+            if (this.doctors.length > 0 && this.filterDoc.length > 0 || this.spec == null) return false;
             return true;
         },
 
-        loading() {
-            if (this.doctors.length > 0) return false;
-
-            return true;
-        },
+        // loading() {
+        //     if (this.doctors.length > 0) return false;
+        //     return true;
+        // },
 
         maxRange() {
             let maxRange = 0;
             this.doctors.forEach(element => {
-                if (element.RateInfo.RateCout > maxRange ) {
+                if (element.RateInfo.RateCout > maxRange) {
                     maxRange = element.RateInfo.RateCout
                 }
             });
