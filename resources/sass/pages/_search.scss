@@ -118,6 +118,16 @@
                     }
                 }
 
+                .name-star {
+                    align-items: center;
+
+                    span {
+                        margin-left: 15px;
+                        color: #fabb0c;
+                        font-size: 20px;
+                        text-shadow: 1px 1px 4px #fabb0c;
+                    }
+                }
             }
         }
     }
