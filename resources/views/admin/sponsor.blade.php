@@ -22,12 +22,28 @@
     </div>
 @endif
 
-<div class="my_container pb-4">
-    <h1 id="title">Hai scelto il piano <span class="text-uppercase">{{$plan->plan}}</span></h1>
+
+<div class="my_container pb-4">          
+        <h1 id="title">Riepilogo dei tuoi dati</h1>
+        <div class="recap">           
+            <div class="user-info">
+                <h2>Nome: <span class="main_color">{{$user->name}}</span></h2>
+                <h2>Cognome: <span class="main_color">{{$user->surname}}</span></h2>
+                <h3>E-mail: <span class="main_color">{{$user->email}}</span></h3>
+                <h4>Indirizzo: <span class="main_color">{{$user->details->address}}</span></h4>
+                <p class="phone">Tel: <span class="main_color">{{$user->details->phone}}</span></p>
+            </div>
+            <div class="plan">
+                <h3>Hai scelto il piano <span class="text-uppercase plan_name">{{$plan->plan}}</span></h3> 
+                <h4>Ti garantirà una sponsorizzazione di {{$plan->period}} ore</h4>
+                <h4>Il piano scadrà il {{$currentExpireDate}}</h4>
+                <h3 class="mt-5 mb-4">Il totale è: <span class="price">{{$plan->price}} €</span> </h3>
+            </div>              
+        </div>    
     <form class="pb-4" id="pay_form" method="POST" action=""  enctype="multipart/form-data"> 
       @csrf
       @method('POST')
-      <h3 class="mt-5 mb-4">Il prezzo da pagare è {{$plan->price}} €</h3>
+      
       <label for="amount" class="d-lg-none">
         <span class="input-label">Amount</span>
             <div class="input-wrapper amount-wrapper">
@@ -36,7 +52,7 @@
         </label>             
           
         <div id="dropin-container"></div>
-        <div class="text-center">
+        <div class="text-center mt-5">
             <input  type="submit" value="Paga Adesso" class="btn btn-insert">
             <input type="hidden" id="nonce" name="payment_method_nonce"/>
         </div> 

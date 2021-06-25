@@ -15,6 +15,10 @@ class PlanController extends Controller
 {
     public function setPlan($id)
     {   
+        $user_id = Auth::id();
+
+        $user = User::where('id', $user_id)->first();
+        /* dd($user); */
         $gateway = new Gateway([
             'environment' => 'sandbox',
             'merchantId' => 'zq9jmpzj8h55xrrp',
@@ -24,9 +28,35 @@ class PlanController extends Controller
 
         $token = $gateway->ClientToken()->generate();
 
-        $plan = Plan::find($id);        
+        $plan = Plan::find($id);
+        
+        $extendPlan = $user->plans()->get()->last();
 
-        return view('admin.sponsor', compact('plan', 'token'));         
+        if($extendPlan){
+            // accedo all'ultima entry di questo user nella tabella pivot
+            //$extendPlan = $user->plans()->get()->last();
+            $now = Carbon::now('Europe/Rome');
+
+                // se non ha mai fatto una sponsorizzazione
+                if ($extendPlan == null) {
+                    $currentExpireDate = $now->addHour($plan->period);
+                } else {
+
+                    // prendo l'ultima expire date dalla pivot
+                    $currentExpireDate = $extendPlan->pivot->expire_date;
+                    
+                    // se la sponsorizzazione non è ancora scaduta, aggiunto le ore alla attuale expire date
+                    if($currentExpireDate < $now){
+                        $currentExpireDate = $now->addHour($plan->period);                                
+                    } else {
+                        // altrimenti la aggiungo all'ora odierna
+                        $currentExpireDate = Carbon::parse($currentExpireDate)->addHour($plan->period);
+                    } 
+                }
+
+        }        
+
+        return view('admin.sponsor', compact('plan', 'token', 'user', 'currentExpireDate'));
     }
 
     public function payPlan(Request $request, $id)

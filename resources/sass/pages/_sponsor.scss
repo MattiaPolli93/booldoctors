@@ -1,0 +1,35 @@
+.recap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    .user-info{
+        padding: 15px 0;        
+        .main_color{
+            color: $bannerColor;
+        }       
+        h2{
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+        h4{
+            margin: 15px 0;
+        }
+        .phone{
+            font-weight: bold;
+        }
+    }
+    .plan{
+        margin-top: 1%;
+        margin-left: 20%;
+        .plan_name{
+            color: $bannerColor;
+        }
+        h4{
+            margin: 15px 0;
+        }
+        .price{
+            color: $bannerColor;
+        }
+    }
+}
