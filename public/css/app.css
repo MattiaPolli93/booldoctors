@@ -10175,8 +10175,9 @@ footer .my_container .list-box:not(:first-child) ul.github li a {
   font-weight: 700;
 }
 footer .my_container .list-box:not(:first-child) ul.github li a .fa-github {
-  color: #097521;
+  color: #00b295;
   font-size: 25px;
+  margin-right: 5px;
 }
 @media screen and (max-width: 992px) {
   footer .my_container .list-box:nth-child(2n+2) {
@@ -10203,8 +10204,9 @@ footer .my_container .list-box:not(:first-child) ul.github li a .fa-github {
 }
 footer .lower-footer {
   background-color: #00b295;
-  color: #5ef77f;
+  color: #ffffff;
   padding: 20px 0;
+  margin-top: 30px;
 }
 footer .lower-footer span {
   color: #ff0000;
@@ -10766,42 +10768,6 @@ main #sponsor .sponsors .card_wrapcard li.price .decimal .month {
   }
   100% {
     transform: translateX(0);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes fade-in-bottom {
-  0% {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@keyframes fade-in-bottom {
-  0% {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
     opacity: 1;
   }
 }
