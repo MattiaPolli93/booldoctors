@@ -18,17 +18,12 @@
                     @endif
             </div>
         </div>
-        <div class="col_right d-flex">
-            <div class="name-star d-flex">
-                <h1>{{$doctor->name}} {{$doctor->surname}}</h1>
-                <span v-if="doctor.RateInfo.averageRate > 0">
-                    <i v-for="star in doctor.RateInfo.averageRate" class="fas fa-star"></i><i v-for="star in (5 - doctor.RateInfo.averageRate)" class="far fa-star"></i>
-                </span>
-            </div>
+        <div class="col_right text-center">
+            <h1>{{$doctor->name}} {{$doctor->surname}}</h1>
             <div class="specializations">
                 @foreach ($doctor->specializations as $specialization)
-                <span class="my_tag">{{$specialization['specialization']}}</span>
-            @endforeach
+                    <span class="my_tag">{{$specialization['specialization']}}</span>
+                @endforeach
             </div>
         </div>
     </div>
