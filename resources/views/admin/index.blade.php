@@ -59,10 +59,16 @@
             <div class="details d-flex">
                 <div class="details-title d-flex">
                     <h1>Buongiorno, <br> <span class="name">{{$user->name}} {{$user->surname}}</span></h1>
-                    <h4><strong>Indirizzo <br> </strong> {{$user->details->address}}</h4>
+                    <h4><strong>Indirizzo <br></strong> {{$user->details->address}}</h4>
                 </div>
                 <div class="bio d-flex">
-                    <p><strong>Bio <br> </strong> {{$user->details->bio}}</p>
+                    <p><strong>Bio <br></strong>
+                        @if ($user->details->bio == '')
+                        <span><em>Nessuna bio inserita</em></span>
+                        @else
+                        <span>{{$user->details->bio}}</span>
+                        @endif
+                    </p>
                 </div>
             </div>
         </div>
