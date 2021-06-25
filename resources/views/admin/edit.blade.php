@@ -67,7 +67,7 @@
         </form>
 
         {{-- Cancella prestazioni --}}
-        @if ($services == null)
+        @if (count($services) > 0)
         <h3 class="mt-4">Cancella prestazione</h3>
             <ul class="d-flex delete-services mt-1 mb-4">
                 @foreach ($services as $service)

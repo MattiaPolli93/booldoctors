@@ -58,6 +58,17 @@
                     color: $white;
                 }
             }
+
+            .name-star {
+                align-items: center;
+                
+                span {
+                    color: #fabb0c;
+                    font-size: 20px;
+                    margin-left: 15px;
+                    text-shadow: 1px 1px 4px #fabb0c;
+                }
+            }
         }
 
         .doctorLogo {

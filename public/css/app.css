@@ -10206,7 +10206,7 @@ footer .lower-footer {
   background-color: #00b295;
   color: #ffffff;
   padding: 20px 0;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 footer .lower-footer span {
   color: #ff0000;
@@ -10265,6 +10265,15 @@ footer .lower-footer span {
 }
 .sponsorDoc .my_container .docInfo:hover h3 {
   color: #ffffff;
+}
+.sponsorDoc .my_container .docInfo .name-star {
+  align-items: center;
+}
+.sponsorDoc .my_container .docInfo .name-star span {
+  color: #fabb0c;
+  font-size: 20px;
+  margin-left: 15px;
+  text-shadow: 1px 1px 4px #fabb0c;
 }
 .sponsorDoc .my_container .doctorLogo {
   font-size: 100px;
@@ -11206,6 +11215,51 @@ h1#title {
 }
 .my_container#search .doctor_container .cardDoctor .docInfo:hover h3 {
   color: #ffffff;
+}
+.my_container#search .doctor_container .cardDoctor .docInfo .name-star {
+  align-items: center;
+}
+.my_container#search .doctor_container .cardDoctor .docInfo .name-star span {
+  color: #fabb0c;
+  font-size: 20px;
+  margin-left: 15px;
+  text-shadow: 1px 1px 4px #fabb0c;
+}
+
+.recap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+}
+.recap .user-info {
+  padding: 15px 0;
+}
+.recap .user-info .main_color {
+  color: #00b295;
+}
+.recap .user-info h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.recap .user-info h4 {
+  margin: 15px 0;
+}
+.recap .user-info .phone {
+  font-weight: bold;
+}
+.recap .plan {
+  margin-top: 1%;
+  margin-left: 20%;
+}
+.recap .plan .plan_name {
+  color: #00b295;
+}
+.recap .plan h4 {
+  margin: 15px 0;
+}
+.recap .plan .price {
+  color: #00b295;
 }
 
 h1.stat_title {
