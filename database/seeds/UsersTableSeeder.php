@@ -27,7 +27,7 @@ class UsersTableSeeder extends Seeder
             'Luigi',
             'Mattia',
             'Stefano',
-            'Nicolò',
+            'Nicolo',
             'Gabriele',
             'Giuseppe',
             'Alfredo',

@@ -29,23 +29,25 @@ class ServicesTableSeeder extends Seeder
             'Ozonoterapia',
             'Trattamento della Sindrome da stanchezza cronica',
         ];
-
+        
         foreach ($doctors as $doctor) {
-
+            $docService = [];
             $r = rand(2, 8);
             if ($r % 2 != 0) {
                 $r++;
             }
             for ($i = 0; $i < $r; $i++) { 
-
                 $newService = new Service();
                 $newService->user_id = $doctor->id;
-
-                for ($j = 0; $j < count($services); $j++) {
+                // controlla se ci sono servizi uguali e non li riassegna
+                do {
+                    $continue = true;
                     $newService->service = $services[array_rand($services)];
-                }
-
-                // $newService->service = $faker->word();
+                    if(!in_array($newService->service, $docService)){
+                        $docService[] = $newService->service;
+                        $continue = false;
+                    }
+                } while ($continue);                
                 $newService->price = $faker->randomFloat(2, 50, 400);
                 $newService->save();
             }

@@ -30,31 +30,28 @@ class PlanController extends Controller
 
         $plan = Plan::find($id);
         
-        $extendPlan = $user->plans()->get()->last();
+        $extendPlan = $user->plans()->get()->last();        
+        // accedo all'ultima entry di questo user nella tabella pivot            
+        $now = Carbon::now('Europe/Rome');
 
-        if($extendPlan){
-            // accedo all'ultima entry di questo user nella tabella pivot
-            //$extendPlan = $user->plans()->get()->last();
-            $now = Carbon::now('Europe/Rome');
+            // se non ha mai fatto una sponsorizzazione
+            if ($extendPlan == null) {
+                $currentExpireDate = $now->addHour($plan->period);
+            } else {
 
-                // se non ha mai fatto una sponsorizzazione
-                if ($extendPlan == null) {
-                    $currentExpireDate = $now->addHour($plan->period);
+                // prendo l'ultima expire date dalla pivot
+                $currentExpireDate = $extendPlan->pivot->expire_date;
+                
+                // se la sponsorizzazione non è ancora scaduta, aggiunto le ore alla attuale expire date
+                if($currentExpireDate < $now){
+                    $currentExpireDate = $now->addHour($plan->period);                                
                 } else {
+                    // altrimenti la aggiungo all'ora odierna
+                    $currentExpireDate = Carbon::parse($currentExpireDate)->addHour($plan->period);
+                } 
+            }
 
-                    // prendo l'ultima expire date dalla pivot
-                    $currentExpireDate = $extendPlan->pivot->expire_date;
-                    
-                    // se la sponsorizzazione non è ancora scaduta, aggiunto le ore alla attuale expire date
-                    if($currentExpireDate < $now){
-                        $currentExpireDate = $now->addHour($plan->period);                                
-                    } else {
-                        // altrimenti la aggiungo all'ora odierna
-                        $currentExpireDate = Carbon::parse($currentExpireDate)->addHour($plan->period);
-                    } 
-                }
-
-        }        
+            
 
         return view('admin.sponsor', compact('plan', 'token', 'user', 'currentExpireDate'));
     }

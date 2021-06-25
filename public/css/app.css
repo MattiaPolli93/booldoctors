@@ -10384,15 +10384,6 @@ footer .lower-footer span {
 .sponsorDoc .my_container .docInfo:hover h3 {
   color: #ffffff;
 }
-.sponsorDoc .my_container .docInfo .name-star {
-  align-items: center;
-}
-.sponsorDoc .my_container .docInfo .name-star span {
-  color: #fabb0c;
-  font-size: 20px;
-  margin-left: 15px;
-  text-shadow: 1px 1px 4px #fabb0c;
-}
 .sponsorDoc .my_container .doctorLogo {
   font-size: 100px;
   color: #00b295;
@@ -11302,15 +11293,6 @@ h1#title {
 .my_container#search .doctor_container .cardDoctor .docInfo:hover h3 {
   color: #ffffff;
 }
-.my_container#search .doctor_container .cardDoctor .docInfo .name-star {
-  align-items: center;
-}
-.my_container#search .doctor_container .cardDoctor .docInfo .name-star span {
-  color: #fabb0c;
-  font-size: 20px;
-  margin-left: 15px;
-  text-shadow: 1px 1px 4px #fabb0c;
-}
 
 .recap {
   display: flex;
@@ -11459,10 +11441,21 @@ main .my_container#error .image_box h2 {
   color: #e3342f;
 }
 
+.docAvatar img {
+  max-width: 120px;
+  width: 100%;
+}
+
 .cardDoctor {
   display: flex;
   width: 100%;
   margin: 30px 0;
+}
+@media screen and (max-width: 576px) {
+  .cardDoctor {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .cardDoctor .docInfo {
   width: 85%;
@@ -11471,6 +11464,31 @@ main .my_container#error .image_box h2 {
   background-color: rgba(157, 187, 172, 0.1);
   position: relative;
 }
+@media screen and (max-width: 576px) {
+  .cardDoctor .docInfo {
+    margin: 15px 0;
+  }
+}
+.cardDoctor .docInfo .name-star {
+  align-items: center;
+}
+.cardDoctor .docInfo .name-star span {
+  color: #fabb0c;
+  font-size: 20px;
+  margin-left: 15px;
+  text-shadow: 1px 1px 4px #fabb0c;
+}
+@media screen and (max-width: 576px) {
+  .cardDoctor .docInfo .name-star span {
+    margin: 10px 0;
+  }
+}
+@media screen and (max-width: 576px) {
+  .cardDoctor .docInfo .name-star {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 .cardDoctor .docInfo .sponsor {
   position: absolute;
   top: 8px;
@@ -11478,16 +11496,24 @@ main .my_container#error .image_box h2 {
   transform: rotate(-25deg);
   width: 50px;
 }
+@media screen and (max-width: 768px) {
+  .cardDoctor .docInfo .sponsor {
+    top: 15px;
+    right: 40%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .cardDoctor .docInfo .sponsor {
+    top: 8px;
+    right: 8px;
+  }
+}
 .cardDoctor .docInfo h3 {
   color: #00b295;
 }
 .cardDoctor .docInfo a {
   display: inline-block;
   margin: 10px 0;
-}
-.cardDoctor .docAvatar img {
-  max-width: 120px;
-  width: 100%;
 }
 
 .my_tag {
