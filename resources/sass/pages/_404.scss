@@ -1,0 +1,22 @@
+main {
+    .my_container#error {
+        .image_box {
+            padding: 25px 0;
+            border-radius: 50%;
+            overflow: hidden;
+            
+            img {
+                width: 50%;
+
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                }
+            }
+
+            h2 {
+                color: $bannerColor;
+                font-weight: 600;
+            }
+        }
+    }
+}

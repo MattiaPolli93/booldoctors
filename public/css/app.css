@@ -11334,6 +11334,24 @@ p.link_dashboard {
   font-size: 20px;
 }
 
+main .my_container#error .image_box {
+  padding: 25px 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+main .my_container#error .image_box img {
+  width: 50%;
+}
+@media screen and (max-width: 768px) {
+  main .my_container#error .image_box img {
+    width: 100%;
+  }
+}
+main .my_container#error .image_box h2 {
+  color: #00b295;
+  font-weight: 600;
+}
+
 .my_jumbotron {
   background-image: url("../../img/jambotron.jpg");
   background-size: cover;
