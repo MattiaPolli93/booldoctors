@@ -22,6 +22,8 @@
                 </div>
           </div>
 
+          <p class="link_dashboard"><a href="{{ route('show', ['id' => $doctor->id]) }}">Vai al tuo profilo pubblico</a></p>
+
           <div class="form-group mt-3">
             <label for="image">Immagine</label>
             <input type="file" class="form-control" id='image' name='image'>
