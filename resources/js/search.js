@@ -91,7 +91,6 @@ const Search = {
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         const SpecializationUrl = urlParams.get('specialization')
-        /* console.log(SpecializationUrl); */
         this.spec = SpecializationUrl;
         setTimeout(() => {
             for (var i = 0; i < this.doctors.length; i++) {
@@ -105,11 +104,9 @@ const Search = {
             }
             this.loading = false;
         }, 1500);
-
         if (this.spec == null) {
             this.loading = false;
         }
-
     },
     computed: {
         docLimit() {
@@ -123,7 +120,7 @@ const Search = {
         },
 
         noFindTxt() {
-            if (this.doctors.length > 0 && this.filterDoc.length > 0 || this.spec == null) return false;
+            if (this.loading == true || this.doctors.length > 0 && this.filterDoc.length > 0 || this.spec == null) return false;
             return true;
         },
 
