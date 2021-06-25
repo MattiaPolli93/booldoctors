@@ -72,6 +72,9 @@
                 </div>
             </div>
         </div>
+        @if ($sponsored == true)
+        <h3>Sei sponsorizzato! La sponsorizzazione scade il {{$currentExpireDate}}</h3>
+        @endif
 
     </section>
     {{-- fine personal info --}}

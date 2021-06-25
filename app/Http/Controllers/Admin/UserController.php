@@ -9,6 +9,7 @@ use App\Plan;
 use App\Service;
 use App\Specialization;
 use App\User;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Storage;
@@ -41,7 +42,25 @@ class UserController extends Controller
         
         $plan = Plan::all();
 
-        return view('admin.index', compact('user', 'details', 'plan'));
+        // accedo all'ultima entry di questo user nella tabella pivot            
+        $extendPlan = $user->plans()->get()->last();
+        $now = Carbon::now('Europe/Rome');
+
+        if ($extendPlan == null) {
+            $sponsored = false;
+            $currentExpireDate = 0;
+        } else {
+
+            $currentExpireDate = $extendPlan->pivot->expire_date;
+
+            if ($currentExpireDate < $now) {
+                $sponsored = false;
+            } else {
+                $sponsored = true;
+            }
+        }
+
+        return view('admin.index', compact('user', 'details', 'plan', 'sponsored', 'currentExpireDate'));
     }
 
     // /**
