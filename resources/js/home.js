@@ -13,6 +13,7 @@ const Home = {
 
 Vue.createApp(Home).mount('#home')
 
+console.log("ciao");
 
 const scrollElements = document.querySelectorAll(".js-scroll");
 const elementInView = (el, dividend = 1) => {

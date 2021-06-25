@@ -10002,6 +10002,97 @@ h3 {
     border-color: #dee2e6;
   }
 }
+.js-scroll {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+
+.js-scroll.scrolled {
+  opacity: 1;
+}
+
+.scrolled.slide-left {
+  -webkit-animation: slide-in-left 0.8s ease-in-out both;
+          animation: slide-in-left 0.8s ease-in-out both;
+}
+
+.scrolled.slide-right {
+  -webkit-animation: slide-in-right 0.8s ease-in-out both;
+          animation: slide-in-right 0.8s ease-in-out both;
+}
+
+@-webkit-keyframes slide-in-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slide-in-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+.sponsorDoc .scrolled.slide-top {
+  -webkit-animation: slide-in-top 0.6s ease-in-out both;
+          animation: slide-in-top 0.6s ease-in-out both;
+}
+
+@-webkit-keyframes slide-in-top {
+  0% {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-80px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.provaaa {
+  width: 100%;
+  height: 100%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10450,65 +10541,6 @@ main #statistics h2 {
 main #reviews .right-scroll,
 main #statistics .right-scroll {
   margin-left: auto;
-}
-main #reviews .js-scroll,
-main #statistics .js-scroll {
-  opacity: 0;
-  transition: opacity 500ms;
-}
-main #reviews .js-scroll.scrolled,
-main #statistics .js-scroll.scrolled {
-  opacity: 1;
-}
-main #reviews .scrolled.slide-left,
-main #statistics .scrolled.slide-left {
-  -webkit-animation: slide-in-left 0.8s ease-in-out both;
-          animation: slide-in-left 0.8s ease-in-out both;
-}
-main #reviews .scrolled.slide-right,
-main #statistics .scrolled.slide-right {
-  -webkit-animation: slide-in-right 0.8s ease-in-out both;
-          animation: slide-in-right 0.8s ease-in-out both;
-}
-@-webkit-keyframes slide-in-left {
-  0% {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes slide-in-left {
-  0% {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes slide-in-right {
-  0% {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes slide-in-right {
-  0% {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
 }
 main #info {
   background-color: #ccdbd8;
