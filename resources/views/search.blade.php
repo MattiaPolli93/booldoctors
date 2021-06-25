@@ -9,7 +9,7 @@
     <div class="filter-options d-flex">
         <div class="filter_bar">
             <form name="myform" class="mb-3" oninput="range1value.value = range1.valueAsNumber">
-                <label for="range1">Filtra per numero di recensioni: </label> <br>
+                <label for="range1"><span class="filter-text">Filtra per numero di recensioni: </label></span> <br>
                 <input type="range" id="range" name="range1" min="0" :max="maxRange" step="1" value="numberOfRates" list="tickmarks" v-model="numberOfRates">
                 <output name="range1value" for="range1">0</output>
             </form>

@@ -11128,9 +11128,22 @@ h1#title {
 .my_container#search {
   padding: 50px 0 30px;
 }
+.my_container#search .filter-options {
+  flex-direction: row-reverse;
+}
 .my_container#search .filter-options .filter_bar,
 .my_container#search .filter-options .search_input {
   flex-basis: 50%;
+}
+.my_container#search .filter-options .filter_bar {
+  border: 2px solid #1af3c495;
+  border-radius: 15px;
+  box-shadow: 5px 5px 5px #1af3c495;
+  padding: 15px 20px;
+}
+.my_container#search .filter-options .filter_bar .filter-text {
+  color: #1af3c495;
+  font-weight: 700;
 }
 .my_container#search .filter-options .filter_bar .select-box select {
   color: #ffffff;
@@ -11138,7 +11151,7 @@ h1#title {
   border: none;
   border-radius: 15px;
   font-weight: 600;
-  padding: 15px 10px;
+  padding: 12px 10px;
 }
 .my_container#search .filter-options .filter_bar input,
 .my_container#search .filter-options .filter_bar output {
@@ -11148,8 +11161,9 @@ h1#title {
   background-color: #1af3c495;
   border-radius: 15px;
   overflow: hidden;
+  padding: 2px;
   -webkit-appearance: none;
-  width: 90%;
+  width: 85%;
 }
 .my_container#search .filter-options .filter_bar output {
   color: #00b295;
@@ -11167,26 +11181,25 @@ h1#title {
   border-radius: 20px;
   margin: 20px 0;
   padding: 8px 20px 8px 40px;
-  width: 80%;
+  width: 90%;
   outline: none;
   caret-color: #00b295;
+}
+@media screen and (max-width: 768px) {
+  .my_container#search .filter-options .search_input input {
+    width: 100%;
+  }
 }
 .my_container#search .filter-options .search_input .fa-search {
   position: absolute;
   font-size: 14px;
   left: 15px;
   top: 34px;
-  vertical-align: middle;
-  color: gray;
-}
-@media screen and (max-width: 768px) {
-  .my_container#search .filter-options .search_input input {
-    width: 80%;
-  }
+  color: #00b295;
 }
 @media screen and (max-width: 768px) {
   .my_container#search .filter-options {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
 .my_container#search .doctor_container {

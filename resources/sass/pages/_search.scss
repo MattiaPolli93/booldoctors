@@ -2,13 +2,24 @@
     padding: 50px 0 30px;
 
     .filter-options {
+        flex-direction: row-reverse;
 
         .filter_bar,
         .search_input {
             flex-basis: 50%;
         }
 
-        .filter_bar {            
+        .filter_bar {
+            border: 2px solid $background_color;
+            border-radius: 15px;
+            box-shadow: 5px 5px 5px $background_color;
+            padding: 15px 20px;
+            
+            .filter-text {
+                color: $background_color;
+                font-weight: 700;
+            }
+
             .select-box {
                 select {
                     color: $white;
@@ -16,7 +27,7 @@
                     border: none;
                     border-radius: 15px;
                     font-weight: 600;
-                    padding: 15px 10px;
+                    padding: 12px 10px;
                 }
             }
 
@@ -30,8 +41,9 @@
                     background-color: $background_color;
                     border-radius: 15px;
                     overflow: hidden;
+                    padding: 2px;
                     -webkit-appearance: none;
-                    width: 90%;
+                    width: 85%;
                 }
             }
 
@@ -53,9 +65,13 @@
                 border-radius: 20px;
                 margin: 20px 0;
                 padding: 8px 20px 8px 40px;
-                width: 80%;
+                width: 90%;
                 outline: none;
                 caret-color: $bannerColor;
+                
+                @media screen and (max-width: 768px) {
+                    width: 100%;
+                }
             }
 
             .fa-search {
@@ -63,19 +79,13 @@
                 font-size: 14px;
                 left: 15px;
                 top: 34px;
-                vertical-align: middle;
-                color: gray;
+                color: $bannerColor;
             }
 
-            @media screen and (max-width: 768px) {
-                input {
-                    width: 80%;
-                }
-            }
         }
 
         @media screen and (max-width: 768px) {
-            flex-direction: column;          
+            flex-direction: column-reverse;          
         }
     }
 
