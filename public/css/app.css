@@ -10379,7 +10379,127 @@ main #statistics .my_container {
 }
 main #reviews,
 main #statistics {
-  min-height: 50vh;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+main #reviews .reviews-text-left,
+main #reviews .reviews-text-right,
+main #statistics .reviews-text-left,
+main #statistics .reviews-text-right {
+  width: 40%;
+  position: absolute;
+  text-align: justify;
+  z-index: 5;
+}
+main #reviews .reviews-text-left strong,
+main #reviews .reviews-text-right strong,
+main #statistics .reviews-text-left strong,
+main #statistics .reviews-text-right strong {
+  display: block;
+}
+main #reviews .reviews-text-left strong i,
+main #reviews .reviews-text-right strong i,
+main #statistics .reviews-text-left strong i,
+main #statistics .reviews-text-right strong i {
+  font-size: 15px;
+  margin-left: 5px;
+  vertical-align: middle;
+}
+main #reviews .reviews-text-left strong a,
+main #reviews .reviews-text-right strong a,
+main #statistics .reviews-text-left strong a,
+main #statistics .reviews-text-right strong a {
+  color: inherit;
+}
+main #reviews .reviews-text-left strong a:hover i,
+main #reviews .reviews-text-right strong a:hover i,
+main #statistics .reviews-text-left strong a:hover i,
+main #statistics .reviews-text-right strong a:hover i {
+  margin-left: 12px;
+  transition: all 0.2s ease-in-out;
+}
+main #reviews .reviews-text-left,
+main #statistics .reviews-text-left {
+  left: 80px;
+}
+main #reviews .reviews-text-right,
+main #statistics .reviews-text-right {
+  right: 80px;
+}
+main #reviews h2,
+main #statistics h2 {
+  font-size: 1400%;
+  opacity: 0.2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+main #reviews .right-scroll,
+main #statistics .right-scroll {
+  margin-left: auto;
+}
+main #reviews .js-scroll,
+main #statistics .js-scroll {
+  opacity: 0;
+  transition: opacity 500ms;
+}
+main #reviews .js-scroll.scrolled,
+main #statistics .js-scroll.scrolled {
+  opacity: 1;
+}
+main #reviews .scrolled.slide-left,
+main #statistics .scrolled.slide-left {
+  -webkit-animation: slide-in-left 0.8s ease-in-out both;
+          animation: slide-in-left 0.8s ease-in-out both;
+}
+main #reviews .scrolled.slide-right,
+main #statistics .scrolled.slide-right {
+  -webkit-animation: slide-in-right 0.8s ease-in-out both;
+          animation: slide-in-right 0.8s ease-in-out both;
+}
+@-webkit-keyframes slide-in-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes slide-in-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 main #info {
   background-color: #ccdbd8;
@@ -10557,15 +10677,10 @@ main #statistics .my_container .statistics-image img {
   }
 }
 main #sponsor {
-  background-color: #dfdfdf;
-  /* background-image: url("https://wallpaperaccess.com/full/3988500.jpg");
-  background-image: url("https: //wallpaperaccess.com/full/3464162.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position-y: 15%; */
+  background: linear-gradient(to bottom, #5ef77f, #1af3c495);
 }
 main #sponsor .text h2 {
-  color: #00b295;
+  color: #FFF;
   font-size: 45px;
   font-weight: 600;
   margin-bottom: 35px;
@@ -10711,66 +10826,6 @@ main #sponsor .sponsors .card_wrapcard li.price .decimal .month {
   color: #818e9d;
 }
 
-.js-scroll {
-  opacity: 0;
-  transition: opacity 500ms;
-}
-
-.js-scroll.scrolled {
-  opacity: 1;
-}
-
-.scrolled.slide-left {
-  -webkit-animation: slide-in-left 1s ease-in-out both;
-          animation: slide-in-left 1s ease-in-out both;
-}
-
-.scrolled.slide-right {
-  -webkit-animation: slide-in-right 1s ease-in-out both;
-          animation: slide-in-right 1s ease-in-out both;
-}
-
-@-webkit-keyframes slide-in-left {
-  0% {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slide-in-left {
-  0% {
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@-webkit-keyframes slide-in-right {
-  0% {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-@keyframes slide-in-right {
-  0% {
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
 main .edit-form h2,
 main .edit-form h3 {
   color: #00b295;

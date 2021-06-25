@@ -12,7 +12,99 @@ main {
 
     #reviews,
     #statistics {
-        min-height: 50vh;
+        min-height: 60vh;
+        display: flex;
+        align-items: center;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        position: relative;
+
+        .reviews-text-left,
+        .reviews-text-right {
+            width: 40%;
+            position: absolute;
+            text-align: justify;
+            z-index: 5;
+
+            strong {
+                display: block;
+
+                i {
+                    font-size: 15px;
+                    margin-left: 5px;
+                    vertical-align: middle;
+                }
+
+                a {
+                    color: inherit;
+                }
+
+                a:hover i {
+                    margin-left: 12px;
+                    transition: all 0.2s ease-in-out;
+                }
+            }
+        }
+
+        .reviews-text-left {
+            left: 80px;
+        }
+
+        .reviews-text-right {
+            right: 80px;
+        }
+
+        h2 {
+            font-size: 1400%;
+            opacity: 0.2;
+            user-select: none;
+        }
+
+        .right-scroll {
+            margin-left: auto;
+        }
+
+        .js-scroll {
+            opacity: 0;
+            transition: opacity 500ms;
+        }
+
+        .js-scroll.scrolled {
+            opacity: 1;
+        }
+
+        .scrolled.slide-left {
+            animation: slide-in-left 0.8s ease-in-out both;
+        }
+
+        .scrolled.slide-right {
+            animation: slide-in-right 0.8s ease-in-out both;
+        }
+        @keyframes slide-in-left {
+            0% {
+                -webkit-transform: translateX(-100px);
+                transform: translateX(-100px);
+                opacity: 0;
+            }
+
+            100% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
+        @keyframes slide-in-right {
+            0% {
+                -webkit-transform: translateX(100px);
+                transform: translateX(100px);
+                opacity: 0;
+            }
+
+            100% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
     }
 
     #info {
@@ -196,15 +288,11 @@ main {
     }
 
     #sponsor {
-        background-color: #dfdfdf;
-        /* background-image: url("https://wallpaperaccess.com/full/3988500.jpg");
-        background-image: url("https: //wallpaperaccess.com/full/3464162.jpg");
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position-y: 15%; */
+        background: linear-gradient(to bottom, #5ef77f, #1af3c495);
+
         .text {
             h2 {
-                color: $bannerColor;
+                color: #FFF;
                 font-size: 45px;
                 font-weight: 600;
                 margin-bottom: 35px;
@@ -350,48 +438,3 @@ main {
         }
     }
 }
-
-
-
-.js-scroll {
-  opacity: 0;
-  transition: opacity 500ms;
-}
-
-.js-scroll.scrolled {
-  opacity: 1;
-}
-
-.scrolled.slide-left {
-  animation: slide-in-left 1s ease-in-out both;
-}
-
-.scrolled.slide-right {
-  animation: slide-in-right 1s ease-in-out both;
-}
-@keyframes slide-in-left {
-  0% {
-    -webkit-transform: translateX(-100px);
-    transform: translateX(-100px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes slide-in-right {
-  0% {
-    -webkit-transform: translateX(100px);
-    transform: translateX(100px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-

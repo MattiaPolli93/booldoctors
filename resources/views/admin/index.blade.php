@@ -72,43 +72,27 @@
 
     {{-- reviews --}}
     <section id="reviews">
-        <div class="my_container d-flex align-items-center">
-          <div class="btn-container">
-          <div class="btn-box text-center">
-              <a href="{{route('admin.messages')}}"><button type="button" class="btn btn-insert ">Messaggi</button></a>
-          </div>
-            <div class="reviews d-flex justify-content-center">
-                <a href="{{route('admin.comments')}}"><button type="button" class="btn btn-insert">Recensioni</button></a>
+      <p class="scroll-element js-scroll slide-left reviews-text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        <strong><a href="{{route('admin.messages')}}">Vai alla pagina<i class="fas fa-arrow-right"></i></a></strong></p>
+          <section class="scroll-container right-scroll">
+            <div class="scroll-element js-scroll slide-right">
+              <h2>Messaggi</h2>
             </div>
-          </div>
-            <div class="reviews-image text-center">
-                <img src="https://www.interno16holidayhome.com/wp-content/uploads/2019/01/reviews.png" alt="Recensioni">
-            </div>
-        </div>
+          </section>
     </section>
     {{-- fine reviews --}}
 
     {{-- statistics --}}
     <section id="statistics">
-        <div class="my_container d-flex align-items-center">
-            <div class="statistics d-flex justify-content-center">
-                <a href="{{route('admin.statistics')}}"><button type="button" class="btn btn-insert">Visualizza le tue statistiche</button></a>
-            </div>
-            <div class="statistics-image text-center">
-                <img src="https://images.vexels.com/media/users/3/143065/isolated/preview/c6cbc8cf5ca3856bca8d5f28c0471fca-bar-graph-cart-by-vexels.png" alt="Grafico">
-            </div>
-        </div>
+        <p class="scroll-element js-scroll slide-right reviews-text-right">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. <strong><a href="{{route('admin.messages')}}">Vai alla pagina<i class="fas fa-arrow-right"></i></a></strong></p>
+            <section class="scroll-container">
+              <div class="scroll-element js-scroll slide-left">
+                <h2>Statistiche</h2>
+              </div>
+            </section>
 
     </section>
     {{-- fine statistics --}}
-
-
-<!-- TEST ANIMAZIONE -->
-    <section class="scroll-container">
-      <div class="scroll-element js-scroll slide-left">
-        <h1>Prova</h1>
-      </div>
-    </section>
 
 <script type="text/javascript">
 // https://webdesign.tutsplus.com/tutorials/animate-on-scroll-with-javascript--cms-36671
@@ -151,8 +135,6 @@ window.addEventListener("scroll", () => {
   handleScrollAnimation();
 });
 </script>
-<!-- FINE TEST ANIMAZIONE -->
-
 
     {{-- sponsorships --}}
     <section id="sponsor">
