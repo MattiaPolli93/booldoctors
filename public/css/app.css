@@ -10206,7 +10206,7 @@ footer .lower-footer {
   background-color: #00b295;
   color: #ffffff;
   padding: 20px 0;
-  margin-top: 30px;
+  margin-top: 20px;
 }
 footer .lower-footer span {
   color: #ff0000;
@@ -10265,6 +10265,15 @@ footer .lower-footer span {
 }
 .sponsorDoc .my_container .docInfo:hover h3 {
   color: #ffffff;
+}
+.sponsorDoc .my_container .docInfo .name-star {
+  align-items: center;
+}
+.sponsorDoc .my_container .docInfo .name-star span {
+  margin-left: 15px;
+  color: #fabb0c;
+  font-size: 20px;
+  text-shadow: 1px 1px 4px #fabb0c;
 }
 .sponsorDoc .my_container .doctorLogo {
   font-size: 100px;
@@ -11151,6 +11160,15 @@ h1#title {
 }
 .my_container#search .doctor_container .cardDoctor .docInfo:hover h3 {
   color: #ffffff;
+}
+.my_container#search .doctor_container .cardDoctor .docInfo .name-star {
+  align-items: center;
+}
+.my_container#search .doctor_container .cardDoctor .docInfo .name-star span {
+  margin-left: 15px;
+  color: #fabb0c;
+  font-size: 20px;
+  text-shadow: 1px 1px 4px #fabb0c;
 }
 
 h1.stat_title {

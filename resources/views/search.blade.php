@@ -38,7 +38,6 @@
         </div>
     </div>
 
-
       <div class="loading" v-if="loading">
           <div class="loader">
             <!-- here put a spinner or whatever you want to indicate that a request is in progress -->
@@ -55,7 +54,7 @@
                 </div>
             </div>
             <div class="docInfo">
-                <div class="name&star d-flex">                 
+                <div class="name-star d-flex">                 
                     <h3>@{{doctor.name}} @{{doctor.surname}}</h3> 
                     {{-- stelline --}}
                     <span v-if="doctor.RateInfo.averageRate > 0">

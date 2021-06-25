@@ -56,7 +56,7 @@
                     </div>              
                 </div>
                     <div class="docInfo">
-                        <div class="name&star d-flex">                 
+                        <div class="name-star d-flex">                 
                             <h3>@{{doctor.name}} @{{doctor.surname}}</h3> 
                             {{-- stelline --}}
                             <span v-if="doctor.RateInfo.averageRate > 0">
