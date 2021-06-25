@@ -43,7 +43,29 @@
 
         .col_right {
             width: 70%;
-            padding-left: 20px;
+            margin-left: 40px;
+            flex-direction: column;
+
+            .name-star {
+                align-items: center;
+                
+                span {
+                    color: #fabb0c;
+                    font-size: 40px;
+                    margin-left: 25px;
+                    text-shadow: 1px 1px 4px #fabb0c;
+
+                    @media screen and (max-width: 768px) {
+                        margin-top: 12px;
+                        margin-left: 0;
+                    }
+                }
+                    
+                @media screen and (max-width: 768px) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+            }
 
             .specializations {
                 margin-top: 20px;

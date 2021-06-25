@@ -10270,9 +10270,9 @@ footer .lower-footer span {
   align-items: center;
 }
 .sponsorDoc .my_container .docInfo .name-star span {
-  margin-left: 15px;
   color: #fabb0c;
   font-size: 20px;
+  margin-left: 15px;
   text-shadow: 1px 1px 4px #fabb0c;
 }
 .sponsorDoc .my_container .doctorLogo {
@@ -10915,7 +10915,29 @@ h1#title {
 }
 .profile .details .col_right {
   width: 70%;
-  padding-left: 20px;
+  margin-left: 40px;
+  flex-direction: column;
+}
+.profile .details .col_right .name-star {
+  align-items: center;
+}
+.profile .details .col_right .name-star span {
+  color: #fabb0c;
+  font-size: 40px;
+  margin-left: 25px;
+  text-shadow: 1px 1px 4px #fabb0c;
+}
+@media screen and (max-width: 768px) {
+  .profile .details .col_right .name-star span {
+    margin-top: 12px;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .profile .details .col_right .name-star {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 .profile .details .col_right .specializations {
   margin-top: 20px;
@@ -11165,10 +11187,46 @@ h1#title {
   align-items: center;
 }
 .my_container#search .doctor_container .cardDoctor .docInfo .name-star span {
-  margin-left: 15px;
   color: #fabb0c;
   font-size: 20px;
+  margin-left: 15px;
   text-shadow: 1px 1px 4px #fabb0c;
+}
+
+.recap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50%;
+}
+.recap .user-info {
+  padding: 15px 0;
+}
+.recap .user-info .main_color {
+  color: #00b295;
+}
+.recap .user-info h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.recap .user-info h4 {
+  margin: 15px 0;
+}
+.recap .user-info .phone {
+  font-weight: bold;
+}
+.recap .plan {
+  margin-top: 1%;
+  margin-left: 20%;
+}
+.recap .plan .plan_name {
+  color: #00b295;
+}
+.recap .plan h4 {
+  margin: 15px 0;
+}
+.recap .plan .price {
+  color: #00b295;
 }
 
 h1.stat_title {
