@@ -255,3 +255,32 @@ h6 {
     width: 1000px;
     z-index: -2;
 }
+
+@media screen and (max-width: 1200px) {
+    main {
+        overflow: hidden;
+    }
+    h6 {
+        left: -115px;
+        left: -89px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        overflow: hidden;
+    }
+    h6 {
+        font-size: 80px;
+        width: 390px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    main {
+        overflow: hidden;
+    }
+    h6 {
+        left: -50px;
+    }
+}
