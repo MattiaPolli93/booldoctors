@@ -10966,7 +10966,7 @@ main ul.delete-services li p {
 }
 
 main {
-  min-height: 40vh;
+  min-height: 700px;
 }
 
 h1#title {
@@ -11424,6 +11424,7 @@ main .my_container#error .image_box h2 {
 }
 .success p {
   font-size: 25px;
+  margin-bottom: 25px;
 }
 .success p .team {
   font-weight: bold;
@@ -11441,10 +11442,15 @@ main .my_container#error .image_box h2 {
 }
 .error p {
   font-size: 25px;
+  margin-bottom: 25px;
 }
 .error p .team {
   font-weight: bold;
   color: #00b295;
+}
+.error img {
+  height: 220px;
+  margin-bottom: 30px;
 }
 
 .my_jumbotron {
@@ -11693,4 +11699,29 @@ main .my_container#error .image_box h2 {
     -webkit-clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
             clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
   }
+}
+
+.nav_container {
+  padding-top: 20px;
+}
+.nav_container .bradCrumps ul {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+}
+.nav_container .bradCrumps ul a {
+  padding: 0 10px;
+  color: gray;
+  font-size: 14px;
+}
+.nav_container .bradCrumps ul a.active {
+  color: #007bff;
+}
+.nav_container .bradCrumps ul a:hover {
+  color: #007bff;
+  transition: all 0.2s ease;
+}
+.nav_container .bradCrumps ul span i {
+  display: inline-block;
+  font-size: 13px;
 }

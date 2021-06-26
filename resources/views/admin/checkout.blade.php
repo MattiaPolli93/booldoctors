@@ -11,6 +11,7 @@
             <h1> <span class="user">{{$user->name}} {{$user->surname}}</span>  la tua transazione è andata a buon fine</h1>
             <h2>La tua sponsorizzazione sarà estesa di {{$plan->period}} ore</h2>
             <p class="text-center">Grazie per la tua scelta, <span class="team">BoolDoctors Team</span></p>
+            <img src="{{url('/img/transaction-costs.png')}}" alt="Transaction Accepted">
             <p class="link_dashboard text-center"><a href="{{ route('admin.profile.index')}}">Torna alla Dashboard</a></p> 
         </div>
         @elseif($result->success == false)
@@ -18,6 +19,7 @@
             <h1>Ci dispiace, qualcosa è andato <span class="err">storto</span></h1>
             <h2>La tua transazione è fallita, ti preghiamo di riprovare</h2>
             <p class="text-center"><span class="team">BoolDoctors Team</span></p>
+            <img src="{{url('/img/card-rejected.png')}}" alt="Transaction Denied">
             <p class="link_dashboard text-center"><a href="{{ route('admin.sponsor', $plan->id)}}">Torna alla pagina di Sponsorizzazione</a></p> 
         </div>                      
         @endif              
