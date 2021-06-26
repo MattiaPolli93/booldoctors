@@ -39,7 +39,7 @@
           <div class="form-group mt-3">
             <label for="bio">Bio</label>
             <div class="bio-text-box">
-                <textarea name="bio" id="bio" cols="60" rows="10">{{$doctor->details->bio}}</textarea>
+                <textarea name="bio" id="bio" cols="60" rows="10" style="resize:none" class="form-control">{{$doctor->details->bio}}</textarea>
             </div>
           </div>
 

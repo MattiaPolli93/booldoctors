@@ -116,6 +116,6 @@ class PlanController extends Controller
             return view('admin.checkout', compact('user','plan', 'result'));
         } else{
             return view('admin.checkout', compact('user','plan', 'result'));
-        } 
+        }
     }
 }

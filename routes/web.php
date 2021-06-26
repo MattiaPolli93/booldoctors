@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-/* Route::get('/home', 'HomeController@index')->name('home'); */
+/* Admin routes */
 Route::prefix('admin')->name('admin.')->namespace('Admin')->middleware('auth')->group(function () {
     Route::resource('profile', 'UserController');
     Route::delete('services/{id}', 'ServiceController@destroy')->name('service.destroy');
@@ -38,6 +38,7 @@ Route::prefix('admin')->name('admin.')->namespace('Admin')->middleware('auth')->
     /* Route::delete('comments/{comment}', 'CommentController@destroy')->name('comments.destroy'); */
 });
 
+/* Guest routes */
 Route::get('/', 'GuestController@index')->name('homepage');
 Route::get('search', 'GuestController@searchDoctors')->name('search');
 Route::get('doctor/{id}', 'GuestController@show')->name('show');

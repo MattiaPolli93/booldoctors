@@ -196,9 +196,9 @@
                           </div>
                         </div>
                     </div>
-
             </div>
         </div>
+        <hr>
     </section>
     {{-- fine sponsorships --}}    
 <script src="{{ asset('js/home.js') }}" defer></script>

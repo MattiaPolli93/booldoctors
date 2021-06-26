@@ -9,7 +9,7 @@
         @if ($result->success == true)
         <div class="success text-center">
             <h1> <span class="user">{{$user->name}} {{$user->surname}}</span>  la tua transazione è andata a buon fine</h1>
-            <h2>La tua sponsorizzazione sarà estesa per altre {{$plan->period}} ore</h2>
+            <h2>La tua sponsorizzazione sarà estesa di {{$plan->period}} ore</h2>
             <p class="text-center">Grazie per la tua scelta, <span class="team">BoolDoctors Team</span></p>
             <p class="link_dashboard text-center"><a href="{{ route('admin.profile.index')}}">Torna alla Dashboard</a></p> 
         </div>
