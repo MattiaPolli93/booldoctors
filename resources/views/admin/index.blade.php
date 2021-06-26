@@ -7,7 +7,7 @@
 @section('content')
     {{-- personal info --}}
     <section id="info">
-        <div class="my_container info d-flex">
+        <div class="my_container info d-flex">            
             {{-- profile image --}}
             <div class="image_box d-flex flex-column align-items-center">
                 <figure class="text-center">
@@ -32,25 +32,25 @@
                     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Elimina profilo</h5>
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">
-                                Sei proprio sicuro di voler eliminare il profilo? Questa operazione è irreversibile.
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-insert" data-dismiss="modal">Torna indietro</button>
-                                <form action="{{route('admin.profile.destroy', [ 'profile' => $user->id ])}}" method="POST">
-							    @csrf
-							    @method('DELETE')
-                                    <button type="submit" class="btn btn-danger">Sono sicuro, elimina il profilo</button>
-                                </form>
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Elimina profilo</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    Sei proprio sicuro di voler eliminare il profilo? Questa operazione è irreversibile.
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-insert" data-dismiss="modal">Torna indietro</button>
+                                    <form action="{{route('admin.profile.destroy', [ 'profile' => $user->id ])}}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                        <button type="submit" class="btn btn-danger">Sono sicuro, elimina il profilo</button>
+                                    </form>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </div>
                 </div>
             </div>
@@ -72,8 +72,8 @@
                 </div>
             </div>
         </div>
-        @if ($sponsored == true)
-        <h3>Sei sponsorizzato! La sponsorizzazione scade il {{$currentExpireDate}}</h3>
+        @if ($sponsored == true)            
+            <h3>Sei sponsorizzato! La sponsorizzazione scade il {{$currentExpireDate}}</h3>
         @endif
 
     </section>
@@ -200,15 +200,6 @@
             </div>
         </div>
     </section>
-    {{-- fine sponsorships --}}
-
-    @if (session('message'))
-    <div class="alert alert-success" style="position: fixed; bottom: 30px; right: 30px">
-        {{ session('message') }}
-		<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-			<span aria-hidden="true">&times;</span>
-		</button>
-    </div>
-	@endif
+    {{-- fine sponsorships --}}    
 <script src="{{ asset('js/home.js') }}" defer></script>
 @endsection

@@ -10384,6 +10384,15 @@ footer .lower-footer span {
 .sponsorDoc .my_container .docInfo:hover h3 {
   color: #ffffff;
 }
+.sponsorDoc .my_container .docInfo .name-star {
+  align-items: center;
+}
+.sponsorDoc .my_container .docInfo .name-star span {
+  color: #fabb0c;
+  font-size: 20px;
+  margin-left: 15px;
+  text-shadow: 1px 1px 4px #fabb0c;
+}
 .sponsorDoc .my_container .doctorLogo {
   font-size: 100px;
   color: #00b295;
@@ -11401,6 +11410,41 @@ main .my_container#error .image_box img {
 main .my_container#error .image_box h2 {
   color: #00b295;
   font-weight: 600;
+}
+
+.success {
+  padding: 20px 0;
+}
+.success .user {
+  font-weight: bold;
+  color: #00b295;
+}
+.success h2 {
+  margin: 30px 0;
+}
+.success p {
+  font-size: 25px;
+}
+.success p .team {
+  font-weight: bold;
+  color: #00b295;
+}
+
+.error {
+  padding: 20px 0;
+}
+.error .err {
+  color: red;
+}
+.error h2 {
+  margin: 30px 0;
+}
+.error p {
+  font-size: 25px;
+}
+.error p .team {
+  font-weight: bold;
+  color: #00b295;
 }
 
 .my_jumbotron {

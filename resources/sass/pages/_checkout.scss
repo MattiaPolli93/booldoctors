@@ -1,0 +1,33 @@
+.success{
+    padding: 20px 0;
+    .user{
+        font-weight: bold;
+        color: $bannerColor;
+    }
+    h2{
+        margin: 30px 0;
+    }
+    p{
+        font-size: 25px;
+        .team{
+            font-weight: bold;
+            color: $bannerColor;
+        }
+    }
+}
+.error{
+    padding: 20px 0;
+    .err{
+        color: red;
+    }
+    h2{
+        margin: 30px 0;
+    }
+    p{
+        font-size: 25px;
+        .team{
+            font-weight: bold;
+            color: $bannerColor;
+        }
+    }
+}

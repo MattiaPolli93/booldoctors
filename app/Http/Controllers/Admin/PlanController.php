@@ -30,7 +30,8 @@ class PlanController extends Controller
 
         $plan = Plan::find($id);
         
-        $extendPlan = $user->plans()->get()->last();        
+        $extendPlan = $user->plans()->get()->last();
+        
         // accedo all'ultima entry di questo user nella tabella pivot            
         $now = Carbon::now('Europe/Rome');
 
@@ -53,7 +54,7 @@ class PlanController extends Controller
 
             
 
-        return view('admin.sponsor', compact('plan', 'token', 'user', 'currentExpireDate'));
+        return view('admin.sponsor', compact('plan', 'token', 'user', 'extendPlan', 'currentExpireDate'));
     }
 
     public function payPlan(Request $request, $id)
@@ -111,9 +112,10 @@ class PlanController extends Controller
                 'plan_id' => $plan->id,
                 'expire_date' => $currentExpireDate
             ]);         
-            return redirect()->route('admin.profile.index')->with('message', 'Transazione riuscita');
+            /* return redirect()->route('admin.profile.index')->with('message', 'Transazione riuscita'); */
+            return view('admin.checkout', compact('user','plan', 'result'));
         } else{
-            return redirect()->route('admin.profile.index')->with('message', 'Transazione fallita');
+            return view('admin.checkout', compact('user','plan', 'result'));
         } 
     }
 }

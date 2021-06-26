@@ -31,7 +31,7 @@ Route::prefix('admin')->name('admin.')->namespace('Admin')->middleware('auth')->
     Route::get('comments', 'CommentController@showComments')->name('comments');
     Route::get('statistics', 'StatisticController@showStats')->name('statistics');
     Route::get('sponsor/{id}', 'PlanController@setPlan')->name('sponsor');
-    Route::post('sponsor/{id}', 'PlanController@payPlan')->name('sponsor.checkout');
+    Route::post('sponsor/{id}/checkout', 'PlanController@payPlan')->name('checkout');
     /* Route::resource('create', 'UserController'); */
     /* Route::resource('posts', 'PostController');
     Route::resource('tags', 'TagController'); */

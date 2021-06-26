@@ -40,7 +40,7 @@
                 <h3 class="mt-5 mb-4">Il totale è: <span class="price">{{$plan->price}} €</span> </h3>
             </div>              
         </div>    
-    <form class="pb-4" id="pay_form" method="POST" action=""  enctype="multipart/form-data"> 
+    <form class="pb-4" id="pay_form" method="POST" action="{{route('admin.checkout', $plan->id)}}"  enctype="multipart/form-data"> 
       @csrf
       @method('POST')
       
