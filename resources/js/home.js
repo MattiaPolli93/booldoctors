@@ -13,8 +13,7 @@ const Home = {
 
 Vue.createApp(Home).mount('#home')
 
-console.log("ciao");
-
+// FUNZIONE HOME
 const scrollElements = document.querySelectorAll(".js-scroll");
 const elementInView = (el, dividend = 1) => {
   const elementTop = el.getBoundingClientRect().top;
@@ -54,8 +53,8 @@ window.addEventListener("scroll", () => {
   handleScrollAnimation();
 });
 
-// FUNZIONE HOME
 
+// FUNZIONE DASHBOARD
 const scrollElements2 = document.querySelectorAll(".js-scroll2");
 const elementInView2 = (el, dividend = 1) => {
   const elementTop = el.getBoundingClientRect().top;

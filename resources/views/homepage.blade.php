@@ -39,12 +39,9 @@
             </div>
         </div>
     </section>
-    <div class="my_container">
-    </div>
     <section class="sponsorDoc sectionP ">
         <div class="my_container">
 
-            <!-- <h2 class="mb-3">Professionisti in <span class="colorName">primo piano</span></h2> -->
             <h6 class="js-scroll2">Professionisti in <span class="colorName">primo piano</span></h6>
             <div class="js-scroll slide-top anim_size">
 
@@ -91,11 +88,8 @@
 
 
 
-    <div class="my_container">
-        <hr>
-    </div>
     <section class="SearchLinks sectionP">
-        <h2>Le Specializzazioni dei nostri <span class="colorName">Dottori</span></h2>
+        <h6 class="js-scroll2">Le specializzazioni dei nostri <span class="colorName">dottori</span></h6>
         <div class="specializations my_container">
             @foreach ($specializations as $specialization)
             <div class="specialization_container">

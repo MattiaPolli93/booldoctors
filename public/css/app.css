@@ -10244,6 +10244,13 @@ header .my_container .navbar-nav {
   header .my_container {
     justify-content: space-between;
   }
+  header .my_container .navbar-nav {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+  header .my_container .navbar-nav .nav-link {
+    padding: 8px;
+  }
 }
 
 main {
@@ -10399,6 +10406,7 @@ footer .lower-footer span {
 }
 
 .SearchLinks {
+  position: relative;
   text-align: center;
   background-image: url("../../img/background.png");
   background-size: cover;
@@ -10494,14 +10502,60 @@ footer .lower-footer span {
 }
 h6 {
   font-size: 120px;
-  left: -200px;
   display: inline-block;
   top: -100px;
   position: absolute;
   width: 1000px;
   z-index: -2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
+.sponsorDoc {
+  margin-bottom: 100px;
+}
+.sponsorDoc h6 {
+  left: -20%;
+}
+
+.SearchLinks h6 {
+  text-align: right;
+  right: 2%;
+}
+
+@media screen and (max-width: 1100px) {
+  h6 {
+    font-size: 90px;
+    max-width: 800px;
+  }
+}
+@media screen and (max-width: 768px) {
+  h6 {
+    font-size: 80px;
+  }
+
+  .sponsorDoc h6 {
+    left: -20%;
+    width: 390px;
+  }
+
+  .SearchLinks h6 {
+    width: 500px;
+    right: 10%;
+  }
+}
+@media screen and (max-width: 576px) {
+  h6 {
+    font-size: 60px;
+  }
+
+  .SearchLinks h6 {
+    max-width: 400px;
+    right: 10%;
+  }
+}
 main #info,
 main #reviews,
 main #sponsor,
