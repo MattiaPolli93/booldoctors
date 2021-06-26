@@ -89,12 +89,17 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0 text-center">
+                        <div class="form-group row mt-3 mb-0 text-center">
                             <div class="col-md-12">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Register') }}
+                                <button type="submit" class="btn btn-insert">
+                                    {{ __('Registrati') }}
                                 </button>
                             </div>
+                        </div>
+                        <div class="form-group row mt-4 text-center">
+                            <div class="col-md-12">
+                                <p>Se sei già registrato fai il <a href="{{route('login')}}">Login</a></p>
+                            </div>                            
                         </div>
                     </form>
                 </div>

@@ -11430,6 +11430,10 @@ main .my_container#error .image_box h2 {
   font-weight: bold;
   color: #00b295;
 }
+.success img {
+  height: 220px;
+  margin-bottom: 30px;
+}
 
 .error {
   padding: 20px 0;
