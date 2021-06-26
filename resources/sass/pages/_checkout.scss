@@ -9,10 +9,15 @@
     }
     p{
         font-size: 25px;
+        margin-bottom: 25px;
         .team{
             font-weight: bold;
             color: $bannerColor;
         }
+    }
+    img{
+        height: 220px;
+        margin-bottom: 30px;
     }
 }
 .error{
@@ -25,9 +30,14 @@
     }
     p{
         font-size: 25px;
-        .team{
+        margin-bottom: 25px;
+        .team{                       
             font-weight: bold;
             color: $bannerColor;
         }
+    }
+    img{
+        height: 220px;
+        margin-bottom: 30px;
     }
 }
