@@ -5,6 +5,18 @@
 @endsection
 
 @section('content')
+<div class="my_container nav_container">
+    <nav class="bradCrumps">
+        <ul>
+            <li><a href="{{ route('homepage') }}">Home</a></li>
+            <span><i class="fas fa-angle-double-right"></i></span>
+            <li><a href="{{ route('search') }}">Search</a></li>
+            <span><i class="fas fa-angle-double-right"></i></span>
+            <li><a href="#" class="active">Dr. {{$doctor->name}} {{$doctor->surname}}</a></li>
+        </ul>
+    </nav>
+    <hr>
+</div>
 <div class="my_container profile">
 
     {{-- dettagli principali --}}
@@ -19,7 +31,7 @@
             </div>
         </div>
         <div class="col_right text-center">
-            <h1>{{$doctor->name}} {{$doctor->surname}}</h1>
+            <h1>Dr. {{$doctor->name}} {{$doctor->surname}}</h1>
             <div class="specializations">
                 @foreach ($doctor->specializations as $specialization)
                     <span class="my_tag">{{$specialization['specialization']}}</span>

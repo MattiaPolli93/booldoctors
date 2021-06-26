@@ -1,0 +1,28 @@
+.nav_container{
+    padding-top: 20px;
+    .bradCrumps {
+        ul {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+            a {
+                padding: 0 10px;
+                color: rgb(128, 128, 128);
+                font-size: 14px;
+                &.active {
+                    color: #007bff;
+                }
+                &:hover {
+                    color: #007bff;
+                    transition: all 0.2s ease;
+                }
+            }
+            span {
+                i {
+                    display: inline-block;
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}

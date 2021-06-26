@@ -5,6 +5,16 @@
 @endsection
 
 @section('content')
+<div class="my_container nav_container">
+    <nav class="bradCrumps">
+        <ul>
+            <li><a href="{{ route('homepage') }}">Home</a></li>
+            <span><i class="fas fa-angle-double-right"></i></span>
+            <li><a href="#" class="active">Search</a></li>
+        </ul>
+    </nav>
+    <hr>
+</div>
 <div class="my_container" id="search">
     <div class="filter-options d-flex">
         <div class="filter_bar">
