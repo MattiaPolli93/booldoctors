@@ -10,7 +10,7 @@
   @if (count($messages) == 0 && count($comments) == 0)
       <h2 id="empty_page">Non hai statistiche disponibili</h2>
   @else
-  
+
   <div class="chart_1">
     <h4>Numero di messaggi e recensioni ricevute ogni mese</h4>
     <canvas id="myChart"></canvas>
@@ -38,7 +38,7 @@ var messaggi = {!! $messages->toJson() !!};
 var now = dayjs();
 
 if (commenti[0]) {
-  const primaDataCommento = commenti[0].added_on;
+  var primaDataCommento = commenti[0].added_on;
   var date1 = dayjs(primaDataCommento);
 } else {
   var date1 = now;
@@ -105,7 +105,7 @@ if (date1.$M == 0) {
   i++;
   x--;
 }
-for (i; i<=diff; i++) {
+for (i; i <= diff; i++) {
   var numeroMeseRece = date1.$M + i + x;
   monthsRece.push(numeroMeseRece + '/2021');
 
@@ -115,7 +115,6 @@ for (i; i<=diff; i++) {
   var countRece4 = 0;
   var countRece5 = 0;
   for (let j = 0; j < commenti.length; j++) {
-
     if (numeroMeseRece == dayjs(commenti[j].added_on).$M + 1) {
       switch (commenti[j].rate) {
         case 1:
@@ -147,11 +146,6 @@ for (i; i<=diff; i++) {
   voto5.push(countRece5);
 
 }
-  // console.log(voto1);
-  // console.log(voto2);
-  // console.log(voto3);
-  // console.log(voto4);
-  // console.log(voto5);
 
 var myChart = new Chart(ctx, {
     type: 'bar',

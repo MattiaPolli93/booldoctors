@@ -71,7 +71,6 @@
                 width: 90%;
                 outline: none;
                 caret-color: $bannerColor;
-
                 @media screen and (max-width: 768px) {
                     width: 100%;
                 }
@@ -84,9 +83,7 @@
                 top: 34px;
                 color: $bannerColor;
             }
-
         }
-
         @media screen and (max-width: 768px) {
             flex-direction: column-reverse;
         }
@@ -97,7 +94,6 @@
         padding-top: 40px;
 
         .cardDoctor {
-
             .docAvatar {
                 width: auto;
                 align-items: center;
@@ -106,6 +102,8 @@
                     border-radius: 50%;
                     overflow: hidden;
                     transition: 0.8s;
+                    height: 100px;
+                    width: 100px;
 
                     &:hover {
                         transform: scale(1.2);
@@ -121,7 +119,7 @@
                 border-radius: 15px;
                 padding: 10px 15px;
                 width: 75%;
-                transition: 0.3s;             
+                transition: 0.3s;
 
                 &:hover {
                     background-color: $background_color;
@@ -130,7 +128,7 @@
                         color: $white;
                     }
                 }
-            }     
+            }
         }
     }
 }
