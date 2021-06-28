@@ -154,7 +154,7 @@
         .glass {
             .text {
                 p {
-                    margin: 10px 0;
+                    margin: 20px 0;
                 }
             }
 
@@ -203,6 +203,12 @@
         .card {
             margin-top: 80px;
             width: 100%;
+        }
+    }
+    .SearchLinks {
+        .specialization_container {
+            max-width: 45%;
+            min-width: 45%;
         }
     }
 }
