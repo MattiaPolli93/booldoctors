@@ -7,6 +7,16 @@
 @section('content')
     {{-- personal info --}}
     <section id="info">
+        <div class="admin nav_container">
+            <nav class="bradCrumps">
+                <ul>
+                    <li><a href="{{ route('homepage') }}">Home</a></li>
+                    <span><i class="fas fa-angle-double-right"></i></span>
+                    <li><a href="#" class="active">Il Mio Profilo</a></li>
+                </ul>
+            </nav>
+            <hr>
+        </div>
         <div class="my_container info d-flex">            
             {{-- profile image --}}
             <div class="image_box d-flex flex-column align-items-center">

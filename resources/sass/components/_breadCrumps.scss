@@ -1,5 +1,10 @@
 .nav_container{
     padding-top: 20px;
+    &.admin {
+        width: 70%;
+        margin: auto;
+        padding-top: 0;
+    }
     .bradCrumps {
         ul {
             display: flex;
