@@ -37,7 +37,7 @@
                                     </span>
                                 @enderror
                             </div>
-                        </div>
+                        </div>                       
 
                         <div class="form-group row">
                             <div class="col-md-12">
@@ -51,7 +51,7 @@
                             </div>
                         </div>
 
-                        <div class="form-group row mb-0">
+                        <div class="form-group row mb-4">
                             <div class="col-md-12">
                                 <button type="submit" class="btn btn-insert">
                                     {{ __('Login') }}
@@ -62,6 +62,11 @@
                                         {{ __('Password dimenticata?') }}
                                     </a>
                                 @endif
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-md-12">                                
+                                <p>Se non sei già registrato clicca qui per <a href="{{route('register')}}">Registrarti</a></p>                                  
                             </div>
                         </div>
                     </form>
