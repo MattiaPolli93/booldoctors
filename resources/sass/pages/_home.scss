@@ -41,6 +41,8 @@
             align-items: center;
 
             .image_box {
+                height: 100px;
+                width: 100px;
                 border-radius: 50%;
                 overflow: hidden;
                 transition: 0.8s;
@@ -205,6 +207,7 @@
             width: 100%;
         }
     }
+
     .SearchLinks {
         .specialization_container {
             max-width: 45%;
@@ -233,7 +236,7 @@ h6 {
 
 .SearchLinks {
     h6 {
-      top: -150px;
+        top: -150px;
         text-align: right;
         right: 2%;
     }
