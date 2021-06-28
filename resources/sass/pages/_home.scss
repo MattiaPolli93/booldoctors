@@ -111,8 +111,8 @@
 
         a {
             color: $bannerSecondary;
-            font-weight: 500;
-            font-size: 15px;
+            font-weight: 600;
+            font-size: 20px;
 
             &:last-of-type {
                 align-self: flex-start;
@@ -227,6 +227,7 @@ h6 {
 
 .SearchLinks {
     h6 {
+      top: -150px;
         text-align: right;
         right: 2%;
     }

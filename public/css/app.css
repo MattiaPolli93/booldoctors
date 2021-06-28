@@ -10427,8 +10427,8 @@ footer .lower-footer span {
 }
 .SearchLinks .specialization_container a {
   color: #1662c6;
-  font-weight: 500;
-  font-size: 15px;
+  font-weight: 600;
+  font-size: 20px;
 }
 .SearchLinks .specialization_container a:last-of-type {
   align-self: flex-start;
@@ -10521,6 +10521,7 @@ h6 {
 }
 
 .SearchLinks h6 {
+  top: -150px;
   text-align: right;
   right: 2%;
 }
@@ -11761,6 +11762,11 @@ main .my_container#error .image_box h2 {
 
 .nav_container {
   padding-top: 20px;
+}
+.nav_container.admin {
+  width: 70%;
+  margin: auto;
+  padding-top: 0;
 }
 .nav_container .bradCrumps ul {
   display: flex;
