@@ -91,31 +91,44 @@ const Search = {
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         const SpecializationUrl = urlParams.get('specialization')
-        this.spec = SpecializationUrl;        
+        this.spec = SpecializationUrl;
+        console.log(SpecializationUrl);
         setTimeout(() => {           
-            let now = dayjs(); 
-            for (var i = 0; i < this.doctors.length; i++) {
-                for (var j = 0; j < this.doctors[i].specializations.length; j++) {
-                    if (this.doctors[i].specializations[j].field.toLowerCase().includes(this.spec.toLowerCase())) {
-                        if (!this.filterDoc.includes(this.doctors[i]) && !this.filterSponsoredDocs.includes(this.doctors[i])) {
-                            console.log(this.filterDoc);
-                            if (dayjs(this.doctors[i].expire_date) > now) {
-                                this.filterSponsoredDocs.push(this.doctors[i]);
-                                console.log(this.filterSponsoredDocs);
-                            } else {
-                                this.filterDoc.push(this.doctors[i]);
+            let now = dayjs();
+            if (SpecializationUrl == null) {
+                for (var i = 0; i < this.doctors.length; i++) {
+                    if (dayjs(this.doctors[i].expire_date) > now) {
+                        this.filterSponsoredDocs.push(this.doctors[i]);
+                        console.log(this.filterSponsoredDocs);
+                    } else {
+                        this.filterDoc.push(this.doctors[i]);
+                        console.log(this.filterDoc);
+                    }
+                }
+            } else {
+                for (var i = 0; i < this.doctors.length; i++) {
+                    for (var j = 0; j < this.doctors[i].specializations.length; j++) {
+                        if (this.doctors[i].specializations[j].field.toLowerCase().includes(this.spec.toLowerCase())) {
+                            if (!this.filterDoc.includes(this.doctors[i]) && !this.filterSponsoredDocs.includes(this.doctors[i])) {
                                 console.log(this.filterDoc);
+                                if (dayjs(this.doctors[i].expire_date) > now) {
+                                    this.filterSponsoredDocs.push(this.doctors[i]);
+                                    console.log(this.filterSponsoredDocs);
+                                } else {
+                                    this.filterDoc.push(this.doctors[i]);
+                                    console.log(this.filterDoc);
+                                }
                             }
-                        }
 
+                        }
                     }
                 }
             }
             this.loading = false;
         }, 1500);
-        if (this.spec == null) {
+        /* if (this.spec == null) {
             this.loading = false;
-        }
+        } */
     },
     computed: {
         docLimit() {
