@@ -7,6 +7,9 @@
 @section('content')
     <div class="container">
       <h1 id="title">Le tue recensioni</h1>
+      @if (count($comments) == 0)
+          <h2 id="empty_page">Nessuna recensione ricevuta</h2>
+      @endif
       <div class="comments">
         @foreach ($comments as $comment)
         <div class="comment">

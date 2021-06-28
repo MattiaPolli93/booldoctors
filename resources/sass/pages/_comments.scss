@@ -6,6 +6,11 @@ h1#title {
   text-align: center;
 }
 
+h2#empty_page {
+  color: $secondary_color;
+  font-size: 26px;
+}
+
 .comments {
   display: flex;
   flex-wrap: wrap;

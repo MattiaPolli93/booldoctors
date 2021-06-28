@@ -7,6 +7,10 @@
 @section('content')
 <div class="my_container">
   <h1 class="stat_title">Le tue statistiche</h1>
+  @if (count($messages) == 0 && count($comments) == 0)
+      <h2 id="empty_page">Non hai statistiche disponibili</h2>
+  @else
+  
   <div class="chart_1">
     <h4>Numero di messaggi e recensioni ricevute ogni mese</h4>
     <canvas id="myChart"></canvas>
@@ -15,8 +19,8 @@
     <h4>Voti ricevuti ogni mese</h4>
     <canvas id="myOtherChart"></canvas>
   </div>
+  @endif
   <p class="link_dashboard"><a href="{{ route('admin.profile.index') }}">Torna alla Dashboard</a></p>
-
 </div>
 
 
@@ -29,8 +33,16 @@ var ct2 = document.getElementById('myOtherChart');
 var commenti = {!! $comments->toJson() !!};
 var messaggi = {!! $messages->toJson() !!};
 // console.log(commenti.length);
-const primaDataCommento = commenti[0].added_on;
-let date1 = dayjs(primaDataCommento);
+// console.log(messaggi.length);
+
+var now = dayjs();
+
+if (commenti[0]) {
+  const primaDataCommento = commenti[0].added_on;
+  var date1 = dayjs(primaDataCommento);
+} else {
+  var date1 = now;
+}
 
 const primaDataMessaggio = messaggi[0].added_on;
 const date2 = dayjs(primaDataMessaggio);
@@ -42,7 +54,6 @@ if (date2 < date1) {
   datex = date1;
 }
 
-var now = dayjs();
 
 var diff = now.diff(datex, 'month');
 var diffRece = now.diff(date1, 'month');
@@ -136,11 +147,11 @@ for (i; i<=diff; i++) {
   voto5.push(countRece5);
 
 }
-  console.log(voto1);
-  console.log(voto2);
-  console.log(voto3);
-  console.log(voto4);
-  console.log(voto5);
+  // console.log(voto1);
+  // console.log(voto2);
+  // console.log(voto3);
+  // console.log(voto4);
+  // console.log(voto5);
 
 var myChart = new Chart(ctx, {
     type: 'bar',
