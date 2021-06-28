@@ -21,21 +21,24 @@
                     <i class="fas fa-thumbs-up"></i>
                 </div>
                 <h3>Il servizio di prenotazione è gratuito</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora ad nobis eligendi odio aspernatur? Aspernatur deserunt expedita optio, qui ipsum, impedit laudantium eum ullam tempore, nulla sunt odit tenetur?</p>
+                <p>Prenotare una visita con BoolDoctors non comporta costi aggiuntivi. <br>
+                    Scegli la data che preferisci, inserisci i tuoi dati e conferma.. la visita è prenotata! <br>
+                    Ti ricorderemo della tua visita tramite Email e Sms.
+                </p>
             </div>
             <div class="card">
                 <div>
                     <i class="fas fa-comments"></i>
                 </div>
                 <h3>Contatti diretti con i dottori</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora ad nobis eligendi odio aspernatur? Aspernatur deserunt expedita optio, qui ipsum, impedit laudantium eum ullam tempore, nulla sunt odit tenetur?</p>
+                <p>Prendersi cura della propria salute da oggi è più semplice e immediato. Parla con uno specialista in qualsiasi momento e luogo attraverso il videoconsulto. Collegati da qualsiasi dispositivo in totale sicurezza. Potrai condividere referti e documenti, ricevere una seconda opinione e discutere delle tue condizioni di salute in tempo reale.</p>
             </div>
             <div class="card">
                 <div>
                     <i class="fas fa-hand-pointer"></i>
                 </div>
                 <h3>I migliori professionsti a portata di click</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis tempora ad nobis eligendi odio aspernatur? Aspernatur deserunt expedita optio, qui ipsum, impedit laudantium eum ullam tempore, nulla sunt odit tenetur?</p>
+                <p>Scegli tra oltre 200 000 dottori e specialisti. Leggi le recensioni di altri pazienti.</p>
             </div>
         </div>
     </section>
