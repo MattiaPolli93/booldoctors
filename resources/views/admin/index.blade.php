@@ -91,9 +91,12 @@
     {{-- reviews --}}
     <section id="reviews">
       <p class="js-scroll slide-left reviews-text-left">
-        In questa pagina è possibile leggere i messaggi privati inviati dagli utenti.
+        Qui puoi accedere alla pagina dei messaggi e leggere i tuoi messaggi privati inviati dagli utenti che hanno bisogno del tuo aiuto per risolvere i loro problemi di salute. <br>
+        Non dimenticarti di loro!!
         <strong><a href="{{route('admin.messages')}}">Vai alla pagina messaggi<i class="fas fa-arrow-right"></i></a></strong>
-        In questa pagina si possono leggere tutte le recensioni ricevute.
+        Qui puoi leggere tutte le recensioni ricevute dagli utenti in base ai servizi che hai offerto e su come si sono trovati con te.
+        <br>
+        Non arrabbiarti se qualcuna non ti soddisfa, sappiamo che dai sempre il massimo per i tuoi pazienti!
         <strong><a href="{{route('admin.comments')}}">Vai alla pagina recensioni<i class="fas fa-arrow-right"></i></a></strong>
       </p>
 
@@ -108,7 +111,7 @@
     {{-- statistics --}}
     <section id="statistics">
         <p class="js-scroll slide-right reviews-text-right">
-          In questa pagina si possono vedere le statistiche relative ai messaggi e alle recensioni ricevute, filtrate per mese e voto.
+          In questa pagina trovi le tue statistiche, sono calcolate sulla base dei messaggi privati che hai ricevuto e delle recensioni ricevute per i tuoi servizi, sono filtrate per mese e voto.
           <strong><a href="{{route('admin.statistics')}}">Vai alla pagina statistiche<i class="fas fa-arrow-right"></i></a></strong>
         </p>
 
