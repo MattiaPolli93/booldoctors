@@ -22,8 +22,8 @@
                 </div>
                 <h3>Il servizio di prenotazione è gratuito</h3>
                 <p>Prenotare una visita con BoolDoctors non comporta costi aggiuntivi. <br>
-                    Scegli la data che preferisci, inserisci i tuoi dati e conferma.. la visita è prenotata! <br>
-                    Ti ricorderemo della tua visita tramite Email e Sms.
+                   Scegli la data che preferisci, inserisci i tuoi dati e conferma.. la visita è prenotata! <br>
+                   Ti ricorderemo della tua visita tramite Email e Sms.
                 </p>
             </div>
             <div class="card">
@@ -31,14 +31,16 @@
                     <i class="fas fa-comments"></i>
                 </div>
                 <h3>Contatti diretti con i dottori</h3>
-                <p>Prendersi cura della propria salute da oggi è più semplice e immediato. Parla con uno specialista in qualsiasi momento e luogo attraverso il videoconsulto. Collegati da qualsiasi dispositivo in totale sicurezza. Potrai condividere referti e documenti, ricevere una seconda opinione e discutere delle tue condizioni di salute in tempo reale.</p>
+                <p>Parla con uno specialista in qualsiasi momento e luogo attraverso il videoconsulto. <br>
+                   Collegati da qualsiasi dispositivo in totale sicurezza. Potrai condividere referti e documenti, ricevere una seconda opinione e discutere delle tue condizioni di salute in tempo reale.</p>
             </div>
             <div class="card">
                 <div>
                     <i class="fas fa-hand-pointer"></i>
                 </div>
                 <h3>I migliori professionsti a portata di click</h3>
-                <p>Scegli tra oltre 200 000 dottori e specialisti. Leggi le recensioni di altri pazienti.</p>
+                <p>I nostri dottori sono selezionati rispondendo a precisi requisiti prima di far parte della nostra famiglia. <br>
+                Scegli tra oltre 200 000 dottori e specialisti. Leggi le recensioni di altri pazienti e scegli il dottore che fa al caso tuo.</p>
             </div>
         </div>
     </section>
@@ -148,13 +150,7 @@
         </div>
 
 
-    </section>
-    {{-- <section class="specialization">
-        <h1>Le Specializzazioni dei nostri dottori</h1>
-        @foreach ($sponsored_doctors as $doctor)
-                <li style="font-size: 26px">{{$doctor->name}} {{$doctor->surname}}</li>
-        @endforeach
-    </section> --}}
+    </section>    
 </div>
 
 @if (session('message'))

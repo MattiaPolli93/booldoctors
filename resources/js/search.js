@@ -91,13 +91,22 @@ const Search = {
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
         const SpecializationUrl = urlParams.get('specialization')
-        this.spec = SpecializationUrl;
-        setTimeout(() => {
+        this.spec = SpecializationUrl;        
+        setTimeout(() => {           
+            let now = dayjs(); 
             for (var i = 0; i < this.doctors.length; i++) {
                 for (var j = 0; j < this.doctors[i].specializations.length; j++) {
                     if (this.doctors[i].specializations[j].field.toLowerCase().includes(this.spec.toLowerCase())) {
-
-                        if (!this.filterDoc.includes(this.doctors[i])) this.filterDoc.push(this.doctors[i]);
+                        if (!this.filterDoc.includes(this.doctors[i]) && !this.filterSponsoredDocs.includes(this.doctors[i])) {
+                            console.log(this.filterDoc);
+                            if (dayjs(this.doctors[i].expire_date) > now) {
+                                this.filterSponsoredDocs.push(this.doctors[i]);
+                                console.log(this.filterSponsoredDocs);
+                            } else {
+                                this.filterDoc.push(this.doctors[i]);
+                                console.log(this.filterDoc);
+                            }
+                        }
 
                     }
                 }
@@ -120,7 +129,7 @@ const Search = {
         },
 
         noFindTxt() {
-            if (this.loading == true || this.doctors.length > 0 && this.filterDoc.length > 0 || this.spec == null) return false;
+            if (this.loading == true || this.doctors.length > 0 && this.filterDoc.length > 0 || this.filterSponsoredDocs.length > 0 || this.spec == null) return false;
             return true;
         },
 
