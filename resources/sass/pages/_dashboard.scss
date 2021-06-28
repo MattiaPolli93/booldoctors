@@ -65,10 +65,16 @@ main {
     }
 
     #info {
-        background-color: #ccdbd8;
-        height: 100vh;
+        background-color: #eeeeee;
+        // height: 100vh;
         @media screen and (max-width: 992px) {
             height: 100%;
+        }
+
+        h3#date {
+            text-align: center;
+            margin-top: 40px;
+            color: #00b295;
         }
 
         .my_container.info {
