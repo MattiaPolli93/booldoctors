@@ -57,6 +57,12 @@ main {
             font-size: 1400%;
             opacity: 0.2;
             user-select: none;
+            @media screen and (max-width: 1045px) {
+                font-size: 900%;
+            }
+            @media screen and (max-width: 768px) {
+                font-size: 500%;
+            }
         }
 
         .right-scroll {
@@ -88,13 +94,17 @@ main {
 
                 figure {
                     .image {
-                        width: 80%;
+                        /* width: 80%; */
                         margin: auto;
                         border-radius: 50%;
                         overflow: hidden;
+                        width: 330px;
+                        height: 330px;
 
                         img {
                             width: 100%;
+                            height: 100%;
+                            object-fit: cover;
                         }
                     }
                 }
@@ -178,6 +188,13 @@ main {
         h2 {
             font-size: 1200%;
             line-height: 1;
+            @media screen and (max-width: 1045px) {
+                font-size: 900%;
+            }
+
+            @media screen and (max-width: 768px) {
+                font-size: 500%;
+            }
         }
 
         .my_container {
