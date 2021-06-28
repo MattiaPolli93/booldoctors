@@ -9,17 +9,24 @@ main {
         .info-box {
             align-items: center;
             padding-top: 20px;
+            align-items: baseline;
 
             .image-box {
               height: 330px;
               width: 330px;
+              flex-shrink: 0;
+
+              @media screen and (max-width: 768px) {
+                  margin: auto;
+              }
                 img {
                     width: 75%;
                     height: 75%;
                     object-fit: cover;
                     border-radius: 50%;
                     @media screen and (max-width: 768px) {
-                        width: 60%;
+                        width: 100%;
+                        height: 100%;
                     }
                 }
             }
