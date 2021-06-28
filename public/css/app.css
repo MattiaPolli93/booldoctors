@@ -10458,7 +10458,7 @@ footer .lower-footer span {
 
 @media screen and (max-width: 1365px) {
   .glassMorph .glass .text p {
-    margin: 10px 0;
+    margin: 12px 0;
   }
   .glassMorph .glass .my_action.small {
     padding: 0 50px;
@@ -10498,6 +10498,11 @@ footer .lower-footer span {
   .infoShow .card {
     margin-top: 80px;
     width: 100%;
+  }
+
+  .SearchLinks .specialization_container {
+    max-width: 45%;
+    min-width: 45%;
   }
 }
 h6 {
@@ -10630,18 +10635,34 @@ main #statistics h2 {
       -ms-user-select: none;
           user-select: none;
 }
+@media screen and (max-width: 1045px) {
+  main #reviews h2,
+main #statistics h2 {
+    font-size: 900%;
+  }
+}
+@media screen and (max-width: 768px) {
+  main #reviews h2,
+main #statistics h2 {
+    font-size: 500%;
+  }
+}
 main #reviews .right-scroll,
 main #statistics .right-scroll {
   margin-left: auto;
 }
 main #info {
-  background-color: #ccdbd8;
-  height: 100vh;
+  background-color: #eeeeee;
 }
 @media screen and (max-width: 992px) {
   main #info {
     height: 100%;
   }
+}
+main #info h3#date {
+  text-align: center;
+  margin-top: 40px;
+  color: #00b295;
 }
 main #info .my_container.info .details,
 main #info .my_container.info .image_box {
@@ -10651,13 +10672,18 @@ main #info .my_container.info .image_box {
   padding: 0 35px;
 }
 main #info .my_container.info .image_box figure .image {
-  width: 80%;
+  /* width: 80%; */
   margin: auto;
   border-radius: 50%;
   overflow: hidden;
+  width: 330px;
+  height: 330px;
 }
 main #info .my_container.info .image_box figure .image img {
   width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 main #info .my_container.info .image_box .info-buttons {
   margin-top: 30px;
@@ -10742,6 +10768,16 @@ main #reviews {
 main #reviews h2 {
   font-size: 1200%;
   line-height: 1;
+}
+@media screen and (max-width: 1045px) {
+  main #reviews h2 {
+    font-size: 900%;
+  }
+}
+@media screen and (max-width: 768px) {
+  main #reviews h2 {
+    font-size: 500%;
+  }
 }
 main #reviews .my_container {
   flex-direction: row-reverse;
@@ -10848,7 +10884,6 @@ main #sponsor .sponsors {
 main #sponsor .sponsors .card_wrapcard:hover {
   transition: transform 0.2s ease-in-out;
   transform: scale(1.05);
-  box-shadow: 3px 3px 10px -3px #1af3c495;
 }
 main #sponsor .sponsors .card_wrapcard:hover .hovertext {
   visibility: visible;
@@ -11252,6 +11287,11 @@ h1#title {
 .my_container#search {
   padding: 50px 0 30px;
 }
+@media screen and (max-width: 768px) {
+  .my_container#search {
+    padding: 0 0 30px;
+  }
+}
 .my_container#search .filter-options {
   flex-direction: row-reverse;
 }
@@ -11421,6 +11461,11 @@ h1#title {
   text-align: center;
 }
 
+h2#empty_page {
+  color: #097521;
+  font-size: 26px;
+}
+
 .comments {
   display: flex;
   flex-wrap: wrap;
@@ -11560,7 +11605,7 @@ main .my_container#error .image_box h2 {
   width: 100%;
   margin: 30px 0;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .cardDoctor {
     flex-direction: column;
     align-items: center;
@@ -11573,7 +11618,7 @@ main .my_container#error .image_box h2 {
   background-color: rgba(157, 187, 172, 0.1);
   position: relative;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .cardDoctor .docInfo {
     margin: 15px 0;
   }
@@ -11587,12 +11632,12 @@ main .my_container#error .image_box h2 {
   margin-left: 15px;
   text-shadow: 1px 1px 4px #fabb0c;
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .cardDoctor .docInfo .name-star span {
     margin: 10px 0;
   }
 }
-@media screen and (max-width: 576px) {
+@media screen and (max-width: 768px) {
   .cardDoctor .docInfo .name-star {
     flex-direction: column;
     align-items: flex-start;
@@ -11604,17 +11649,21 @@ main .my_container#error .image_box h2 {
   right: 8px;
   transform: rotate(-25deg);
   width: 50px;
+  /* @media screen and (max-width: 768px) {
+      top: 15px;
+      right: 40%;
+  } */
 }
 @media screen and (max-width: 768px) {
   .cardDoctor .docInfo .sponsor {
-    top: 15px;
-    right: 40%;
+    top: 8px;
+    right: 8px;
   }
 }
 @media screen and (max-width: 576px) {
   .cardDoctor .docInfo .sponsor {
     top: 8px;
-    right: 8px;
+    right: 3px;
   }
 }
 .cardDoctor .docInfo h3 {
@@ -11651,7 +11700,7 @@ main .my_container#error .image_box h2 {
   margin: 30px 0;
 }
 .glass .text p {
-  margin: 20px 0 30px;
+  margin: 20px 0;
 }
 .glass .glass_img {
   background: linear-gradient(180deg, rgba(184, 242, 208, 0.8), rgba(118, 233, 163, 0.8));
@@ -11680,7 +11729,7 @@ main .my_container#error .image_box h2 {
     width: 100%;
     order: 2;
     margin-top: 0px;
-    padding-bottom: 30px;
+    /* padding-bottom: 30px; */
   }
   .glass .text button {
     width: 100%;

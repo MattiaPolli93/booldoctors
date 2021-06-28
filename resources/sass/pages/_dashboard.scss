@@ -191,7 +191,6 @@ main {
             @media screen and (max-width: 1045px) {
                 font-size: 900%;
             }
-
             @media screen and (max-width: 768px) {
                 font-size: 500%;
             }
@@ -310,7 +309,6 @@ main {
             .card_wrapcard:hover {
                 transition: transform 0.2s ease-in-out;
                 transform: scale(1.05);
-                box-shadow: 3px 3px 10px -3px $background_color;
             }
 
             .card_wrapcard:hover .hovertext {
