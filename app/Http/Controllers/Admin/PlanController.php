@@ -15,6 +15,7 @@ class PlanController extends Controller
 {
     public function setPlan($id)
     {   
+        // prendo i dati del dottore tramite il suo id
         $user_id = Auth::id();
 
         $user = User::where('id', $user_id)->first();
@@ -28,8 +29,10 @@ class PlanController extends Controller
 
         $token = $gateway->ClientToken()->generate();
 
+        // controllo se esiste già un piano di sponsorizzazione
         $plan = Plan::find($id);
         
+        // prendo la data della fine sponsorizzazione
         $extendPlan = $user->plans()->get()->last();
         
         // accedo all'ultima entry di questo user nella tabella pivot            
@@ -59,8 +62,10 @@ class PlanController extends Controller
 
     public function payPlan(Request $request, $id)
     {   
+        // prendo i dati del dottore tramite il suo id
         $user_id = Auth::id();
-        $user = User::where('id', $user_id)->first();  
+        $user = User::where('id', $user_id)->first(); 
+        // controllo il piano selezionato          
         $plan = Plan::find($id);
         $data = $request->all();
         
@@ -89,7 +94,7 @@ class PlanController extends Controller
             $extendPlan = $user->plans()->get()->last();
             $now = Carbon::now('Europe/Rome');
 
-                // se non ha mai fatto una sponsorizzazione
+                //controllo se non ha mai fatto una sponsorizzazione
                 if ($extendPlan == null) {
                     $currentExpireDate = $now->addHour($plan->period);
                 } else {
@@ -97,7 +102,7 @@ class PlanController extends Controller
                     // prendo l'ultima expire date dalla pivot
                     $currentExpireDate = $extendPlan->pivot->expire_date;
                     
-                    // se la sponsorizzazione non è ancora scaduta, aggiunto le ore alla attuale expire date
+                    // se la sponsorizzazione non è ancora scaduta, aggiungo le ore alla attuale data di scadenza
                     if($currentExpireDate < $now){
                         $currentExpireDate = $now->addHour($plan->period);                                
                     } else {
@@ -106,13 +111,12 @@ class PlanController extends Controller
                     } 
                 }
 
-                // inserisco i dati nella pivot
+            // inserisco i dati nella pivot
             $user->plans()->attach($user, [
                 'user_id' => $user->id,
                 'plan_id' => $plan->id,
                 'expire_date' => $currentExpireDate
-            ]);         
-            /* return redirect()->route('admin.profile.index')->with('message', 'Transazione riuscita'); */
+            ]);
             return view('admin.checkout', compact('user','plan', 'result'));
         } else{
             return view('admin.checkout', compact('user','plan', 'result'));

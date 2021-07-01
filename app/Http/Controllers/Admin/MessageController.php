@@ -12,10 +12,12 @@ class MessageController extends Controller
 {
     public function showMessages(Message $messages)
     {   
+        // prendo i dati del dottore registrato in base al suo id
         $doctor_id = Auth::id();
 
         $user = User::where('id', $doctor_id)->first();
 
+        // filtro i messaggi in base all'id del dottore
         $messages = Message::where('user_id', $doctor_id)->get();          
         
 

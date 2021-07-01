@@ -36,13 +36,7 @@
                 </select>
             </div>
         </div>
-        <div class="search_input">
-            {{-- <select name="spec" id="spec" v-model="spec" v-on:change="filterSpec">
-                <option value="" disabled selected>Filtra per specializzazione</option>
-                @foreach ($specializations as $specialization)
-                    <option :value="{{$specialization->name}}">{{$specialization->specialization}}</option>
-                @endforeach
-            </select> --}}
+        <div class="search_input">           
             <input type="text" placeholder="Cerca una specializzazione" v-model="spec" @keyup="filterText">
             <i class="fas fa-search"></i>
         </div>

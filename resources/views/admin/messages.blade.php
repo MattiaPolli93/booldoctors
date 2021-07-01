@@ -6,10 +6,12 @@
 
 @section('content')
     <div class="my_container">
+        {{-- controllo se il dottore ha ricevuto dei messaggi privati --}}
         <h1 id="title">I tuoi messaggi</h1>
         @if (count($messages) == 0)
           <h2 id="empty_page">Nessun messaggio ricevuto</h2>
         @endif
+        {{-- se ci sono messaggi li mostro in pagina --}}
         <div class="messages">
             @foreach ($messages as $message)
             <div class="message">

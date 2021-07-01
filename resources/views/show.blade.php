@@ -58,17 +58,6 @@
         </div>
     </nav>
 
-    {{-- menu dottore --}}
-    {{-- <div class="menu">
-        <ul>
-            <li><a href="#contacts">Contatti</a></li>
-            <li><a href="#bio">Bio</a></li>
-            <li><a href="#services">Servizi</a></li>
-            <li><a href="#review">Recensioni</a></li>
-            <li><a href="#contact_me">Manda un messaggio al medico</a></li>
-        </ul>
-    </div> --}}
-
     <hr>
 
     {{-- contatti --}}
@@ -143,6 +132,7 @@
                 <label for="comment">Recensione</label>
                 <textarea class="form-control"  name="comment" id="comment" cols="30" rows="4" placeholder="Inserisci la tua recensione"></textarea>
             </div>
+            {{-- aggiunta del voto tramite selezione di stelle --}}
            <div class="form-check form-check-inline">
                 <div class="star-widget">
                     <input type="radio" name="rate" id="rate_5"  value="5">
@@ -157,39 +147,7 @@
                     <label for="rate_1" class="fas fa-star"></label>
                 </div> 
             </div>
-            
-            {{-- <div class="form-check form-check-inline">
-                <label class="form-check-label" for="rate_2">
-                    @for ($i = 0; $i < 2; $i++)
-                        <i class="fas fa-star"></i>
-                    @endfor
-                </label>
-                <input class="form-check-input ml-2 mt-1" type="radio" name="rate" id="rate_2" value="2">
-            </div>
-            <div class="form-check form-check-inline">
-                <label class="form-check-label" for="rate_3">
-                    @for ($i = 0; $i < 3; $i++)
-                        <i class="fas fa-star"></i>
-                    @endfor
-                </label>
-                <input class="form-check-input ml-2 mt-1" type="radio" name="rate" id="rate_3" value="3">
-            </div>
-            <div class="form-check form-check-inline">
-                <label class="form-check-label" for="rate_4">
-                    @for ($i = 0; $i < 4; $i++)
-                        <i class="fas fa-star"></i>
-                    @endfor
-                </label>
-                <input class="form-check-input ml-2 mt-1" type="radio" name="rate" id="rate_4" value="4">
-            </div>
-            <div class="form-check form-check-inline">
-                <label class="form-check-label" for="rate_5">
-                    @for ($i = 0; $i < 5; $i++)
-                        <i class="fas fa-star"></i>
-                    @endfor
-                </label>
-                <input class="form-check-input ml-2 mt-1" type="radio" name="rate" id="rate_5" value="5">
-            </div>  --}}                    
+                                
             <div class="mt-3">
                 <button type="submit" class="btn btn-insert">Inserisci</button>
             </div>

@@ -34,15 +34,17 @@ class UserController extends Controller
      */
     public function index()
     {
+        // prendo i dati del dottore registrato
         $doctor_id = Auth::id();
 
         $user = User::where('id', $doctor_id)->first();
 
+        // accedo alle tabelle dei dettagli e dei piani correlati al dottore
         $details = Detail::where('id', $doctor_id)->first(); 
         
         $plan = Plan::all();
 
-        // accedo all'ultima entry di questo user nella tabella pivot            
+        // accedo all'ultima entry di questo dottore nella tabella pivot dei piani già selezionati per visualizzare in pagina la data di scadenza 
         $extendPlan = $user->plans()->get()->last();
         $now = Carbon::now('Europe/Rome');
 
@@ -61,72 +63,7 @@ class UserController extends Controller
         }
 
         return view('admin.index', compact('user', 'details', 'plan', 'sponsored', 'currentExpireDate'));
-    }
-
-    // /**
-    //  * Show the form for creating a new resource.
-    //  *
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function create()
-    // {
-    //     $specializations = Specialization::all();
-
-    //     return view('admin.create', compact('specializations'));
-
-
-    // }
-
-    // /**
-    //  * Store a newly created resource in storage.
-    //  *
-    //  * @param  \Illuminate\Http\Request  $request
-    //  * @return \Illuminate\Http\Response
-    //  */
-    // public function store(Request $request, $id)
-    // {
-    //     // validazione dei dati inseriti
-    //     $validation = $this->validation;
-    //     $request->validate($validation);
-
-    //     /* // imposto lo user_id
-    //     $data['user_id'] = Auth::id();
-
-    //     // prendo tutti i dati da salvare
-    //     $data = $request->all();
-
-    //     //inserimento dei dati
-    //     $details = Detail::create($data);   */
-    //     $doctor = User::where('id', $id)->first();
-    //     Detail::create([
-    //         'address' => request('address'),
-    //         'phone' => request('phone'),
-    //         'bio' => request('bio'),
-    //         //prende lo user_id
-    //         'user_id' => auth()->id()
-    //     ]);
-
-    //     if (!isset($data['specializations'])) {
-    //         $data['specializations'] = [];
-    //     }
-    //     $doctor->specializations()->sync($data['specializations']);
-
-    //     // reindirizzamento alla pagina index
-    //     return redirect()->route('admin.profile.index')->with('message', 'le tue informazioni sono state aggiunte!');
-    // }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    /*  public function show($id)
-    {
-        $doctor = Auth::id();
-
-        return view('admin.show', compact('doctor'));
-    } */
+    }    
 
     /**
      * Show the form for editing the specified resource.
@@ -136,7 +73,7 @@ class UserController extends Controller
      */
     public function edit(User $user, Service $services, Specialization $specializations, $id)
     {
-
+        // prendo i dati del dottore registrato comprese specializzazioni, dettagli e servizi 
         $user_id = Auth::id();
         $details = Detail::where('user_id', $id)->first();
         $specializations = Specialization::all();
@@ -161,13 +98,14 @@ class UserController extends Controller
      */
     public function update(Request $request, $id)
     {
-
+        // prendo i dati del dottore registrato
         $user_id = Auth::id();
 
         // validazione dei dati inseriti
         $validation = $this->validation;
         $request->validate($validation);
 
+        // prendo i dati che saranno soggetti ad eventuali modifiche da parte del dottore
         $data = $request->only('bio', 'address', 'phone', 'image');
 
         $doctor = User::where('id', $id)->first();
@@ -208,6 +146,7 @@ class UserController extends Controller
      */
     public function destroy($id)
     {
+        // funzione per eliminare il profilo 
         $user = User::where('id', $id)->first();
         $user->delete();
 

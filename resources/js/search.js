@@ -27,17 +27,7 @@ const Search = {
 
                     }
                 }
-            }
-            // console.log(allDoctors);
-            // console.log(this.filterDoc);
-            /* for(var i = 0; i < this.sponsoredDocs.length; i++){
-               for(var j = 0; j < this.sponsoredDocs[i].length; j++){
-                 if(this.sponsoredDocs[i] == this.spec){
-                     filterSponsoredDocs.push(this.doctors[i])
-                 }
-               }
-             }
-             console.log(this.filterSponsoredDocs);   */
+            }            
         },
         filterText() {
             this.filterDoc = [];
@@ -60,10 +50,7 @@ const Search = {
                     }
                 }
             }
-        },
-        /* prova() {
-            console.log(this.numberOfRates, this.selectRate);
-        }, */
+        },      
     },
     mounted() {
         axios.get("http://localhost:8000/api/v1/doctors")
@@ -77,13 +64,7 @@ const Search = {
                         if (dayjs(doctor.expire_date) > now) {
                             this.sponsoredDocs.push(doctor);
                         }
-                    });
-                    /* console.log(this.sponsoredDocs); */
-                    // axios.get("http://localhost:8000/api/v1/sponsoredDoc")
-                    //     .then((response) => {
-                    //         this.sponsoredDocs = response.data;
-
-                    //     })
+                    });                    
                 }
 
             );
@@ -125,10 +106,7 @@ const Search = {
                 }
             }
             this.loading = false;
-        }, 1500);
-        /* if (this.spec == null) {
-            this.loading = false;
-        } */
+        }, 1500);        
     },
     computed: {
         docLimit() {
@@ -144,13 +122,7 @@ const Search = {
         noFindTxt() {
             if (this.loading == true || this.doctors.length > 0 && this.filterDoc.length > 0 || this.filterSponsoredDocs.length > 0 || this.spec == null) return false;
             return true;
-        },
-
-        // loading() {
-        //     if (this.doctors.length > 0) return false;
-        //     return true;
-        // },
-
+        }, 
         maxRange() {
             let maxRange = 0;
             this.doctors.forEach(element => {
@@ -161,14 +133,6 @@ const Search = {
 
             return maxRange;
         },
-        /* sponsored(){
-            if(this.filterDoc.includes(this.sponsoredDocs)){
-                this
-                console.log(this.sponsoredDocs);
-            }
-        } */
-
-
     }
 }
 

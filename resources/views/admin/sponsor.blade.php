@@ -64,9 +64,6 @@
 
 <script src="https://js.braintreegateway.com/web/dropin/1.10.0/js/dropin.js"></script>
 
- 
- 
- 
 <script>    
     var form = document.querySelector('#pay_form');
     var token = "{{ $token }}"

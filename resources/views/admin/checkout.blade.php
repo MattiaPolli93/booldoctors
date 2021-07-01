@@ -6,6 +6,7 @@
 
 @section('content')
     <div class="my_container">
+        {{-- se transazione riuscita restituisco i seguenti dati --}}
         @if ($result->success == true)
         <div class="success text-center">
             <h1> <span class="user">{{$user->name}} {{$user->surname}}</span>  la tua transazione è andata a buon fine</h1>
@@ -14,6 +15,7 @@
             <img src="{{url('/img/transaction-costs.png')}}" alt="Transaction Accepted">
             <p class="link_dashboard text-center"><a href="{{ route('admin.profile.index')}}">Torna alla Dashboard</a></p> 
         </div>
+        {{-- altrimenti chiedo di ritentare la transazione --}}
         @elseif($result->success == false)
         <div class="error text-center">
             <h1>Ci dispiace, qualcosa è andato <span class="err">storto</span></h1>

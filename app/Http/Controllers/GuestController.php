@@ -7,7 +7,6 @@ use App\User;
 use App\Specialization;
 use App\Comment;
 use Carbon\Carbon;
-use App\Plan;
 
 use Illuminate\Http\Request;
 
@@ -20,6 +19,7 @@ class GuestController extends Controller
      */
     public function index()
     {
+        // prendo tutti i dottori e le specializzazioni inseriti ad DB 
         $doctors = User::all();
         $specializations = Specialization::all();
 
@@ -67,6 +67,7 @@ class GuestController extends Controller
             'email' => 'required|email|max:50',
             'message' => 'required|string',
         ]);
+        // possibilità di inserire un messaggio ad un dottore identificato dal suo id
         $user = User::find($id);
         $newMessage = new Message();
         $newMessage->user_id = $user->id;
@@ -97,7 +98,7 @@ class GuestController extends Controller
             'comment' => 'nullable|string',
             'rate' => 'required|string|in:1,2,3,4,5',
         ]);
-
+        // possibilità di inserire una recensione ad un dottore identificato dal suo id
         $user = User::find($id);
         $newComment = new Comment();
         $newComment->user_id = $user->id;
@@ -128,9 +129,10 @@ class GuestController extends Controller
 
     public function searchDoctors(Specialization $specializations, Request $request) 
     {
+        // prendo le specializzazioni e le filtro in base all'id del dottore
         $specializations = Specialization::all();
         $currentSpec = Specialization::where('id', $request->query('id'))->first();
-        /* dd($currentSpec->specialization); */
+        
         return view('search', compact('specializations', 'currentSpec'));
     }
 
