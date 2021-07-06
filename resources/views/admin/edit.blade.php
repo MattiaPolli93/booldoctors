@@ -56,14 +56,25 @@
               @endforeach
             </div>
 
-            {{-- Inserisci prestazioni --}}
-          <div class="form-group mt-4">
+          {{-- Inserisci prestazioni --}}
+          <div id="edit">
+            <div v-for="num in numService" class="form-group mt-4">
+              <h3 class="mb-3">Aggiungi nuova prestazione</h3>
+                <label for="service_name">Nome prestazione</label>
+                <input type="text" class="form-control mb-3" name="service_name[]" id="service_name" placeholder="Inserisci il nome della prestazione" value="">
+                <label for="service_price">Prezzo prestazione</label>
+                <input type="number" class="form-control" name="service_price[]" id="service_price" min="0" max="9999.99" step="0.01" placeholder="Inserisci il prezzo della prestazione" value="">
+            </div>
+
+            <p>Vuoi aggiungere più prestazioni? <button v-on:click="addService" type="button" class="btn btn-insert mt-2 mb-3">Clicca qui</button></p>
+          </div>
+          {{-- <div class="form-group mt-4">
             <h3 class="mb-3">Aggiungi nuova prestazione</h3>
               <label for="service_name">Nome prestazione</label>
-              <input type="text" class="form-control mb-3" name="service_name" id="service_name" placeholder="Inserisci il nome della prestazione" value="">
+              <input type="text" class="form-control mb-3" name="service_name[]" id="service_name" placeholder="Inserisci il nome della prestazione" value="">
               <label for="service_price">Prezzo prestazione</label>
-              <input type="number" class="form-control" name="service_price" id="service_price" min="0" max="9999.99" step="0.01" placeholder="Inserisci il prezzo della prestazione" value="">
-          </div>
+              <input type="number" class="form-control" name="service_price[]" id="service_price" min="0" max="9999.99" step="0.01" placeholder="Inserisci il prezzo della prestazione" value="">
+          </div> --}}
 
           <button type="submit" class="btn btn-insert mt-3 mb-3">Salva modifiche</button>
         </form>
@@ -81,15 +92,10 @@
                               <button type="submit" class="btn btn-danger mt-3 mb-2">Cancella</button>
                           </form>
                     </li>
-                {{-- <div class="form-group mt-5">
-                    <label for="service_name">Nome prestazione</label>
-                    <input type="text" class="form-control" name="service_name" id="service_name" placeholder="Inserisci il nome della prestazione" value="{{$service['service']}}">
-                    <label for="service_price">Prezzo prestazione</label>
-                    <input type="number" class="form-control" name="service_price" id="service_price" min="0" max="9999.99" step="0.01" placeholder="Inserisci il prezzo della prestazione" value="{{$service['price']}}">
-                </div> --}}
                  @endforeach
             </ul>
           @endif
           <p class="link_dashboard"><a href="{{ route('admin.profile.index') }}">Torna alla Dashboard</a></p>
     </div>
+    <script src="{{ asset('js/edit.js') }}" defer></script>
 @endsection

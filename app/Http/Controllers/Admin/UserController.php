@@ -22,8 +22,8 @@ class UserController extends Controller
         'bio' => 'nullable|string',
         'address' => 'required|string|max:100',
         'phone' => 'nullable|string|max:25',
-        'service_name' => 'nullable|string',
-        'service_price' => 'nullable|numeric'
+        // 'service_name' => 'nullable|string',
+        // 'service_price' => 'nullable|numeric'
     ]);
 
 
@@ -100,7 +100,7 @@ class UserController extends Controller
     {
         // prendo i dati del dottore registrato
         $user_id = Auth::id();
-
+        
         // validazione dei dati inseriti
         $validation = $this->validation;
         $request->validate($validation);
@@ -117,14 +117,20 @@ class UserController extends Controller
         
         // salvataggio dei dati modificati
         $doctor->details->update($data);
-        
-        if ($request->service_name || $request->service_price) {
-            // salvataggio nella tabella service
-            $newService = new Service();
-            $newService->user_id = $user_id;
-            $newService->service = $request->service_name;
-            $newService->price = $request->service_price;
-            $newService->save();
+
+        $service_name = $request->service_name;
+        $service_price = $request->service_price;
+
+        // ciclo su tutti gli input dei services
+        for ($i = 0; $i < count($service_name); $i++) {
+            if ($service_name[$i] && $service_price[$i]) {
+                // salvataggio nella tabella service
+                $newService = new Service();
+                $newService->user_id = $user_id;
+                $newService->service = $service_name[$i];
+                $newService->price = $service_price[$i];
+                $newService->save();
+            }
         }
 
         // controllo specializzazioni
